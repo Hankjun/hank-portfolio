@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>汉克 Hank | 多身份创业者 · 社区架构师 · 私域操盘手</title>
+<meta name="description" content="汉克 — 80后INFP，法国埃米尔科尔高等艺术学院中国区招生推广，大鲤鱼OPC社区负责人，作品集研习社创始人（16万艺术留学生社群），小太阳企业家俱乐部私域操盘手。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ===== Reset & Base ===== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --ink: #1a1a2e;
+  --ink-2: #16213e;
+  --gold: #c9a55c;
+  --gold-light: #e8c887;
+  --gold-dim: #a8893f;
+  --teal: #2a6f7e;
+  --teal-light: #3d8a9a;
+  --cream: #faf8f4;
+  --cream-2: #f5f1ea;
+  --slate: #3d3d52;
+  --slate-light: #6b6b80;
+  --line: #e4dfd6;
+  --white: #ffffff;
+  --shadow: 0 4px 24px rgba(26, 26, 46, 0.08);
+  --shadow-lg: 0 12px 48px rgba(26, 26, 46, 0.12);
+  --radius: 16px;
+  --max-w: 1200px;
+  --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: 'Noto Sans SC', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--slate);
+  background: var(--cream);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+.serif { font-family: 'Noto Serif SC', serif; }
+
+/* ===== Navigation ===== */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  padding: 1.2rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: var(--transition);
+}
+.nav.scrolled {
+  background: rgba(250, 248, 244, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.06);
+  padding: 0.8rem 2rem;
+}
+.nav-logo {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: var(--ink);
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.nav-logo span { color: var(--gold); }
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+.nav-links a {
+  text-decoration: none;
+  color: var(--slate);
+  font-size: 0.9rem;
+  font-weight: 500;
+  position: relative;
+  transition: color var(--transition);
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px; left: 0;
+  width: 0; height: 2px;
+  background: var(--gold);
+  transition: width var(--transition);
+}
+.nav-links a:hover { color: var(--ink); }
+.nav-links a:hover::after { width: 100%; }
+.nav.scrolled .nav-links a,
+.nav.scrolled .nav-logo { color: var(--ink); }
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+}
+
+/* ===== Hero ===== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--ink) 0%, var(--ink-2) 50%, #0f3460 100%);
+  color: var(--white);
+  text-align: center;
+  padding: 6rem 2rem 4rem;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%; right: -20%;
+  width: 80%; height: 120%;
+  background: radial-gradient(ellipse, rgba(201, 165, 92, 0.12) 0%, transparent 60%);
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -30%; left: -15%;
+  width: 70%; height: 90%;
+  background: radial-gradient(ellipse, rgba(42, 111, 126, 0.15) 0%, transparent 60%);
+  pointer-events: none;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+.hero-badge {
+  display: inline-block;
+  padding: 0.4rem 1.2rem;
+  border: 1px solid rgba(201, 165, 92, 0.4);
+  border-radius: 50px;
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  color: var(--gold-light);
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+.hero h1 {
+  font-family: 'Noto Serif SC', serif;
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-weight: 900;
+  letter-spacing: 8px;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(180deg, #fff 0%, #e0dacb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero h1-en {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  font-weight: 300;
+  letter-spacing: 12px;
+  color: var(--gold-light);
+  margin-bottom: 1.5rem;
+  opacity: 0.8;
+}
+.hero-tagline {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+.hero-tag {
+  padding: 0.4rem 1rem;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 8px;
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.8);
+  backdrop-filter: blur(10px);
+}
+.hero-tag.gold {
+  background: rgba(201, 165, 92, 0.15);
+  border-color: rgba(201, 165, 92, 0.3);
+  color: var(--gold-light);
+}
+.hero-scroll {
+  position: absolute;
+  bottom: 2rem; left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255,255,255,0.4);
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+}
+.hero-scroll-line {
+  width: 1px; height: 40px;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.4));
+  animation: scrollLine 2s ease-in-out infinite;
+}
+@keyframes scrollLine {
+  0%, 100% { opacity: 0.3; transform: scaleY(0.5); }
+  50% { opacity: 1; transform: scaleY(1); }
+}
+
+/* ===== Section Base ===== */
+.section {
+  padding: 6rem 2rem;
+  position: relative;
+}
+.section-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+.section-label {
+  display: inline-block;
+  font-size: 0.78rem;
+  letter-spacing: 4px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+.section-title {
+  font-family: 'Noto Serif SC', serif;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+.section-desc {
+  font-size: 1rem;
+  color: var(--slate-light);
+  max-width: 600px;
+  margin-bottom: 3rem;
+}
+
+/* ===== About ===== */
+.about { background: var(--cream); }
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  align-items: center;
+}
+@media (max-width: 900px) {
+  .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+}
+.about-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.avatar-ring {
+  width: 280px; height: 280px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--ink), var(--ink-2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: var(--shadow-lg);
+}
+.avatar-ring::before {
+  content: '';
+  position: absolute;
+  inset: -12px;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  opacity: 0.3;
+}
+.avatar-ring::after {
+  content: '';
+  position: absolute;
+  inset: -24px;
+  border-radius: 50%;
+  border: 1px solid var(--gold);
+  opacity: 0.15;
+}
+.avatar-text {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 5rem;
+  font-weight: 900;
+  color: var(--gold-light);
+  letter-spacing: 4px;
+}
+.about-info-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  box-shadow: var(--shadow);
+}
+.info-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.info-row:last-child { border-bottom: none; }
+.info-label {
+  font-size: 0.82rem;
+  color: var(--gold-dim);
+  font-weight: 600;
+  min-width: 70px;
+  letter-spacing: 1px;
+}
+.info-value {
+  font-size: 0.95rem;
+  color: var(--slate);
+  flex: 1;
+}
+.about-philosophy {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: var(--cream-2);
+  border-radius: 12px;
+  border-left: 3px solid var(--gold);
+}
+.about-philosophy p {
+  font-size: 0.9rem;
+  color: var(--slate);
+  font-style: italic;
+}
+
+/* ===== Roles ===== */
+.roles { background: var(--white); }
+.roles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+.role-card {
+  background: var(--cream);
+  border-radius: var(--radius);
+  padding: 2rem;
+  border: 1px solid var(--line);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+.role-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 3px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition);
+}
+.role-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: transparent;
+}
+.role-card:hover::before { transform: scaleX(1); }
+.role-icon {
+  width: 48px; height: 48px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--ink), var(--ink-2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+}
+.role-icon svg { width: 24px; height: 24px; }
+.role-org {
+  font-size: 0.8rem;
+  color: var(--gold-dim);
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 0.4rem;
+}
+.role-title {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+}
+.role-desc {
+  font-size: 0.85rem;
+  color: var(--slate-light);
+}
+
+/* ===== Business ===== */
+.business { background: var(--cream); }
+.business-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+@media (max-width: 700px) {
+  .business-grid { grid-template-columns: 1fr; }
+}
+.biz-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+.biz-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+.biz-num {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--gold);
+  opacity: 0.3;
+  line-height: 1;
+  min-width: 50px;
+}
+.biz-info h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 0.3rem;
+}
+.biz-info .biz-org {
+  font-size: 0.8rem;
+  color: var(--gold-dim);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.biz-info p {
+  font-size: 0.85rem;
+  color: var(--slate-light);
+}
+
+/* ===== Projects ===== */
+.projects { background: var(--white); }
+.project-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 2.5rem;
+}
+.tab-btn {
+  padding: 0.5rem 1.2rem;
+  border: 1px solid var(--line);
+  border-radius: 50px;
+  background: transparent;
+  font-size: 0.85rem;
+  color: var(--slate);
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: inherit;
+}
+.tab-btn:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+.tab-btn.active {
+  background: var(--ink);
+  color: var(--white);
+  border-color: var(--ink);
+}
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1rem;
+}
+.project-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  padding: 1rem 1.2rem;
+  background: var(--cream);
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  transition: var(--transition);
+}
+.project-item:hover {
+  border-color: var(--gold);
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+.project-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  margin-top: 8px;
+  flex-shrink: 0;
+}
+.project-item span {
+  font-size: 0.88rem;
+  color: var(--slate);
+  line-height: 1.5;
+}
+.project-count {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  background: var(--cream-2);
+  border-radius: 50px;
+  font-size: 0.78rem;
+  color: var(--slate-light);
+  margin-left: 0.5rem;
+}
+
+/* ===== Investments ===== */
+.investments { background: var(--ink); color: var(--white); }
+.investments .section-title { color: var(--white); }
+.investments .section-label { color: var(--gold-light); }
+.investments .section-desc { color: rgba(255,255,255,0.6); }
+.invest-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.2rem;
+}
+.invest-card {
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: var(--transition);
+}
+.invest-card:hover {
+  background: rgba(201, 165, 92, 0.08);
+  border-color: rgba(201, 165, 92, 0.3);
+  transform: translateY(-4px);
+}
+.invest-card .invest-city {
+  font-size: 0.75rem;
+  color: var(--gold-light);
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+.invest-card h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.5;
+}
+
+/* ===== Ecosystem ===== */
+.ecosystem { background: var(--cream); }
+.eco-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+.eco-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  background: var(--white);
+  border-radius: 50px;
+  box-shadow: var(--shadow);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--ink);
+  transition: var(--transition);
+}
+.eco-chip:hover {
+  background: var(--ink);
+  color: var(--white);
+  transform: translateY(-3px);
+}
+.eco-chip-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+/* ===== Footer ===== */
+.footer {
+  background: var(--ink);
+  color: rgba(255,255,255,0.5);
+  padding: 3rem 2rem 2rem;
+  text-align: center;
+}
+.footer-logo {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--white);
+  letter-spacing: 4px;
+  margin-bottom: 0.5rem;
+}
+.footer-logo span { color: var(--gold); }
+.footer p {
+  font-size: 0.82rem;
+  margin-bottom: 0.3rem;
+}
+.footer-divider {
+  width: 40px; height: 2px;
+  background: var(--gold);
+  margin: 1.5rem auto;
+}
+
+/* ===== Animations ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+</style>
+</head>
+<body>
+
+<!-- ===== Navigation ===== -->
+<nav class="nav" id="nav">
+  <div class="nav-logo">汉克<span>·</span>HANK</div>
+  <ul class="nav-links">
+    <li><a href="#about">关于</a></li>
+    <li><a href="#roles">角色</a></li>
+    <li><a href="#business">业务</a></li>
+    <li><a href="#projects">项目</a></li>
+    <li><a href="#investments">投资</a></li>
+  </ul>
+</nav>
+
+<!-- ===== Hero ===== -->
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <div class="hero-badge">多身份创业者 · 社区架构师</div>
+    <h1>汉 克</h1>
+    <h1-en>H A N K</h1-en>
+    <p class="hero-tagline">法国艺术院校中国区推广 · 16万社群创始人 · 私域操盘手</p>
+    <div class="hero-tags">
+      <span class="hero-tag gold">80后</span>
+      <span class="hero-tag gold">INFP</span>
+      <span class="hero-tag">丁火</span>
+      <span class="hero-tag">逻辑怪</span>
+      <span class="hero-tag">哲科思维</span>
+      <span class="hero-tag">软件控</span>
+    </div>
+    <div class="hero-tags">
+      <span class="hero-tag">无锡</span>
+      <span class="hero-tag">苏州</span>
+      <span class="hero-tag">北京</span>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>SCROLL</span>
+    <div class="hero-scroll-line"></div>
+  </div>
+</section>
+
+<!-- ===== About ===== -->
+<section class="section about" id="about">
+  <div class="section-inner">
+    <div class="section-label reveal">ABOUT</div>
+    <h2 class="section-title reveal">关于汉克</h2>
+    <p class="section-desc reveal">一个用哲科思维驱动实践的多身份创业者，横跨AI智能体、艺术留学、品牌设计、私域运营与自媒体矩阵。</p>
+    <div class="about-grid">
+      <div class="about-visual reveal reveal-delay-1">
+        <div class="avatar-ring">
+          <span class="avatar-text">汉</span>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <div class="about-info-card">
+          <div class="info-row">
+            <span class="info-label">昵称</span>
+            <span class="info-value">汉克 (Hank)</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">标签</span>
+            <span class="info-value">80后 · INFP · 丁火 · 逻辑怪 · 哲科思维 · 软件控</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">坐标</span>
+            <span class="info-value">无锡 / 苏州 / 北京（三城生活）</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">角色</span>
+            <span class="info-value">多身份创业者 · 社区架构师 · 私域操盘手 · 天使投资人</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">领域</span>
+            <span class="info-value">AI智能体 · 艺术留学 · 社群运营 · 品牌设计 · 私域运营 · 自媒体矩阵</span>
+          </div>
+        </div>
+        <div class="about-philosophy">
+          <p>"从底层逻辑出发思考问题，用结构化思维拆解复杂世界。先做再问，带答案回来，而不是带问题。"</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Roles ===== -->
+<section class="section roles" id="roles">
+  <div class="section-inner">
+    <div class="section-label reveal">ROLES</div>
+    <h2 class="section-title reveal">角色与身份</h2>
+    <p class="section-desc reveal">四重身份，四条赛道，一个内核——用社区思维连接人与资源。</p>
+    <div class="roles-grid">
+      <div class="role-card reveal reveal-delay-1">
+        <div class="role-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#c9a55c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        </div>
+        <div class="role-org">Ecole Emile Cohl</div>
+        <div class="role-title">中国区招生推广</div>
+        <div class="role-desc">法国埃米尔科尔高等艺术学院</div>
+      </div>
+      <div class="role-card reveal reveal-delay-2">
+        <div class="role-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#c9a55c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+        </div>
+        <div class="role-org">大鲤鱼OPC社区</div>
+        <div class="role-title">南虾塘主 & 负责人</div>
+        <div class="role-desc">超级工作站和智能体服务社区</div>
+      </div>
+      <div class="role-card reveal reveal-delay-3">
+        <div class="role-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#c9a55c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div class="role-org">作品集研习社</div>
+        <div class="role-title">创始人 · 16万社群</div>
+        <div class="role-desc">16万艺术留学生社群创始人</div>
+      </div>
+      <div class="role-card reveal reveal-delay-4">
+        <div class="role-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#c9a55c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/></svg>
+        </div>
+        <div class="role-org">小太阳企业家俱乐部</div>
+        <div class="role-title">私域操盘手</div>
+        <div class="role-desc">企业私域运营与增长</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Core Business ===== -->
+<section class="section business" id="business">
+  <div class="section-inner">
+    <div class="section-label reveal">BUSINESS</div>
+    <h2 class="section-title reveal">核心业务</h2>
+    <p class="section-desc reveal">四条核心业务线，覆盖教育、AI、社群与私域。</p>
+    <div class="business-grid">
+      <div class="biz-card reveal reveal-delay-1">
+        <div class="biz-num">01</div>
+        <div class="biz-info">
+          <h3>法国留学招生推广</h3>
+          <div class="biz-org">@Ecole Emile Cohl</div>
+          <p>法国埃米尔科尔高等艺术学院中国区招生推广，搭建中法艺术教育桥梁。</p>
+        </div>
+      </div>
+      <div class="biz-card reveal reveal-delay-2">
+        <div class="biz-num">02</div>
+        <div class="biz-info">
+          <h3>超级工作站和智能体服务</h3>
+          <div class="biz-org">@大鲤鱼OPC社区</div>
+          <p>AI智能体生态建设，超级工作站服务，赋能企业与个人数字化转型。</p>
+        </div>
+      </div>
+      <div class="biz-card reveal reveal-delay-3">
+        <div class="biz-num">03</div>
+        <div class="biz-info">
+          <h3>艺术留学生社群</h3>
+          <div class="biz-org">@作品集研习社</div>
+          <p>16万艺术留学生社群运营，内容驱动、服务导向的留学生生态平台。</p>
+        </div>
+      </div>
+      <div class="biz-card reveal reveal-delay-4">
+        <div class="biz-num">04</div>
+        <div class="biz-info">
+          <h3>私域运营</h3>
+          <div class="biz-org">@小太阳企业家俱乐部</div>
+          <p>企业私域流量操盘，社群架构设计与增长策略落地。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Projects ===== -->
+<section class="section projects" id="projects">
+  <div class="section-inner">
+    <div class="section-label reveal">PROJECTS</div>
+    <h2 class="section-title reveal">项目经验 <span class="project-count">38+ 项目</span></h2>
+    <p class="section-desc reveal">十余年深耕，横跨AI、社群、自媒体、品牌、教育、活动与企业服务七大领域。</p>
+    <div class="project-tabs reveal" id="projectTabs">
+      <button class="tab-btn active" data-cat="all">全部</button>
+      <button class="tab-btn" data-cat="ai">AI与智能体</button>
+      <button class="tab-btn" data-cat="community">社区与私域</button>
+      <button class="tab-btn" data-cat="media">自媒体与内容</button>
+      <button class="tab-btn" data-cat="brand">品牌与设计</button>
+      <button class="tab-btn" data-cat="edu">教育与培训</button>
+      <button class="tab-btn" data-cat="event">活动与策划</button>
+      <button class="tab-btn" data-cat="enterprise">企业服务</button>
+    </div>
+    <div class="project-list reveal reveal-delay-1" id="projectList">
+      <!-- AI与智能体 -->
+      <div class="project-item" data-cat="ai"><div class="project-dot"></div><span>江苏电商直播基地·大鲤鱼超级助手AI智能体</span></div>
+      <div class="project-item" data-cat="ai"><div class="project-dot"></div><span>华夏博雅教育集团上市财报ChatGPT资料库</span></div>
+      <!-- 社区与私域 -->
+      <div class="project-item" data-cat="community"><div class="project-dot"></div><span>作品集研习社（16万艺术留学生社群·创始人）</span></div>
+      <div class="project-item" data-cat="community"><div class="project-dot"></div><span>小太阳企业家俱乐部私域运营</span></div>
+      <div class="project-item" data-cat="community"><div class="project-dot"></div><span>Yes Design社群运营代运营</span></div>
+      <div class="project-item" data-cat="community"><div class="project-dot"></div><span>RAC共创社群运营与主题共创工坊合作</span></div>
+      <div class="project-item" data-cat="community"><div class="project-dot"></div><span>WeDesign共创社群运营</span></div>
+      <!-- 自媒体与内容 -->
+      <div class="project-item" data-cat="media"><div class="project-dot"></div><span>IGA小红书自媒体代运营</span></div>
+      <div class="project-item" data-cat="media"><div class="project-dot"></div><span>TAL小红书自媒体代运营</span></div>
+      <div class="project-item" data-cat="media"><div class="project-dot"></div><span>MILD School自媒体代运营</span></div>
+      <div class="project-item" data-cat="media"><div class="project-dot"></div><span>SIA自媒体矩阵运营全策划与运营</span></div>
+      <div class="project-item" data-cat="media"><div class="project-dot"></div><span>欧桥百度SEO优化与自媒体矩阵项目</span></div>
+      <div class="project-item" data-cat="media"><div class="project-dot"></div><span>SFK微博矩阵和豆瓣矩阵运营策划（2014）</span></div>
+      <!-- 品牌与产品设计 -->
+      <div class="project-item" data-cat="brand"><div class="project-dot"></div><span>鞠戏产品设计工坊（体育与音乐跨界品牌）</span></div>
+      <div class="project-item" data-cat="brand"><div class="project-dot"></div><span>A+创意工坊平台项目设计</span></div>
+      <div class="project-item" data-cat="brand"><div class="project-dot"></div><span>高思控制品牌官网设计与建设</span></div>
+      <div class="project-item" data-cat="brand"><div class="project-dot"></div><span>睿艺空间网站设计（天道教育集团旗下）</span></div>
+      <div class="project-item" data-cat="brand"><div class="project-dot"></div><span>Artunigo艺术留学生社区设计（SIA旗下）</span></div>
+      <div class="project-item" data-cat="brand"><div class="project-dot"></div><span>壹壹网产品设计（SFK旗下，2014）</span></div>
+      <div class="project-item" data-cat="brand"><div class="project-dot"></div><span>华夏博雅教育集团官网设计与策划</span></div>
+      <div class="project-item" data-cat="brand"><div class="project-dot"></div><span>SIA官网产品设计与内容统筹（2014-2015）</span></div>
+      <!-- 教育与培训 -->
+      <div class="project-item" data-cat="edu"><div class="project-dot"></div><span>石家庄职业技术学院IP运营实验室项目策划</span></div>
+      <div class="project-item" data-cat="edu"><div class="project-dot"></div><span>2019和创留学运营团队培训工坊落地</span></div>
+      <div class="project-item" data-cat="edu"><div class="project-dot"></div><span>2019-2020和与国际艺术教育运营咨询</span></div>
+      <div class="project-item" data-cat="edu"><div class="project-dot"></div><span>2019-2020集品艺术留学运营咨询</span></div>
+      <div class="project-item" data-cat="edu"><div class="project-dot"></div><span>PSONE2016教务服务体系设计与培训</span></div>
+      <div class="project-item" data-cat="edu"><div class="project-dot"></div><span>PSONE2017课程体系"万有引力"全程策划</span></div>
+      <div class="project-item" data-cat="edu"><div class="project-dot"></div><span>IAIA艺盟2017新版服务体系设计</span></div>
+      <div class="project-item" data-cat="edu"><div class="project-dot"></div><span>IAIA艺盟2016年度市场团队咨询与培训</span></div>
+      <div class="project-item" data-cat="edu"><div class="project-dot"></div><span>北京理工大学·软件学院与设计学院·硕士项目落地</span></div>
+      <div class="project-item" data-cat="edu"><div class="project-dot"></div><span>新东方·优能中学·酷学酷玩动画电影训练营</span></div>
+      <!-- 活动与策划 -->
+      <div class="project-item" data-cat="event"><div class="project-dot"></div><span>大千阳光法国昂西动画节全程策划与落地</span></div>
+      <div class="project-item" data-cat="event"><div class="project-dot"></div><span>大千阳光全球动画人才库建设</span></div>
+      <div class="project-item" data-cat="event"><div class="project-dot"></div><span>PSONE成都动画周策划与执行</span></div>
+      <div class="project-item" data-cat="event"><div class="project-dot"></div><span>北京服装学院动画系2017大师行策划与落地</span></div>
+      <div class="project-item" data-cat="event"><div class="project-dot"></div><span>IAIA艺盟团队展示视频策划与落地</span></div>
+      <div class="project-item" data-cat="event"><div class="project-dot"></div><span>Zinch中国&SIA艺术留学合作全程策划</span></div>
+      <!-- 企业服务 -->
+      <div class="project-item" data-cat="enterprise"><div class="project-dot"></div><span>中域云仓私域社群·联营仓企业融资</span></div>
+      <div class="project-item" data-cat="enterprise"><div class="project-dot"></div><span>中国饭店抖音事业部组建·数字人直播</span></div>
+      <div class="project-item" data-cat="enterprise"><div class="project-dot"></div><span>大船艺术教师IP运营项目合作</span></div>
+      <div class="project-item" data-cat="enterprise"><div class="project-dot"></div><span>和创艺术留学IP运营项目合作</span></div>
+      <div class="project-item" data-cat="enterprise"><div class="project-dot"></div><span>SFK教务服务流程优化梳理项目（2013）</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Investments ===== -->
+<section class="section investments" id="investments">
+  <div class="section-inner">
+    <div class="section-label reveal">INVESTMENTS</div>
+    <h2 class="section-title reveal">投资与企业</h2>
+    <p class="section-desc reveal">五家公司，横跨传媒、科技、教育、文化与品牌策划。</p>
+    <div class="invest-grid">
+      <div class="invest-card reveal reveal-delay-1">
+        <div class="invest-city">无锡</div>
+        <h4>无锡汉克超级助理传媒有限公司</h4>
+      </div>
+      <div class="invest-card reveal reveal-delay-2">
+        <div class="invest-city">苏州</div>
+        <h4>苏州紫灵扬升信息科技有限公司</h4>
+      </div>
+      <div class="invest-card reveal reveal-delay-3">
+        <div class="invest-city">北京</div>
+        <h4>留皇叔（北京）教育科技有限公司</h4>
+      </div>
+      <div class="invest-card reveal reveal-delay-4">
+        <div class="invest-city">北京</div>
+        <h4>北京章鱼和小伙伴们文化发展有限公司</h4>
+      </div>
+      <div class="invest-card reveal reveal-delay-4">
+        <div class="invest-city">无锡</div>
+        <h4>无锡阳阳壹叁壹肆品牌策划有限公司</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Ecosystem ===== -->
+<section class="section ecosystem" id="ecosystem">
+  <div class="section-inner">
+    <div class="section-label reveal">ECOSYSTEM</div>
+    <h2 class="section-title reveal">数据与工具生态</h2>
+    <p class="section-desc reveal">多平台协作工具链，支撑高效的全栈办公与智能体开发。</p>
+    <div class="eco-grid reveal reveal-delay-1">
+      <div class="eco-chip"><div class="eco-chip-dot"></div>Openclaw</div>
+      <div class="eco-chip"><div class="eco-chip-dot"></div>WorkBuddy</div>
+      <div class="eco-chip"><div class="eco-chip-dot"></div>JVS</div>
+      <div class="eco-chip"><div class="eco-chip-dot"></div>Qclaw</div>
+      <div class="eco-chip"><div class="eco-chip-dot"></div>Arkclaw</div>
+      <div class="eco-chip"><div class="eco-chip-dot"></div>Qoder</div>
+      <div class="eco-chip"><div class="eco-chip-dot"></div>Gemini CLI</div>
+      <div class="eco-chip"><div class="eco-chip-dot"></div>Claude Code</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="footer">
+  <div class="footer-logo">汉克<span>·</span>HANK</div>
+  <p>多身份创业者 · 社区架构师 · 私域操盘手</p>
+  <div class="footer-divider"></div>
+  <p>无锡 / 苏州 / 北京</p>
+  <p style="margin-top: 1rem; opacity: 0.4;">&copy; 2026 Hank. All rights reserved.</p>
+</footer>
+
+<script>
+// ===== Nav scroll effect =====
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 60) nav.classList.add('scrolled');
+  else nav.classList.remove('scrolled');
+});
+
+// ===== Reveal animation =====
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// ===== Project tabs =====
+const tabBtns = document.querySelectorAll('.tab-btn');
+const projectItems = document.querySelectorAll('.project-item');
+
+tabBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    tabBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const cat = btn.dataset.cat;
+    projectItems.forEach(item => {
+      if (cat === 'all' || item.dataset.cat === cat) {
+        item.style.display = 'flex';
+        item.style.animation = 'fadeIn 0.4s ease';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  });
+});
+
+// Add fade-in keyframe
+const style = document.createElement('style');
+style.textContent = `@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }`;
+document.head.appendChild(style);
+</script>
+
+</body>
+</html>
