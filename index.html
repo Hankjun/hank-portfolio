@@ -212,6 +212,15 @@
 
 
 /* HANK shop SKU catalog */
+.shop-cover-illustration,.shop-cover-title,.shop-cover-cn{display:block}
+.shop-card-spec{margin:13px 0 0;font-size:11px;line-height:1.75;color:#61716e}
+.shop-card-spec>div{display:grid;grid-template-columns:28px minmax(0,1fr);gap:8px;margin:5px 0}
+.shop-card-spec dt{color:#74837d}.shop-card-spec dd{margin:0;overflow-wrap:anywhere}
+.shop-card-spec>div:last-child dd{color:#a6503d;font-weight:650}
+.shop-card-contents{margin-top:12px;font-size:11px;line-height:1.8;color:#536c66}
+.shop-card-contents summary{cursor:pointer;text-decoration:underline;text-underline-offset:4px}
+.shop-card-contents ul{padding-left:18px;margin:8px 0}
+
 .shop-item-sku{margin:12px 0 0;color:#9e5945;font:750 10px/1.5 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.1em}
 .shop-item-sku+.shop-item-name{margin-top:5px}
 .shop-sku-spec{border-top:1px solid #c8cec3;border-bottom:1px solid #c8cec3;margin:20px 0}
@@ -292,14 +301,14 @@
   <div class="shop-overline"><span>03 / HANK'S LITTLE SHOP</span><span>IDEAS → OBJECTS → USEFUL THINGS</span></div>
   <div class="shop-head">
    <div><div class="shop-nameplate"><span class="shop-nameplate-mark">h.</span> OPEN SHELF / 汉克小铺</div>
-    <h2 class="serif" id="shopTitle">一些想法，<br/><em>整理成 12 件小产品。</em></h2>
+    <h2 class="serif" id="shopTitle">一些想法，<br/><em>整理成 8 件小产品。</em></h2>
    </div>
-   <div class="shop-aside"><p>先从 12 款商品实例开始。每件都有独立 SKU、统一封皮、商品规格、适用人群与示意价格，可以从一个小产品开始认识汉克的工作方法。</p>
+   <div class="shop-aside"><p>先从 8 款商品实例开始。每件都有独立 SKU、统一封皮、商品规格、适用人群与示意价格，可以从一个小产品开始认识汉克的工作方法。</p>
     <button class="shop-cart-button" id="shopCartOpen" type="button" aria-label="打开小铺选购清单">我的选购清单 <span id="shopCartCount" aria-live="polite">0</span> ↗</button>
    </div>
   </div>
   <div class="shop-filters" role="group" aria-label="按商品类型筛选">
-   <button class="shop-filter is-active" type="button" data-kind="全部" aria-pressed="true">全部 SKU（12）</button>
+   <button class="shop-filter is-active" type="button" data-kind="全部" aria-pressed="true">全部 SKU（8）</button>
    <button class="shop-filter" type="button" data-kind="付费专栏" aria-pressed="false">付费专栏</button>
    <button class="shop-filter" type="button" data-kind="知识库" aria-pressed="false">知识库</button>
    <button class="shop-filter" type="button" data-kind="技能包" aria-pressed="false">技能包</button>
@@ -308,8 +317,8 @@
   </div>
   <div class="shop-grid" id="shopGrid" aria-live="polite"></div>
   <div class="shop-after">
-   <div><span class="shop-index">SHELF 01 / 2026 · 12 SKUs / 5 CATEGORIES</span><p>不同类型的东西，放在同一个货架。<br/>想独立购买，也可以组合成适合自己的工具箱。</p></div>
-   <p class="shop-availability"><strong>关于价格与购买：</strong>当前展示的是<strong>12 款示例 SKU</strong>。商品文件及交付条款尚需制作或核验，所有标价均为示意价格而非最终售价。微信支付与自动交付尚未接入，当前不能直接付款。</p>
+   <div><span class="shop-index">SHELF 01 / 2026 · 8 SKUs / 5 CATEGORIES</span><p>不同类型的东西，放在同一个货架。<br/>想独立购买，也可以组合成适合自己的工具箱。</p></div>
+   <p class="shop-availability"><strong>关于价格与购买：</strong>当前展示的是<strong>8 款示例 SKU</strong>。商品文件及交付条款尚需制作或核验，所有标价均为示意价格而非最终售价。微信优先：计划先人工确认收款与交付，后续接入商户支付与自动交付。当前未配置商户、收款入口与交付内容，未开售，不能直接付款。</p>
   </div>
  </div>
 </section>
@@ -468,7 +477,7 @@
 </script>
 <script>
 
-(function(){
+(async function(){
   'use strict';
   // Product catalog can be replaced item by item after content, final prices,
   // delivery terms and merchant-hosted payment URLs have been confirmed.
@@ -478,8 +487,18 @@
       const res=await fetch(new URL('shop-skus.json',document.baseURI),{cache:'no-cache'});
       if(!res.ok)throw new Error('SKU HTTP '+res.status);
       const data=await res.json();
-      if(!Array.isArray(data)||data.length!==12||data.some(p=>!p.sku||!p.id||!p.category))throw new Error('Invalid SKU catalog');
-      return data;
+      const categories={'资料包':'DAT','技能包':'KIT','工作流':'FLW','知识库':'KNB','付费专栏':'SER'};
+      const themes=['ember','ink','ochre','sage','linen','wine','night','blue'];
+      const fields=['id','sku','category','name','en','coverCN','desc','audience','format','scope','version','edition','status','delivery'];
+      if(!Array.isArray(data)||!data.length||data.some(p=>!p||
+        fields.some(k=>typeof p[k]!=='string'||!p[k].trim())||
+        !categories[p.category]||!new RegExp('^HKS-'+categories[p.category]+'-[0-9]{3}$').test(p.sku)||
+        !themes.includes(p.theme)||typeof p.listed!=='boolean'||
+        !Number.isFinite(p.price)||p.price<0||!Array.isArray(p.contents)||!p.contents.length||
+        p.contents.some(x=>typeof x!=='string'||!x.trim())||p.paymentUrl!==null)||
+        new Set(data.map(p=>p.id)).size!==data.length||new Set(data.map(p=>p.sku)).size!==data.length)
+        throw new Error('Invalid SKU catalog');
+      return data.filter(p=>p.listed);
     }catch(e){
       console.error('SKU catalog load error:',e);
       const el=document.querySelector('#shopGrid');
@@ -489,6 +508,8 @@
   })();
     // Source of truth: shop-skus.json; payment is deliberately disabled.
   const $=(sel,root=document)=>root.querySelector(sel), $$=(sel,root=document)=>Array.from(root.querySelectorAll(sel));
+  if(!products.length)return;
+  $('[data-kind="全部"]').textContent='全部 SKU（'+products.length+'）';
   let activeKind='全部';
   let cart=[];
   try{const saved=JSON.parse(localStorage.getItem('hank-shop-interest-v1')||'[]');if(Array.isArray(saved))cart=saved.filter(id=>products.some(p=>p.id===id));}catch(_){}
@@ -510,6 +531,8 @@
       '<button class="shop-item-cover" type="button" data-shop-detail="'+esc(p.id)+'" aria-label="查看 '+esc(p.name)+' 商品详情">'+cover(p)+'</button>'+
       '<div class="shop-item-meta"><div class="shop-item-type"><span>'+esc(p.category)+'</span><span>EXAMPLE SKU / 2026</span></div>'+
       '<div class="shop-item-sku">'+esc(p.sku)+'</div><h3 class="shop-item-name">'+esc(p.name)+'</h3><p class="shop-item-desc">'+esc(p.desc)+'</p>'+
+      '<dl class="shop-card-spec"><div><dt>版本</dt><dd>'+esc(p.version)+'</dd></div><div><dt>交付</dt><dd>'+esc(p.delivery)+'</dd></div><div><dt>状态</dt><dd>'+esc(p.status)+'</dd></div></dl>'+
+      '<details class="shop-card-contents"><summary>拟含 '+p.contents.length+' 项内容</summary><ul>'+p.contents.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul></details>'+
       '<div class="shop-item-bottom"><div class="shop-item-price"><strong>'+money(p.price)+'</strong><small>示意价</small></div>'+
       '<div class="shop-item-actions"><button type="button" data-shop-detail="'+esc(p.id)+'" aria-label="查看 '+esc(p.name)+' 详情">↗</button>'+
       '<button type="button" data-shop-add="'+esc(p.id)+'" aria-label="'+(selected?'从选购清单移除 ':'加入选购清单 ')+esc(p.name)+'" aria-pressed="'+selected+'">'+(selected?'✓':'+')+'</button></div></div></div></article>';
@@ -527,10 +550,10 @@
     $('#shopDetailContent').innerHTML='<div class="shop-detail-layout"><div><div class="shop-item-cover" aria-hidden="true">'+cover(p)+'</div></div>'+
        '<div class="shop-detail-copy"><span class="shop-detail-kicker">'+esc(p.sku)+' / '+esc(p.category)+'</span>'+
        '<h2 class="serif" id="shopDetailTitle">'+esc(p.name)+'</h2><p>'+esc(p.desc)+'</p>'+
-       '<dl class="shop-sku-spec"><div><dt>SKU</dt><dd>'+esc(p.sku)+'</dd></div><div><dt>适用人群</dt><dd>'+esc(p.audience)+'</dd></div><div><dt>计划交付格式</dt><dd>'+esc(p.format)+'</dd></div><div><dt>版本</dt><dd>'+esc(p.version)+'</dd></div><div><dt>产品范围</dt><dd>'+esc(p.scope)+'</dd></div><div><dt>当前状态</dt><dd>'+esc(p.status)+'</dd></div></dl><h3>拟包含的内容</h3><ul>'+p.contents.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>'+
+       '<dl class="shop-sku-spec"><div><dt>SKU</dt><dd>'+esc(p.sku)+'</dd></div><div><dt>类别</dt><dd>'+esc(p.category)+'</dd></div><div><dt>适用人群</dt><dd>'+esc(p.audience)+'</dd></div><div><dt>计划交付格式</dt><dd>'+esc(p.format)+'</dd></div><div><dt>交付方式</dt><dd>'+esc(p.delivery)+'</dd></div><div><dt>版本</dt><dd>'+esc(p.version)+'</dd></div><div><dt>产品范围</dt><dd>'+esc(p.scope)+'</dd></div><div><dt>当前状态</dt><dd>'+esc(p.status)+'</dd></div></dl><h3>拟包含的内容</h3><ul>'+p.contents.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>'+
        '<div class="shop-detail-price">'+money(p.price)+' <small>示意价 · 待确认</small></div>'+
        '<button class="shop-add-button" type="button" data-shop-add="'+esc(p.id)+'">'+(cart.includes(p.id)?'移出选购清单':'加入我的选购清单')+' ↗</button>'+
-       '<p class="shop-detail-disclaimer">此 SKU 为产品实例，实际文件、交付条件与正式售价待确认。微信收款尚未接入。</p></div></div>';
+       '<p class="shop-detail-disclaimer">此 SKU 为产品实例，实际文件、交付条件与正式售价待确认。微信优先规划：先人工确认收款与交付，后续接入商户支付与自动交付。当前未开售，无法付款。</p></div></div>';
     openDialog(detail);
   }
   function renderCart(){
@@ -547,10 +570,10 @@
     const list=cart.map(find).filter(Boolean);
     if(!list.length)return null;
     return ['HANK / 汉克小铺 · 购买意向清单','（当前为商品概念与示意价格，非正式订单）','────────────────────',
-      ...list.map((p,i)=>(i+1)+'. '+p.sku+' / '+p.name+' / '+p.category+' / '+money(p.price)),
+      ...list.map((p,i)=>(i+1)+'. '+p.sku+' / '+p.name+' / '+p.category+' / '+money(p.price)+'（示意价） / '+p.version+' / '+p.status+' / '+p.delivery),
       '────────────────────','示意价格合计：'+money(list.reduce((n,p)=>n+p.price,0)),
       '','请与汉克进一步确认：正式售价、具体内容、付款方式、交付时间和售后安排。',
-      '当前网站尚未接入支付和商品交付系统，以上清单不会自动发送。'].join('\n');
+      '微信优先支付仍在规划中，当前未开售且无法付款。以上清单仅供咨询，不会自动发送。'].join('\n');
   }
   function download(txt){
     const blob=new Blob(['\uFEFF'+txt],{type:'text/plain;charset=utf-8'});

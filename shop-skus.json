@@ -19,8 +19,10 @@
     ],
     "version": "2026 · V0.1（筹备）",
     "edition": "DATA / 01",
-    "status": "示例上架 · 待交付",
-    "paymentUrl": null
+    "status": "示例上架 · 未开售",
+    "paymentUrl": null,
+    "listed": true,
+    "delivery": "计划人工发送文件或下载链接；文件与交付时间待确认"
   },
   {
     "id": "opc-fieldmap",
@@ -42,31 +44,10 @@
     ],
     "version": "2026 · V0.1（筹备）",
     "edition": "DATA / 02",
-    "status": "示例上架 · 待交付",
-    "paymentUrl": null
-  },
-  {
-    "id": "agent-eval",
-    "sku": "HKS-DAT-003",
-    "category": "资料包",
-    "name": "AI Agent 选型评估表",
-    "en": "PICK / AGENT",
-    "coverCN": "效率 成本 交付率",
-    "price": 69,
-    "theme": "blue",
-    "desc": "对任务完成率、推理效率和单位结果成本进行结构化比较。",
-    "audience": "FDE、部门主管、方案师",
-    "format": "XLSX 评分表 + PDF 指南（拟）",
-    "scope": "评估工具；不保证工具性能",
-    "contents": [
-      "任务完成质量评分",
-      "单位结果成本测算",
-      "试用对照与复盘表"
-    ],
-    "version": "2026 · V0.1（筹备）",
-    "edition": "DATA / 03",
-    "status": "示例上架 · 待交付",
-    "paymentUrl": null
+    "status": "示例上架 · 未开售",
+    "paymentUrl": null,
+    "listed": true,
+    "delivery": "计划人工发送文件或下载链接；文件与交付时间待确认"
   },
   {
     "id": "agent-worker",
@@ -88,54 +69,10 @@
     ],
     "version": "2026 · V0.1（筹备）",
     "edition": "KIT / 01",
-    "status": "示例上架 · 待交付",
-    "paymentUrl": null
-  },
-  {
-    "id": "service-card",
-    "sku": "HKS-KIT-002",
-    "category": "技能包",
-    "name": "Work 服务产品化卡片包",
-    "en": "WORK / CARDS",
-    "coverCN": "能力变成服务单品",
-    "price": 79,
-    "theme": "linen",
-    "desc": "把专业能力打包成可组合、可报价的工作单元。",
-    "audience": "顾问、设计师、自由职业者",
-    "format": "可编辑卡片 + 实例（拟）",
-    "scope": "模板产品，不含咨询",
-    "contents": [
-      "Work 服务定义卡",
-      "范围与交付清单",
-      "Work → Worker → Outcome 示例"
-    ],
-    "version": "2026 · V0.1（筹备）",
-    "edition": "KIT / 02",
-    "status": "示例上架 · 待交付",
-    "paymentUrl": null
-  },
-  {
-    "id": "outcome-quote",
-    "sku": "HKS-KIT-003",
-    "category": "技能包",
-    "name": "Outcome 结果交付报价模板",
-    "en": "SELL / RESULTS",
-    "coverCN": "结果定价与验收",
-    "price": 89,
-    "theme": "sage",
-    "desc": "从工时清单切换到交付物和验收的报价表达。",
-    "audience": "独立服务者、项目负责人",
-    "format": "报价表 + 交付清单（拟）",
-    "scope": "通用业务模板；不构成法律意见",
-    "contents": [
-      "结果计价表",
-      "里程碑验收卡",
-      "范围变更提醒"
-    ],
-    "version": "2026 · V0.1（筹备）",
-    "edition": "KIT / 03",
-    "status": "示例上架 · 待交付",
-    "paymentUrl": null
+    "status": "示例上架 · 未开售",
+    "paymentUrl": null,
+    "listed": true,
+    "delivery": "计划人工发送模板、提示词与使用说明；交付时间待确认"
   },
   {
     "id": "dly-diagnostic",
@@ -157,8 +94,10 @@
     ],
     "version": "2026 · V0.1（筹备）",
     "edition": "FLOW / 01",
-    "status": "示例上架 · 待交付",
-    "paymentUrl": null
+    "status": "示例上架 · 未开售",
+    "paymentUrl": null,
+    "listed": true,
+    "delivery": "计划人工发送流程文件、任务模板与教程；交付时间待确认"
   },
   {
     "id": "content-line",
@@ -180,8 +119,10 @@
     ],
     "version": "2026 · V0.1（筹备）",
     "edition": "FLOW / 02",
-    "status": "示例上架 · 待交付",
-    "paymentUrl": null
+    "status": "示例上架 · 未开售",
+    "paymentUrl": null,
+    "listed": true,
+    "delivery": "计划人工发送流程文件、任务模板与教程；交付时间待确认"
   },
   {
     "id": "knowledge-seed",
@@ -203,31 +144,10 @@
     ],
     "version": "2026 · V0.1（筹备）",
     "edition": "BASE / 01",
-    "status": "示例上架 · 待交付",
-    "paymentUrl": null
-  },
-  {
-    "id": "france-arts",
-    "sku": "HKS-KNB-002",
-    "category": "知识库",
-    "name": "法国艺术教育渠道研究库",
-    "en": "ART / FRANCE",
-    "coverCN": "院校与渠道观察",
-    "price": 89,
-    "theme": "blue",
-    "desc": "帮助系统梳理法国艺术教育与中国区渠道信息。",
-    "audience": "留学顾问、渠道合作人员",
-    "format": "索引表 + 调研模板（拟）",
-    "scope": "研究工具，不保证录取或合作",
-    "contents": [
-      "院校信息字段",
-      "渠道筛选框架",
-      "跟进记录模板"
-    ],
-    "version": "2026 · V0.1（筹备）",
-    "edition": "BASE / 02",
-    "status": "示例上架 · 待交付",
-    "paymentUrl": null
+    "status": "示例上架 · 未开售",
+    "paymentUrl": null,
+    "listed": true,
+    "delivery": "计划人工提供知识库资料包；在线访问权限与更新规则待确认"
   },
   {
     "id": "solution-notes",
@@ -249,8 +169,110 @@
     ],
     "version": "2026 · V0.1（筹备）",
     "edition": "SERIES / 01",
-    "status": "示例上架 · 待交付",
-    "paymentUrl": null
+    "status": "示例上架 · 未开售",
+    "paymentUrl": null,
+    "listed": true,
+    "delivery": "计划人工提供图文内容或阅读入口；内容范围与更新规则待确认"
+  },
+  {
+    "id": "france-arts",
+    "sku": "HKS-KNB-002",
+    "category": "知识库",
+    "name": "法国艺术教育渠道研究库",
+    "en": "ART / FRANCE",
+    "coverCN": "院校与渠道观察",
+    "price": 89,
+    "theme": "blue",
+    "desc": "帮助系统梳理法国艺术教育与中国区渠道信息。",
+    "audience": "留学顾问、渠道合作人员",
+    "format": "索引表 + 调研模板（拟）",
+    "scope": "研究工具，不保证录取或合作",
+    "contents": [
+      "院校信息字段",
+      "渠道筛选框架",
+      "跟进记录模板"
+    ],
+    "version": "2026 · V0.1（筹备）",
+    "edition": "BASE / 02",
+    "status": "示例上架 · 未开售",
+    "paymentUrl": null,
+    "listed": true,
+    "delivery": "计划人工提供知识库资料包；在线访问权限与更新规则待确认"
+  },
+  {
+    "id": "agent-eval",
+    "sku": "HKS-DAT-003",
+    "category": "资料包",
+    "name": "AI Agent 选型评估表",
+    "en": "PICK / AGENT",
+    "coverCN": "效率 成本 交付率",
+    "price": 69,
+    "theme": "blue",
+    "desc": "对任务完成率、推理效率和单位结果成本进行结构化比较。",
+    "audience": "FDE、部门主管、方案师",
+    "format": "XLSX 评分表 + PDF 指南（拟）",
+    "scope": "评估工具；不保证工具性能",
+    "contents": [
+      "任务完成质量评分",
+      "单位结果成本测算",
+      "试用对照与复盘表"
+    ],
+    "version": "2026 · V0.1（筹备）",
+    "edition": "DATA / 03",
+    "status": "草稿 · 未展示",
+    "paymentUrl": null,
+    "listed": false,
+    "delivery": "计划人工发送文件或下载链接；文件与交付时间待确认"
+  },
+  {
+    "id": "service-card",
+    "sku": "HKS-KIT-002",
+    "category": "技能包",
+    "name": "Work 服务产品化卡片包",
+    "en": "WORK / CARDS",
+    "coverCN": "能力变成服务单品",
+    "price": 79,
+    "theme": "linen",
+    "desc": "把专业能力打包成可组合、可报价的工作单元。",
+    "audience": "顾问、设计师、自由职业者",
+    "format": "可编辑卡片 + 实例（拟）",
+    "scope": "模板产品，不含咨询",
+    "contents": [
+      "Work 服务定义卡",
+      "范围与交付清单",
+      "Work → Worker → Outcome 示例"
+    ],
+    "version": "2026 · V0.1（筹备）",
+    "edition": "KIT / 02",
+    "status": "草稿 · 未展示",
+    "paymentUrl": null,
+    "listed": false,
+    "delivery": "计划人工发送模板、提示词与使用说明；交付时间待确认"
+  },
+  {
+    "id": "outcome-quote",
+    "sku": "HKS-KIT-003",
+    "category": "技能包",
+    "name": "Outcome 结果交付报价模板",
+    "en": "SELL / RESULTS",
+    "coverCN": "结果定价与验收",
+    "price": 89,
+    "theme": "sage",
+    "desc": "从工时清单切换到交付物和验收的报价表达。",
+    "audience": "独立服务者、项目负责人",
+    "format": "报价表 + 交付清单（拟）",
+    "scope": "通用业务模板；不构成法律意见",
+    "contents": [
+      "结果计价表",
+      "里程碑验收卡",
+      "范围变更提醒"
+    ],
+    "version": "2026 · V0.1（筹备）",
+    "edition": "KIT / 03",
+    "status": "草稿 · 未展示",
+    "paymentUrl": null,
+    "listed": false,
+    "delivery": "计划人工发送模板、提示词与使用说明；交付时间待确认"
   },
   {
     "id": "ai-600hours",
@@ -272,7 +294,9 @@
     ],
     "version": "2026 · V0.1（筹备）",
     "edition": "SERIES / 02",
-    "status": "示例上架 · 待交付",
-    "paymentUrl": null
+    "status": "草稿 · 未展示",
+    "paymentUrl": null,
+    "listed": false,
+    "delivery": "计划人工提供图文内容或阅读入口；内容范围与更新规则待确认"
   }
 ]
