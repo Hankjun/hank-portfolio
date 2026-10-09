@@ -29,7 +29,7 @@
 .delivery-wrap{background:#e5e8df;padding:clamp(80px,9vw,130px) 0}.delivery-wrap .section-head{border-color:#b7c5bc}.delivery-intro{display:grid;grid-template-columns:1fr 1fr;align-items:end;gap:40px}.delivery-intro .section-title{margin-bottom:0}.delivery-intro .section-title em{color:var(--terracotta);font-style:normal}.delivery-intro p{font-size:15px;line-height:2;color:#5c6b69;max-width:530px;margin-left:auto}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:75px;border-top:1px solid #afbcb3;border-bottom:1px solid #afbcb3}.step{padding:26px 23px 38px;border-right:1px solid #afbcb3;min-height:250px}.step:first-child{padding-left:0}.step:last-child{border-right:0}.step small{color:var(--terracotta);font:800 11px ui-monospace,monospace}.step h3{font-size:27px;letter-spacing:-.04em;margin:31px 0 14px}.step h3 span{display:block;font:italic 21px Georgia,serif;color:#8b9992;margin-top:3px}.step p{font-size:13px;color:#64716a;line-height:1.85;max-width:225px}.statement-banner{display:flex;gap:30px;justify-content:space-between;align-items:center;margin-top:55px}.statement-banner strong{font:italic clamp(25px,3vw,43px) Georgia,serif;letter-spacing:-.05em}.statement-banner strong span{color:var(--terracotta)}.statement-banner small{color:#71817b;font-size:11px;text-align:right;line-height:1.8}
 /* contact */
 .contact-section{padding:clamp(80px,9vw,130px) 0;background:var(--paper)}.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(40px,8vw,135px)}.contact-copy h2{font-size:clamp(45px,6vw,85px);margin:40px 0 20px;line-height:1.23;letter-spacing:-.055em}.contact-copy h2 em{color:var(--terracotta);font-style:normal}.contact-copy p{line-height:2;color:var(--body);font-size:15px}.note{margin-top:66px;border-top:1px solid var(--stroke);padding-top:20px;font-size:12px;line-height:1.9;color:#71817c}.brief-form{background:var(--white);border:1px solid #d5d9d0;padding:clamp(24px,3vw,47px);box-shadow:13px 13px 0 #e7e9df}.form-caption{display:flex;align-items:center;justify-content:space-between;gap:15px;color:#84918a;font-size:10px;letter-spacing:.11em;font-weight:750}.brief-form h3{font-size:26px;letter-spacing:-.03em;margin:22px 0 33px}.field{margin-bottom:24px}.field label,.field legend{display:block;font-weight:750;font-size:12px;margin-bottom:10px}.field small{color:#90a09a;font-weight:400}.field textarea,.field input,.field select{width:100%;border:1px solid #ccd5cb;border-radius:0;background:#faf9f4;color:var(--ink);padding:14px 15px;font-size:13px;outline:none;transition:border-color .2s}.field textarea:focus,.field input:focus,.field select:focus{border-color:#54766a}.field textarea{min-height:125px;resize:vertical;line-height:1.8}.field textarea::placeholder,.field input::placeholder{color:#a2aca8}.goal-pills{display:flex;flex-wrap:wrap;gap:7px}.goal-pills label{display:flex;position:relative;cursor:pointer;margin:0}.goal-pills input{position:absolute;opacity:0;pointer-events:none}.goal-pills span{padding:10px 13px;background:#f6f5ee;border:1px solid #d7dcd2;font-size:12px;color:#64726b}.goal-pills input:checked+span{background:var(--ink);color:white;border-color:var(--ink)}.goal-pills input:focus-visible+span{outline:3px solid #c78b4f;outline-offset:2px}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:15px}.chosen-works{display:flex;flex-wrap:wrap;gap:7px;margin-top:5px}.chosen-chip{border:1px solid #cbdbb3;background:#edf5db;color:#45603a;padding:7px 10px;font-size:11px}.empty-chip{font-size:11px;color:#9aa89b}.form-note{font-size:11px;color:#7f8c84;line-height:1.8;margin:15px 0}.form-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.copy-secondary{background:none;border:1px solid #abb9b0;color:var(--ink);padding:16px 17px;font-size:12px;font-weight:650}.draft-preview{white-space:pre-wrap;overflow-wrap:anywhere;font:12px/1.85 ui-monospace,"PingFang SC",monospace;background:#f4f5ee;border-left:3px solid var(--terracotta);padding:18px;margin-top:23px;color:#374c49;max-height:300px;overflow:auto}.draft-preview[hidden]{display:none}.toast{position:fixed;z-index:100;bottom:24px;left:50%;transform:translate(-50%,25px);background:#193a31;color:white;padding:13px 21px;font-size:12px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;box-shadow:0 15px 35px #0002}.toast.show{opacity:1;transform:translate(-50%,0)}
-/* footer — personal brand → service discovery → project briefing */
+/* footer — personal brand, service discovery, project briefing */
 .footer{position:relative;isolation:isolate;overflow:hidden;background:#152c2e;color:#f7f4ec;padding:0}
 .footer:before{content:"";position:absolute;z-index:-1;inset:0;pointer-events:none;background:radial-gradient(ellipse at 94% 12%,rgba(233,141,88,.105),transparent 36%),radial-gradient(ellipse at 8% 94%,rgba(100,147,132,.09),transparent 36%)}
 .footer-eyebrow{display:flex;justify-content:space-between;gap:20px;align-items:center;padding:31px 0 0;color:#b0c1b8;font:600 10px/1.6 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.17em}
@@ -229,15 +229,54 @@
 .shop-sku-spec dt{font-weight:650;color:#829085}.shop-sku-spec dd{margin:0;color:#264841;font-weight:550;overflow-wrap:anywhere}
 .shop-load-error{grid-column:1/-1;padding:30px 0;color:#ad5744}
 @media(max-width:640px){.shop-sku-spec>div{grid-template-columns:78px minmax(0,1fr);gap:9px;font-size:11px}}
+
+/* HANK utility icons: editorial strokes with a terracotta point of origin. */
+.hank-icon-library{position:absolute;width:0;height:0;overflow:hidden;pointer-events:none}
+.hank-icon{display:inline-block;width:20px;height:20px;flex:none;vertical-align:middle;fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:square;stroke-linejoin:miter;pointer-events:none;transition:transform .2s ease}
+.icon-accent{fill:var(--terracotta);stroke:none}
+.arrow{display:inline-flex;line-height:1}.arrow .hank-icon{width:24px;height:24px}
+.header-cta,.hero-shop-link,.shop-talk-link,.shop-copy,.shop-export,.copy-secondary,.shop-add-button{display:inline-flex;align-items:center;gap:9px}
+.shop-talk-link{margin-top:18px}.shop-copy:disabled,.shop-export:disabled{opacity:.45;cursor:default}
+.mobile-menu .hank-icon{width:24px;height:24px}
+.footer-action-arrow .hank-icon{width:19px;height:19px}.footer-return>.hank-icon{width:25px;height:25px}
+.nav-shop .hank-icon,.footer-menu-group .hank-icon,.social-state .hank-icon{width:16px;height:16px}
+.project-symbol .hank-icon{width:.65em;height:.65em;margin-left:.12em}
+.shop-item-actions .hank-icon,.work-add .hank-icon{width:19px;height:19px}
+.shop-dialog-close .hank-icon{width:22px;height:22px}
+.work-add{display:grid;place-items:center}
+.shop-card-contents summary{list-style:none;display:flex;align-items:center;gap:5px}
+.shop-card-contents summary::-webkit-details-marker{display:none}
+.shop-card-contents summary .hank-icon{width:13px;height:13px}
+.shop-card-contents[open] summary .hank-icon{transform:rotate(90deg)}
+:is(a,button):hover>.icon-arrow-ne,:is(a,button):hover>.arrow>.icon-arrow-ne{transform:translate(2px,-2px)}
+:is(a,button):hover>.icon-arrow-se,:is(a,button):hover>.arrow>.icon-arrow-se{transform:translate(2px,2px)}
+:is(a,button):hover>.icon-arrow-up{transform:translateY(-2px)}
+.orbit-tag.a{left:14%;top:20%;transform:rotate(-6deg)}
+.field select{appearance:none;padding-right:43px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='m5 8 7 7 7-7' fill='none' stroke='%23183238' stroke-width='1.65'/%3E%3Ccircle cx='12' cy='15' r='1.65' fill='%23bf6044'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:18px}
+@media(prefers-reduced-motion:reduce){.hank-icon{transition:none}:is(a,button):hover .hank-icon{transform:none}}
+
 </style>
 </head>
 <body>
+<svg class="hank-icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><defs>
+<symbol id="hank-icon-arrow-ne" viewBox="0 0 24 24"><path d="M5 19 19 5M8 5h11v11"/><circle class="icon-accent" cx="5" cy="19" r="1.65"/></symbol>
+<symbol id="hank-icon-arrow-se" viewBox="0 0 24 24"><path d="m5 5 14 14M8 19h11V8"/><circle class="icon-accent" cx="5" cy="5" r="1.65"/></symbol>
+<symbol id="hank-icon-arrow-right" viewBox="0 0 24 24"><path d="M4 12h16m-7-7 7 7-7 7"/><circle class="icon-accent" cx="4" cy="12" r="1.65"/></symbol>
+<symbol id="hank-icon-arrow-up" viewBox="0 0 24 24"><path d="M12 20V4m-7 7 7-7 7 7"/><circle class="icon-accent" cx="12" cy="20" r="1.65"/></symbol>
+<symbol id="hank-icon-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/><circle class="icon-accent" cx="12" cy="12" r="1.65"/></symbol>
+<symbol id="hank-icon-check" viewBox="0 0 24 24"><path d="m4.5 12.5 5 5 10-11"/><circle class="icon-accent" cx="19.5" cy="6.5" r="1.65"/></symbol>
+<symbol id="hank-icon-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/><circle class="icon-accent" cx="18" cy="6" r="1.65"/></symbol>
+<symbol id="hank-icon-menu" viewBox="0 0 24 24"><path d="M5 6h14M5 12h10M5 18h14"/><circle class="icon-accent" cx="19" cy="12" r="1.65"/></symbol>
+<symbol id="hank-icon-chevron" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+<symbol id="hank-icon-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4"/><circle class="icon-accent" cx="12" cy="3" r="1.65"/></symbol>
+<symbol id="hank-icon-copy" viewBox="0 0 24 24"><path d="M8 8h12v12H8zM15 4H4v11"/><circle class="icon-accent" cx="4" cy="4" r="1.65"/></symbol>
+</defs></svg>
 <header class="site-header">
  <div class="container head-inner">
   <a class="brand" href="#top" aria-label="汉克，回到首页"><svg class="hank-logo hank-logo-header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 249" aria-hidden="true" focusable="false"><defs><linearGradient id="hank-sunset-nav" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#e99a46"/><stop offset="1" stop-color="#eb695a"/></linearGradient></defs><path d="M126 16 C188 16 237 65 237 127 L237 236 L126 236 C65 236 16 187 16 127 C16 65 65 16 126 16 Z" fill="url(#hank-sunset-nav)"/><path d="M100 206 L102 211 108 216 117 216 122 214 125 211 127 207 129 193 130 192 130 189 131 188 131 185 134 176 138 168 144 163 148 166 147 203 150 210 153 213 159 215 167 214 174 211 184 202 190 193 193 202 197 208 202 212 207 214 218 214 225 211 231 206 232 206 237 212 241 214 245 214 246 215 254 214 262 210 267 206 271 201 272 202 272 206 274 210 277 213 280 214 289 214 294 212 299 206 300 199 301 198 301 194 302 193 304 182 306 179 306 176 310 168 315 163 317 163 320 166 319 202 322 210 327 214 334 215 335 214 339 214 347 210 355 203 359 197 360 198 360 207 361 209 364 212 368 214 378 214 381 213 386 208 387 201 389 200 396 207 403 211 406 211 407 212 415 212 416 211 419 211 426 207 436 197 442 186 443 180 444 179 444 173 443 172 442 175 435 184 430 187 424 189 413 189 412 188 409 188 402 185 397 180 396 178 396 174 400 170 409 167 418 166 422 164 427 159 430 152 430 142 427 139 422 138 417 140 402 150 398 151 397 150 397 145 398 144 398 140 400 134 400 129 401 128 401 123 402 122 401 114 397 109 394 108 383 108 375 111 371 115 369 119 368 133 367 134 367 142 366 143 366 151 365 152 365 159 364 160 364 168 363 169 363 177 360 183 351 191 347 191 345 189 345 180 346 179 346 169 347 168 347 164 346 163 346 155 343 147 337 141 329 138 319 139 311 144 306 139 301 137 291 137 290 138 287 138 279 145 277 150 277 158 276 159 276 167 275 168 275 176 274 177 274 180 265 190 263 191 259 191 257 189 257 181 258 180 258 176 259 175 259 171 260 170 260 166 261 165 261 161 263 155 263 144 260 138 254 134 244 134 238 137 235 141 227 138 221 138 220 139 216 139 208 143 200 151 196 157 191 170 190 180 188 183 179 191 175 191 173 189 173 180 174 179 174 156 170 146 165 141 157 138 150 138 143 141 139 144 138 143 139 142 141 129 142 128 143 120 144 119 144 108 141 104 136 102 124 102 116 106 113 110 111 116 111 123 110 124 110 131 109 132 109 137 108 138 108 145 107 146 107 153 106 154 106 161 105 162 105 168 104 169 104 176 103 177 103 184 102 185 102 192 101 193 Z M230 159 L233 162 233 165 234 166 233 176 232 177 231 183 225 192 222 194 217 194 214 191 213 188 213 181 214 180 215 172 218 166 225 159 Z" fill="#1a343a" fill-rule="evenodd" stroke="#f5f2eb" stroke-width="9" stroke-linejoin="round" paint-order="stroke fill"/></svg><span class="brand-sub">汉克 / 方案师</span></a>
-  <nav class="nav" id="mainNav" aria-label="主导航"><a href="#about">认识汉克</a><a href="#services">发现服务</a><a href="#shop" class="nav-shop">汉克小铺 <span aria-hidden="true">↗</span></a><a href="#projects">项目实践</a><a href="#delivery">交付方式</a></nav>
-  <a href="#contact" class="header-cta">谈谈你的问题 ↗</a>
-  <button class="mobile-menu" id="menuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="展开菜单">☰</button>
+  <nav class="nav" id="mainNav" aria-label="主导航"><a href="#about">认识汉克</a><a href="#services">发现服务</a><a href="#shop" class="nav-shop">汉克小铺 <span aria-hidden="true"><svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></span></a><a href="#projects">项目实践</a><a href="#delivery">交付方式</a></nav>
+  <a href="#contact" class="header-cta">谈谈你的问题 <svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></a>
+  <button class="mobile-menu" id="menuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="展开菜单"><svg class="hank-icon icon-menu" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-menu"/></svg></button>
  </div>
  <div class="read-progress" id="readProgress"></div>
 </header>
@@ -247,7 +286,7 @@
   <div class="eyebrow">HANK / HUMAN-FIRST SOLUTION ARCHITECT</div>
   <h1 class="serif" id="heroTitle">以我为<span>界面</span>，<br/>让事情发生。</h1>
   <p class="hero-lead">你好，我是汉克，一名方案师。<br/>我站在真实问题的最前端，理解需求、设计方案、连接人才与 AI，再把复杂的工作组织成可以交付的结果。</p>
-  <div class="hero-actions"><a class="btn" href="#about">先认识我 <span class="arrow">↗</span></a><a class="link-line" href="#services">直接探索服务 <span class="arrow">↘</span></a><a class="hero-shop-link" href="#shop">逛逛汉克小铺 ↗</a></div>
+  <div class="hero-actions"><a class="btn" href="#about">先认识我 <span class="arrow"><svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></span></a><a class="link-line" href="#services">直接探索服务 <span class="arrow"><svg class="hank-icon icon-arrow-se" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-se"/></svg></span></a><a class="hero-shop-link" href="#shop">逛逛汉克小铺 <svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></a></div>
   <div class="micro">一个人作为入口，一张网络共同完成。</div>
  </div>
  <div class="hero-art" role="img" aria-label="代表汉克个人品牌的 H 字母和环绕其间的研究、设计、连接、交付能力的抽象视觉图形">
@@ -262,49 +301,49 @@
 </div></section>
 <section class="big-section" id="about"><div class="container">
  <div class="section-head"><span class="left">01 / ABOUT HANK</span><span>一个人的工作方式</span></div>
- <div class="intro-layout"><div class="intro-left"><div class="intro-marker">H.</div><p>独立方案师<br/>AI 原生服务探索者<br/>大鲤鱼超级工作站主理方向</p></div>
+ <div class="intro-layout"><div class="intro-left"><div class="intro-marker">H.</div><p>独立方案师<br/>AI 原生服务探索者<br/>大鲤鱼超级工作站主理人</p></div>
  <div><h2 class="intro-copy serif">我不想把自己定义为<br/>某个工具、职位或行业。<br/><em>我希望成为解决问题的入口。</em></h2>
  <p class="intro-detail">过去的项目涉及产业技术、品牌视觉、会展供应链、科创服务、教育合作与 AI 智能体。表面上，它们属于不同的行业；对我而言，它们有同一条主线：理解复杂现实，把分散的人、信息和资源组织成一套有效的方案。</p>
  <p class="intro-detail">我把个人判断放在前端，把 AI、专业伙伴和执行系统放在身后。客户无需先懂技术，也不用先知道该找哪种服务——我们先把问题说清楚。</p>
  <div class="capabilities"><div><b>理解问题</b><small>商业洞察 · 需求诊断<br/>目标与约束</small></div><div><b>设计方案</b><small>系统思考 · 服务组合<br/>计划与路径</small></div><div><b>组织交付</b><small>AI · 专业协作<br/>执行与复盘</small></div></div>
  </div></div>
 </div></section>
-<div class="bridge"><div class="container bridge-inner"><p>“我的价值，不是我一个人会做多少件事，<br/>而是我能让多少件<em>正确的事</em>发生。”</p><a class="link-line" href="#services">进入服务发现 <span class="arrow">↗</span></a></div></div>
+<div class="bridge"><div class="container bridge-inner"><p>“我的价值，不是我一个人会做多少件事，<br/>而是我能让多少件<em>正确的事</em>发生。”</p><a class="link-line" href="#services">进入服务发现 <span class="arrow"><svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></span></a></div></div>
 <section class="service-wrap" id="services"><div class="container">
  <div class="section-head"><span class="left">02 / SERVICE DISCOVERY</span><span>HANK WORK INDEX · V1.0</span></div>
  <div class="service-lead"><div><h2 class="section-title">MAKE<br/>IT <em>WORK.</em></h2><p class="service-description">不必先选择一家供应商，也不必先决定使用什么 AI。告诉我你想完成什么工作。每一项 Work 都可以独立交付，也可以组合成一个完整项目。</p></div><div class="service-aside">From needs<br/>to <em>possibilities.</em></div></div>
  <div class="filters" role="group" aria-label="按工作类型筛选"><button class="filter-btn" data-filter="all" aria-pressed="true">全部服务 <span>16</span></button><button class="filter-btn" data-filter="insight" aria-pressed="false">研究与判断</button><button class="filter-btn" data-filter="create" aria-pressed="false">内容与设计</button><button class="filter-btn" data-filter="system" aria-pressed="false">数字与运营</button><button class="filter-btn" data-filter="delivery" aria-pressed="false">连接与执行</button></div>
  <div class="work-grid" id="workGrid">
-  <article class="work-card" data-group="insight" data-name="Brainwork"><div class="work-top"><small>01 / INSIGHT</small><button class="work-add" type="button" aria-label="添加 Brainwork" aria-pressed="false">+</button></div><h3>Brainwork</h3><p>商业判断、策略制定、方案架构</p><div class="work-bottom">思考与决策</div></article>
-  <article class="work-card" data-group="insight" data-name="Researchwork"><div class="work-top"><small>02 / INSIGHT</small><button class="work-add" type="button" aria-label="添加 Researchwork" aria-pressed="false">+</button></div><h3>Researchwork</h3><p>行业调研、竞品分析、机会识别</p><div class="work-bottom">调研与研究</div></article>
-  <article class="work-card" data-group="insight" data-name="Datawork"><div class="work-top"><small>03 / INSIGHT</small><button class="work-add" type="button" aria-label="添加 Datawork" aria-pressed="false">+</button></div><h3>Datawork</h3><p>数据整理、商业分析、可视化</p><div class="work-bottom">数据与分析</div></article>
-  <article class="work-card" data-group="insight" data-name="Knowledgework"><div class="work-top"><small>04 / INSIGHT</small><button class="work-add" type="button" aria-label="添加 Knowledgework" aria-pressed="false">+</button></div><h3>Knowledgework</h3><p>知识组织、知识库、智能问答</p><div class="work-bottom">知识管理</div></article>
-  <article class="work-card" data-group="create" data-name="Designwork"><div class="work-top"><small>05 / CREATE</small><button class="work-add" type="button" aria-label="添加 Designwork" aria-pressed="false">+</button></div><h3>Designwork</h3><p>品牌视觉、界面体验、设计系统</p><div class="work-bottom">创意与设计</div></article>
-  <article class="work-card" data-group="create" data-name="Contentwork"><div class="work-top"><small>06 / CREATE</small><button class="work-add" type="button" aria-label="添加 Contentwork" aria-pressed="false">+</button></div><h3>Contentwork</h3><p>内容策略、写作、脚本与策划</p><div class="work-bottom">内容与表达</div></article>
-  <article class="work-card" data-group="create" data-name="Mediawork"><div class="work-top"><small>07 / CREATE</small><button class="work-add" type="button" aria-label="添加 Mediawork" aria-pressed="false">+</button></div><h3>Mediawork</h3><p>图片、视频、传播物料与内容制作</p><div class="work-bottom">多媒体制作</div></article>
-  <article class="work-card" data-group="create" data-name="Paperwork"><div class="work-top"><small>08 / CREATE</small><button class="work-add" type="button" aria-label="添加 Paperwork" aria-pressed="false">+</button></div><h3>Paperwork</h3><p>报告、提案、表格与商务文书</p><div class="work-bottom">文书与文档</div></article>
-  <article class="work-card" data-group="system" data-name="Codework"><div class="work-top"><small>09 / SYSTEM</small><button class="work-add" type="button" aria-label="添加 Codework" aria-pressed="false">+</button></div><h3>Codework</h3><p>网站、应用、轻量软件与工具</p><div class="work-bottom">数字产品开发</div></article>
-  <article class="work-card" data-group="system" data-name="AIwork"><div class="work-top"><small>10 / SYSTEM</small><button class="work-add" type="button" aria-label="添加 AIwork" aria-pressed="false">+</button></div><h3>AIwork</h3><p>AI 智能体、数字员工、自动化方案</p><div class="work-bottom">AI 能力建设</div></article>
-  <article class="work-card" data-group="system" data-name="Opswork"><div class="work-top"><small>11 / SYSTEM</small><button class="work-add" type="button" aria-label="添加 Opswork" aria-pressed="false">+</button></div><h3>Opswork</h3><p>流程优化、业务运营、日常执行</p><div class="work-bottom">运营与流程</div></article>
-  <article class="work-card" data-group="delivery" data-name="Network"><div class="work-top"><small>12 / CONNECT</small><button class="work-add" type="button" aria-label="添加 Network" aria-pressed="false">+</button></div><h3>Network</h3><p>资源匹配、渠道拓展、合作连接</p><div class="work-bottom">资源与连接</div></article>
-  <article class="work-card" data-group="delivery" data-name="Saleswork"><div class="work-top"><small>13 / DELIVER</small><button class="work-add" type="button" aria-label="添加 Saleswork" aria-pressed="false">+</button></div><h3>Saleswork</h3><p>销售支持、客户开发、商务转化</p><div class="work-bottom">销售与商务</div></article>
-  <article class="work-card" data-group="delivery" data-name="Growthwork"><div class="work-top"><small>14 / DELIVER</small><button class="work-add" type="button" aria-label="添加 Growthwork" aria-pressed="false">+</button></div><h3>Growthwork</h3><p>用户增长、获客与转化实验</p><div class="work-bottom">增长与获客</div></article>
-  <article class="work-card" data-group="delivery" data-name="Fieldwork"><div class="work-top"><small>15 / DELIVER</small><button class="work-add" type="button" aria-label="添加 Fieldwork" aria-pressed="false">+</button></div><h3>Fieldwork</h3><p>线下活动、现场调研、项目落地</p><div class="work-bottom">现场与执行</div></article>
-  <article class="work-card" data-group="delivery" data-name="Teamwork"><div class="work-top"><small>16 / DELIVER</small><button class="work-add" type="button" aria-label="添加 Teamwork" aria-pressed="false">+</button></div><h3>Teamwork</h3><p>团队协作、项目组织、资源调度</p><div class="work-bottom">协作与管理</div></article>
+  <article class="work-card" data-group="insight" data-name="Brainwork"><div class="work-top"><small>01 / INSIGHT</small><button class="work-add" type="button" aria-label="添加 Brainwork" aria-pressed="false"><svg class="hank-icon icon-plus" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-plus"/></svg></button></div><h3>Brainwork</h3><p>商业判断、策略制定、方案架构</p><div class="work-bottom">思考与决策</div></article>
+  <article class="work-card" data-group="insight" data-name="Researchwork"><div class="work-top"><small>02 / INSIGHT</small><button class="work-add" type="button" aria-label="添加 Researchwork" aria-pressed="false"><svg class="hank-icon icon-plus" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-plus"/></svg></button></div><h3>Researchwork</h3><p>行业调研、竞品分析、机会识别</p><div class="work-bottom">调研与研究</div></article>
+  <article class="work-card" data-group="insight" data-name="Datawork"><div class="work-top"><small>03 / INSIGHT</small><button class="work-add" type="button" aria-label="添加 Datawork" aria-pressed="false"><svg class="hank-icon icon-plus" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-plus"/></svg></button></div><h3>Datawork</h3><p>数据整理、商业分析、可视化</p><div class="work-bottom">数据与分析</div></article>
+  <article class="work-card" data-group="insight" data-name="Knowledgework"><div class="work-top"><small>04 / INSIGHT</small><button class="work-add" type="button" aria-label="添加 Knowledgework" aria-pressed="false"><svg class="hank-icon icon-plus" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-plus"/></svg></button></div><h3>Knowledgework</h3><p>知识组织、知识库、智能问答</p><div class="work-bottom">知识管理</div></article>
+  <article class="work-card" data-group="create" data-name="Designwork"><div class="work-top"><small>05 / CREATE</small><button class="work-add" type="button" aria-label="添加 Designwork" aria-pressed="false"><svg class="hank-icon icon-plus" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-plus"/></svg></button></div><h3>Designwork</h3><p>品牌视觉、界面体验、设计系统</p><div class="work-bottom">创意与设计</div></article>
+  <article class="work-card" data-group="create" data-name="Contentwork"><div class="work-top"><small>06 / CREATE</small><button class="work-add" type="button" aria-label="添加 Contentwork" aria-pressed="false"><svg class="hank-icon icon-plus" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-plus"/></svg></button></div><h3>Contentwork</h3><p>内容策略、写作、脚本与策划</p><div class="work-bottom">内容与表达</div></article>
+  <article class="work-card" data-group="create" data-name="Mediawork"><div class="work-top"><small>07 / CREATE</small><button class="work-add" type="button" aria-label="添加 Mediawork" aria-pressed="false"><svg class="hank-icon icon-plus" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-plus"/></svg></button></div><h3>Mediawork</h3><p>图片、视频、传播物料与内容制作</p><div class="work-bottom">多媒体制作</div></article>
+  <article class="work-card" data-group="create" data-name="Paperwork"><div class="work-top"><small>08 / CREATE</small><button class="work-add" type="button" aria-label="添加 Paperwork" aria-pressed="false"><svg class="hank-icon icon-plus" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-plus"/></svg></button></div><h3>Paperwork</h3><p>报告、提案、表格与商务文书</p><div class="work-bottom">文书与文档</div></article>
+  <article class="work-card" data-group="system" data-name="Codework"><div class="work-top"><small>09 / SYSTEM</small><button class="work-add" type="button" aria-label="添加 Codework" aria-pressed="false"><svg class="hank-icon icon-plus" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-plus"/></svg></button></div><h3>Codework</h3><p>网站、应用、轻量软件与工具</p><div class="work-bottom">数字产品开发</div></article>
+  <article class="work-card" data-group="system" data-name="AIwork"><div class="work-top"><small>10 / SYSTEM</small><button class="work-add" type="button" aria-label="添加 AIwork" aria-pressed="false"><svg class="hank-icon icon-plus" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-plus"/></svg></button></div><h3>AIwork</h3><p>AI 智能体、数字员工、自动化方案</p><div class="work-bottom">AI 能力建设</div></article>
+  <article class="work-card" data-group="system" data-name="Opswork"><div class="work-top"><small>11 / SYSTEM</small><button class="work-add" type="button" aria-label="添加 Opswork" aria-pressed="false"><svg class="hank-icon icon-plus" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-plus"/></svg></button></div><h3>Opswork</h3><p>流程优化、业务运营、日常执行</p><div class="work-bottom">运营与流程</div></article>
+  <article class="work-card" data-group="delivery" data-name="Network"><div class="work-top"><small>12 / CONNECT</small><button class="work-add" type="button" aria-label="添加 Network" aria-pressed="false"><svg class="hank-icon icon-plus" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-plus"/></svg></button></div><h3>Network</h3><p>资源匹配、渠道拓展、合作连接</p><div class="work-bottom">资源与连接</div></article>
+  <article class="work-card" data-group="delivery" data-name="Saleswork"><div class="work-top"><small>13 / DELIVER</small><button class="work-add" type="button" aria-label="添加 Saleswork" aria-pressed="false"><svg class="hank-icon icon-plus" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-plus"/></svg></button></div><h3>Saleswork</h3><p>销售支持、客户开发、商务转化</p><div class="work-bottom">销售与商务</div></article>
+  <article class="work-card" data-group="delivery" data-name="Growthwork"><div class="work-top"><small>14 / DELIVER</small><button class="work-add" type="button" aria-label="添加 Growthwork" aria-pressed="false"><svg class="hank-icon icon-plus" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-plus"/></svg></button></div><h3>Growthwork</h3><p>用户增长、获客与转化实验</p><div class="work-bottom">增长与获客</div></article>
+  <article class="work-card" data-group="delivery" data-name="Fieldwork"><div class="work-top"><small>15 / DELIVER</small><button class="work-add" type="button" aria-label="添加 Fieldwork" aria-pressed="false"><svg class="hank-icon icon-plus" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-plus"/></svg></button></div><h3>Fieldwork</h3><p>线下活动、现场调研、项目落地</p><div class="work-bottom">现场与执行</div></article>
+  <article class="work-card" data-group="delivery" data-name="Teamwork"><div class="work-top"><small>16 / DELIVER</small><button class="work-add" type="button" aria-label="添加 Teamwork" aria-pressed="false"><svg class="hank-icon icon-plus" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-plus"/></svg></button></div><h3>Teamwork</h3><p>团队协作、项目组织、资源调度</p><div class="work-bottom">协作与管理</div></article>
  </div>
- <div class="work-selection" aria-live="polite"><div><b id="selectedCount">已选择 0 项 Work</b><p id="selectedSummary">点击服务卡片右上角的 +，组合你需要的工作。</p></div><button id="goBrief" type="button" disabled>带着这些服务发起项目 ↗</button></div>
+ <div class="work-selection" aria-live="polite"><div><b id="selectedCount">已选择 0 项 Work</b><p id="selectedSummary">点击服务卡片右上角的添加按钮，组合你需要的工作。</p></div><button id="goBrief" type="button" disabled>带着这些服务发起项目 <svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></button></div>
  <div class="work-hint"><span>* 分类为服务导航语言；部分英文名称属于品牌命名，并非通用职业术语。</span><span>WORK IS MODULAR. OUTCOMES ARE PERSONAL.</span></div>
 </div></section>
 
 <section class="hank-shop" id="shop" aria-labelledby="shopTitle">
  <div class="container">
-  <div class="shop-overline"><span>03 / HANK'S LITTLE SHOP</span><span>IDEAS → OBJECTS → USEFUL THINGS</span></div>
+  <div class="shop-overline"><span>03 / HANK'S LITTLE SHOP</span><span>IDEAS <svg class="hank-icon icon-arrow-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-right"/></svg> OBJECTS <svg class="hank-icon icon-arrow-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-right"/></svg> USEFUL THINGS</span></div>
   <div class="shop-head">
    <div><div class="shop-nameplate"><span class="shop-nameplate-mark">h.</span> OPEN SHELF / 汉克小铺</div>
     <h2 class="serif" id="shopTitle">一些想法，<br/><em>整理成 8 件小产品。</em></h2>
    </div>
    <div class="shop-aside"><p>先从 8 款商品实例开始。每件都有独立 SKU、统一封皮、商品规格、适用人群与示意价格，可以从一个小产品开始认识汉克的工作方法。</p>
-    <button class="shop-cart-button" id="shopCartOpen" type="button" aria-label="打开小铺选购清单">我的选购清单 <span id="shopCartCount" aria-live="polite">0</span> ↗</button>
+    <button class="shop-cart-button" id="shopCartOpen" type="button" aria-label="打开小铺选购清单">我的选购清单 <span id="shopCartCount" aria-live="polite">0</span> <svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></button>
    </div>
   </div>
   <div class="shop-filters" role="group" aria-label="按商品类型筛选">
@@ -324,22 +363,22 @@
 </section>
 <dialog class="shop-dialog" id="shopDetail" aria-labelledby="shopDetailTitle">
  <div class="shop-dialog-scroll">
-  <button class="shop-dialog-close" type="button" data-shop-close="shopDetail" aria-label="关闭商品详情">×</button>
+  <button class="shop-dialog-close" type="button" data-shop-close="shopDetail" aria-label="关闭商品详情"><svg class="hank-icon icon-close" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-close"/></svg></button>
   <div id="shopDetailContent"></div>
  </div>
 </dialog>
 <dialog class="shop-dialog shop-cart-dialog" id="shopCart" aria-labelledby="shopCartTitle">
  <div class="shop-dialog-scroll">
-  <button class="shop-dialog-close" type="button" data-shop-close="shopCart" aria-label="关闭选购清单">×</button>
+  <button class="shop-dialog-close" type="button" data-shop-close="shopCart" aria-label="关闭选购清单"><svg class="hank-icon icon-close" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-close"/></svg></button>
   <div class="shop-cart-head"><span>HANK / SMALL THINGS, USEFUL WORK.</span><h2 class="serif" id="shopCartTitle">我的选购清单<span>。</span></h2><p>把感兴趣的 SKU 放在一起，整理一张包含编号与示意价格的购买意向清单。</p></div>
   <div id="shopCartItems" class="shop-cart-items"></div>
   <div class="shop-cart-total"><span>示意金额合计</span><strong id="shopCartTotal">¥ 0</strong></div>
   <p class="shop-cart-warning">以上为示例 SKU 和示意价格，不构成真实订单；尚未接入微信支付与数字内容交付，当前无法付款。</p>
   <div class="shop-cart-actions">
-   <button type="button" class="shop-copy" id="shopCopyList">复制咨询清单 ↗</button>
-   <button type="button" class="shop-export" id="shopExportList">下载 .txt</button>
+   <button type="button" class="shop-copy" id="shopCopyList">复制咨询清单 <svg class="hank-icon icon-copy" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-copy"/></svg></button>
+   <button type="button" class="shop-export" id="shopExportList">下载 .txt <svg class="hank-icon icon-download" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-download"/></svg></button>
   </div>
-  <a class="shop-talk-link" id="shopTalkLink" href="#contact">带着清单，发起合作对话 ↗</a>
+  <a class="shop-talk-link" id="shopTalkLink" href="#contact">带着清单，发起合作对话 <svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></a>
  </div>
 </dialog>
 
@@ -347,7 +386,7 @@
  <div class="section-head"><span class="left">04 / SELECTED PRACTICES</span><span>跨行业的实践，始终围绕同一种工作方法</span></div>
  <div class="practice-title"><h2 class="serif">看起来不同的项目，<br/>其实在做<em>同一件事。</em></h2><p>这些是真实涉足的领域和项目方向。不是用漂亮的行业标签证明“什么都会”，而是展示如何在不同情境里理解需求、组织方案。</p></div>
  <div class="project-grid">
-  <article class="project-card"><div class="project-meta"><span>01 / AI SYSTEM</span><span>WORKSTATION</span></div><div class="project-symbol">DLY↗</div><h3>大鲤鱼超级工作站</h3><p>面向超级个体和企业，把 AI Agent、业务流程与协作能力组织成可调用的工作系统。</p><div class="project-tags">AI 原生工作流 / 服务产品体系</div></article>
+  <article class="project-card"><div class="project-meta"><span>01 / AI SYSTEM</span><span>WORKSTATION</span></div><div class="project-symbol">DLY<svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></div><h3>大鲤鱼超级工作站</h3><p>面向超级个体和企业，把 AI Agent、业务流程与协作能力组织成可调用的工作系统。</p><div class="project-tags">AI 原生工作流 / 服务产品体系</div></article>
   <article class="project-card"><div class="project-meta"><span>02 / INDUSTRIAL</span><span>BRANDING</span></div><div class="project-symbol">G.</div><h3>Gauss Control</h3><p>围绕工业热处理过程控制，探索专业技术的品牌语言、内容结构与视觉表达。</p><div class="project-tags">工业品牌 / 技术传播 / 视觉系统</div></article>
   <article class="project-card"><div class="project-meta"><span>03 / SUPPLY CHAIN</span><span>SERVICE</span></div><div class="project-symbol">云.</div><h3>中域云仓</h3><p>以会展道具租赁为业务基底，梳理服务场景、品牌 IP、物料体系与跨城仓网表达。</p><div class="project-tags">业务理解 / 品牌与内容 / 线下服务</div></article>
   <article class="project-card"><div class="project-meta"><span>04 / PUBLIC INNOVATION</span><span>IDENTITY</span></div><div class="project-symbol">南.</div><h3>南半园科创</h3><p>将苏州园林的人文气质与现代科创服务结合，探索统一的视觉识别与传播体系。</p><div class="project-tags">科创服务 / 品牌形象 / 文化表达</div></article>
@@ -359,7 +398,7 @@
  <div class="section-head"><span class="left">05 / FROM PROBLEM TO OUTCOME</span><span>不是推荐工具，而是组织结果</span></div>
  <div class="delivery-intro"><h2 class="section-title serif">一个人是入口，<br/><em>不是全部。</em></h2><p>我作为统一的沟通和判断界面，背后可组合 AI Agent、数字员工、专业伙伴和现场执行资源。每个项目从明确问题开始，以双方确认的交付物和验收标准结束。</p></div>
  <div class="steps"><div class="step"><small>STEP 01</small><h3>理解问题<span>Discover</span></h3><p>先对话、调研与诊断，确认目标、优先级、资源条件和限制。</p></div><div class="step"><small>STEP 02</small><h3>组合工作<span>Design</span></h3><p>拆解任务，选择合适的 Work 模块，形成范围、计划与交付清单。</p></div><div class="step"><small>STEP 03</small><h3>组织执行<span>Orchestrate</span></h3><p>编排 AI、专业人员及协作网络，跟踪进度与关键质量节点。</p></div><div class="step"><small>STEP 04</small><h3>交付结果<span>Deliver</span></h3><p>交付方案、作品、系统或业务成果，并按约定标准验收与复盘。</p></div></div>
- <div class="statement-banner"><strong>Work → Worker → <span>Outcome.</span></strong><small>人作为界面 / 工作作为单元 / 结果作为承诺<br/>SELL OUTCOMES, NOT AI.</small></div>
+ <div class="statement-banner"><strong>Work <svg class="hank-icon icon-arrow-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-right"/></svg> Worker <svg class="hank-icon icon-arrow-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-right"/></svg> <span>Outcome.</span></strong><small>人作为界面 / 工作作为单元 / 结果作为承诺<br/>SELL OUTCOMES, NOT AI.</small></div>
 </div></section>
 <section class="contact-section" id="contact"><div class="container contact-grid">
  <div class="contact-copy"><div class="eyebrow" style="color:var(--terracotta)">06 / START WITH A CONVERSATION</div><h2 class="serif">你想让什么<br/><em>事情发生？</em></h2><p>不必先写一份完整需求文档。可以是一个正在卡住的项目、一项急需完成的工作，也可以是一个尚未成形的想法。</p><p>从你面对的真实问题开始，我会先帮助厘清它，再判断是否适合合作，以及需要哪些能力参与。</p><div class="note">当前为可交互网站原型：项目简报仅在你的浏览器内生成，可复制或下载；不会上传到服务器。正式上线时可接入邮箱、微信或客户管理系统。</div></div>
@@ -369,10 +408,10 @@
   <div class="field"><label>你选中的服务 <small>（可选，可返回上方添加）</small></label><div class="chosen-works" id="chosenWorks"><span class="empty-chip">还没有选择，没关系。</span></div></div>
   <div class="form-row"><div class="field"><label for="contactName">你的称呼 <small>（可选）</small></label><input id="contactName" name="contactName" placeholder="如何称呼你"/></div><div class="field"><label for="contactChannel">方便联系的方式 <small>（可选）</small></label><input id="contactChannel" name="contactChannel" placeholder="微信 / 邮箱 / 手机"/></div></div>
   <div class="field"><label for="timeframe">项目节奏 <small>（可选）</small></label><select id="timeframe" name="timeframe"><option value="尚未确定">尚未确定</option><option value="尽快启动">尽快启动</option><option value="一个月内">一个月内</option><option value="中长期规划">中长期规划</option></select></div>
-  <div class="form-actions"><button class="btn" type="submit">生成合作简报 <span class="arrow">↗</span></button><button class="copy-secondary" type="button" id="downloadBrief">下载简报 .txt</button></div>
+  <div class="form-actions"><button class="btn" type="submit">生成合作简报 <span class="arrow"><svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></span></button><button class="copy-secondary" type="button" id="downloadBrief">下载简报 .txt <svg class="hank-icon icon-download" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-download"/></svg></button></div>
   <p class="form-note">简报不会自动发送给汉克。生成后请复制内容，通过双方约定的联系渠道发送。</p>
   <div class="draft-preview" id="draftPreview" aria-live="polite" hidden></div>
-  <button class="copy-secondary" id="copyBrief" type="button" style="margin-top:12px;display:none">复制上方项目简报 ↗</button>
+  <button class="copy-secondary" id="copyBrief" type="button" style="margin-top:12px;display:none">复制上方项目简报 <svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></button>
  </form>
 </div></section>
 </main>
@@ -388,7 +427,7 @@
     <p>不需要一份完美的需求。带着你的问题来，<br class="footer-desktop-break"/>我们一起寻找可执行的方案。</p>
    </div>
    <div class="footer-action">
-    <a href="#contact" class="footer-project-link" aria-label="前往合作简报填写区">整理我的项目简报 <span class="footer-action-arrow" aria-hidden="true">↗</span></a>
+    <a href="#contact" class="footer-project-link" aria-label="前往合作简报填写区">整理我的项目简报 <span class="footer-action-arrow" aria-hidden="true"><svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></span></a>
     <span class="footer-action-note">在浏览器中生成 · 不会自动发送</span>
    </div>
   </div>
@@ -405,7 +444,7 @@
    <div class="social-card social-card-pending" aria-label="抖音，账号待绑定"><span class="social-monogram" aria-hidden="true">抖</span><span class="social-meta"><strong>抖音</strong><small>短视频 · 项目观察</small></span><span class="social-state ">待绑定</span></div>
    <div class="social-card social-card-pending" aria-label="哔哩哔哩，账号待绑定"><span class="social-monogram" aria-hidden="true">B</span><span class="social-meta"><strong>哔哩哔哩</strong><small>视频 · 长内容</small></span><span class="social-state ">待绑定</span></div>
    <div class="social-card social-card-pending" aria-label="知乎，账号待绑定"><span class="social-monogram" aria-hidden="true">知</span><span class="social-meta"><strong>知乎</strong><small>观点 · 知识分享</small></span><span class="social-state ">待绑定</span></div>
-   <a class="social-card social-card-live" href="https://github.com/Hankjun" target="_blank" rel="noopener noreferrer" aria-label="访问汉克的 GitHub 主页（在新窗口打开）"><span class="social-monogram" aria-hidden="true">GH</span><span class="social-meta"><strong>GitHub</strong><small>代码 · 开放项目</small></span><span class="social-state is-live">访问 ↗</span></a>
+   <a class="social-card social-card-live" href="https://github.com/Hankjun" target="_blank" rel="noopener noreferrer" aria-label="访问汉克的 GitHub 主页（在新窗口打开）"><span class="social-monogram" aria-hidden="true">GH</span><span class="social-meta"><strong>GitHub</strong><small>代码 · 开放项目</small></span><span class="social-state is-live">访问 <svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></span></a>
    </div>
    <p class="social-help">目前仅 GitHub 已绑定真实主页；其他渠道确认账号后开放链接或二维码。</p>
   </section>
@@ -415,27 +454,31 @@
     <p>汉克 · 方案师<br/><span>以我为界面，让事情发生。</span></p>
    </div>
    <nav class="footer-directory" aria-label="页脚导航">
-    <div class="footer-menu-group"><h3>THE PERSON <span>关于</span></h3><a href="#about">认识汉克 <span aria-hidden="true">↗</span></a><a href="#projects">项目实践 <span aria-hidden="true">↗</span></a></div>
-    <div class="footer-menu-group"><h3>THE WORK <span>服务</span></h3><a href="#services">发现服务 <span aria-hidden="true">↗</span></a><a href="#shop">汉克小铺 <span aria-hidden="true">↗</span></a><a href="#delivery">交付方式 <span aria-hidden="true">↗</span></a></div>
+    <div class="footer-menu-group"><h3>THE PERSON <span>关于</span></h3><a href="#about">认识汉克 <span aria-hidden="true"><svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></span></a><a href="#projects">项目实践 <span aria-hidden="true"><svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></span></a></div>
+    <div class="footer-menu-group"><h3>THE WORK <span>服务</span></h3><a href="#services">发现服务 <span aria-hidden="true"><svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></span></a><a href="#shop">汉克小铺 <span aria-hidden="true"><svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></span></a><a href="#delivery">交付方式 <span aria-hidden="true"><svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></span></a></div>
    </nav>
-   <a class="footer-return" href="#top" aria-label="回到页面顶部"><span aria-hidden="true">↑</span><small>TOP</small></a>
+   <a class="footer-return" href="#top" aria-label="回到页面顶部"><span aria-hidden="true"><svg class="hank-icon icon-arrow-up" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-up"/></svg></span><small>TOP</small></a>
   </div>
   <div class="footer-legal">
    <span>© 2026 HANK · INDEPENDENT SOLUTION ARCHITECT</span>
-   <span>PERSON → WORK → OUTCOME</span>
+   <span>PERSON <svg class="hank-icon icon-arrow-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-right"/></svg> WORK <svg class="hank-icon icon-arrow-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-right"/></svg> OUTCOME</span>
   </div>
  </div>
 </footer>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 <script>
+// Only fixed icon names are passed here; symbols live in the inline SVG library.
+window.hankIcon=name=>'<svg class="hank-icon icon-'+name+'" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-'+name+'"/></svg>';
+
 (async function(){
  'use strict';
+ const icon=window.hankIcon;
  const selected=new Set();
  const $=s=>document.querySelector(s);
  const $$=s=>Array.from(document.querySelectorAll(s));
  const nav=$('#mainNav'), menu=$('#menuToggle');
- menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'×':'☰';});
- $$('#mainNav a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰';}));
+ menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.innerHTML=icon(open?'close':'menu');menu.setAttribute('aria-label',open?'关闭菜单':'展开菜单');});
+ $$('#mainNav a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.innerHTML=icon('menu');menu.setAttribute('aria-label','展开菜单');}));
  let ticking=false;
  const progress=()=>{const max=document.documentElement.scrollHeight-innerHeight;$('#readProgress').style.width=(max?Math.max(0,Math.min(100,scrollY/max*100)):0)+'%';ticking=false;};
  window.addEventListener('scroll',()=>{if(!ticking){ticking=true;requestAnimationFrame(progress)}},{passive:true});progress();
@@ -445,7 +488,7 @@
  }));
  function syncSelection(){
   $('#selectedCount').textContent=`已选择 ${selected.size} 项 Work`;
-  $('#selectedSummary').textContent=selected.size?[...selected].join(' / '):'点击服务卡片右上角的 +，组合你需要的工作。';
+  $('#selectedSummary').textContent=selected.size?[...selected].join(' / '):'点击服务卡片右上角的添加按钮，组合你需要的工作。';
   $('#goBrief').disabled=!selected.size;
   const chips=$('#chosenWorks');chips.replaceChildren();
   if(!selected.size){const e=document.createElement('span');e.className='empty-chip';e.textContent='还没有选择，没关系。';chips.append(e)}
@@ -454,7 +497,7 @@
  $$('.work-card').forEach(card=>card.querySelector('.work-add').addEventListener('click',()=>{
   const name=card.dataset.name;if(selected.has(name))selected.delete(name);else selected.add(name);
   const on=selected.has(name),btn=card.querySelector('.work-add');card.classList.toggle('selected',on);
-  btn.setAttribute('aria-pressed',String(on));btn.setAttribute('aria-label',`${on?'移除':'添加'} ${name}`);btn.textContent=on?'✓':'+';syncSelection();
+  btn.setAttribute('aria-pressed',String(on));btn.setAttribute('aria-label',`${on?'移除':'添加'} ${name}`);btn.innerHTML=icon(on?'check':'plus');syncSelection();
  }));
  $('#goBrief').addEventListener('click',()=>$('#contact').scrollIntoView({behavior:'smooth'}));
  let toastTimer;
@@ -479,6 +522,7 @@
 
 (async function(){
   'use strict';
+  const icon=window.hankIcon;
   // Product catalog can be replaced item by item after content, final prices,
   // delivery terms and merchant-hosted payment URLs have been confirmed.
   // price = display-only concept price until actual products are approved.
@@ -532,10 +576,10 @@
       '<div class="shop-item-meta"><div class="shop-item-type"><span>'+esc(p.category)+'</span><span>EXAMPLE SKU / 2026</span></div>'+
       '<div class="shop-item-sku">'+esc(p.sku)+'</div><h3 class="shop-item-name">'+esc(p.name)+'</h3><p class="shop-item-desc">'+esc(p.desc)+'</p>'+
       '<dl class="shop-card-spec"><div><dt>版本</dt><dd>'+esc(p.version)+'</dd></div><div><dt>交付</dt><dd>'+esc(p.delivery)+'</dd></div><div><dt>状态</dt><dd>'+esc(p.status)+'</dd></div></dl>'+
-      '<details class="shop-card-contents"><summary>拟含 '+p.contents.length+' 项内容</summary><ul>'+p.contents.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul></details>'+
+      '<details class="shop-card-contents"><summary>'+icon('chevron')+'拟含 '+p.contents.length+' 项内容</summary><ul>'+p.contents.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul></details>'+
       '<div class="shop-item-bottom"><div class="shop-item-price"><strong>'+money(p.price)+'</strong><small>示意价</small></div>'+
-      '<div class="shop-item-actions"><button type="button" data-shop-detail="'+esc(p.id)+'" aria-label="查看 '+esc(p.name)+' 详情">↗</button>'+
-      '<button type="button" data-shop-add="'+esc(p.id)+'" aria-label="'+(selected?'从选购清单移除 ':'加入选购清单 ')+esc(p.name)+'" aria-pressed="'+selected+'">'+(selected?'✓':'+')+'</button></div></div></div></article>';
+      '<div class="shop-item-actions"><button type="button" data-shop-detail="'+esc(p.id)+'" aria-label="查看 '+esc(p.name)+' 详情">' +icon('arrow-ne')+'</button>'+
+      '<button type="button" data-shop-add="'+esc(p.id)+'" aria-label="'+(selected?'从选购清单移除 ':'加入选购清单 ')+esc(p.name)+'" aria-pressed="'+selected+'">'+icon(selected?'check':'plus')+'</button></div></div></div></article>';
   }
   function render(){
     grid.innerHTML=products.filter(p=>activeKind==='全部'||p.category===activeKind).map(card).join('');
@@ -552,7 +596,7 @@
        '<h2 class="serif" id="shopDetailTitle">'+esc(p.name)+'</h2><p>'+esc(p.desc)+'</p>'+
        '<dl class="shop-sku-spec"><div><dt>SKU</dt><dd>'+esc(p.sku)+'</dd></div><div><dt>类别</dt><dd>'+esc(p.category)+'</dd></div><div><dt>适用人群</dt><dd>'+esc(p.audience)+'</dd></div><div><dt>计划交付格式</dt><dd>'+esc(p.format)+'</dd></div><div><dt>交付方式</dt><dd>'+esc(p.delivery)+'</dd></div><div><dt>版本</dt><dd>'+esc(p.version)+'</dd></div><div><dt>产品范围</dt><dd>'+esc(p.scope)+'</dd></div><div><dt>当前状态</dt><dd>'+esc(p.status)+'</dd></div></dl><h3>拟包含的内容</h3><ul>'+p.contents.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>'+
        '<div class="shop-detail-price">'+money(p.price)+' <small>示意价 · 待确认</small></div>'+
-       '<button class="shop-add-button" type="button" data-shop-add="'+esc(p.id)+'">'+(cart.includes(p.id)?'移出选购清单':'加入我的选购清单')+' ↗</button>'+
+       '<button class="shop-add-button" type="button" data-shop-add="'+esc(p.id)+'">'+(cart.includes(p.id)?'移出选购清单':'加入我的选购清单')+' '+icon('arrow-ne')+'</button>'+
        '<p class="shop-detail-disclaimer">此 SKU 为产品实例，实际文件、交付条件与正式售价待确认。微信优先规划：先人工确认收款与交付，后续接入商户支付与自动交付。当前未开售，无法付款。</p></div></div>';
     openDialog(detail);
   }
@@ -585,7 +629,7 @@
     try{
       if(navigator.clipboard&&window.isSecureContext)await navigator.clipboard.writeText(txt);
       else{const el=document.createElement('textarea');el.value=txt;el.style.position='fixed';el.style.opacity='0';document.body.appendChild(el);el.select();if(!document.execCommand('copy'))throw Error('no clipboard');el.remove();}
-      $('#shopCopyList').textContent='已复制 ✓';setTimeout(()=>$('#shopCopyList').textContent='复制咨询清单 ↗',2000);
+      $('#shopCopyList').innerHTML='已复制 '+icon('check');setTimeout(()=>$('#shopCopyList').innerHTML='复制咨询清单 '+icon('copy'),2000);
     }catch(_){alert('复制受浏览器限制，请下载选购清单。');}
   }
   $$('.shop-filter').forEach(btn=>btn.addEventListener('click',()=>{
