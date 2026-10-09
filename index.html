@@ -43,6 +43,28 @@
 .footer-project-link:hover{transform:translateY(-3px);filter:brightness(1.08)}
 .footer-action-arrow{display:grid;place-items:center;width:33px;height:33px;border:1px solid rgba(26,48,49,.35);border-radius:50%;font-size:19px;font-weight:400}
 .footer-action-note{color:#8fa59e;font-size:11px;line-height:1.7}
+
+/* FIND ME ONLINE — verified links only */
+.footer-social{padding:43px 0 49px;border-bottom:1px solid rgba(220,235,226,.20)}
+.footer-social-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:22px;margin-bottom:23px}
+.footer-social-kicker{display:block;margin-bottom:15px;color:#eda881;font:650 10px/1.6 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.14em}
+.footer-social-heading h3{font:500 clamp(22px,2.5vw,34px)/1.35 Georgia,"Songti SC","Noto Serif SC","SimSun",serif;letter-spacing:-.03em;margin:0}
+.footer-social-heading h3 span{color:#eda881}
+.footer-social-heading p{font-size:12px;color:#9fb8af;margin:0 0 5px;line-height:1.8}
+.social-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.social-card{display:flex;align-items:center;gap:12px;min-width:0;min-height:78px;padding:14px 13px;background:rgba(255,255,255,.035);border:1px solid rgba(220,235,226,.15);border-radius:3px}
+.social-monogram{flex:none;width:37px;height:37px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:rgba(238,168,125,.10);color:#f3b28f;font:700 13px/1 ui-monospace,SFMono-Regular,Consolas,monospace}
+.social-meta{display:flex;flex-direction:column;gap:7px;min-width:0}.social-meta strong{color:#e7ece6;font-size:12px;font-weight:700;white-space:nowrap}.social-meta small{color:#91a99f;font-size:10px;line-height:1.25;white-space:nowrap}
+.social-state{flex:none;margin-left:auto;color:#7f9a91;font-size:10px;white-space:nowrap}
+.social-card-pending{opacity:.65;cursor:default}
+.social-card-live{background:rgba(240,174,112,.10);border-color:rgba(240,174,112,.45);transition:transform .22s,border-color .22s,background .22s}
+.social-card-live .social-monogram{background:linear-gradient(135deg,#f0ae70,#ed8067);color:#172d2f}
+.social-card-live .social-state{color:#f0ae70}
+.social-card-live:hover{transform:translateY(-3px);background:rgba(240,174,112,.16);border-color:#f0ae70}
+.social-help{margin:16px 0 0;color:#7b958a;font-size:10px;line-height:1.8}
+@media(max-width:1100px){.social-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.social-card{min-height:76px}}
+@media(max-width:630px){.footer-social{padding:37px 0 42px}.footer-social-heading{display:block;margin-bottom:20px}.footer-social-heading p{margin:13px 0 0}.social-grid{gap:8px}.social-card{min-height:96px;flex-wrap:wrap;gap:8px;padding:12px}.social-meta{flex:1;min-width:calc(100% - 49px)}.social-meta small{font-size:10px;white-space:normal}.social-state{margin-left:0;flex-basis:100%;text-align:right}.social-help{font-size:10px}}
+@media(max-width:390px){.social-card{padding:10px}.social-monogram{width:30px;height:30px}.social-meta strong{font-size:11px}.social-meta{min-width:calc(100% - 40px)}}
 .footer-middle{display:grid;grid-template-columns:minmax(230px,1.25fr) minmax(300px,1fr) 72px;align-items:start;gap:clamp(25px,4vw,74px);padding:49px 0 58px}
 .footer-identity .footer-logo{display:inline-flex;align-items:center}
 .footer-identity .hank-logo-footer{width:min(272px,100%);height:auto}
@@ -189,6 +211,23 @@
     <span class="footer-action-note">在浏览器中生成 · 不会自动发送</span>
    </div>
   </div>
+  <section class="footer-social" aria-labelledby="footerSocialTitle">
+   <div class="footer-social-heading">
+    <div><span class="footer-social-kicker">FIND ME ONLINE / 与我连接</span><h3 id="footerSocialTitle">每个平台，都是另一种交流方式<span>。</span></h3></div>
+    <p>文章、影像、作品与项目，也欢迎联系交流。</p>
+   </div>
+   <div class="social-grid">
+   <div class="social-card social-card-pending" aria-label="个人微信，账号待绑定"><span class="social-monogram" aria-hidden="true">微</span><span class="social-meta"><strong>个人微信</strong><small>合作与日常联系</small></span><span class="social-state ">待绑定</span></div>
+   <div class="social-card social-card-pending" aria-label="微信公众号，账号待绑定"><span class="social-monogram" aria-hidden="true">文</span><span class="social-meta"><strong>微信公众号</strong><small>文章 · 深度思考</small></span><span class="social-state ">待绑定</span></div>
+   <div class="social-card social-card-pending" aria-label="微信视频号，账号待绑定"><span class="social-monogram" aria-hidden="true">视</span><span class="social-meta"><strong>微信视频号</strong><small>影像 · 日常更新</small></span><span class="social-state ">待绑定</span></div>
+   <div class="social-card social-card-pending" aria-label="小红书，账号待绑定"><span class="social-monogram" aria-hidden="true">红</span><span class="social-meta"><strong>小红书</strong><small>创意 · 作品分享</small></span><span class="social-state ">待绑定</span></div>
+   <div class="social-card social-card-pending" aria-label="抖音，账号待绑定"><span class="social-monogram" aria-hidden="true">抖</span><span class="social-meta"><strong>抖音</strong><small>短视频 · 项目观察</small></span><span class="social-state ">待绑定</span></div>
+   <div class="social-card social-card-pending" aria-label="哔哩哔哩，账号待绑定"><span class="social-monogram" aria-hidden="true">B</span><span class="social-meta"><strong>哔哩哔哩</strong><small>视频 · 长内容</small></span><span class="social-state ">待绑定</span></div>
+   <div class="social-card social-card-pending" aria-label="知乎，账号待绑定"><span class="social-monogram" aria-hidden="true">知</span><span class="social-meta"><strong>知乎</strong><small>观点 · 知识分享</small></span><span class="social-state ">待绑定</span></div>
+   <a class="social-card social-card-live" href="https://github.com/Hankjun" target="_blank" rel="noopener noreferrer" aria-label="访问汉克的 GitHub 主页（在新窗口打开）"><span class="social-monogram" aria-hidden="true">GH</span><span class="social-meta"><strong>GitHub</strong><small>代码 · 开放项目</small></span><span class="social-state is-live">访问 ↗</span></a>
+   </div>
+   <p class="social-help">目前仅 GitHub 已绑定真实主页；其他渠道确认账号后开放链接或二维码。</p>
+  </section>
   <div class="footer-middle">
    <div class="footer-identity">
     <a href="#top" class="footer-logo" aria-label="Hank，回到首页"><svg class="hank-logo hank-logo-footer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 249" aria-hidden="true" focusable="false"><defs><linearGradient id="hank-sunset-footer" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#e99a46"/><stop offset="1" stop-color="#eb695a"/></linearGradient></defs><path d="M126 16 C188 16 237 65 237 127 L237 236 L126 236 C65 236 16 187 16 127 C16 65 65 16 126 16 Z" fill="url(#hank-sunset-footer)"/><path d="M100 206 L102 211 108 216 117 216 122 214 125 211 127 207 129 193 130 192 130 189 131 188 131 185 134 176 138 168 144 163 148 166 147 203 150 210 153 213 159 215 167 214 174 211 184 202 190 193 193 202 197 208 202 212 207 214 218 214 225 211 231 206 232 206 237 212 241 214 245 214 246 215 254 214 262 210 267 206 271 201 272 202 272 206 274 210 277 213 280 214 289 214 294 212 299 206 300 199 301 198 301 194 302 193 304 182 306 179 306 176 310 168 315 163 317 163 320 166 319 202 322 210 327 214 334 215 335 214 339 214 347 210 355 203 359 197 360 198 360 207 361 209 364 212 368 214 378 214 381 213 386 208 387 201 389 200 396 207 403 211 406 211 407 212 415 212 416 211 419 211 426 207 436 197 442 186 443 180 444 179 444 173 443 172 442 175 435 184 430 187 424 189 413 189 412 188 409 188 402 185 397 180 396 178 396 174 400 170 409 167 418 166 422 164 427 159 430 152 430 142 427 139 422 138 417 140 402 150 398 151 397 150 397 145 398 144 398 140 400 134 400 129 401 128 401 123 402 122 401 114 397 109 394 108 383 108 375 111 371 115 369 119 368 133 367 134 367 142 366 143 366 151 365 152 365 159 364 160 364 168 363 169 363 177 360 183 351 191 347 191 345 189 345 180 346 179 346 169 347 168 347 164 346 163 346 155 343 147 337 141 329 138 319 139 311 144 306 139 301 137 291 137 290 138 287 138 279 145 277 150 277 158 276 159 276 167 275 168 275 176 274 177 274 180 265 190 263 191 259 191 257 189 257 181 258 180 258 176 259 175 259 171 260 170 260 166 261 165 261 161 263 155 263 144 260 138 254 134 244 134 238 137 235 141 227 138 221 138 220 139 216 139 208 143 200 151 196 157 191 170 190 180 188 183 179 191 175 191 173 189 173 180 174 179 174 156 170 146 165 141 157 138 150 138 143 141 139 144 138 143 139 142 141 129 142 128 143 120 144 119 144 108 141 104 136 102 124 102 116 106 113 110 111 116 111 123 110 124 110 131 109 132 109 137 108 138 108 145 107 146 107 153 106 154 106 161 105 162 105 168 104 169 104 176 103 177 103 184 102 185 102 192 101 193 Z M230 159 L233 162 233 165 234 166 233 176 232 177 231 183 225 192 222 194 217 194 214 191 213 188 213 181 214 180 215 172 218 166 225 159 Z" fill="#fffdf7" fill-rule="evenodd" stroke="#183238" stroke-width="9" stroke-linejoin="round" paint-order="stroke fill"/></svg></a>
