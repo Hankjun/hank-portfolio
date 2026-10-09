@@ -210,6 +210,16 @@
 @media(max-width:640px){.shop-overline span:last-child{display:none}.shop-head{display:block;margin:32px 0 27px}.shop-head h2{font-size:clamp(35px,9vw,52px)}.shop-aside{max-width:100%;margin-top:25px}.shop-aside p{font-size:13px;margin-bottom:15px}.shop-filters{gap:6px}.shop-filter{padding:9px 11px;font-size:11px}.shop-grid{column-gap:13px;row-gap:28px}.shop-cover-face{padding:14px}.shop-cover-title{font-size:clamp(19px,5.5vw,29px)}.shop-cover-cn{font-size:11px}.shop-cover-top,.shop-cover-foot{font-size:8px}.shop-cover-illustration{margin-bottom:9px}.shop-item-name{font-size:15px}.shop-item-desc{font-size:11px;min-height:60px}.shop-item-price{display:block}.shop-item-price strong{display:block;font-size:21px}.shop-item-price small{font-size:9px}.shop-item-bottom{gap:5px}.shop-item-actions{gap:4px}.shop-item-actions button{width:31px;height:31px}.shop-after{grid-template-columns:1fr}.shop-detail-layout{grid-template-columns:1fr;gap:25px}.shop-detail-layout .shop-item-cover{max-width:240px}.shop-cart-actions{flex-wrap:wrap}.shop-dialog-scroll{padding:24px}}
 @media(max-width:370px){.shop-grid{grid-template-columns:1fr}.shop-item-cover{max-width:320px}.shop-cover-title{font-size:34px}.shop-item-desc{min-height:0}}
 
+
+/* HANK shop SKU catalog */
+.shop-item-sku{margin:12px 0 0;color:#9e5945;font:750 10px/1.5 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.1em}
+.shop-item-sku+.shop-item-name{margin-top:5px}
+.shop-sku-spec{border-top:1px solid #c8cec3;border-bottom:1px solid #c8cec3;margin:20px 0}
+.shop-sku-spec>div{display:grid;grid-template-columns:100px minmax(0,1fr);gap:12px;padding:10px 0;border-bottom:1px solid #dbe0d6;font-size:12px;line-height:1.65}
+.shop-sku-spec>div:last-child{border-bottom:none}
+.shop-sku-spec dt{font-weight:650;color:#829085}.shop-sku-spec dd{margin:0;color:#264841;font-weight:550;overflow-wrap:anywhere}
+.shop-load-error{grid-column:1/-1;padding:30px 0;color:#ad5744}
+@media(max-width:640px){.shop-sku-spec>div{grid-template-columns:78px minmax(0,1fr);gap:9px;font-size:11px}}
 </style>
 </head>
 <body>
@@ -282,14 +292,14 @@
   <div class="shop-overline"><span>03 / HANK'S LITTLE SHOP</span><span>IDEAS → OBJECTS → USEFUL THINGS</span></div>
   <div class="shop-head">
    <div><div class="shop-nameplate"><span class="shop-nameplate-mark">h.</span> OPEN SHELF / 汉克小铺</div>
-    <h2 class="serif" id="shopTitle">一些想法，<br/><em>做成可以带走的东西。</em></h2>
+    <h2 class="serif" id="shopTitle">一些想法，<br/><em>整理成 12 件小产品。</em></h2>
    </div>
-   <div class="shop-aside"><p>研究、方法、经验和可复用的工作成果，整理成一件件看得见、能组合的小产品。</p>
+   <div class="shop-aside"><p>先从 12 款商品实例开始。每件都有独立 SKU、统一封皮、商品规格、适用人群与示意价格，可以从一个小产品开始认识汉克的工作方法。</p>
     <button class="shop-cart-button" id="shopCartOpen" type="button" aria-label="打开小铺选购清单">我的选购清单 <span id="shopCartCount" aria-live="polite">0</span> ↗</button>
    </div>
   </div>
   <div class="shop-filters" role="group" aria-label="按商品类型筛选">
-   <button class="shop-filter is-active" type="button" data-kind="全部" aria-pressed="true">全部上架概念</button>
+   <button class="shop-filter is-active" type="button" data-kind="全部" aria-pressed="true">全部 SKU（12）</button>
    <button class="shop-filter" type="button" data-kind="付费专栏" aria-pressed="false">付费专栏</button>
    <button class="shop-filter" type="button" data-kind="知识库" aria-pressed="false">知识库</button>
    <button class="shop-filter" type="button" data-kind="技能包" aria-pressed="false">技能包</button>
@@ -298,8 +308,8 @@
   </div>
   <div class="shop-grid" id="shopGrid" aria-live="polite"></div>
   <div class="shop-after">
-   <div><span class="shop-index">SHELF 01 / 2026</span><p>不同类型的东西，放在同一个货架。<br/>想独立购买，也可以组合成适合自己的工具箱。</p></div>
-   <p class="shop-availability"><strong>关于价格与购买：</strong>当前展示的是<strong>商品概念与示意价格</strong>，不是正式在售商品。付款链接、内容交付和售后条款尚未配置；暂不提供在线扣款。确认正式商品信息后可逐项启用。</p>
+   <div><span class="shop-index">SHELF 01 / 2026 · 12 SKUs / 5 CATEGORIES</span><p>不同类型的东西，放在同一个货架。<br/>想独立购买，也可以组合成适合自己的工具箱。</p></div>
+   <p class="shop-availability"><strong>关于价格与购买：</strong>当前展示的是<strong>12 款示例 SKU</strong>。商品文件及交付条款尚需制作或核验，所有标价均为示意价格而非最终售价。微信支付与自动交付尚未接入，当前不能直接付款。</p>
   </div>
  </div>
 </section>
@@ -312,10 +322,10 @@
 <dialog class="shop-dialog shop-cart-dialog" id="shopCart" aria-labelledby="shopCartTitle">
  <div class="shop-dialog-scroll">
   <button class="shop-dialog-close" type="button" data-shop-close="shopCart" aria-label="关闭选购清单">×</button>
-  <div class="shop-cart-head"><span>HANK / SMALL THINGS, USEFUL WORK.</span><h2 class="serif" id="shopCartTitle">我的选购清单<span>。</span></h2><p>把感兴趣的内容放在一起，整理成一张购买咨询清单。</p></div>
+  <div class="shop-cart-head"><span>HANK / SMALL THINGS, USEFUL WORK.</span><h2 class="serif" id="shopCartTitle">我的选购清单<span>。</span></h2><p>把感兴趣的 SKU 放在一起，整理一张包含编号与示意价格的购买意向清单。</p></div>
   <div id="shopCartItems" class="shop-cart-items"></div>
   <div class="shop-cart-total"><span>示意金额合计</span><strong id="shopCartTotal">¥ 0</strong></div>
-  <p class="shop-cart-warning">以上为展示价格，不构成正式报价或订单。当前网站没有接入收款、数字商品交付系统，暂不能直接付款。</p>
+  <p class="shop-cart-warning">以上为示例 SKU 和示意价格，不构成真实订单；尚未接入微信支付与数字内容交付，当前无法付款。</p>
   <div class="shop-cart-actions">
    <button type="button" class="shop-copy" id="shopCopyList">复制咨询清单 ↗</button>
    <button type="button" class="shop-export" id="shopExportList">下载 .txt</button>
@@ -409,7 +419,7 @@
 </footer>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 <script>
-(function(){
+(async function(){
  'use strict';
  const selected=new Set();
  const $=s=>document.querySelector(s);
@@ -463,18 +473,22 @@
   // Product catalog can be replaced item by item after content, final prices,
   // delivery terms and merchant-hosted payment URLs have been confirmed.
   // price = display-only concept price until actual products are approved.
-  const products=[
-    {id:'agent-atlas',category:'资料包',name:'2026 AI Agent 全景地图',en:'AGENT / ATLAS',coverCN:'全球智能体生态地图',price:59,theme:'ember',desc:'从工具、平台到工作场景，建立可检索的 Agent 全景视角。',contents:['全球 Agent 类型与场景索引','平台能力对照与选型维度','持续更新的研究框架'],version:'VOL.01 / RESEARCH',status:'概念商品',paymentUrl:null},
-    {id:'opc-fieldmap',category:'资料包',name:'超级个体 · 作战地图',en:'ONE / PERSON',coverCN:'OPC 超级个体作战地图',price:39,theme:'ink',desc:'把个人业务拆成可以逐步执行的任务、能力和资源。',contents:['个人业务角色地图','场景与资源梳理模板','任务优先级清单'],version:'VOL.02 / FIELD NOTES',status:'概念商品',paymentUrl:null},
-    {id:'agent-worker',category:'技能包',name:'AI 数字员工上岗工具包',en:'AI / WORKER',coverCN:'从岗位到任务的上岗卡',price:99,theme:'ochre',desc:'从岗位定义、任务清单到验收标准，让数字员工真正开始干活。',contents:['岗位职责定义卡','任务与边界模板','上岗测试及验收清单'],version:'KIT.01 / PEOPLE+AI',status:'概念商品',paymentUrl:null},
-    {id:'dly-diagnostic',category:'工作流',name:'DLY-6C 经营诊断工作流',en:'THINK / SYSTEM',coverCN:'六维经营诊断工作流',price:129,theme:'sage',desc:'用结构化提问与诊断流程，把模糊问题变成行动线索。',contents:['六维诊断流程示意','访谈问题与记录结构','诊断总结交付模板'],version:'FLOW.01 / 6C',status:'概念商品',paymentUrl:null},
-    {id:'content-line',category:'工作流',name:'一人公司内容生产线',en:'MAKE / MEDIA',coverCN:'内容生产与发布流程',price:199,theme:'wine',desc:'从选题、素材整理到多平台改写，建立能重复使用的内容流程。',contents:['选题采集与筛选流程','一稿多用的任务链','发布复盘清单'],version:'FLOW.02 / CONTENT',status:'概念商品',paymentUrl:null},
-    {id:'knowledge-seed',category:'知识库',name:'锦鲤智库 · 知识库起步包',en:'KNOW / MORE',coverCN:'个人知识库起步包',price:149,theme:'night',desc:'为个人与小团队设计资料入口、分类体系和持续更新的方法。',contents:['知识架构与标签模板','资料入库规则示例','检索与维护流程'],version:'BASE.01 / KNOWLEDGE',status:'概念商品',paymentUrl:null},
-    {id:'solution-notes',category:'付费专栏',name:'方案师的工作方法',en:'SOLVE / THINGS',coverCN:'方案师的日常方法笔记',price:49,theme:'linen',desc:'关于问题判断、方案结构、AI 实践与真实交付的连续思考。',contents:['核心方法论专题目录','案例拆解的计划结构','更新机制（待确定）'],version:'SERIES.01 / ESSAYS',status:'概念商品',paymentUrl:null},
-    {id:'france-arts',category:'知识库',name:'法国艺术留学渠道观察',en:'ART / FRANCE',coverCN:'艺术教育与渠道研究',price:89,theme:'blue',desc:'把法国艺术教育的调研视角整理成可追踪的院校与渠道地图。',contents:['院校分类与观察字段','渠道筛选方法','动态信息更新框架'],version:'BASE.02 / EDUCATION',status:'概念商品',paymentUrl:null}
-  ];
-  // This is a public concept catalog; external payment is deliberately disabled.
-  const $=(sel,root=document)=>root.querySelector(sel), $=(sel,root=document)=>Array.from(root.querySelectorAll(sel));
+  const products=await (async()=>{
+    try{
+      const res=await fetch(new URL('shop-skus.json',document.baseURI),{cache:'no-cache'});
+      if(!res.ok)throw new Error('SKU HTTP '+res.status);
+      const data=await res.json();
+      if(!Array.isArray(data)||data.length!==12||data.some(p=>!p.sku||!p.id||!p.category))throw new Error('Invalid SKU catalog');
+      return data;
+    }catch(e){
+      console.error('SKU catalog load error:',e);
+      const el=document.querySelector('#shopGrid');
+      if(el)el.innerHTML='<p class="shop-load-error" role="status">商品目录暂时未能载入，请联网后刷新页面。</p>';
+      return [];
+    }
+  })();
+    // Source of truth: shop-skus.json; payment is deliberately disabled.
+  const $=(sel,root=document)=>root.querySelector(sel), $$=(sel,root=document)=>Array.from(root.querySelectorAll(sel));
   let activeKind='全部';
   let cart=[];
   try{const saved=JSON.parse(localStorage.getItem('hank-shop-interest-v1')||'[]');if(Array.isArray(saved))cart=saved.filter(id=>products.some(p=>p.id===id));}catch(_){}
@@ -488,14 +502,14 @@
      '<span class="shop-cover-central"><span class="shop-cover-illustration" aria-hidden="true"></span>'+
      '<span class="shop-cover-title">'+esc(p.en.replace(' / ','<br>')).replace('&lt;br&gt;','<br>')+'</span>'+
      '<span class="shop-cover-cn">'+esc(p.coverCN)+'</span></span>'+
-     '<span class="shop-cover-foot"><span>'+esc(p.version)+'</span><span>h.</span></span></span>';
+     '<span class="shop-cover-foot"><span>'+esc(p.edition)+'</span><span>h.</span></span></span>';
   }
   function card(p){
     const selected=cart.includes(p.id);
     return '<article class="shop-item" data-category="'+esc(p.category)+'" data-product="'+esc(p.id)+'">'+
       '<button class="shop-item-cover" type="button" data-shop-detail="'+esc(p.id)+'" aria-label="查看 '+esc(p.name)+' 商品详情">'+cover(p)+'</button>'+
-      '<div class="shop-item-meta"><div class="shop-item-type"><span>'+esc(p.category)+'</span><span>CONCEPT / 2026</span></div>'+
-      '<h3 class="shop-item-name">'+esc(p.name)+'</h3><p class="shop-item-desc">'+esc(p.desc)+'</p>'+
+      '<div class="shop-item-meta"><div class="shop-item-type"><span>'+esc(p.category)+'</span><span>EXAMPLE SKU / 2026</span></div>'+
+      '<div class="shop-item-sku">'+esc(p.sku)+'</div><h3 class="shop-item-name">'+esc(p.name)+'</h3><p class="shop-item-desc">'+esc(p.desc)+'</p>'+
       '<div class="shop-item-bottom"><div class="shop-item-price"><strong>'+money(p.price)+'</strong><small>示意价</small></div>'+
       '<div class="shop-item-actions"><button type="button" data-shop-detail="'+esc(p.id)+'" aria-label="查看 '+esc(p.name)+' 详情">↗</button>'+
       '<button type="button" data-shop-add="'+esc(p.id)+'" aria-label="'+(selected?'从选购清单移除 ':'加入选购清单 ')+esc(p.name)+'" aria-pressed="'+selected+'">'+(selected?'✓':'+')+'</button></div></div></div></article>';
@@ -511,18 +525,18 @@
   function showDetail(id){
     const p=find(id);if(!p)return;
     $('#shopDetailContent').innerHTML='<div class="shop-detail-layout"><div><div class="shop-item-cover" aria-hidden="true">'+cover(p)+'</div></div>'+
-       '<div class="shop-detail-copy"><span class="shop-detail-kicker">'+esc(p.category)+' / '+esc(p.version)+'</span>'+
+       '<div class="shop-detail-copy"><span class="shop-detail-kicker">'+esc(p.sku)+' / '+esc(p.category)+'</span>'+
        '<h2 class="serif" id="shopDetailTitle">'+esc(p.name)+'</h2><p>'+esc(p.desc)+'</p>'+
-       '<h3>拟包含的内容</h3><ul>'+p.contents.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>'+
+       '<dl class="shop-sku-spec"><div><dt>SKU</dt><dd>'+esc(p.sku)+'</dd></div><div><dt>适用人群</dt><dd>'+esc(p.audience)+'</dd></div><div><dt>计划交付格式</dt><dd>'+esc(p.format)+'</dd></div><div><dt>版本</dt><dd>'+esc(p.version)+'</dd></div><div><dt>产品范围</dt><dd>'+esc(p.scope)+'</dd></div><div><dt>当前状态</dt><dd>'+esc(p.status)+'</dd></div></dl><h3>拟包含的内容</h3><ul>'+p.contents.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>'+
        '<div class="shop-detail-price">'+money(p.price)+' <small>示意价 · 待确认</small></div>'+
        '<button class="shop-add-button" type="button" data-shop-add="'+esc(p.id)+'">'+(cart.includes(p.id)?'移出选购清单':'加入我的选购清单')+' ↗</button>'+
-       '<p class="shop-detail-disclaimer">商品内容、正式定价、交付形式与付款方式尚待确认；当前仅用于购买意向展示。</p></div></div>';
+       '<p class="shop-detail-disclaimer">此 SKU 为产品实例，实际文件、交付条件与正式售价待确认。微信收款尚未接入。</p></div></div>';
     openDialog(detail);
   }
   function renderCart(){
     const list=cart.map(find).filter(Boolean);
     $('#shopCartItems').innerHTML=list.length?list.map(p=>'<div class="shop-cart-row">'+
-      '<div class="shop-cart-mini" aria-hidden="true">h.</div><div class="shop-cart-row-text"><strong>'+esc(p.name)+'</strong><small>'+esc(p.category)+' · 展示价格</small></div>'+
+      '<div class="shop-cart-mini" aria-hidden="true">h.</div><div class="shop-cart-row-text"><strong>'+esc(p.name)+'</strong><small>'+esc(p.sku)+' · '+esc(p.category)+' · 展示价格</small></div>'+
       '<span class="shop-cart-row-price">'+money(p.price)+'</span>'+
       '<button class="shop-cart-remove" type="button" data-shop-remove="'+esc(p.id)+'" aria-label="移除 '+esc(p.name)+'">移除</button></div>').join(''):
       '<p class="shop-cart-empty">架子上有很多想法，你还没选中任何东西。先挑几件看看吧。</p>';
@@ -533,7 +547,7 @@
     const list=cart.map(find).filter(Boolean);
     if(!list.length)return null;
     return ['HANK / 汉克小铺 · 购买意向清单','（当前为商品概念与示意价格，非正式订单）','────────────────────',
-      ...list.map((p,i)=>(i+1)+'. '+p.name+' / '+p.category+' / '+money(p.price)),
+      ...list.map((p,i)=>(i+1)+'. '+p.sku+' / '+p.name+' / '+p.category+' / '+money(p.price)),
       '────────────────────','示意价格合计：'+money(list.reduce((n,p)=>n+p.price,0)),
       '','请与汉克进一步确认：正式售价、具体内容、付款方式、交付时间和售后安排。',
       '当前网站尚未接入支付和商品交付系统，以上清单不会自动发送。'].join('\n');
@@ -551,8 +565,8 @@
       $('#shopCopyList').textContent='已复制 ✓';setTimeout(()=>$('#shopCopyList').textContent='复制咨询清单 ↗',2000);
     }catch(_){alert('复制受浏览器限制，请下载选购清单。');}
   }
-  $('.shop-filter').forEach(btn=>btn.addEventListener('click',()=>{
-    activeKind=btn.dataset.kind;$('.shop-filter').forEach(el=>{el.classList.toggle('is-active',el===btn);el.setAttribute('aria-pressed',String(el===btn));});
+  $$('.shop-filter').forEach(btn=>btn.addEventListener('click',()=>{
+    activeKind=btn.dataset.kind;$$('.shop-filter').forEach(el=>{el.classList.toggle('is-active',el===btn);el.setAttribute('aria-pressed',String(el===btn));});
     render();
   }));
   grid.addEventListener('click',e=>{
@@ -562,7 +576,7 @@
   detail.addEventListener('click',e=>{const b=e.target.closest('[data-shop-add]');if(b){toggle(b.dataset.shopAdd);showDetail(b.dataset.shopAdd);}});
   cartDialog.addEventListener('click',e=>{const b=e.target.closest('[data-shop-remove]');if(b)toggle(b.dataset.shopRemove);});
   $('#shopCartOpen').addEventListener('click',()=>{renderCart();openDialog(cartDialog);});
-  $('[data-shop-close]').forEach(b=>b.addEventListener('click',()=>closeDialog($('#'+b.dataset.shopClose))));
+  $$('[data-shop-close]').forEach(b=>b.addEventListener('click',()=>closeDialog($('#'+b.dataset.shopClose))));
   [detail,cartDialog].forEach(d=>d.addEventListener('click',e=>{if(e.target===d)closeDialog(d);}));
   $('#shopTalkLink').addEventListener('click',()=>closeDialog(cartDialog));
   $('#shopCopyList').addEventListener('click',()=>{const txt=cartText();if(txt)copy(txt);});
