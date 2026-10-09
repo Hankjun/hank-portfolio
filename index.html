@@ -96,13 +96,127 @@
 .hank-logo-footer{width:min(450px,70vw);max-width:100%;filter:none}
 @media(max-width:800px){.hank-logo-header{width:116px;max-height:62px}}
 @media(max-width:560px){.hank-logo-header{width:112px;max-height:60px}}
+
+/* HANK'S LITTLE SHOP — modular digital-product shelf */
+.nav-shop{color:#bd6045!important;font-weight:800!important}
+.hero-shop-link{font-size:12px;font-weight:700;color:#b85f46;border-bottom:1px solid currentColor;padding-bottom:6px}
+.hank-shop{padding:clamp(70px,8vw,120px) 0 clamp(66px,8vw,110px);background:#e9e8df;color:#193236;position:relative;overflow:hidden}
+.hank-shop:before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 98% 4%,rgba(238,140,101,.11),transparent 34%),linear-gradient(90deg,rgba(24,50,56,.023) 1px,transparent 1px);background-size:auto,72px 72px}
+.hank-shop .container{position:relative;z-index:1}
+.shop-overline{border-top:1px solid #a7afa8;display:flex;justify-content:space-between;gap:20px;padding-top:17px;font:700 11px/1.5 ui-monospace,Consolas,monospace;letter-spacing:.12em;color:#60716e}
+.shop-overline span:first-child{color:#a55442}
+.shop-head{display:flex;align-items:flex-end;justify-content:space-between;gap:45px;margin:49px 0 35px}
+.shop-nameplate{display:flex;align-items:center;gap:12px;font:750 12px/1.5 ui-monospace,Consolas,monospace;letter-spacing:.11em;color:#677771}
+.shop-nameplate-mark{display:inline-flex;justify-content:center;align-items:center;width:32px;height:32px;border-radius:50%;font:bold italic 21px/1 Georgia,serif;background:linear-gradient(145deg,#f3aa52,#e66d61);color:white;letter-spacing:-.12em}
+.shop-head h2{font-size:clamp(37px,4.8vw,70px);line-height:1.21;letter-spacing:-.05em;font-weight:500;margin:25px 0 0}
+.shop-head h2 em{font-style:normal;color:#b75e43}
+.shop-aside{max-width:310px;flex:0 0 310px}
+.shop-aside p{color:#586b69;font-size:14px;line-height:1.9;margin:0 0 24px}
+.shop-cart-button{border:1px solid #224243;background:#224243;color:#f7f4eb;display:inline-flex;align-items:center;gap:11px;padding:15px 18px;font-weight:750;font-size:12px;transition:background .2s,transform .2s}
+.shop-cart-button:hover{background:#345654;transform:translateY(-2px)}
+.shop-cart-button span{min-width:21px;height:21px;padding:2px 6px;display:inline-flex;align-items:center;justify-content:center;background:#ed9574;color:#193236;border-radius:20px;font-size:11px}
+.shop-filters{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin:0 0 29px;border-top:1px solid #b7beb4;padding-top:21px}
+.shop-filter{border:1px solid #c5cac0;background:transparent;color:#566967;padding:10px 15px;font-size:12px;font-weight:650;transition:all .18s}
+.shop-filter:hover{border-color:#203e40;color:#203e40}
+.shop-filter.is-active{background:#213f40;border-color:#213f40;color:#f8f4ed}
+.shop-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:clamp(14px,2vw,30px);row-gap:34px}
+.shop-item{min-width:0}
+.shop-item[hidden]{display:none!important}
+.shop-item-cover{width:100%;aspect-ratio:4/5;position:relative;display:flex;flex-direction:column;overflow:hidden;text-align:left;isolation:isolate;border:0;padding:0;background:transparent;box-shadow:10px 14px 22px rgba(31,49,47,.11);transition:transform .28s,box-shadow .28s;cursor:pointer}
+.shop-item-cover:hover{transform:translateY(-5px);box-shadow:12px 19px 30px rgba(31,49,47,.17)}
+.shop-cover-face{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;padding:clamp(16px,2vw,27px);background:var(--cover-bg);color:var(--cover-fg)}
+.shop-cover-face:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.18;background:repeating-linear-gradient(115deg,transparent 0 38px,rgba(255,255,255,.35) 39px 40px)}
+.shop-cover-face:after{content:"";position:absolute;left:0;top:0;bottom:0;width:7px;background:rgba(0,0,0,.13);box-shadow:3px 0 7px rgba(0,0,0,.11)}
+.shop-cover-face.theme-ember{--cover-bg:#e77b62;--cover-fg:#183238;--accent:#f7d6a5}
+.shop-cover-face.theme-ink{--cover-bg:#173a3d;--cover-fg:#f7f4ec;--accent:#df9d72}
+.shop-cover-face.theme-ochre{--cover-bg:#f0c276;--cover-fg:#183238;--accent:#f8eee0}
+.shop-cover-face.theme-sage{--cover-bg:#aebfa7;--cover-fg:#243f3a;--accent:#ebede0}
+.shop-cover-face.theme-linen{--cover-bg:#e9e1cf;--cover-fg:#1f403c;--accent:#c97b5f}
+.shop-cover-face.theme-wine{--cover-bg:#8e5c54;--cover-fg:#fff5e9;--accent:#eeac7d}
+.shop-cover-face.theme-night{--cover-bg:#28333b;--cover-fg:#f6f1e6;--accent:#e0a576}
+.shop-cover-face.theme-blue{--cover-bg:#a7bbbd;--cover-fg:#193c48;--accent:#e8d3a7}
+.shop-cover-top,.shop-cover-foot{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:center;gap:12px;font:800 clamp(9px,.78vw,11px)/1.2 ui-monospace,Consolas,monospace;letter-spacing:.11em}
+.shop-cover-foot{border-top:1px solid currentColor;padding-top:12px}
+.shop-cover-central{position:relative;z-index:1;margin:auto 0;min-width:0}
+.shop-cover-illustration{width:56%;max-width:190px;aspect-ratio:1;position:relative;margin:0 auto 17px;opacity:.95}
+.shop-cover-illustration:before{content:"";position:absolute;inset:5%;border-radius:50%;border:clamp(9px,1.35vw,19px) solid var(--accent)}
+.shop-cover-illustration:after{content:"";position:absolute;inset:34%;transform:rotate(45deg);background:var(--accent);box-shadow:30px -30px 0 -12px var(--accent),-24px 24px 0 -13px var(--accent)}
+.shop-item:nth-child(3n+2) .shop-cover-illustration:before{border-radius:5%;transform:rotate(-18deg)}
+.shop-item:nth-child(3n) .shop-cover-illustration:before{border-radius:0 100% 40% 70%;transform:rotate(25deg)}
+.shop-cover-title{font:700 clamp(24px,2.4vw,37px)/1.0 Georgia,serif;letter-spacing:-.045em;word-break:break-word}
+.shop-cover-cn{font-size:clamp(12px,1.12vw,17px);line-height:1.4;font-weight:800;margin-top:9px;letter-spacing:.03em}
+.shop-cover-foot span:last-child{font:italic 800 21px/1 Georgia,serif;letter-spacing:-.08em}
+.shop-item-meta{padding-top:17px}
+.shop-item-type{display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:.05em;color:#74837d}
+.shop-item-name{margin:8px 0 8px;font-size:18px;line-height:1.45;font-weight:750;color:#1c383b}
+.shop-item-desc{min-height:45px;margin:0;font-size:12px;line-height:1.85;color:#61716e}
+.shop-item-bottom{display:flex;justify-content:space-between;align-items:flex-end;gap:11px;border-top:1px solid #c8cec3;padding-top:11px;margin-top:14px}
+.shop-item-price{display:flex;align-items:baseline;gap:9px}
+.shop-item-price strong{font:700 23px/1 Georgia,serif;letter-spacing:-.04em;color:#a6503d}
+.shop-item-price small{font-size:10px;color:#8a978c;white-space:nowrap}
+.shop-item-actions{display:flex;gap:7px}
+.shop-item-actions button{width:34px;height:34px;background:transparent;border:1px solid #82968d;color:#234343;font-size:18px;display:grid;place-items:center;transition:background .2s,color .2s}
+.shop-item-actions button:hover{background:#234343;color:white}
+.shop-item-actions button[aria-pressed="true"]{background:#b8664c;border-color:#b8664c;color:white}
+.shop-after{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start;margin-top:44px;padding-top:21px;border-top:1px solid #aeb8ad}
+.shop-index{font:700 11px/1.5 ui-monospace,Consolas,monospace;letter-spacing:.12em;color:#a65c45}
+.shop-after p{margin:10px 0 0;color:#5e716a;font-size:13px;line-height:1.9}
+.shop-after .shop-availability{margin:0;font-size:12px;color:#687670}
+.shop-after .shop-availability strong{color:#a65c45}
+.shop-dialog{max-width:min(720px,calc(100vw - 28px));width:100%;max-height:min(88vh,850px);padding:0;background:#f5f2eb;border:1px solid #aebdb2;color:#18383c;box-shadow:0 32px 90px rgba(0,0,0,.4)}
+.shop-dialog::backdrop{background:rgba(12,28,30,.78);backdrop-filter:blur(5px)}
+.shop-dialog-scroll{max-height:calc(88vh - 2px);overflow:auto;padding:clamp(24px,4.5vw,47px)}
+.shop-dialog-close{position:sticky;z-index:4;top:0;float:right;width:40px;height:40px;display:grid;place-items:center;border:1px solid #bac6ba;background:#f5f2eb;color:#18383c;font-size:24px;margin:-10px -11px 0 0}
+.shop-detail-layout{display:grid;grid-template-columns:minmax(0,225px) minmax(0,1fr);gap:35px;clear:both;padding-top:9px}
+.shop-detail-layout .shop-item-cover{pointer-events:none}
+.shop-detail-layout .shop-cover-face{padding:18px}
+.shop-detail-layout .shop-cover-title{font-size:24px}
+.shop-detail-layout .shop-cover-illustration{margin-bottom:8px}
+.shop-detail-layout .shop-cover-cn{font-size:12px}
+.shop-detail-layout .shop-cover-top,.shop-detail-layout .shop-cover-foot{font-size:8px}
+.shop-detail-kicker{color:#b25d46;font-size:11px;letter-spacing:.14em;font-weight:700}
+.shop-detail-copy h2{font-size:clamp(25px,3vw,38px);font-weight:500;line-height:1.35;margin:16px 0}
+.shop-detail-copy p{font-size:13px;color:#576d68;line-height:1.9}
+.shop-detail-copy h3{font-size:12px;margin:24px 0 10px;letter-spacing:.05em}
+.shop-detail-copy ul{padding:0 0 0 18px;color:#536c66;font-size:12px;line-height:2}
+.shop-detail-price{font:700 26px/1.4 Georgia,serif;color:#b45b44;padding:14px 0 6px}
+.shop-detail-price small{font:400 11px/1.5 sans-serif;color:#778984;margin-left:8px}
+.shop-add-button{padding:15px 19px;background:#234344;border:1px solid #234344;color:#fff9f0;font-weight:700;font-size:12px;margin-top:10px}
+.shop-add-button:hover{background:#385656}
+.shop-detail-disclaimer{margin-top:13px;font-size:11px!important;color:#9d6555!important}
+.shop-cart-head>span{color:#af634e;font:700 10px/1.4 ui-monospace,Consolas,monospace;letter-spacing:.13em}
+.shop-cart-head h2{font-size:clamp(34px,5vw,50px);font-weight:500;margin:17px 0 6px}
+.shop-cart-head h2 span{color:#c26b50}
+.shop-cart-head p{font-size:12px;color:#637a71}
+.shop-cart-items{border-top:1px solid #c6cfc4;margin-top:27px}
+.shop-cart-row{display:flex;align-items:center;gap:13px;padding:18px 0;border-bottom:1px solid #c6cfc4}
+.shop-cart-mini{display:grid;place-items:center;flex:none;width:42px;height:52px;background:#24494b;color:#f2ac7b;font:800 21px/1 Georgia,serif}
+.shop-cart-row-text{flex:1;min-width:0}
+.shop-cart-row-text strong{display:block;font-size:14px}
+.shop-cart-row-text small{display:block;margin-top:7px;font-size:10px;color:#6b7d76}
+.shop-cart-row-price{font:700 16px/1 Georgia,serif;color:#9e5141}
+.shop-cart-remove{padding:6px;border:0;background:transparent;color:#a65a4b;font-size:11px;text-decoration:underline}
+.shop-cart-empty{color:#677b71;padding:28px 0;font-size:14px}
+.shop-cart-total{display:flex;justify-content:space-between;align-items:center;margin:21px 0}
+.shop-cart-total span{font-size:12px;color:#60756c}
+.shop-cart-total strong{font:700 29px/1 Georgia,serif;color:#a65440}
+.shop-cart-warning{padding:12px 15px;border-left:3px solid #cd7961;background:#ece5d8;font-size:11px;line-height:1.85;color:#6d5b4f}
+.shop-cart-actions{display:flex;gap:9px;margin-top:23px}
+.shop-copy,.shop-export{padding:14px 18px;font-size:12px;font-weight:750}
+.shop-copy{background:#244547;border:1px solid #244547;color:#fff9f0}.shop-export{border:1px solid #244547;background:transparent;color:#244547}
+.shop-talk-link{display:block;margin-top:18px;font-size:12px;color:#ab6048;text-decoration:underline;text-underline-offset:5px}
+@media(max-width:1120px){.shop-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.shop-cover-title{font-size:clamp(23px,3vw,37px)}}
+@media(max-width:840px){.shop-head{align-items:flex-start;gap:22px}.shop-aside{flex-basis:260px}.shop-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.nav{gap:15px}}
+@media(max-width:640px){.shop-overline span:last-child{display:none}.shop-head{display:block;margin:32px 0 27px}.shop-head h2{font-size:clamp(35px,9vw,52px)}.shop-aside{max-width:100%;margin-top:25px}.shop-aside p{font-size:13px;margin-bottom:15px}.shop-filters{gap:6px}.shop-filter{padding:9px 11px;font-size:11px}.shop-grid{column-gap:13px;row-gap:28px}.shop-cover-face{padding:14px}.shop-cover-title{font-size:clamp(19px,5.5vw,29px)}.shop-cover-cn{font-size:11px}.shop-cover-top,.shop-cover-foot{font-size:8px}.shop-cover-illustration{margin-bottom:9px}.shop-item-name{font-size:15px}.shop-item-desc{font-size:11px;min-height:60px}.shop-item-price{display:block}.shop-item-price strong{display:block;font-size:21px}.shop-item-price small{font-size:9px}.shop-item-bottom{gap:5px}.shop-item-actions{gap:4px}.shop-item-actions button{width:31px;height:31px}.shop-after{grid-template-columns:1fr}.shop-detail-layout{grid-template-columns:1fr;gap:25px}.shop-detail-layout .shop-item-cover{max-width:240px}.shop-cart-actions{flex-wrap:wrap}.shop-dialog-scroll{padding:24px}}
+@media(max-width:370px){.shop-grid{grid-template-columns:1fr}.shop-item-cover{max-width:320px}.shop-cover-title{font-size:34px}.shop-item-desc{min-height:0}}
+
 </style>
 </head>
 <body>
 <header class="site-header">
  <div class="container head-inner">
   <a class="brand" href="#top" aria-label="汉克，回到首页"><svg class="hank-logo hank-logo-header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 249" aria-hidden="true" focusable="false"><defs><linearGradient id="hank-sunset-nav" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#e99a46"/><stop offset="1" stop-color="#eb695a"/></linearGradient></defs><path d="M126 16 C188 16 237 65 237 127 L237 236 L126 236 C65 236 16 187 16 127 C16 65 65 16 126 16 Z" fill="url(#hank-sunset-nav)"/><path d="M100 206 L102 211 108 216 117 216 122 214 125 211 127 207 129 193 130 192 130 189 131 188 131 185 134 176 138 168 144 163 148 166 147 203 150 210 153 213 159 215 167 214 174 211 184 202 190 193 193 202 197 208 202 212 207 214 218 214 225 211 231 206 232 206 237 212 241 214 245 214 246 215 254 214 262 210 267 206 271 201 272 202 272 206 274 210 277 213 280 214 289 214 294 212 299 206 300 199 301 198 301 194 302 193 304 182 306 179 306 176 310 168 315 163 317 163 320 166 319 202 322 210 327 214 334 215 335 214 339 214 347 210 355 203 359 197 360 198 360 207 361 209 364 212 368 214 378 214 381 213 386 208 387 201 389 200 396 207 403 211 406 211 407 212 415 212 416 211 419 211 426 207 436 197 442 186 443 180 444 179 444 173 443 172 442 175 435 184 430 187 424 189 413 189 412 188 409 188 402 185 397 180 396 178 396 174 400 170 409 167 418 166 422 164 427 159 430 152 430 142 427 139 422 138 417 140 402 150 398 151 397 150 397 145 398 144 398 140 400 134 400 129 401 128 401 123 402 122 401 114 397 109 394 108 383 108 375 111 371 115 369 119 368 133 367 134 367 142 366 143 366 151 365 152 365 159 364 160 364 168 363 169 363 177 360 183 351 191 347 191 345 189 345 180 346 179 346 169 347 168 347 164 346 163 346 155 343 147 337 141 329 138 319 139 311 144 306 139 301 137 291 137 290 138 287 138 279 145 277 150 277 158 276 159 276 167 275 168 275 176 274 177 274 180 265 190 263 191 259 191 257 189 257 181 258 180 258 176 259 175 259 171 260 170 260 166 261 165 261 161 263 155 263 144 260 138 254 134 244 134 238 137 235 141 227 138 221 138 220 139 216 139 208 143 200 151 196 157 191 170 190 180 188 183 179 191 175 191 173 189 173 180 174 179 174 156 170 146 165 141 157 138 150 138 143 141 139 144 138 143 139 142 141 129 142 128 143 120 144 119 144 108 141 104 136 102 124 102 116 106 113 110 111 116 111 123 110 124 110 131 109 132 109 137 108 138 108 145 107 146 107 153 106 154 106 161 105 162 105 168 104 169 104 176 103 177 103 184 102 185 102 192 101 193 Z M230 159 L233 162 233 165 234 166 233 176 232 177 231 183 225 192 222 194 217 194 214 191 213 188 213 181 214 180 215 172 218 166 225 159 Z" fill="#1a343a" fill-rule="evenodd" stroke="#f5f2eb" stroke-width="9" stroke-linejoin="round" paint-order="stroke fill"/></svg><span class="brand-sub">汉克 / 方案师</span></a>
-  <nav class="nav" id="mainNav" aria-label="主导航"><a href="#about">认识汉克</a><a href="#services">发现服务</a><a href="#projects">项目实践</a><a href="#delivery">交付方式</a></nav>
+  <nav class="nav" id="mainNav" aria-label="主导航"><a href="#about">认识汉克</a><a href="#services">发现服务</a><a href="#shop" class="nav-shop">汉克小铺 <span aria-hidden="true">↗</span></a><a href="#projects">项目实践</a><a href="#delivery">交付方式</a></nav>
   <a href="#contact" class="header-cta">谈谈你的问题 ↗</a>
   <button class="mobile-menu" id="menuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="展开菜单">☰</button>
  </div>
@@ -114,7 +228,7 @@
   <div class="eyebrow">HANK / HUMAN-FIRST SOLUTION ARCHITECT</div>
   <h1 class="serif" id="heroTitle">以我为<span>界面</span>，<br/>让事情发生。</h1>
   <p class="hero-lead">你好，我是汉克，一名方案师。<br/>我站在真实问题的最前端，理解需求、设计方案、连接人才与 AI，再把复杂的工作组织成可以交付的结果。</p>
-  <div class="hero-actions"><a class="btn" href="#about">先认识我 <span class="arrow">↗</span></a><a class="link-line" href="#services">直接探索服务 <span class="arrow">↘</span></a></div>
+  <div class="hero-actions"><a class="btn" href="#about">先认识我 <span class="arrow">↗</span></a><a class="link-line" href="#services">直接探索服务 <span class="arrow">↘</span></a><a class="hero-shop-link" href="#shop">逛逛汉克小铺 ↗</a></div>
   <div class="micro">一个人作为入口，一张网络共同完成。</div>
  </div>
  <div class="hero-art" role="img" aria-label="代表汉克个人品牌的 H 字母和环绕其间的研究、设计、连接、交付能力的抽象视觉图形">
@@ -162,8 +276,56 @@
  <div class="work-selection" aria-live="polite"><div><b id="selectedCount">已选择 0 项 Work</b><p id="selectedSummary">点击服务卡片右上角的 +，组合你需要的工作。</p></div><button id="goBrief" type="button" disabled>带着这些服务发起项目 ↗</button></div>
  <div class="work-hint"><span>* 分类为服务导航语言；部分英文名称属于品牌命名，并非通用职业术语。</span><span>WORK IS MODULAR. OUTCOMES ARE PERSONAL.</span></div>
 </div></section>
+
+<section class="hank-shop" id="shop" aria-labelledby="shopTitle">
+ <div class="container">
+  <div class="shop-overline"><span>03 / HANK'S LITTLE SHOP</span><span>IDEAS → OBJECTS → USEFUL THINGS</span></div>
+  <div class="shop-head">
+   <div><div class="shop-nameplate"><span class="shop-nameplate-mark">h.</span> OPEN SHELF / 汉克小铺</div>
+    <h2 class="serif" id="shopTitle">一些想法，<br/><em>做成可以带走的东西。</em></h2>
+   </div>
+   <div class="shop-aside"><p>研究、方法、经验和可复用的工作成果，整理成一件件看得见、能组合的小产品。</p>
+    <button class="shop-cart-button" id="shopCartOpen" type="button" aria-label="打开小铺选购清单">我的选购清单 <span id="shopCartCount" aria-live="polite">0</span> ↗</button>
+   </div>
+  </div>
+  <div class="shop-filters" role="group" aria-label="按商品类型筛选">
+   <button class="shop-filter is-active" type="button" data-kind="全部" aria-pressed="true">全部上架概念</button>
+   <button class="shop-filter" type="button" data-kind="付费专栏" aria-pressed="false">付费专栏</button>
+   <button class="shop-filter" type="button" data-kind="知识库" aria-pressed="false">知识库</button>
+   <button class="shop-filter" type="button" data-kind="技能包" aria-pressed="false">技能包</button>
+   <button class="shop-filter" type="button" data-kind="工作流" aria-pressed="false">工作流</button>
+   <button class="shop-filter" type="button" data-kind="资料包" aria-pressed="false">资料包</button>
+  </div>
+  <div class="shop-grid" id="shopGrid" aria-live="polite"></div>
+  <div class="shop-after">
+   <div><span class="shop-index">SHELF 01 / 2026</span><p>不同类型的东西，放在同一个货架。<br/>想独立购买，也可以组合成适合自己的工具箱。</p></div>
+   <p class="shop-availability"><strong>关于价格与购买：</strong>当前展示的是<strong>商品概念与示意价格</strong>，不是正式在售商品。付款链接、内容交付和售后条款尚未配置；暂不提供在线扣款。确认正式商品信息后可逐项启用。</p>
+  </div>
+ </div>
+</section>
+<dialog class="shop-dialog" id="shopDetail" aria-labelledby="shopDetailTitle">
+ <div class="shop-dialog-scroll">
+  <button class="shop-dialog-close" type="button" data-shop-close="shopDetail" aria-label="关闭商品详情">×</button>
+  <div id="shopDetailContent"></div>
+ </div>
+</dialog>
+<dialog class="shop-dialog shop-cart-dialog" id="shopCart" aria-labelledby="shopCartTitle">
+ <div class="shop-dialog-scroll">
+  <button class="shop-dialog-close" type="button" data-shop-close="shopCart" aria-label="关闭选购清单">×</button>
+  <div class="shop-cart-head"><span>HANK / SMALL THINGS, USEFUL WORK.</span><h2 class="serif" id="shopCartTitle">我的选购清单<span>。</span></h2><p>把感兴趣的内容放在一起，整理成一张购买咨询清单。</p></div>
+  <div id="shopCartItems" class="shop-cart-items"></div>
+  <div class="shop-cart-total"><span>示意金额合计</span><strong id="shopCartTotal">¥ 0</strong></div>
+  <p class="shop-cart-warning">以上为展示价格，不构成正式报价或订单。当前网站没有接入收款、数字商品交付系统，暂不能直接付款。</p>
+  <div class="shop-cart-actions">
+   <button type="button" class="shop-copy" id="shopCopyList">复制咨询清单 ↗</button>
+   <button type="button" class="shop-export" id="shopExportList">下载 .txt</button>
+  </div>
+  <a class="shop-talk-link" id="shopTalkLink" href="#contact">带着清单，发起合作对话 ↗</a>
+ </div>
+</dialog>
+
 <section class="practice-section" id="projects"><div class="container">
- <div class="section-head"><span class="left">03 / SELECTED PRACTICES</span><span>跨行业的实践，始终围绕同一种工作方法</span></div>
+ <div class="section-head"><span class="left">04 / SELECTED PRACTICES</span><span>跨行业的实践，始终围绕同一种工作方法</span></div>
  <div class="practice-title"><h2 class="serif">看起来不同的项目，<br/>其实在做<em>同一件事。</em></h2><p>这些是真实涉足的领域和项目方向。不是用漂亮的行业标签证明“什么都会”，而是展示如何在不同情境里理解需求、组织方案。</p></div>
  <div class="project-grid">
   <article class="project-card"><div class="project-meta"><span>01 / AI SYSTEM</span><span>WORKSTATION</span></div><div class="project-symbol">DLY↗</div><h3>大鲤鱼超级工作站</h3><p>面向超级个体和企业，把 AI Agent、业务流程与协作能力组织成可调用的工作系统。</p><div class="project-tags">AI 原生工作流 / 服务产品体系</div></article>
@@ -175,13 +337,13 @@
  </div>
 </div></section>
 <section class="delivery-wrap" id="delivery"><div class="container">
- <div class="section-head"><span class="left">04 / FROM PROBLEM TO OUTCOME</span><span>不是推荐工具，而是组织结果</span></div>
+ <div class="section-head"><span class="left">05 / FROM PROBLEM TO OUTCOME</span><span>不是推荐工具，而是组织结果</span></div>
  <div class="delivery-intro"><h2 class="section-title serif">一个人是入口，<br/><em>不是全部。</em></h2><p>我作为统一的沟通和判断界面，背后可组合 AI Agent、数字员工、专业伙伴和现场执行资源。每个项目从明确问题开始，以双方确认的交付物和验收标准结束。</p></div>
  <div class="steps"><div class="step"><small>STEP 01</small><h3>理解问题<span>Discover</span></h3><p>先对话、调研与诊断，确认目标、优先级、资源条件和限制。</p></div><div class="step"><small>STEP 02</small><h3>组合工作<span>Design</span></h3><p>拆解任务，选择合适的 Work 模块，形成范围、计划与交付清单。</p></div><div class="step"><small>STEP 03</small><h3>组织执行<span>Orchestrate</span></h3><p>编排 AI、专业人员及协作网络，跟踪进度与关键质量节点。</p></div><div class="step"><small>STEP 04</small><h3>交付结果<span>Deliver</span></h3><p>交付方案、作品、系统或业务成果，并按约定标准验收与复盘。</p></div></div>
  <div class="statement-banner"><strong>Work → Worker → <span>Outcome.</span></strong><small>人作为界面 / 工作作为单元 / 结果作为承诺<br/>SELL OUTCOMES, NOT AI.</small></div>
 </div></section>
 <section class="contact-section" id="contact"><div class="container contact-grid">
- <div class="contact-copy"><div class="eyebrow" style="color:var(--terracotta)">05 / START WITH A CONVERSATION</div><h2 class="serif">你想让什么<br/><em>事情发生？</em></h2><p>不必先写一份完整需求文档。可以是一个正在卡住的项目、一项急需完成的工作，也可以是一个尚未成形的想法。</p><p>从你面对的真实问题开始，我会先帮助厘清它，再判断是否适合合作，以及需要哪些能力参与。</p><div class="note">当前为可交互网站原型：项目简报仅在你的浏览器内生成，可复制或下载；不会上传到服务器。正式上线时可接入邮箱、微信或客户管理系统。</div></div>
+ <div class="contact-copy"><div class="eyebrow" style="color:var(--terracotta)">06 / START WITH A CONVERSATION</div><h2 class="serif">你想让什么<br/><em>事情发生？</em></h2><p>不必先写一份完整需求文档。可以是一个正在卡住的项目、一项急需完成的工作，也可以是一个尚未成形的想法。</p><p>从你面对的真实问题开始，我会先帮助厘清它，再判断是否适合合作，以及需要哪些能力参与。</p><div class="note">当前为可交互网站原型：项目简报仅在你的浏览器内生成，可复制或下载；不会上传到服务器。正式上线时可接入邮箱、微信或客户管理系统。</div></div>
  <form class="brief-form" id="briefForm"><div class="form-caption"><span>HANK / PROJECT INTAKE</span><span>NO. 001 — OPEN</span></div><h3>把一个问题交给我。</h3>
   <div class="field"><label>你现在最需要的是？</label><div class="goal-pills"><label><input type="radio" name="goal" value="解决一个具体项目" checked/><span>解决一个具体项目</span></label><label><input type="radio" name="goal" value="探索新方向"/><span>探索新方向</span></label><label><input type="radio" name="goal" value="寻找长期协作"/><span>寻找长期协作</span></label></div></div>
   <div class="field"><label for="problem">告诉我你正在面对的问题 <small>（必填）</small></label><textarea id="problem" name="problem" placeholder="例如：我们有一个新业务，但定位不清晰、内容产出慢，也不知道怎样把 AI 放进团队日常……" required></textarea></div>
@@ -235,7 +397,7 @@
    </div>
    <nav class="footer-directory" aria-label="页脚导航">
     <div class="footer-menu-group"><h3>THE PERSON <span>关于</span></h3><a href="#about">认识汉克 <span aria-hidden="true">↗</span></a><a href="#projects">项目实践 <span aria-hidden="true">↗</span></a></div>
-    <div class="footer-menu-group"><h3>THE WORK <span>服务</span></h3><a href="#services">发现服务 <span aria-hidden="true">↗</span></a><a href="#delivery">交付方式 <span aria-hidden="true">↗</span></a></div>
+    <div class="footer-menu-group"><h3>THE WORK <span>服务</span></h3><a href="#services">发现服务 <span aria-hidden="true">↗</span></a><a href="#shop">汉克小铺 <span aria-hidden="true">↗</span></a><a href="#delivery">交付方式 <span aria-hidden="true">↗</span></a></div>
    </nav>
    <a class="footer-return" href="#top" aria-label="回到页面顶部"><span aria-hidden="true">↑</span><small>TOP</small></a>
   </div>
@@ -293,5 +455,120 @@
  $('#downloadBrief').addEventListener('click',()=>{const t=reveal();if(!t)return;const blob=new Blob(['\uFEFF'+t],{type:'text/plain;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='HANK-项目合作简报.txt';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);toast('简报已下载。')});
  syncSelection();
 })();
+</script>
+<script>
+
+(function(){
+  'use strict';
+  // Product catalog can be replaced item by item after content, final prices,
+  // delivery terms and merchant-hosted payment URLs have been confirmed.
+  // price = display-only concept price until actual products are approved.
+  const products=[
+    {id:'agent-atlas',category:'资料包',name:'2026 AI Agent 全景地图',en:'AGENT / ATLAS',coverCN:'全球智能体生态地图',price:59,theme:'ember',desc:'从工具、平台到工作场景，建立可检索的 Agent 全景视角。',contents:['全球 Agent 类型与场景索引','平台能力对照与选型维度','持续更新的研究框架'],version:'VOL.01 / RESEARCH',status:'概念商品',paymentUrl:null},
+    {id:'opc-fieldmap',category:'资料包',name:'超级个体 · 作战地图',en:'ONE / PERSON',coverCN:'OPC 超级个体作战地图',price:39,theme:'ink',desc:'把个人业务拆成可以逐步执行的任务、能力和资源。',contents:['个人业务角色地图','场景与资源梳理模板','任务优先级清单'],version:'VOL.02 / FIELD NOTES',status:'概念商品',paymentUrl:null},
+    {id:'agent-worker',category:'技能包',name:'AI 数字员工上岗工具包',en:'AI / WORKER',coverCN:'从岗位到任务的上岗卡',price:99,theme:'ochre',desc:'从岗位定义、任务清单到验收标准，让数字员工真正开始干活。',contents:['岗位职责定义卡','任务与边界模板','上岗测试及验收清单'],version:'KIT.01 / PEOPLE+AI',status:'概念商品',paymentUrl:null},
+    {id:'dly-diagnostic',category:'工作流',name:'DLY-6C 经营诊断工作流',en:'THINK / SYSTEM',coverCN:'六维经营诊断工作流',price:129,theme:'sage',desc:'用结构化提问与诊断流程，把模糊问题变成行动线索。',contents:['六维诊断流程示意','访谈问题与记录结构','诊断总结交付模板'],version:'FLOW.01 / 6C',status:'概念商品',paymentUrl:null},
+    {id:'content-line',category:'工作流',name:'一人公司内容生产线',en:'MAKE / MEDIA',coverCN:'内容生产与发布流程',price:199,theme:'wine',desc:'从选题、素材整理到多平台改写，建立能重复使用的内容流程。',contents:['选题采集与筛选流程','一稿多用的任务链','发布复盘清单'],version:'FLOW.02 / CONTENT',status:'概念商品',paymentUrl:null},
+    {id:'knowledge-seed',category:'知识库',name:'锦鲤智库 · 知识库起步包',en:'KNOW / MORE',coverCN:'个人知识库起步包',price:149,theme:'night',desc:'为个人与小团队设计资料入口、分类体系和持续更新的方法。',contents:['知识架构与标签模板','资料入库规则示例','检索与维护流程'],version:'BASE.01 / KNOWLEDGE',status:'概念商品',paymentUrl:null},
+    {id:'solution-notes',category:'付费专栏',name:'方案师的工作方法',en:'SOLVE / THINGS',coverCN:'方案师的日常方法笔记',price:49,theme:'linen',desc:'关于问题判断、方案结构、AI 实践与真实交付的连续思考。',contents:['核心方法论专题目录','案例拆解的计划结构','更新机制（待确定）'],version:'SERIES.01 / ESSAYS',status:'概念商品',paymentUrl:null},
+    {id:'france-arts',category:'知识库',name:'法国艺术留学渠道观察',en:'ART / FRANCE',coverCN:'艺术教育与渠道研究',price:89,theme:'blue',desc:'把法国艺术教育的调研视角整理成可追踪的院校与渠道地图。',contents:['院校分类与观察字段','渠道筛选方法','动态信息更新框架'],version:'BASE.02 / EDUCATION',status:'概念商品',paymentUrl:null}
+  ];
+  // This is a public concept catalog; external payment is deliberately disabled.
+  const $=(sel,root=document)=>root.querySelector(sel), $=(sel,root=document)=>Array.from(root.querySelectorAll(sel));
+  let activeKind='全部';
+  let cart=[];
+  try{const saved=JSON.parse(localStorage.getItem('hank-shop-interest-v1')||'[]');if(Array.isArray(saved))cart=saved.filter(id=>products.some(p=>p.id===id));}catch(_){}
+  const grid=$('#shopGrid'),detail=$('#shopDetail'),cartDialog=$('#shopCart');
+  if(!grid||!detail||!cartDialog)return;
+  const money=n=>'¥ '+Number(n).toLocaleString('zh-CN');
+  const find=id=>products.find(p=>p.id===id);
+  const esc=str=>String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+  function cover(p){return '<span class="shop-cover-face theme-'+p.theme+'">'+
+     '<span class="shop-cover-top"><span>HANK / LITTLE SHOP</span><span>© 2026</span></span>'+
+     '<span class="shop-cover-central"><span class="shop-cover-illustration" aria-hidden="true"></span>'+
+     '<span class="shop-cover-title">'+esc(p.en.replace(' / ','<br>')).replace('&lt;br&gt;','<br>')+'</span>'+
+     '<span class="shop-cover-cn">'+esc(p.coverCN)+'</span></span>'+
+     '<span class="shop-cover-foot"><span>'+esc(p.version)+'</span><span>h.</span></span></span>';
+  }
+  function card(p){
+    const selected=cart.includes(p.id);
+    return '<article class="shop-item" data-category="'+esc(p.category)+'" data-product="'+esc(p.id)+'">'+
+      '<button class="shop-item-cover" type="button" data-shop-detail="'+esc(p.id)+'" aria-label="查看 '+esc(p.name)+' 商品详情">'+cover(p)+'</button>'+
+      '<div class="shop-item-meta"><div class="shop-item-type"><span>'+esc(p.category)+'</span><span>CONCEPT / 2026</span></div>'+
+      '<h3 class="shop-item-name">'+esc(p.name)+'</h3><p class="shop-item-desc">'+esc(p.desc)+'</p>'+
+      '<div class="shop-item-bottom"><div class="shop-item-price"><strong>'+money(p.price)+'</strong><small>示意价</small></div>'+
+      '<div class="shop-item-actions"><button type="button" data-shop-detail="'+esc(p.id)+'" aria-label="查看 '+esc(p.name)+' 详情">↗</button>'+
+      '<button type="button" data-shop-add="'+esc(p.id)+'" aria-label="'+(selected?'从选购清单移除 ':'加入选购清单 ')+esc(p.name)+'" aria-pressed="'+selected+'">'+(selected?'✓':'+')+'</button></div></div></div></article>';
+  }
+  function render(){
+    grid.innerHTML=products.filter(p=>activeKind==='全部'||p.category===activeKind).map(card).join('');
+    $('#shopCartCount').textContent=String(cart.length);
+  }
+  function save(){try{localStorage.setItem('hank-shop-interest-v1',JSON.stringify(cart));}catch(_){}render();if(cartDialog.open)renderCart();}
+  function toggle(id){if(!find(id))return;cart=cart.includes(id)?cart.filter(x=>x!==id):cart.concat(id);save();}
+  function openDialog(dialog){if(typeof dialog.showModal==='function')dialog.showModal();else dialog.setAttribute('open','');}
+  function closeDialog(dialog){if(typeof dialog.close==='function')dialog.close();else dialog.removeAttribute('open');}
+  function showDetail(id){
+    const p=find(id);if(!p)return;
+    $('#shopDetailContent').innerHTML='<div class="shop-detail-layout"><div><div class="shop-item-cover" aria-hidden="true">'+cover(p)+'</div></div>'+
+       '<div class="shop-detail-copy"><span class="shop-detail-kicker">'+esc(p.category)+' / '+esc(p.version)+'</span>'+
+       '<h2 class="serif" id="shopDetailTitle">'+esc(p.name)+'</h2><p>'+esc(p.desc)+'</p>'+
+       '<h3>拟包含的内容</h3><ul>'+p.contents.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>'+
+       '<div class="shop-detail-price">'+money(p.price)+' <small>示意价 · 待确认</small></div>'+
+       '<button class="shop-add-button" type="button" data-shop-add="'+esc(p.id)+'">'+(cart.includes(p.id)?'移出选购清单':'加入我的选购清单')+' ↗</button>'+
+       '<p class="shop-detail-disclaimer">商品内容、正式定价、交付形式与付款方式尚待确认；当前仅用于购买意向展示。</p></div></div>';
+    openDialog(detail);
+  }
+  function renderCart(){
+    const list=cart.map(find).filter(Boolean);
+    $('#shopCartItems').innerHTML=list.length?list.map(p=>'<div class="shop-cart-row">'+
+      '<div class="shop-cart-mini" aria-hidden="true">h.</div><div class="shop-cart-row-text"><strong>'+esc(p.name)+'</strong><small>'+esc(p.category)+' · 展示价格</small></div>'+
+      '<span class="shop-cart-row-price">'+money(p.price)+'</span>'+
+      '<button class="shop-cart-remove" type="button" data-shop-remove="'+esc(p.id)+'" aria-label="移除 '+esc(p.name)+'">移除</button></div>').join(''):
+      '<p class="shop-cart-empty">架子上有很多想法，你还没选中任何东西。先挑几件看看吧。</p>';
+    $('#shopCartTotal').textContent=money(list.reduce((sum,p)=>sum+p.price,0));
+    $('#shopCopyList').disabled=!list.length;$('#shopExportList').disabled=!list.length;
+  }
+  function cartText(){
+    const list=cart.map(find).filter(Boolean);
+    if(!list.length)return null;
+    return ['HANK / 汉克小铺 · 购买意向清单','（当前为商品概念与示意价格，非正式订单）','────────────────────',
+      ...list.map((p,i)=>(i+1)+'. '+p.name+' / '+p.category+' / '+money(p.price)),
+      '────────────────────','示意价格合计：'+money(list.reduce((n,p)=>n+p.price,0)),
+      '','请与汉克进一步确认：正式售价、具体内容、付款方式、交付时间和售后安排。',
+      '当前网站尚未接入支付和商品交付系统，以上清单不会自动发送。'].join('\n');
+  }
+  function download(txt){
+    const blob=new Blob(['\uFEFF'+txt],{type:'text/plain;charset=utf-8'});
+    const url=URL.createObjectURL(blob), a=document.createElement('a');
+    a.href=url;a.download='HANK-小铺选购意向清单.txt';document.body.appendChild(a);a.click();a.remove();
+    setTimeout(()=>URL.revokeObjectURL(url),1500);
+  }
+  async function copy(txt){
+    try{
+      if(navigator.clipboard&&window.isSecureContext)await navigator.clipboard.writeText(txt);
+      else{const el=document.createElement('textarea');el.value=txt;el.style.position='fixed';el.style.opacity='0';document.body.appendChild(el);el.select();if(!document.execCommand('copy'))throw Error('no clipboard');el.remove();}
+      $('#shopCopyList').textContent='已复制 ✓';setTimeout(()=>$('#shopCopyList').textContent='复制咨询清单 ↗',2000);
+    }catch(_){alert('复制受浏览器限制，请下载选购清单。');}
+  }
+  $('.shop-filter').forEach(btn=>btn.addEventListener('click',()=>{
+    activeKind=btn.dataset.kind;$('.shop-filter').forEach(el=>{el.classList.toggle('is-active',el===btn);el.setAttribute('aria-pressed',String(el===btn));});
+    render();
+  }));
+  grid.addEventListener('click',e=>{
+    const add=e.target.closest('[data-shop-add]');if(add){toggle(add.dataset.shopAdd);return;}
+    const item=e.target.closest('[data-shop-detail]');if(item)showDetail(item.dataset.shopDetail);
+  });
+  detail.addEventListener('click',e=>{const b=e.target.closest('[data-shop-add]');if(b){toggle(b.dataset.shopAdd);showDetail(b.dataset.shopAdd);}});
+  cartDialog.addEventListener('click',e=>{const b=e.target.closest('[data-shop-remove]');if(b)toggle(b.dataset.shopRemove);});
+  $('#shopCartOpen').addEventListener('click',()=>{renderCart();openDialog(cartDialog);});
+  $('[data-shop-close]').forEach(b=>b.addEventListener('click',()=>closeDialog($('#'+b.dataset.shopClose))));
+  [detail,cartDialog].forEach(d=>d.addEventListener('click',e=>{if(e.target===d)closeDialog(d);}));
+  $('#shopTalkLink').addEventListener('click',()=>closeDialog(cartDialog));
+  $('#shopCopyList').addEventListener('click',()=>{const txt=cartText();if(txt)copy(txt);});
+  $('#shopExportList').addEventListener('click',()=>{const txt=cartText();if(txt)download(txt);});
+  render();
+})();
+
 </script>
 </body></html>
