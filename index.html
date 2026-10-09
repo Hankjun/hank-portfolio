@@ -1,975 +1,186 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>汉克 Hank | 多身份创业者 · 社区架构师 · 私域操盘手</title>
-<meta name="description" content="汉克 — 80后INFP，法国埃米尔科尔高等艺术学院中国区招生推广，大鲤鱼OPC社区负责人，作品集研习社创始人（16万艺术留学生社群），小太阳企业家俱乐部私域操盘手。">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<meta name="theme-color" content="#f5f2eb" />
+<meta name="description" content="汉克 HANK，一名方案师。以人为入口，以工作为单元，以结果为终点。探索商业研究、品牌设计、AI 工作流、资源连接与项目交付。" />
+<title>HANK 汉克 — 以我为界面，让事情发生。</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'%3E%3Crect width='80' height='80' rx='18' fill='%231a343a'/%3E%3Ctext x='16' y='57' fill='%23e4fa8c' font-size='48' font-family='Georgia'%3EH%3C/text%3E%3C/svg%3E" />
 <style>
-/* ===== Reset & Base ===== */
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-:root {
-  --ink: #1a1a2e;
-  --ink-2: #16213e;
-  --gold: #c9a55c;
-  --gold-light: #e8c887;
-  --gold-dim: #a8893f;
-  --teal: #2a6f7e;
-  --teal-light: #3d8a9a;
-  --cream: #faf8f4;
-  --cream-2: #f5f1ea;
-  --slate: #3d3d52;
-  --slate-light: #6b6b80;
-  --line: #e4dfd6;
-  --white: #ffffff;
-  --shadow: 0 4px 24px rgba(26, 26, 46, 0.08);
-  --shadow-lg: 0 12px 48px rgba(26, 26, 46, 0.12);
-  --radius: 16px;
-  --max-w: 1200px;
-  --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-html { scroll-behavior: smooth; font-size: 16px; }
-body {
-  font-family: 'Noto Sans SC', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  color: var(--slate);
-  background: var(--cream);
-  line-height: 1.7;
-  overflow-x: hidden;
-}
-.serif { font-family: 'Noto Serif SC', serif; }
-
-/* ===== Navigation ===== */
-.nav {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 1000;
-  padding: 1.2rem 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  transition: var(--transition);
-}
-.nav.scrolled {
-  background: rgba(250, 248, 244, 0.92);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  box-shadow: 0 1px 0 rgba(0,0,0,0.06);
-  padding: 0.8rem 2rem;
-}
-.nav-logo {
-  font-family: 'Noto Serif SC', serif;
-  font-size: 1.4rem;
-  font-weight: 900;
-  color: var(--ink);
-  letter-spacing: 2px;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-.nav-logo span { color: var(--gold); }
-.nav-links {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-}
-.nav-links a {
-  text-decoration: none;
-  color: var(--slate);
-  font-size: 0.9rem;
-  font-weight: 500;
-  position: relative;
-  transition: color var(--transition);
-}
-.nav-links a::after {
-  content: '';
-  position: absolute;
-  bottom: -4px; left: 0;
-  width: 0; height: 2px;
-  background: var(--gold);
-  transition: width var(--transition);
-}
-.nav-links a:hover { color: var(--ink); }
-.nav-links a:hover::after { width: 100%; }
-.nav.scrolled .nav-links a,
-.nav.scrolled .nav-logo { color: var(--ink); }
-@media (max-width: 768px) {
-  .nav-links { display: none; }
-}
-
-/* ===== Hero ===== */
-.hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(135deg, var(--ink) 0%, var(--ink-2) 50%, #0f3460 100%);
-  color: var(--white);
-  text-align: center;
-  padding: 6rem 2rem 4rem;
-}
-.hero::before {
-  content: '';
-  position: absolute;
-  top: -50%; right: -20%;
-  width: 80%; height: 120%;
-  background: radial-gradient(ellipse, rgba(201, 165, 92, 0.12) 0%, transparent 60%);
-  pointer-events: none;
-}
-.hero::after {
-  content: '';
-  position: absolute;
-  bottom: -30%; left: -15%;
-  width: 70%; height: 90%;
-  background: radial-gradient(ellipse, rgba(42, 111, 126, 0.15) 0%, transparent 60%);
-  pointer-events: none;
-}
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 800px;
-}
-.hero-badge {
-  display: inline-block;
-  padding: 0.4rem 1.2rem;
-  border: 1px solid rgba(201, 165, 92, 0.4);
-  border-radius: 50px;
-  font-size: 0.8rem;
-  letter-spacing: 3px;
-  color: var(--gold-light);
-  margin-bottom: 2rem;
-  text-transform: uppercase;
-}
-.hero h1 {
-  font-family: 'Noto Serif SC', serif;
-  font-size: clamp(3rem, 8vw, 5.5rem);
-  font-weight: 900;
-  letter-spacing: 8px;
-  margin-bottom: 0.5rem;
-  background: linear-gradient(180deg, #fff 0%, #e0dacb 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-.hero h1-en {
-  display: block;
-  font-family: 'Inter', sans-serif;
-  font-size: clamp(0.9rem, 2vw, 1.1rem);
-  font-weight: 300;
-  letter-spacing: 12px;
-  color: var(--gold-light);
-  margin-bottom: 1.5rem;
-  opacity: 0.8;
-}
-.hero-tagline {
-  font-size: clamp(1rem, 2.5vw, 1.25rem);
-  color: rgba(255,255,255,0.7);
-  margin-bottom: 2.5rem;
-  font-weight: 300;
-  letter-spacing: 1px;
-}
-.hero-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-  justify-content: center;
-  margin-bottom: 3rem;
-}
-.hero-tag {
-  padding: 0.4rem 1rem;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 8px;
-  font-size: 0.82rem;
-  color: rgba(255,255,255,0.8);
-  backdrop-filter: blur(10px);
-}
-.hero-tag.gold {
-  background: rgba(201, 165, 92, 0.15);
-  border-color: rgba(201, 165, 92, 0.3);
-  color: var(--gold-light);
-}
-.hero-scroll {
-  position: absolute;
-  bottom: 2rem; left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  color: rgba(255,255,255,0.4);
-  font-size: 0.75rem;
-  letter-spacing: 2px;
-}
-.hero-scroll-line {
-  width: 1px; height: 40px;
-  background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.4));
-  animation: scrollLine 2s ease-in-out infinite;
-}
-@keyframes scrollLine {
-  0%, 100% { opacity: 0.3; transform: scaleY(0.5); }
-  50% { opacity: 1; transform: scaleY(1); }
-}
-
-/* ===== Section Base ===== */
-.section {
-  padding: 6rem 2rem;
-  position: relative;
-}
-.section-inner {
-  max-width: var(--max-w);
-  margin: 0 auto;
-}
-.section-label {
-  display: inline-block;
-  font-size: 0.78rem;
-  letter-spacing: 4px;
-  color: var(--gold);
-  text-transform: uppercase;
-  margin-bottom: 0.8rem;
-  font-weight: 600;
-}
-.section-title {
-  font-family: 'Noto Serif SC', serif;
-  font-size: clamp(1.8rem, 4vw, 2.6rem);
-  font-weight: 700;
-  color: var(--ink);
-  margin-bottom: 1rem;
-  letter-spacing: 2px;
-}
-.section-desc {
-  font-size: 1rem;
-  color: var(--slate-light);
-  max-width: 600px;
-  margin-bottom: 3rem;
-}
-
-/* ===== About ===== */
-.about { background: var(--cream); }
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 4rem;
-  align-items: center;
-}
-@media (max-width: 900px) {
-  .about-grid { grid-template-columns: 1fr; gap: 2rem; }
-}
-.about-visual {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.avatar-ring {
-  width: 280px; height: 280px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--ink), var(--ink-2));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  box-shadow: var(--shadow-lg);
-}
-.avatar-ring::before {
-  content: '';
-  position: absolute;
-  inset: -12px;
-  border-radius: 50%;
-  border: 2px solid var(--gold);
-  opacity: 0.3;
-}
-.avatar-ring::after {
-  content: '';
-  position: absolute;
-  inset: -24px;
-  border-radius: 50%;
-  border: 1px solid var(--gold);
-  opacity: 0.15;
-}
-.avatar-text {
-  font-family: 'Noto Serif SC', serif;
-  font-size: 5rem;
-  font-weight: 900;
-  color: var(--gold-light);
-  letter-spacing: 4px;
-}
-.about-info-card {
-  background: var(--white);
-  border-radius: var(--radius);
-  padding: 2.5rem;
-  box-shadow: var(--shadow);
-}
-.info-row {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  padding: 1rem 0;
-  border-bottom: 1px solid var(--line);
-}
-.info-row:last-child { border-bottom: none; }
-.info-label {
-  font-size: 0.82rem;
-  color: var(--gold-dim);
-  font-weight: 600;
-  min-width: 70px;
-  letter-spacing: 1px;
-}
-.info-value {
-  font-size: 0.95rem;
-  color: var(--slate);
-  flex: 1;
-}
-.about-philosophy {
-  margin-top: 2rem;
-  padding: 1.5rem;
-  background: var(--cream-2);
-  border-radius: 12px;
-  border-left: 3px solid var(--gold);
-}
-.about-philosophy p {
-  font-size: 0.9rem;
-  color: var(--slate);
-  font-style: italic;
-}
-
-/* ===== Roles ===== */
-.roles { background: var(--white); }
-.roles-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-}
-.role-card {
-  background: var(--cream);
-  border-radius: var(--radius);
-  padding: 2rem;
-  border: 1px solid var(--line);
-  transition: var(--transition);
-  position: relative;
-  overflow: hidden;
-}
-.role-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 3px;
-  background: var(--gold);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform var(--transition);
-}
-.role-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
-  border-color: transparent;
-}
-.role-card:hover::before { transform: scaleX(1); }
-.role-icon {
-  width: 48px; height: 48px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, var(--ink), var(--ink-2));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1.2rem;
-}
-.role-icon svg { width: 24px; height: 24px; }
-.role-org {
-  font-size: 0.8rem;
-  color: var(--gold-dim);
-  font-weight: 600;
-  letter-spacing: 1px;
-  margin-bottom: 0.4rem;
-}
-.role-title {
-  font-family: 'Noto Serif SC', serif;
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--ink);
-  margin-bottom: 0.5rem;
-}
-.role-desc {
-  font-size: 0.85rem;
-  color: var(--slate-light);
-}
-
-/* ===== Business ===== */
-.business { background: var(--cream); }
-.business-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-}
-@media (max-width: 700px) {
-  .business-grid { grid-template-columns: 1fr; }
-}
-.biz-card {
-  background: var(--white);
-  border-radius: var(--radius);
-  padding: 2rem;
-  display: flex;
-  gap: 1.5rem;
-  align-items: flex-start;
-  box-shadow: var(--shadow);
-  transition: var(--transition);
-}
-.biz-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
-}
-.biz-num {
-  font-family: 'Noto Serif SC', serif;
-  font-size: 2.5rem;
-  font-weight: 900;
-  color: var(--gold);
-  opacity: 0.3;
-  line-height: 1;
-  min-width: 50px;
-}
-.biz-info h3 {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--ink);
-  margin-bottom: 0.3rem;
-}
-.biz-info .biz-org {
-  font-size: 0.8rem;
-  color: var(--gold-dim);
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-.biz-info p {
-  font-size: 0.85rem;
-  color: var(--slate-light);
-}
-
-/* ===== Projects ===== */
-.projects { background: var(--white); }
-.project-tabs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-  margin-bottom: 2.5rem;
-}
-.tab-btn {
-  padding: 0.5rem 1.2rem;
-  border: 1px solid var(--line);
-  border-radius: 50px;
-  background: transparent;
-  font-size: 0.85rem;
-  color: var(--slate);
-  cursor: pointer;
-  transition: var(--transition);
-  font-family: inherit;
-}
-.tab-btn:hover {
-  border-color: var(--gold);
-  color: var(--gold);
-}
-.tab-btn.active {
-  background: var(--ink);
-  color: var(--white);
-  border-color: var(--ink);
-}
-.project-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 1rem;
-}
-.project-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.8rem;
-  padding: 1rem 1.2rem;
-  background: var(--cream);
-  border-radius: 10px;
-  border: 1px solid var(--line);
-  transition: var(--transition);
-}
-.project-item:hover {
-  border-color: var(--gold);
-  background: var(--white);
-  box-shadow: var(--shadow);
-}
-.project-dot {
-  width: 6px; height: 6px;
-  border-radius: 50%;
-  background: var(--gold);
-  margin-top: 8px;
-  flex-shrink: 0;
-}
-.project-item span {
-  font-size: 0.88rem;
-  color: var(--slate);
-  line-height: 1.5;
-}
-.project-count {
-  display: inline-block;
-  padding: 0.3rem 0.8rem;
-  background: var(--cream-2);
-  border-radius: 50px;
-  font-size: 0.78rem;
-  color: var(--slate-light);
-  margin-left: 0.5rem;
-}
-
-/* ===== Investments ===== */
-.investments { background: var(--ink); color: var(--white); }
-.investments .section-title { color: var(--white); }
-.investments .section-label { color: var(--gold-light); }
-.investments .section-desc { color: rgba(255,255,255,0.6); }
-.invest-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.2rem;
-}
-.invest-card {
-  padding: 1.5rem;
-  border-radius: var(--radius);
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
-  transition: var(--transition);
-}
-.invest-card:hover {
-  background: rgba(201, 165, 92, 0.08);
-  border-color: rgba(201, 165, 92, 0.3);
-  transform: translateY(-4px);
-}
-.invest-card .invest-city {
-  font-size: 0.75rem;
-  color: var(--gold-light);
-  letter-spacing: 2px;
-  margin-bottom: 0.5rem;
-}
-.invest-card h4 {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--white);
-  line-height: 1.5;
-}
-
-/* ===== Ecosystem ===== */
-.ecosystem { background: var(--cream); }
-.eco-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-}
-.eco-chip {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.8rem 1.5rem;
-  background: var(--white);
-  border-radius: 50px;
-  box-shadow: var(--shadow);
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--ink);
-  transition: var(--transition);
-}
-.eco-chip:hover {
-  background: var(--ink);
-  color: var(--white);
-  transform: translateY(-3px);
-}
-.eco-chip-dot {
-  width: 8px; height: 8px;
-  border-radius: 50%;
-  background: var(--gold);
-}
-
-/* ===== Footer ===== */
-.footer {
-  background: var(--ink);
-  color: rgba(255,255,255,0.5);
-  padding: 3rem 2rem 2rem;
-  text-align: center;
-}
-.footer-logo {
-  font-family: 'Noto Serif SC', serif;
-  font-size: 1.5rem;
-  font-weight: 900;
-  color: var(--white);
-  letter-spacing: 4px;
-  margin-bottom: 0.5rem;
-}
-.footer-logo span { color: var(--gold); }
-.footer p {
-  font-size: 0.82rem;
-  margin-bottom: 0.3rem;
-}
-.footer-divider {
-  width: 40px; height: 2px;
-  background: var(--gold);
-  margin: 1.5rem auto;
-}
-
-/* ===== Animations ===== */
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-.reveal-delay-1 { transition-delay: 0.1s; }
-.reveal-delay-2 { transition-delay: 0.2s; }
-.reveal-delay-3 { transition-delay: 0.3s; }
-.reveal-delay-4 { transition-delay: 0.4s; }
+:root{--paper:#f5f2eb;--paper2:#ebe8de;--white:#fffdf7;--ink:#183238;--ink-deep:#101b1d;--body:#57666a;--terracotta:#c36141;--mint:#dbf77c;--stroke:#d6d9d1;--stroke-dark:#344643;--ease:cubic-bezier(.22,1,.36,1);--w:1300px;--pad:clamp(22px,5.2vw,88px)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:86px}body{background:var(--paper);color:var(--ink);margin:0;font-family:Inter,"Helvetica Neue","PingFang SC","Microsoft Yahei",sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #c78b4f;outline-offset:3px}::selection{background:#d8ed99;color:#183238}.container{width:min(var(--w),calc(100% - var(--pad)*2));margin-inline:auto}.eyebrow{font-size:11px;letter-spacing:.17em;font-weight:750;text-transform:uppercase}.section-number{font:500 11px/1.3 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.12em;text-transform:uppercase}.serif{font-family:Georgia,"Songti SC","Noto Serif SC","SimSun",serif;font-weight:500}.sans{font-family:Inter,"Helvetica Neue","PingFang SC",sans-serif}.muted{color:var(--body)}.divider{height:1px;background:var(--stroke)}.link-line{display:inline-flex;align-items:center;gap:12px;font-size:13px;font-weight:750;padding-bottom:8px;border-bottom:1px solid currentColor;transition:gap .2s}.link-line:hover{gap:20px}.arrow{font-size:20px;font-weight:400;line-height:.9}.btn{display:inline-flex;align-items:center;justify-content:center;gap:18px;padding:16px 22px;background:var(--ink);color:var(--white);border:1px solid var(--ink);border-radius:3px;font-size:13px;font-weight:650;transition:transform .2s,background .2s}.btn:hover{transform:translateY(-2px);background:#294950}.btn.outline{background:transparent;color:var(--ink)}.btn.outline:hover{background:#ebece2}.btn.sm{padding:12px 17px}.big-section{padding:clamp(75px,9vw,138px) 0}.section-head{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:18px 0;border-top:1px solid var(--stroke);font-size:11px;color:#75817f}.section-head .left{font-weight:750;color:var(--ink);letter-spacing:.12em}.section-title{font-size:clamp(38px,5.4vw,78px);line-height:1.22;letter-spacing:-.055em;margin:42px 0 25px}.section-intro{color:var(--body);font-size:16px;line-height:2;max-width:660px}
+/* header */
+.site-header{height:80px;position:sticky;z-index:50;top:0;border-bottom:1px solid rgba(24,50,56,.13);background:rgba(245,242,235,.91);backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px)}.head-inner{height:100%;display:flex;justify-content:space-between;align-items:center;gap:25px}.brand{display:flex;align-items:baseline;gap:15px;white-space:nowrap}.brand-word{font:bold italic 32px/1 Georgia,serif;letter-spacing:-.09em}.brand-dot{color:var(--terracotta);font-size:31px}.brand-sub{font-size:11px;letter-spacing:.09em;font-weight:700}.nav{display:flex;gap:32px;align-items:center;margin-left:auto;font-size:12px;font-weight:650}.nav a:hover{color:var(--terracotta)}.header-cta{font-size:12px;border:1px solid var(--ink);padding:12px 17px;border-radius:2px;font-weight:750}.header-cta:hover{background:var(--ink);color:white}.mobile-menu{display:none;border:1px solid var(--stroke);background:transparent;width:41px;height:41px;font-size:23px;color:var(--ink)}.read-progress{height:2px;position:absolute;left:0;bottom:-1px;background:var(--terracotta);width:0%;pointer-events:none;z-index:2}
+/* hero */
+.hero{padding-top:clamp(60px,8vw,122px);padding-bottom:clamp(65px,7vw,105px);overflow:hidden}.hero-grid{display:grid;grid-template-columns:minmax(0,1.17fr) minmax(340px,.83fr);gap:clamp(36px,5vw,90px);align-items:center}.hero .eyebrow{color:var(--terracotta);margin-bottom:29px}.hero h1{font-size:clamp(56px,6.5vw,103px);line-height:1.23;letter-spacing:-.075em;margin:0 0 29px}.hero h1 span{color:var(--terracotta)}.hero-lead{font-size:clamp(16px,1.3vw,19px);line-height:2.03;color:#536468;max-width:635px;margin:0}.hero-actions{display:flex;gap:29px;align-items:center;margin-top:40px;flex-wrap:wrap}.micro{display:flex;gap:21px;margin-top:63px;align-items:center;color:#667577;font-size:11px;font-weight:650;letter-spacing:.04em}.micro:before{content:"";height:1px;width:46px;background:var(--terracotta)}
+.hero-art{aspect-ratio:.85;background:#dfe3d9;border-radius:250px 250px 5px 5px;position:relative;overflow:hidden;min-height:455px;isolation:isolate;box-shadow:20px 25px 0 #ebe9df}.hero-art:before{content:"";position:absolute;inset:21px;border:1px solid #b7c8c0;border-radius:240px 240px 1px 1px}.poster-grid{position:absolute;inset:0;background:linear-gradient(90deg,transparent 49.8%,#829c8c24 50%,transparent 50.2%),linear-gradient(transparent 49.8%,#829c8c24 50%,transparent 50.2%);background-size:80px 80px;opacity:.65}.halo{position:absolute;width:76%;aspect-ratio:1;left:12%;top:18%;border:1px solid #809d9480;border-radius:50%}.halo:before{content:"";position:absolute;width:140%;aspect-ratio:1;left:-20%;top:-20%;border:1px dashed #a6bbb2c9;border-radius:50%;transform:rotate(-15deg)}.halo:after{content:"";position:absolute;width:64%;aspect-ratio:1;left:18%;top:18%;border:1px solid #79998c99;border-radius:50%}.h-character{position:absolute;top:25%;left:19%;font:italic 400 clamp(200px,28vw,430px)/.85 Georgia,serif;letter-spacing:-.15em;color:var(--ink);transform:rotate(-7deg);text-shadow:10px 19px 0 #1832380a}.h-character i{color:var(--terracotta);font-style:normal;position:relative;left:2%;font-size:.8em}.orbit-tag{position:absolute;z-index:1;background:var(--white);box-shadow:0 6px 30px #152c3019;border:1px solid #d5ded6;padding:11px 14px;font:700 10px/1.5 ui-monospace,monospace;letter-spacing:.08em}.orbit-tag.a{left:3%;top:19%;transform:rotate(-7deg)}.orbit-tag.b{right:1%;top:39%;transform:rotate(5deg)}.orbit-tag.c{left:9%;bottom:17%;transform:rotate(3deg)}.poster-footer{position:absolute;bottom:34px;left:35px;right:35px;display:flex;justify-content:space-between;gap:10px;font-size:10px;letter-spacing:.1em;font-weight:700;color:#395f59}.hero-art .orange-disc{position:absolute;width:80px;aspect-ratio:1;background:#c8764e;border-radius:50%;right:13%;top:11%;filter:blur(.4px);box-shadow:0 0 50px #c8764e44}
+/* principle spine */
+.spine{background:var(--ink);color:#f9faf0}.spine-inner{min-height:116px;display:grid;grid-template-columns:repeat(3,1fr);align-items:center}.spine-item{display:flex;align-items:center;gap:20px;padding:27px 25px;border-right:1px solid #5871715e;min-width:0}.spine-item:first-child{padding-left:0}.spine-item:last-child{border:0}.spine-item b{font:italic 40px Georgia,serif;letter-spacing:-.06em;color:var(--mint)}.spine-item span{font-size:12px;color:#d2dcd7;line-height:1.8}.spine-item small{display:block;font-size:10px;letter-spacing:.12em;color:#99aca4;margin-bottom:3px}
+/* introduction */
+.intro-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(40px,8vw,140px);margin-top:55px}.intro-marker{font:italic clamp(58px,9vw,130px)/.9 Georgia,serif;color:var(--terracotta);letter-spacing:-.09em}.intro-left p{font-size:13px;color:#788481;margin-top:36px;line-height:2}.intro-copy{font-size:clamp(25px,2.75vw,39px);line-height:1.65;letter-spacing:-.04em;margin:0 0 32px}.intro-copy em{font-style:normal;color:var(--terracotta)}.intro-detail{font-size:15px;line-height:2.1;color:var(--body);max-width:700px}.capabilities{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--stroke);border-bottom:1px solid var(--stroke);margin-top:38px}.capabilities>div{padding:25px 18px 25px 0;border-right:1px solid var(--stroke)}.capabilities>div+div{padding-left:18px}.capabilities>div:last-child{border:0}.capabilities b{font-size:15px}.capabilities small{display:block;color:#84938c;font-size:11px;margin-top:9px;line-height:1.8}
+/* bridge to service */
+.bridge{background:#e7e9dd;padding:46px 0}.bridge-inner{display:flex;justify-content:space-between;align-items:center;gap:35px}.bridge p{max-width:830px;font-family:Georgia,"Songti SC",serif;font-size:clamp(21px,2.5vw,35px);line-height:1.6;margin:0}.bridge em{font-style:normal;color:var(--terracotta)}
+/* dark services */
+.service-wrap{background:var(--ink-deep);color:#e6eee4;padding:clamp(78px,9vw,140px) 0;position:relative;overflow:hidden}.service-wrap .section-head{border-color:var(--stroke-dark);color:#8eaaa0}.service-wrap .section-head .left{color:var(--mint)}.service-wrap .section-title{font:700 clamp(58px,8.8vw,134px)/.99 Inter,"Helvetica Neue",sans-serif;letter-spacing:-.09em;margin:47px 0 28px}.service-wrap .section-title em{color:var(--mint);font-style:normal}.service-wrap .section-intro{color:#aabdb2}.service-lead{display:flex;justify-content:space-between;align-items:end;gap:40px}.service-description{margin-top:21px;max-width:560px;font-size:15px;line-height:2;color:#afbeb3}.service-aside{font:italic clamp(26px,3vw,47px)/1.1 Georgia,serif;color:#96a9a0;white-space:nowrap}.service-aside em{color:var(--mint);font-style:normal}.filters{margin:61px 0 25px;display:flex;gap:10px;flex-wrap:wrap}.filter-btn{border-radius:40px;border:1px solid #455951;background:transparent;color:#becbc2;font-size:12px;padding:11px 19px;transition:all .2s}.filter-btn:hover{border-color:var(--mint)}.filter-btn[aria-pressed="true"]{background:var(--mint);color:var(--ink-deep);border-color:var(--mint);font-weight:750}.work-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#36443d;border:1px solid #36443d}.work-card{background:var(--ink-deep);min-height:220px;padding:24px;display:flex;flex-direction:column;position:relative;transition:background .2s,transform .2s}.work-card:hover{background:#1e2d28}.work-card[hidden]{display:none}.work-card.selected{background:#263629}.work-card.selected .work-add{background:var(--mint);color:#13211a;border-color:var(--mint)}.work-top{display:flex;align-items:center;justify-content:space-between}.work-top small{font:10px ui-monospace,monospace;color:#75887b;letter-spacing:.12em}.work-add{font-size:20px;font-weight:400;color:#9baea3;border-radius:50%;width:33px;height:33px;border:1px solid #486156;background:transparent;display:grid;place-items:center;line-height:1;transition:all .2s}.work-add:hover{background:#374c3f}.work-card h3{font-size:clamp(20px,2vw,30px);letter-spacing:-.06em;margin:auto 0 11px}.work-card p{font-size:12px;color:#98aa9c;line-height:1.7;margin:0;max-width:220px}.work-bottom{margin-top:20px;border-top:1px solid #36483d;padding-top:9px;font-size:10px;color:#758a7b}.work-selection{margin-top:24px;padding:21px 25px;border:1px solid #344a39;background:#1a2920;display:flex;gap:22px;align-items:center;justify-content:space-between}.work-selection b{font-size:13px;color:var(--mint)}.work-selection p{color:#a7bbad;font-size:12px;margin:8px 0 0;line-height:1.7}.work-selection button{background:var(--mint);color:#14251e;border:0;font-weight:800;padding:13px 18px;white-space:nowrap;font-size:12px}.work-selection button:disabled{opacity:.4;cursor:not-allowed}.work-hint{display:flex;gap:15px;justify-content:space-between;align-items:center;color:#7f988b;font-size:11px;margin-top:22px;line-height:1.6}
+/* projects */
+.practice-section{background:var(--paper);padding:clamp(80px,9vw,130px) 0}.practice-title{display:flex;align-items:end;justify-content:space-between;gap:25px;margin-bottom:45px}.practice-title h2{margin:36px 0 0;font-size:clamp(38px,5.6vw,79px);line-height:1.2}.practice-title h2 em{color:var(--terracotta);font-style:normal}.practice-title p{max-width:290px;color:var(--body);font-size:13px;line-height:1.95;margin:0 0 6px}.project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.project-card{border:1px solid var(--stroke);background:#f9f7f0;min-height:350px;padding:30px;display:flex;flex-direction:column;gap:20px;transition:background .2s,transform .2s}.project-card:hover{background:#fffefb;transform:translateY(-4px)}.project-meta{display:flex;justify-content:space-between;gap:10px;align-items:center;font:700 10px ui-monospace,monospace;letter-spacing:.1em;color:#89938f}.project-symbol{font-size:64px;line-height:1;letter-spacing:-.08em;font-family:Georgia,serif;color:var(--terracotta);margin:27px 0 5px}.project-card:nth-child(2) .project-symbol,.project-card:nth-child(5) .project-symbol{color:#2d6266}.project-card:nth-child(3) .project-symbol,.project-card:nth-child(6) .project-symbol{color:#808a5f}.project-card h3{margin:auto 0 0;font-size:25px;letter-spacing:-.04em}.project-card p{line-height:1.8;font-size:13px;color:#61716c;margin:0}.project-tags{font-size:10px;letter-spacing:.08em;color:#9d6a52;border-top:1px solid var(--stroke);padding-top:13px}
+/* delivery */
+.delivery-wrap{background:#e5e8df;padding:clamp(80px,9vw,130px) 0}.delivery-wrap .section-head{border-color:#b7c5bc}.delivery-intro{display:grid;grid-template-columns:1fr 1fr;align-items:end;gap:40px}.delivery-intro .section-title{margin-bottom:0}.delivery-intro .section-title em{color:var(--terracotta);font-style:normal}.delivery-intro p{font-size:15px;line-height:2;color:#5c6b69;max-width:530px;margin-left:auto}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:75px;border-top:1px solid #afbcb3;border-bottom:1px solid #afbcb3}.step{padding:26px 23px 38px;border-right:1px solid #afbcb3;min-height:250px}.step:first-child{padding-left:0}.step:last-child{border-right:0}.step small{color:var(--terracotta);font:800 11px ui-monospace,monospace}.step h3{font-size:27px;letter-spacing:-.04em;margin:31px 0 14px}.step h3 span{display:block;font:italic 21px Georgia,serif;color:#8b9992;margin-top:3px}.step p{font-size:13px;color:#64716a;line-height:1.85;max-width:225px}.statement-banner{display:flex;gap:30px;justify-content:space-between;align-items:center;margin-top:55px}.statement-banner strong{font:italic clamp(25px,3vw,43px) Georgia,serif;letter-spacing:-.05em}.statement-banner strong span{color:var(--terracotta)}.statement-banner small{color:#71817b;font-size:11px;text-align:right;line-height:1.8}
+/* contact */
+.contact-section{padding:clamp(80px,9vw,130px) 0;background:var(--paper)}.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(40px,8vw,135px)}.contact-copy h2{font-size:clamp(45px,6vw,85px);margin:40px 0 20px;line-height:1.23;letter-spacing:-.055em}.contact-copy h2 em{color:var(--terracotta);font-style:normal}.contact-copy p{line-height:2;color:var(--body);font-size:15px}.note{margin-top:66px;border-top:1px solid var(--stroke);padding-top:20px;font-size:12px;line-height:1.9;color:#71817c}.brief-form{background:var(--white);border:1px solid #d5d9d0;padding:clamp(24px,3vw,47px);box-shadow:13px 13px 0 #e7e9df}.form-caption{display:flex;align-items:center;justify-content:space-between;gap:15px;color:#84918a;font-size:10px;letter-spacing:.11em;font-weight:750}.brief-form h3{font-size:26px;letter-spacing:-.03em;margin:22px 0 33px}.field{margin-bottom:24px}.field label,.field legend{display:block;font-weight:750;font-size:12px;margin-bottom:10px}.field small{color:#90a09a;font-weight:400}.field textarea,.field input,.field select{width:100%;border:1px solid #ccd5cb;border-radius:0;background:#faf9f4;color:var(--ink);padding:14px 15px;font-size:13px;outline:none;transition:border-color .2s}.field textarea:focus,.field input:focus,.field select:focus{border-color:#54766a}.field textarea{min-height:125px;resize:vertical;line-height:1.8}.field textarea::placeholder,.field input::placeholder{color:#a2aca8}.goal-pills{display:flex;flex-wrap:wrap;gap:7px}.goal-pills label{display:flex;position:relative;cursor:pointer;margin:0}.goal-pills input{position:absolute;opacity:0;pointer-events:none}.goal-pills span{padding:10px 13px;background:#f6f5ee;border:1px solid #d7dcd2;font-size:12px;color:#64726b}.goal-pills input:checked+span{background:var(--ink);color:white;border-color:var(--ink)}.goal-pills input:focus-visible+span{outline:3px solid #c78b4f;outline-offset:2px}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:15px}.chosen-works{display:flex;flex-wrap:wrap;gap:7px;margin-top:5px}.chosen-chip{border:1px solid #cbdbb3;background:#edf5db;color:#45603a;padding:7px 10px;font-size:11px}.empty-chip{font-size:11px;color:#9aa89b}.form-note{font-size:11px;color:#7f8c84;line-height:1.8;margin:15px 0}.form-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.copy-secondary{background:none;border:1px solid #abb9b0;color:var(--ink);padding:16px 17px;font-size:12px;font-weight:650}.draft-preview{white-space:pre-wrap;overflow-wrap:anywhere;font:12px/1.85 ui-monospace,"PingFang SC",monospace;background:#f4f5ee;border-left:3px solid var(--terracotta);padding:18px;margin-top:23px;color:#374c49;max-height:300px;overflow:auto}.draft-preview[hidden]{display:none}.toast{position:fixed;z-index:100;bottom:24px;left:50%;transform:translate(-50%,25px);background:#193a31;color:white;padding:13px 21px;font-size:12px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;box-shadow:0 15px 35px #0002}.toast.show{opacity:1;transform:translate(-50%,0)}
+/* footer */
+.footer{background:var(--ink);color:#dce5db;padding:55px 0 30px}.footer-top{display:flex;justify-content:space-between;gap:30px;align-items:end}.footer-logo{font:bold italic clamp(75px,13vw,177px)/.7 Georgia,serif;letter-spacing:-.105em;color:#f7f6ea}.footer-tag{font-size:13px;color:#a6bbb0;line-height:2}.footer-base{border-top:1px solid #45605a;margin-top:59px;padding-top:22px;display:flex;justify-content:space-between;gap:25px;color:#88a297;font-size:11px;line-height:1.9}.footer-base a{color:#e0ebe1}.backtop{border:1px solid #618075;padding:11px 14px;background:transparent;color:#e0ebe1;font-size:11px}
+@media(max-width:1050px){.hero-grid{grid-template-columns:1.18fr .82fr;gap:35px}.hero-art{min-height:400px}.work-grid{grid-template-columns:repeat(3,1fr)}.project-grid{grid-template-columns:repeat(2,1fr)}.nav{gap:17px}.capabilities b{font-size:14px}}@media(max-width:800px){.site-header{height:70px}.nav{display:none;position:absolute;top:70px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--stroke);padding:20px var(--pad);box-shadow:0 20px 25px #00000010}.nav.open{display:flex;flex-direction:column;align-items:start;gap:22px}.nav a{font-size:15px}.mobile-menu{display:block}.brand-sub{font-size:10px}.header-cta{margin-left:auto}.hero-grid{grid-template-columns:1fr}.hero-art{max-width:480px;min-height:auto;aspect-ratio:1.0;margin-inline:auto;width:100%;border-radius:300px 300px 3px 3px}.h-character{font-size:320px}.spine-inner{grid-template-columns:1fr 1fr 1fr}.spine-item{padding:25px 11px;gap:11px}.spine-item b{font-size:30px}.spine-item span{font-size:11px}.intro-layout{grid-template-columns:1fr;gap:35px}.intro-left{display:flex;align-items:end;gap:32px}.intro-left p{margin:0}.service-lead,.practice-title,.bridge-inner{display:block}.service-aside{margin-top:25px}.work-grid{grid-template-columns:repeat(2,1fr)}.practice-title p{margin-top:20px}.delivery-intro{grid-template-columns:1fr}.delivery-intro p{margin:0}.steps{grid-template-columns:repeat(2,1fr)}.step:nth-child(2){border-right:0}.step:nth-child(-n+2){border-bottom:1px solid #afbcb3}.step:nth-child(3){padding-left:0}.contact-grid{grid-template-columns:1fr}.note{margin-top:25px}.contact-copy h2{margin-top:25px}.footer-logo{font-size:100px}}
+@media(max-width:560px){.header-cta{font-size:11px;padding:11px}.brand-word{font-size:29px}.brand-sub{display:none}.hero{padding-top:59px}.hero h1{font-size:clamp(48px,11.7vw,70px)}.hero-lead{font-size:15px}.hero-actions{gap:23px}.micro{margin-top:39px}.hero-art{min-height:340px;max-width:400px}.h-character{font-size:270px}.poster-footer{bottom:28px;left:29px;right:29px;font-size:8px}.orbit-tag{padding:8px;font-size:8px}.spine-inner{grid-template-columns:1fr}.spine-item{border-right:none;border-bottom:1px solid #45645b;padding:18px 0}.spine-item:last-child{border:0}.spine-item b{font-size:35px}.spine-item span{font-size:12px}.intro-left{display:block}.intro-left p{margin-top:20px}.intro-copy{font-size:27px}.capabilities{grid-template-columns:1fr}.capabilities>div,.capabilities>div+div{padding:18px 0;border-right:0;border-bottom:1px solid var(--stroke)}.capabilities>div:last-child{border:0}.bridge{padding:35px 0}.service-wrap .section-title{font-size:clamp(65px,15vw,85px)}.service-aside{font-size:25px}.work-grid{grid-template-columns:1fr 1fr}.work-card{min-height:205px;padding:16px}.work-card h3{font-size:21px;overflow-wrap:anywhere}.work-card p{font-size:11px}.work-selection{display:block;padding:20px}.work-selection button{margin-top:18px;width:100%}.work-hint{display:block}.project-grid{grid-template-columns:1fr}.project-card{min-height:290px}.delivery-intro .section-title{font-size:43px}.steps{grid-template-columns:1fr}.step,.step:nth-child(3){padding:23px 0;min-height:200px;border-right:0;border-bottom:1px solid #afbcb3}.step:last-child{border-bottom:0}.step h3{margin-top:20px}.statement-banner{display:block}.statement-banner small{display:block;text-align:left;margin-top:20px}.brief-form{box-shadow:6px 6px 0 #e7e9df}.form-row{grid-template-columns:1fr}.footer-top{display:block}.footer-tag{margin-top:35px}.footer-base{flex-wrap:wrap}.footer-logo{font-size:86px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
-
-<!-- ===== Navigation ===== -->
-<nav class="nav" id="nav">
-  <div class="nav-logo">汉克<span>·</span>HANK</div>
-  <ul class="nav-links">
-    <li><a href="#about">关于</a></li>
-    <li><a href="#roles">角色</a></li>
-    <li><a href="#business">业务</a></li>
-    <li><a href="#projects">项目</a></li>
-    <li><a href="#investments">投资</a></li>
-  </ul>
-</nav>
-
-<!-- ===== Hero ===== -->
-<section class="hero" id="hero">
-  <div class="hero-content">
-    <div class="hero-badge">多身份创业者 · 社区架构师</div>
-    <h1>汉 克</h1>
-    <h1-en>H A N K</h1-en>
-    <p class="hero-tagline">法国艺术院校中国区推广 · 16万社群创始人 · 私域操盘手</p>
-    <div class="hero-tags">
-      <span class="hero-tag gold">80后</span>
-      <span class="hero-tag gold">INFP</span>
-      <span class="hero-tag">丁火</span>
-      <span class="hero-tag">逻辑怪</span>
-      <span class="hero-tag">哲科思维</span>
-      <span class="hero-tag">软件控</span>
-    </div>
-    <div class="hero-tags">
-      <span class="hero-tag">无锡</span>
-      <span class="hero-tag">苏州</span>
-      <span class="hero-tag">北京</span>
-    </div>
-  </div>
-  <div class="hero-scroll">
-    <span>SCROLL</span>
-    <div class="hero-scroll-line"></div>
-  </div>
-</section>
-
-<!-- ===== About ===== -->
-<section class="section about" id="about">
-  <div class="section-inner">
-    <div class="section-label reveal">ABOUT</div>
-    <h2 class="section-title reveal">关于汉克</h2>
-    <p class="section-desc reveal">一个用哲科思维驱动实践的多身份创业者，横跨AI智能体、艺术留学、品牌设计、私域运营与自媒体矩阵。</p>
-    <div class="about-grid">
-      <div class="about-visual reveal reveal-delay-1">
-        <div class="avatar-ring">
-          <span class="avatar-text">汉</span>
-        </div>
-      </div>
-      <div class="reveal reveal-delay-2">
-        <div class="about-info-card">
-          <div class="info-row">
-            <span class="info-label">昵称</span>
-            <span class="info-value">汉克 (Hank)</span>
-          </div>
-          <div class="info-row">
-            <span class="info-label">标签</span>
-            <span class="info-value">80后 · INFP · 丁火 · 逻辑怪 · 哲科思维 · 软件控</span>
-          </div>
-          <div class="info-row">
-            <span class="info-label">坐标</span>
-            <span class="info-value">无锡 / 苏州 / 北京（三城生活）</span>
-          </div>
-          <div class="info-row">
-            <span class="info-label">角色</span>
-            <span class="info-value">多身份创业者 · 社区架构师 · 私域操盘手 · 天使投资人</span>
-          </div>
-          <div class="info-row">
-            <span class="info-label">领域</span>
-            <span class="info-value">AI智能体 · 艺术留学 · 社群运营 · 品牌设计 · 私域运营 · 自媒体矩阵</span>
-          </div>
-        </div>
-        <div class="about-philosophy">
-          <p>"从底层逻辑出发思考问题，用结构化思维拆解复杂世界。先做再问，带答案回来，而不是带问题。"</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== Roles ===== -->
-<section class="section roles" id="roles">
-  <div class="section-inner">
-    <div class="section-label reveal">ROLES</div>
-    <h2 class="section-title reveal">角色与身份</h2>
-    <p class="section-desc reveal">四重身份，四条赛道，一个内核——用社区思维连接人与资源。</p>
-    <div class="roles-grid">
-      <div class="role-card reveal reveal-delay-1">
-        <div class="role-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#c9a55c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-        </div>
-        <div class="role-org">Ecole Emile Cohl</div>
-        <div class="role-title">中国区招生推广</div>
-        <div class="role-desc">法国埃米尔科尔高等艺术学院</div>
-      </div>
-      <div class="role-card reveal reveal-delay-2">
-        <div class="role-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#c9a55c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
-        </div>
-        <div class="role-org">大鲤鱼OPC社区</div>
-        <div class="role-title">南虾塘主 & 负责人</div>
-        <div class="role-desc">超级工作站和智能体服务社区</div>
-      </div>
-      <div class="role-card reveal reveal-delay-3">
-        <div class="role-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#c9a55c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        </div>
-        <div class="role-org">作品集研习社</div>
-        <div class="role-title">创始人 · 16万社群</div>
-        <div class="role-desc">16万艺术留学生社群创始人</div>
-      </div>
-      <div class="role-card reveal reveal-delay-4">
-        <div class="role-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#c9a55c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/></svg>
-        </div>
-        <div class="role-org">小太阳企业家俱乐部</div>
-        <div class="role-title">私域操盘手</div>
-        <div class="role-desc">企业私域运营与增长</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== Core Business ===== -->
-<section class="section business" id="business">
-  <div class="section-inner">
-    <div class="section-label reveal">BUSINESS</div>
-    <h2 class="section-title reveal">核心业务</h2>
-    <p class="section-desc reveal">四条核心业务线，覆盖教育、AI、社群与私域。</p>
-    <div class="business-grid">
-      <div class="biz-card reveal reveal-delay-1">
-        <div class="biz-num">01</div>
-        <div class="biz-info">
-          <h3>法国留学招生推广</h3>
-          <div class="biz-org">@Ecole Emile Cohl</div>
-          <p>法国埃米尔科尔高等艺术学院中国区招生推广，搭建中法艺术教育桥梁。</p>
-        </div>
-      </div>
-      <div class="biz-card reveal reveal-delay-2">
-        <div class="biz-num">02</div>
-        <div class="biz-info">
-          <h3>超级工作站和智能体服务</h3>
-          <div class="biz-org">@大鲤鱼OPC社区</div>
-          <p>AI智能体生态建设，超级工作站服务，赋能企业与个人数字化转型。</p>
-        </div>
-      </div>
-      <div class="biz-card reveal reveal-delay-3">
-        <div class="biz-num">03</div>
-        <div class="biz-info">
-          <h3>艺术留学生社群</h3>
-          <div class="biz-org">@作品集研习社</div>
-          <p>16万艺术留学生社群运营，内容驱动、服务导向的留学生生态平台。</p>
-        </div>
-      </div>
-      <div class="biz-card reveal reveal-delay-4">
-        <div class="biz-num">04</div>
-        <div class="biz-info">
-          <h3>私域运营</h3>
-          <div class="biz-org">@小太阳企业家俱乐部</div>
-          <p>企业私域流量操盘，社群架构设计与增长策略落地。</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== Projects ===== -->
-<section class="section projects" id="projects">
-  <div class="section-inner">
-    <div class="section-label reveal">PROJECTS</div>
-    <h2 class="section-title reveal">项目经验 <span class="project-count">38+ 项目</span></h2>
-    <p class="section-desc reveal">十余年深耕，横跨AI、社群、自媒体、品牌、教育、活动与企业服务七大领域。</p>
-    <div class="project-tabs reveal" id="projectTabs">
-      <button class="tab-btn active" data-cat="all">全部</button>
-      <button class="tab-btn" data-cat="ai">AI与智能体</button>
-      <button class="tab-btn" data-cat="community">社区与私域</button>
-      <button class="tab-btn" data-cat="media">自媒体与内容</button>
-      <button class="tab-btn" data-cat="brand">品牌与设计</button>
-      <button class="tab-btn" data-cat="edu">教育与培训</button>
-      <button class="tab-btn" data-cat="event">活动与策划</button>
-      <button class="tab-btn" data-cat="enterprise">企业服务</button>
-    </div>
-    <div class="project-list reveal reveal-delay-1" id="projectList">
-      <!-- AI与智能体 -->
-      <div class="project-item" data-cat="ai"><div class="project-dot"></div><span>江苏电商直播基地·大鲤鱼超级助手AI智能体</span></div>
-      <div class="project-item" data-cat="ai"><div class="project-dot"></div><span>华夏博雅教育集团上市财报ChatGPT资料库</span></div>
-      <!-- 社区与私域 -->
-      <div class="project-item" data-cat="community"><div class="project-dot"></div><span>作品集研习社（16万艺术留学生社群·创始人）</span></div>
-      <div class="project-item" data-cat="community"><div class="project-dot"></div><span>小太阳企业家俱乐部私域运营</span></div>
-      <div class="project-item" data-cat="community"><div class="project-dot"></div><span>Yes Design社群运营代运营</span></div>
-      <div class="project-item" data-cat="community"><div class="project-dot"></div><span>RAC共创社群运营与主题共创工坊合作</span></div>
-      <div class="project-item" data-cat="community"><div class="project-dot"></div><span>WeDesign共创社群运营</span></div>
-      <!-- 自媒体与内容 -->
-      <div class="project-item" data-cat="media"><div class="project-dot"></div><span>IGA小红书自媒体代运营</span></div>
-      <div class="project-item" data-cat="media"><div class="project-dot"></div><span>TAL小红书自媒体代运营</span></div>
-      <div class="project-item" data-cat="media"><div class="project-dot"></div><span>MILD School自媒体代运营</span></div>
-      <div class="project-item" data-cat="media"><div class="project-dot"></div><span>SIA自媒体矩阵运营全策划与运营</span></div>
-      <div class="project-item" data-cat="media"><div class="project-dot"></div><span>欧桥百度SEO优化与自媒体矩阵项目</span></div>
-      <div class="project-item" data-cat="media"><div class="project-dot"></div><span>SFK微博矩阵和豆瓣矩阵运营策划（2014）</span></div>
-      <!-- 品牌与产品设计 -->
-      <div class="project-item" data-cat="brand"><div class="project-dot"></div><span>鞠戏产品设计工坊（体育与音乐跨界品牌）</span></div>
-      <div class="project-item" data-cat="brand"><div class="project-dot"></div><span>A+创意工坊平台项目设计</span></div>
-      <div class="project-item" data-cat="brand"><div class="project-dot"></div><span>高思控制品牌官网设计与建设</span></div>
-      <div class="project-item" data-cat="brand"><div class="project-dot"></div><span>睿艺空间网站设计（天道教育集团旗下）</span></div>
-      <div class="project-item" data-cat="brand"><div class="project-dot"></div><span>Artunigo艺术留学生社区设计（SIA旗下）</span></div>
-      <div class="project-item" data-cat="brand"><div class="project-dot"></div><span>壹壹网产品设计（SFK旗下，2014）</span></div>
-      <div class="project-item" data-cat="brand"><div class="project-dot"></div><span>华夏博雅教育集团官网设计与策划</span></div>
-      <div class="project-item" data-cat="brand"><div class="project-dot"></div><span>SIA官网产品设计与内容统筹（2014-2015）</span></div>
-      <!-- 教育与培训 -->
-      <div class="project-item" data-cat="edu"><div class="project-dot"></div><span>石家庄职业技术学院IP运营实验室项目策划</span></div>
-      <div class="project-item" data-cat="edu"><div class="project-dot"></div><span>2019和创留学运营团队培训工坊落地</span></div>
-      <div class="project-item" data-cat="edu"><div class="project-dot"></div><span>2019-2020和与国际艺术教育运营咨询</span></div>
-      <div class="project-item" data-cat="edu"><div class="project-dot"></div><span>2019-2020集品艺术留学运营咨询</span></div>
-      <div class="project-item" data-cat="edu"><div class="project-dot"></div><span>PSONE2016教务服务体系设计与培训</span></div>
-      <div class="project-item" data-cat="edu"><div class="project-dot"></div><span>PSONE2017课程体系"万有引力"全程策划</span></div>
-      <div class="project-item" data-cat="edu"><div class="project-dot"></div><span>IAIA艺盟2017新版服务体系设计</span></div>
-      <div class="project-item" data-cat="edu"><div class="project-dot"></div><span>IAIA艺盟2016年度市场团队咨询与培训</span></div>
-      <div class="project-item" data-cat="edu"><div class="project-dot"></div><span>北京理工大学·软件学院与设计学院·硕士项目落地</span></div>
-      <div class="project-item" data-cat="edu"><div class="project-dot"></div><span>新东方·优能中学·酷学酷玩动画电影训练营</span></div>
-      <!-- 活动与策划 -->
-      <div class="project-item" data-cat="event"><div class="project-dot"></div><span>大千阳光法国昂西动画节全程策划与落地</span></div>
-      <div class="project-item" data-cat="event"><div class="project-dot"></div><span>大千阳光全球动画人才库建设</span></div>
-      <div class="project-item" data-cat="event"><div class="project-dot"></div><span>PSONE成都动画周策划与执行</span></div>
-      <div class="project-item" data-cat="event"><div class="project-dot"></div><span>北京服装学院动画系2017大师行策划与落地</span></div>
-      <div class="project-item" data-cat="event"><div class="project-dot"></div><span>IAIA艺盟团队展示视频策划与落地</span></div>
-      <div class="project-item" data-cat="event"><div class="project-dot"></div><span>Zinch中国&SIA艺术留学合作全程策划</span></div>
-      <!-- 企业服务 -->
-      <div class="project-item" data-cat="enterprise"><div class="project-dot"></div><span>中域云仓私域社群·联营仓企业融资</span></div>
-      <div class="project-item" data-cat="enterprise"><div class="project-dot"></div><span>中国饭店抖音事业部组建·数字人直播</span></div>
-      <div class="project-item" data-cat="enterprise"><div class="project-dot"></div><span>大船艺术教师IP运营项目合作</span></div>
-      <div class="project-item" data-cat="enterprise"><div class="project-dot"></div><span>和创艺术留学IP运营项目合作</span></div>
-      <div class="project-item" data-cat="enterprise"><div class="project-dot"></div><span>SFK教务服务流程优化梳理项目（2013）</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== Investments ===== -->
-<section class="section investments" id="investments">
-  <div class="section-inner">
-    <div class="section-label reveal">INVESTMENTS</div>
-    <h2 class="section-title reveal">投资与企业</h2>
-    <p class="section-desc reveal">五家公司，横跨传媒、科技、教育、文化与品牌策划。</p>
-    <div class="invest-grid">
-      <div class="invest-card reveal reveal-delay-1">
-        <div class="invest-city">无锡</div>
-        <h4>无锡汉克超级助理传媒有限公司</h4>
-      </div>
-      <div class="invest-card reveal reveal-delay-2">
-        <div class="invest-city">苏州</div>
-        <h4>苏州紫灵扬升信息科技有限公司</h4>
-      </div>
-      <div class="invest-card reveal reveal-delay-3">
-        <div class="invest-city">北京</div>
-        <h4>留皇叔（北京）教育科技有限公司</h4>
-      </div>
-      <div class="invest-card reveal reveal-delay-4">
-        <div class="invest-city">北京</div>
-        <h4>北京章鱼和小伙伴们文化发展有限公司</h4>
-      </div>
-      <div class="invest-card reveal reveal-delay-4">
-        <div class="invest-city">无锡</div>
-        <h4>无锡阳阳壹叁壹肆品牌策划有限公司</h4>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== Ecosystem ===== -->
-<section class="section ecosystem" id="ecosystem">
-  <div class="section-inner">
-    <div class="section-label reveal">ECOSYSTEM</div>
-    <h2 class="section-title reveal">数据与工具生态</h2>
-    <p class="section-desc reveal">多平台协作工具链，支撑高效的全栈办公与智能体开发。</p>
-    <div class="eco-grid reveal reveal-delay-1">
-      <div class="eco-chip"><div class="eco-chip-dot"></div>Openclaw</div>
-      <div class="eco-chip"><div class="eco-chip-dot"></div>WorkBuddy</div>
-      <div class="eco-chip"><div class="eco-chip-dot"></div>JVS</div>
-      <div class="eco-chip"><div class="eco-chip-dot"></div>Qclaw</div>
-      <div class="eco-chip"><div class="eco-chip-dot"></div>Arkclaw</div>
-      <div class="eco-chip"><div class="eco-chip-dot"></div>Qoder</div>
-      <div class="eco-chip"><div class="eco-chip-dot"></div>Gemini CLI</div>
-      <div class="eco-chip"><div class="eco-chip-dot"></div>Claude Code</div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== Footer ===== -->
-<footer class="footer">
-  <div class="footer-logo">汉克<span>·</span>HANK</div>
-  <p>多身份创业者 · 社区架构师 · 私域操盘手</p>
-  <div class="footer-divider"></div>
-  <p>无锡 / 苏州 / 北京</p>
-  <p style="margin-top: 1rem; opacity: 0.4;">&copy; 2026 Hank. All rights reserved.</p>
-</footer>
-
+<header class="site-header">
+ <div class="container head-inner">
+  <a class="brand" href="#top" aria-label="汉克，回到首页"><span class="brand-word">Hank<span class="brand-dot">.</span></span><span class="brand-sub">汉克 / 方案师</span></a>
+  <nav class="nav" id="mainNav" aria-label="主导航"><a href="#about">认识汉克</a><a href="#services">发现服务</a><a href="#projects">项目实践</a><a href="#delivery">交付方式</a></nav>
+  <a href="#contact" class="header-cta">谈谈你的问题 ↗</a>
+  <button class="mobile-menu" id="menuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="展开菜单">☰</button>
+ </div>
+ <div class="read-progress" id="readProgress"></div>
+</header>
+<main id="top">
+<section class="hero" aria-labelledby="heroTitle"><div class="container hero-grid">
+ <div>
+  <div class="eyebrow">HANK / HUMAN-FIRST SOLUTION ARCHITECT</div>
+  <h1 class="serif" id="heroTitle">以我为<span>界面</span>，<br/>让事情发生。</h1>
+  <p class="hero-lead">你好，我是汉克，一名方案师。<br/>我站在真实问题的最前端，理解需求、设计方案、连接人才与 AI，再把复杂的工作组织成可以交付的结果。</p>
+  <div class="hero-actions"><a class="btn" href="#about">先认识我 <span class="arrow">↗</span></a><a class="link-line" href="#services">直接探索服务 <span class="arrow">↘</span></a></div>
+  <div class="micro">一个人作为入口，一张网络共同完成。</div>
+ </div>
+ <div class="hero-art" role="img" aria-label="代表汉克个人品牌的 H 字母和环绕其间的研究、设计、连接、交付能力的抽象视觉图形">
+  <div class="poster-grid" aria-hidden="true"></div><div class="orange-disc" aria-hidden="true"></div><div class="halo" aria-hidden="true"></div><div class="h-character" aria-hidden="true">H<i>.</i></div>
+  <div class="orbit-tag a">01 / THINK</div><div class="orbit-tag b">02 / CREATE</div><div class="orbit-tag c">03 / CONNECT & DELIVER</div><div class="poster-footer"><span>THE PERSON IS THE INTERFACE</span><span>2026 © HANK</span></div>
+ </div>
+</div></section>
+<section class="spine" aria-label="网站的三个阶段"><div class="container spine-inner">
+ <a class="spine-item" href="#about"><b>01</b><span><small>PERSON / 人</small>认识汉克 · 理解判断</span></a>
+ <a class="spine-item" href="#services"><b>02</b><span><small>WORK / 事</small>发现服务 · 组合能力</span></a>
+ <a class="spine-item" href="#delivery"><b>03</b><span><small>OUTCOME / 果</small>组织项目 · 完成交付</span></a>
+</div></section>
+<section class="big-section" id="about"><div class="container">
+ <div class="section-head"><span class="left">01 / ABOUT HANK</span><span>一个人的工作方式</span></div>
+ <div class="intro-layout"><div class="intro-left"><div class="intro-marker">H.</div><p>独立方案师<br/>AI 原生服务探索者<br/>大鲤鱼超级工作站主理方向</p></div>
+ <div><h2 class="intro-copy serif">我不想把自己定义为<br/>某个工具、职位或行业。<br/><em>我希望成为解决问题的入口。</em></h2>
+ <p class="intro-detail">过去的项目涉及产业技术、品牌视觉、会展供应链、科创服务、教育合作与 AI 智能体。表面上，它们属于不同的行业；对我而言，它们有同一条主线：理解复杂现实，把分散的人、信息和资源组织成一套有效的方案。</p>
+ <p class="intro-detail">我把个人判断放在前端，把 AI、专业伙伴和执行系统放在身后。客户无需先懂技术，也不用先知道该找哪种服务——我们先把问题说清楚。</p>
+ <div class="capabilities"><div><b>理解问题</b><small>商业洞察 · 需求诊断<br/>目标与约束</small></div><div><b>设计方案</b><small>系统思考 · 服务组合<br/>计划与路径</small></div><div><b>组织交付</b><small>AI · 专业协作<br/>执行与复盘</small></div></div>
+ </div></div>
+</div></section>
+<div class="bridge"><div class="container bridge-inner"><p>“我的价值，不是我一个人会做多少件事，<br/>而是我能让多少件<em>正确的事</em>发生。”</p><a class="link-line" href="#services">进入服务发现 <span class="arrow">↗</span></a></div></div>
+<section class="service-wrap" id="services"><div class="container">
+ <div class="section-head"><span class="left">02 / SERVICE DISCOVERY</span><span>HANK WORK INDEX · V1.0</span></div>
+ <div class="service-lead"><div><h2 class="section-title">MAKE<br/>IT <em>WORK.</em></h2><p class="service-description">不必先选择一家供应商，也不必先决定使用什么 AI。告诉我你想完成什么工作。每一项 Work 都可以独立交付，也可以组合成一个完整项目。</p></div><div class="service-aside">From needs<br/>to <em>possibilities.</em></div></div>
+ <div class="filters" role="group" aria-label="按工作类型筛选"><button class="filter-btn" data-filter="all" aria-pressed="true">全部服务 <span>16</span></button><button class="filter-btn" data-filter="insight" aria-pressed="false">研究与判断</button><button class="filter-btn" data-filter="create" aria-pressed="false">内容与设计</button><button class="filter-btn" data-filter="system" aria-pressed="false">数字与运营</button><button class="filter-btn" data-filter="delivery" aria-pressed="false">连接与执行</button></div>
+ <div class="work-grid" id="workGrid">
+  <article class="work-card" data-group="insight" data-name="Brainwork"><div class="work-top"><small>01 / INSIGHT</small><button class="work-add" type="button" aria-label="添加 Brainwork" aria-pressed="false">+</button></div><h3>Brainwork</h3><p>商业判断、策略制定、方案架构</p><div class="work-bottom">思考与决策</div></article>
+  <article class="work-card" data-group="insight" data-name="Researchwork"><div class="work-top"><small>02 / INSIGHT</small><button class="work-add" type="button" aria-label="添加 Researchwork" aria-pressed="false">+</button></div><h3>Researchwork</h3><p>行业调研、竞品分析、机会识别</p><div class="work-bottom">调研与研究</div></article>
+  <article class="work-card" data-group="insight" data-name="Datawork"><div class="work-top"><small>03 / INSIGHT</small><button class="work-add" type="button" aria-label="添加 Datawork" aria-pressed="false">+</button></div><h3>Datawork</h3><p>数据整理、商业分析、可视化</p><div class="work-bottom">数据与分析</div></article>
+  <article class="work-card" data-group="insight" data-name="Knowledgework"><div class="work-top"><small>04 / INSIGHT</small><button class="work-add" type="button" aria-label="添加 Knowledgework" aria-pressed="false">+</button></div><h3>Knowledgework</h3><p>知识组织、知识库、智能问答</p><div class="work-bottom">知识管理</div></article>
+  <article class="work-card" data-group="create" data-name="Designwork"><div class="work-top"><small>05 / CREATE</small><button class="work-add" type="button" aria-label="添加 Designwork" aria-pressed="false">+</button></div><h3>Designwork</h3><p>品牌视觉、界面体验、设计系统</p><div class="work-bottom">创意与设计</div></article>
+  <article class="work-card" data-group="create" data-name="Contentwork"><div class="work-top"><small>06 / CREATE</small><button class="work-add" type="button" aria-label="添加 Contentwork" aria-pressed="false">+</button></div><h3>Contentwork</h3><p>内容策略、写作、脚本与策划</p><div class="work-bottom">内容与表达</div></article>
+  <article class="work-card" data-group="create" data-name="Mediawork"><div class="work-top"><small>07 / CREATE</small><button class="work-add" type="button" aria-label="添加 Mediawork" aria-pressed="false">+</button></div><h3>Mediawork</h3><p>图片、视频、传播物料与内容制作</p><div class="work-bottom">多媒体制作</div></article>
+  <article class="work-card" data-group="create" data-name="Paperwork"><div class="work-top"><small>08 / CREATE</small><button class="work-add" type="button" aria-label="添加 Paperwork" aria-pressed="false">+</button></div><h3>Paperwork</h3><p>报告、提案、表格与商务文书</p><div class="work-bottom">文书与文档</div></article>
+  <article class="work-card" data-group="system" data-name="Codework"><div class="work-top"><small>09 / SYSTEM</small><button class="work-add" type="button" aria-label="添加 Codework" aria-pressed="false">+</button></div><h3>Codework</h3><p>网站、应用、轻量软件与工具</p><div class="work-bottom">数字产品开发</div></article>
+  <article class="work-card" data-group="system" data-name="AIwork"><div class="work-top"><small>10 / SYSTEM</small><button class="work-add" type="button" aria-label="添加 AIwork" aria-pressed="false">+</button></div><h3>AIwork</h3><p>AI 智能体、数字员工、自动化方案</p><div class="work-bottom">AI 能力建设</div></article>
+  <article class="work-card" data-group="system" data-name="Opswork"><div class="work-top"><small>11 / SYSTEM</small><button class="work-add" type="button" aria-label="添加 Opswork" aria-pressed="false">+</button></div><h3>Opswork</h3><p>流程优化、业务运营、日常执行</p><div class="work-bottom">运营与流程</div></article>
+  <article class="work-card" data-group="delivery" data-name="Network"><div class="work-top"><small>12 / CONNECT</small><button class="work-add" type="button" aria-label="添加 Network" aria-pressed="false">+</button></div><h3>Network</h3><p>资源匹配、渠道拓展、合作连接</p><div class="work-bottom">资源与连接</div></article>
+  <article class="work-card" data-group="delivery" data-name="Saleswork"><div class="work-top"><small>13 / DELIVER</small><button class="work-add" type="button" aria-label="添加 Saleswork" aria-pressed="false">+</button></div><h3>Saleswork</h3><p>销售支持、客户开发、商务转化</p><div class="work-bottom">销售与商务</div></article>
+  <article class="work-card" data-group="delivery" data-name="Growthwork"><div class="work-top"><small>14 / DELIVER</small><button class="work-add" type="button" aria-label="添加 Growthwork" aria-pressed="false">+</button></div><h3>Growthwork</h3><p>用户增长、获客与转化实验</p><div class="work-bottom">增长与获客</div></article>
+  <article class="work-card" data-group="delivery" data-name="Fieldwork"><div class="work-top"><small>15 / DELIVER</small><button class="work-add" type="button" aria-label="添加 Fieldwork" aria-pressed="false">+</button></div><h3>Fieldwork</h3><p>线下活动、现场调研、项目落地</p><div class="work-bottom">现场与执行</div></article>
+  <article class="work-card" data-group="delivery" data-name="Teamwork"><div class="work-top"><small>16 / DELIVER</small><button class="work-add" type="button" aria-label="添加 Teamwork" aria-pressed="false">+</button></div><h3>Teamwork</h3><p>团队协作、项目组织、资源调度</p><div class="work-bottom">协作与管理</div></article>
+ </div>
+ <div class="work-selection" aria-live="polite"><div><b id="selectedCount">已选择 0 项 Work</b><p id="selectedSummary">点击服务卡片右上角的 +，组合你需要的工作。</p></div><button id="goBrief" type="button" disabled>带着这些服务发起项目 ↗</button></div>
+ <div class="work-hint"><span>* 分类为服务导航语言；部分英文名称属于品牌命名，并非通用职业术语。</span><span>WORK IS MODULAR. OUTCOMES ARE PERSONAL.</span></div>
+</div></section>
+<section class="practice-section" id="projects"><div class="container">
+ <div class="section-head"><span class="left">03 / SELECTED PRACTICES</span><span>跨行业的实践，始终围绕同一种工作方法</span></div>
+ <div class="practice-title"><h2 class="serif">看起来不同的项目，<br/>其实在做<em>同一件事。</em></h2><p>这些是真实涉足的领域和项目方向。不是用漂亮的行业标签证明“什么都会”，而是展示如何在不同情境里理解需求、组织方案。</p></div>
+ <div class="project-grid">
+  <article class="project-card"><div class="project-meta"><span>01 / AI SYSTEM</span><span>WORKSTATION</span></div><div class="project-symbol">DLY↗</div><h3>大鲤鱼超级工作站</h3><p>面向超级个体和企业，把 AI Agent、业务流程与协作能力组织成可调用的工作系统。</p><div class="project-tags">AI 原生工作流 / 服务产品体系</div></article>
+  <article class="project-card"><div class="project-meta"><span>02 / INDUSTRIAL</span><span>BRANDING</span></div><div class="project-symbol">G.</div><h3>Gauss Control</h3><p>围绕工业热处理过程控制，探索专业技术的品牌语言、内容结构与视觉表达。</p><div class="project-tags">工业品牌 / 技术传播 / 视觉系统</div></article>
+  <article class="project-card"><div class="project-meta"><span>03 / SUPPLY CHAIN</span><span>SERVICE</span></div><div class="project-symbol">云.</div><h3>中域云仓</h3><p>以会展道具租赁为业务基底，梳理服务场景、品牌 IP、物料体系与跨城仓网表达。</p><div class="project-tags">业务理解 / 品牌与内容 / 线下服务</div></article>
+  <article class="project-card"><div class="project-meta"><span>04 / PUBLIC INNOVATION</span><span>IDENTITY</span></div><div class="project-symbol">南.</div><h3>南半园科创</h3><p>将苏州园林的人文气质与现代科创服务结合，探索统一的视觉识别与传播体系。</p><div class="project-tags">科创服务 / 品牌形象 / 文化表达</div></article>
+  <article class="project-card"><div class="project-meta"><span>05 / SOLO BUSINESS</span><span>COMMUNITY</span></div><div class="project-symbol">1+∞</div><h3>OPC 超级个体实践</h3><p>面向一人公司与 AI 服务创业者，探索实战项目、社群协作和能力交付机制。</p><div class="project-tags">社群生态 / 商业化实践 / 人才协作</div></article>
+  <article class="project-card"><div class="project-meta"><span>06 / ART EDUCATION</span><span>NETWORK</span></div><div class="project-symbol">FR.</div><h3>法国艺术教育合作</h3><p>探索法国艺术院校与中国市场之间的项目沟通、渠道建设与教育资源连接。</p><div class="project-tags">跨境教育 / 渠道连接 / 资源合作</div></article>
+ </div>
+</div></section>
+<section class="delivery-wrap" id="delivery"><div class="container">
+ <div class="section-head"><span class="left">04 / FROM PROBLEM TO OUTCOME</span><span>不是推荐工具，而是组织结果</span></div>
+ <div class="delivery-intro"><h2 class="section-title serif">一个人是入口，<br/><em>不是全部。</em></h2><p>我作为统一的沟通和判断界面，背后可组合 AI Agent、数字员工、专业伙伴和现场执行资源。每个项目从明确问题开始，以双方确认的交付物和验收标准结束。</p></div>
+ <div class="steps"><div class="step"><small>STEP 01</small><h3>理解问题<span>Discover</span></h3><p>先对话、调研与诊断，确认目标、优先级、资源条件和限制。</p></div><div class="step"><small>STEP 02</small><h3>组合工作<span>Design</span></h3><p>拆解任务，选择合适的 Work 模块，形成范围、计划与交付清单。</p></div><div class="step"><small>STEP 03</small><h3>组织执行<span>Orchestrate</span></h3><p>编排 AI、专业人员及协作网络，跟踪进度与关键质量节点。</p></div><div class="step"><small>STEP 04</small><h3>交付结果<span>Deliver</span></h3><p>交付方案、作品、系统或业务成果，并按约定标准验收与复盘。</p></div></div>
+ <div class="statement-banner"><strong>Work → Worker → <span>Outcome.</span></strong><small>人作为界面 / 工作作为单元 / 结果作为承诺<br/>SELL OUTCOMES, NOT AI.</small></div>
+</div></section>
+<section class="contact-section" id="contact"><div class="container contact-grid">
+ <div class="contact-copy"><div class="eyebrow" style="color:var(--terracotta)">05 / START WITH A CONVERSATION</div><h2 class="serif">你想让什么<br/><em>事情发生？</em></h2><p>不必先写一份完整需求文档。可以是一个正在卡住的项目、一项急需完成的工作，也可以是一个尚未成形的想法。</p><p>从你面对的真实问题开始，我会先帮助厘清它，再判断是否适合合作，以及需要哪些能力参与。</p><div class="note">当前为可交互网站原型：项目简报仅在你的浏览器内生成，可复制或下载；不会上传到服务器。正式上线时可接入邮箱、微信或客户管理系统。</div></div>
+ <form class="brief-form" id="briefForm"><div class="form-caption"><span>HANK / PROJECT INTAKE</span><span>NO. 001 — OPEN</span></div><h3>把一个问题交给我。</h3>
+  <div class="field"><label>你现在最需要的是？</label><div class="goal-pills"><label><input type="radio" name="goal" value="解决一个具体项目" checked/><span>解决一个具体项目</span></label><label><input type="radio" name="goal" value="探索新方向"/><span>探索新方向</span></label><label><input type="radio" name="goal" value="寻找长期协作"/><span>寻找长期协作</span></label></div></div>
+  <div class="field"><label for="problem">告诉我你正在面对的问题 <small>（必填）</small></label><textarea id="problem" name="problem" placeholder="例如：我们有一个新业务，但定位不清晰、内容产出慢，也不知道怎样把 AI 放进团队日常……" required></textarea></div>
+  <div class="field"><label>你选中的服务 <small>（可选，可返回上方添加）</small></label><div class="chosen-works" id="chosenWorks"><span class="empty-chip">还没有选择，没关系。</span></div></div>
+  <div class="form-row"><div class="field"><label for="contactName">你的称呼 <small>（可选）</small></label><input id="contactName" name="contactName" placeholder="如何称呼你"/></div><div class="field"><label for="contactChannel">方便联系的方式 <small>（可选）</small></label><input id="contactChannel" name="contactChannel" placeholder="微信 / 邮箱 / 手机"/></div></div>
+  <div class="field"><label for="timeframe">项目节奏 <small>（可选）</small></label><select id="timeframe" name="timeframe"><option value="尚未确定">尚未确定</option><option value="尽快启动">尽快启动</option><option value="一个月内">一个月内</option><option value="中长期规划">中长期规划</option></select></div>
+  <div class="form-actions"><button class="btn" type="submit">生成合作简报 <span class="arrow">↗</span></button><button class="copy-secondary" type="button" id="downloadBrief">下载简报 .txt</button></div>
+  <p class="form-note">简报不会自动发送给汉克。生成后请复制内容，通过双方约定的联系渠道发送。</p>
+  <div class="draft-preview" id="draftPreview" aria-live="polite" hidden></div>
+  <button class="copy-secondary" id="copyBrief" type="button" style="margin-top:12px;display:none">复制上方项目简报 ↗</button>
+ </form>
+</div></section>
+</main>
+<footer class="footer"><div class="container"><div class="footer-top"><div><div class="footer-logo">Hank.</div><div class="footer-tag" style="margin-top:35px">汉克 / 方案师<br/>以我为界面，让事情发生。</div></div><a class="backtop" href="#top">回到顶部 ↑</a></div><div class="footer-base"><span>© 2026 HANK · INDEPENDENT SOLUTION ARCHITECT</span><span>ONE PERSON AS THE INTERFACE. A NETWORK BEHIND THE WORK.</span><span><a href="#about">认识我</a> · <a href="#services">服务发现</a> · <a href="#contact">发起项目</a></span></div></div></footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 <script>
-// ===== Nav scroll effect =====
-const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 60) nav.classList.add('scrolled');
-  else nav.classList.remove('scrolled');
-});
-
-// ===== Reveal animation =====
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-  });
-}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-// ===== Project tabs =====
-const tabBtns = document.querySelectorAll('.tab-btn');
-const projectItems = document.querySelectorAll('.project-item');
-
-tabBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    tabBtns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    const cat = btn.dataset.cat;
-    projectItems.forEach(item => {
-      if (cat === 'all' || item.dataset.cat === cat) {
-        item.style.display = 'flex';
-        item.style.animation = 'fadeIn 0.4s ease';
-      } else {
-        item.style.display = 'none';
-      }
-    });
-  });
-});
-
-// Add fade-in keyframe
-const style = document.createElement('style');
-style.textContent = `@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }`;
-document.head.appendChild(style);
+(function(){
+ 'use strict';
+ const selected=new Set();
+ const $=s=>document.querySelector(s);
+ const $$=s=>Array.from(document.querySelectorAll(s));
+ const nav=$('#mainNav'), menu=$('#menuToggle');
+ menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'×':'☰';});
+ $$('#mainNav a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰';}));
+ let ticking=false;
+ const progress=()=>{const max=document.documentElement.scrollHeight-innerHeight;$('#readProgress').style.width=(max?Math.max(0,Math.min(100,scrollY/max*100)):0)+'%';ticking=false;};
+ window.addEventListener('scroll',()=>{if(!ticking){ticking=true;requestAnimationFrame(progress)}},{passive:true});progress();
+ $$('.filter-btn').forEach(btn=>btn.addEventListener('click',()=>{
+  $$('.filter-btn').forEach(b=>b.setAttribute('aria-pressed',String(b===btn)));
+  $$('.work-card').forEach(card=>{card.hidden=btn.dataset.filter!=='all'&&card.dataset.group!==btn.dataset.filter});
+ }));
+ function syncSelection(){
+  $('#selectedCount').textContent=`已选择 ${selected.size} 项 Work`;
+  $('#selectedSummary').textContent=selected.size?[...selected].join(' / '):'点击服务卡片右上角的 +，组合你需要的工作。';
+  $('#goBrief').disabled=!selected.size;
+  const chips=$('#chosenWorks');chips.replaceChildren();
+  if(!selected.size){const e=document.createElement('span');e.className='empty-chip';e.textContent='还没有选择，没关系。';chips.append(e)}
+  else [...selected].forEach(name=>{const e=document.createElement('span');e.className='chosen-chip';e.textContent=name;chips.append(e)});
+ }
+ $$('.work-card').forEach(card=>card.querySelector('.work-add').addEventListener('click',()=>{
+  const name=card.dataset.name;if(selected.has(name))selected.delete(name);else selected.add(name);
+  const on=selected.has(name),btn=card.querySelector('.work-add');card.classList.toggle('selected',on);
+  btn.setAttribute('aria-pressed',String(on));btn.setAttribute('aria-label',`${on?'移除':'添加'} ${name}`);btn.textContent=on?'✓':'+';syncSelection();
+ }));
+ $('#goBrief').addEventListener('click',()=>$('#contact').scrollIntoView({behavior:'smooth'}));
+ let toastTimer;
+ function toast(text){const box=$('#toast');box.textContent=text;box.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>box.classList.remove('show'),3000)}
+ function briefText(){
+  const problem=$('#problem').value.trim();
+  if(!problem){$('#problem').focus();toast('请先描述你面对的问题。');return null}
+  const name=$('#contactName').value.trim()||'未填写', channel=$('#contactChannel').value.trim()||'未填写';
+  const goal=$('input[name="goal"]:checked').value;
+  return ['HANK / 项目合作简报','━━━━━━━━━━━━━━━━━━━━━━',`合作类型：${goal}`,`称呼：${name}`,`联系方式：${channel}`,`项目节奏：${$('#timeframe').value}`,'', '【问题与需求】',problem,'','【关注的 Work 服务】',selected.size?[...selected].join(' / '):'暂未选择，待进一步讨论','','【下一步】','与汉克交流并确认问题、服务范围、交付方式及合作条件。','','— 由 HANK 个人主页本地生成（未自动发送）'].join('\n');
+ }
+ let current='';
+ function reveal(){const t=briefText();if(!t)return null;current=t;$('#draftPreview').textContent=t;$('#draftPreview').hidden=false;$('#copyBrief').style.display='inline-block';return t}
+ $('#briefForm').addEventListener('submit',e=>{e.preventDefault();if(reveal()){toast('简报已生成。可复制或下载，再通过联系渠道发送。');$('#draftPreview').scrollIntoView({behavior:'smooth',block:'nearest'});}});
+ async function copy(t){try{if(navigator.clipboard && window.isSecureContext){await navigator.clipboard.writeText(t)}else{const el=document.createElement('textarea');el.value=t;el.style.position='fixed';el.style.opacity='0';document.body.appendChild(el);el.select();if(!document.execCommand('copy'))throw new Error('copy');el.remove()}toast('简报已复制到剪贴板。')}catch(e){toast('复制受浏览器限制，请手动选中上方简报复制。')}}
+ $('#copyBrief').addEventListener('click',()=>{if(current)copy(current)});
+ $('#downloadBrief').addEventListener('click',()=>{const t=reveal();if(!t)return;const blob=new Blob(['\uFEFF'+t],{type:'text/plain;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='HANK-项目合作简报.txt';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);toast('简报已下载。')});
+ syncSelection();
+})();
 </script>
-
-</body>
-</html>
+</body></html>
