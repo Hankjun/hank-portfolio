@@ -255,7 +255,165 @@
 .field select{appearance:none;padding-right:43px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='m5 8 7 7 7-7' fill='none' stroke='%23183238' stroke-width='1.65'/%3E%3Ccircle cx='12' cy='15' r='1.65' fill='%23bf6044'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:18px}
 @media(prefers-reduced-motion:reduce){.hank-icon{transition:none}:is(a,button):hover .hank-icon{transform:none}}
 
+
+/* Detail refinement: typography, reading rhythm, alignment, touch and focus. */
+html,body{overflow-x:clip}
+html{scroll-padding-top:calc(var(--header-height) + var(--space-md));scrollbar-gutter:stable}
+body{font-family:var(--font-body)}
+h1,h2,h3{min-width:0;overflow-wrap:anywhere;text-wrap:pretty;font-style:normal}
+.serif{font-family:var(--font-display)}
+:is(.hero h1,.section-title,.practice-title h2,.shop-head h2,.contact-copy h2,.footer-invite-copy h2){letter-spacing:-.025em}
+:is(a,button,summary){-webkit-tap-highlight-color:transparent}
+:is(button,.btn,.header-cta,.link-line,.hero-shop-link,.shop-talk-link,.footer-project-link,.nav a,.footer-menu-group>a){white-space:nowrap}
+:is(button,a,summary,input,textarea,select):focus-visible{outline:2px solid var(--color-focus);outline-offset:4px}
+button:active,.btn:active,.header-cta:active{transform:translateY(1px)}
+button:disabled{cursor:default}
+.header-cta{display:inline-flex;align-items:center;gap:var(--space-xs);flex-shrink:0;min-height:var(--control-size)}
+.mobile-menu{flex-shrink:0;min-width:var(--control-size);min-height:var(--control-size)}
+.head-inner{gap:var(--space-md)}
+.nav a{position:relative;padding-block:var(--space-xs)}
+.nav a[aria-current="location"]{color:var(--color-accent)}
+.nav a[aria-current="location"]:after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:currentColor}
+.hero-lead{max-width:35em}
+.hero-art{container-type:inline-size}
+.h-character{font-size:70cqw;top:26%;left:19%}
+.micro{line-height:1.8}
+.section-head{color:var(--color-muted);font-size:var(--text-caption)}
+.hero-shop-link,.shop-index,.project-tags,.shop-talk-link{color:var(--color-accent)}
+.nav-shop{color:var(--color-accent)!important}
+.shop-detail-disclaimer{color:var(--color-accent)!important}
+.shop-nameplate,.shop-overline,.shop-availability{color:var(--color-muted)}
+.shop-overline>span:first-child{color:var(--color-accent)}
+.intro-left p,.capabilities small,.project-meta{color:var(--color-muted)}
+.intro-detail{max-width:42em}
+.capabilities small{font-size:12px}
+.filters{margin-top:var(--space-2xl)}
+.filter-btn{transition:background var(--dur-short),color var(--dur-short),border-color var(--dur-short)}
+.work-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.work-add{width:var(--control-size);height:var(--control-size);transition:background var(--dur-short),color var(--dur-short),border-color var(--dur-short)}
+.work-card h3{letter-spacing:-.035em;font-size:clamp(21px,1.8vw,28px)}
+.work-card p{font-size:var(--text-small);color:var(--color-dark-muted);line-height:1.85}
+.work-top small,.work-bottom,.work-hint{color:var(--color-dark-secondary);font-size:var(--text-caption)}
+.work-bottom{margin-top:var(--space-lg)}
+.service-aside{font-style:normal}
+.shop-filter{min-height:var(--control-size);transition:background var(--dur-short),color var(--dur-short),border-color var(--dur-short)}
+.shop-item{display:flex;flex-direction:column}
+.shop-item-cover{container-type:inline-size}
+.shop-cover-title{font-size:clamp(18px,10cqw,36px);line-height:1.04}
+.shop-item-meta{display:flex;flex-direction:column;flex:1}
+.shop-item-sku{font-size:var(--text-caption);color:var(--color-accent)}
+.shop-item-type,.shop-item-desc,.shop-card-spec,.shop-item-price small{color:var(--color-muted)}
+.shop-item-type{letter-spacing:.025em}
+.shop-card-spec{font-size:12px;line-height:1.75;margin-top:var(--space-sm)}
+.shop-card-spec dt{color:var(--color-muted)}
+.shop-card-spec>div:last-child dd{color:var(--color-accent)}
+.shop-card-contents{margin-bottom:var(--space-md);font-size:12px}
+.shop-card-contents summary{min-height:32px;width:fit-content;text-decoration:none;border-bottom:1px solid var(--color-rule)}
+.shop-item-bottom{margin-top:auto;padding-top:var(--space-md);align-items:center;flex-wrap:wrap;row-gap:var(--space-xs)}
+.shop-item-actions{margin-left:auto}
+.shop-item-actions button{width:var(--control-size);height:var(--control-size)}
+.shop-item-price strong,.shop-detail-price{font-variant-numeric:tabular-nums}
+.shop-overline,.shop-nameplate{letter-spacing:.08em}
+.shop-after p{font-size:var(--text-small)}
+.shop-dialog{max-height:90dvh}
+.shop-dialog-scroll{max-height:calc(90dvh - 2px);overscroll-behavior:contain;scroll-padding-block:var(--space-2xl)}
+.shop-dialog-close{width:var(--control-size);height:var(--control-size);border-radius:var(--radius-control)}
+.shop-detail-copy p{font-size:14px;line-height:1.9}
+.shop-detail-copy ul{font-size:var(--text-small);line-height:2}
+.shop-sku-spec dt{color:var(--color-muted)}
+.shop-cart-row-text small,.shop-detail-price small{color:var(--color-muted);font-size:var(--text-caption)}
+.shop-cart-actions{flex-wrap:wrap}
+.shop-detail-layout{align-items:start}
+.project-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.project-card{gap:var(--space-md);padding:clamp(24px,2.3vw,34px)}
+.project-card h3{font-size:clamp(22px,2vw,27px);line-height:1.4}
+.project-card p{font-size:14px;line-height:1.9}
+.project-tags{line-height:1.8;font-size:var(--text-caption)}
+.project-card:hover{transform:none}
+.step h3 span,.statement-banner strong{font-style:normal}
+.step p{font-size:14px;line-height:1.9}
+.field textarea,.field input,.field select{font-size:16px;border-color:var(--color-field-rule);border-radius:var(--radius-control)}
+.field textarea:focus,.field input:focus,.field select:focus{border-color:var(--color-focus);box-shadow:0 0 0 3px var(--color-focus-halo)}
+.field :is(textarea,input)::placeholder{color:var(--color-muted)}
+.field small,.form-caption,.form-note,.empty-chip,.note{color:var(--color-muted)}
+.form-caption{gap:var(--space-sm);line-height:1.7;letter-spacing:.07em}
+.field label,.field legend{line-height:1.7}
+.goal-pills span{min-height:var(--control-size);display:flex;align-items:center;font-size:var(--text-small)}
+.form-actions{gap:var(--space-sm)}
+.form-actions>.btn,.form-actions>.copy-secondary{min-height:48px}
+.toast{width:min(420px,calc(100% - var(--pad)*2));text-align:center;line-height:1.7}
+.brief-form h3{font-size:clamp(23px,2.1vw,28px);line-height:1.5;margin-bottom:var(--space-lg)}
+.footer-invite-copy h2{font-size:clamp(34px,4.8vw,68px);line-height:1.32}
+.footer-action-note,.social-help,.footer-eyebrow-right,.footer-legal{color:var(--color-dark-secondary)}
+.social-card-pending{opacity:1}
+.social-card-pending .social-meta strong{color:var(--color-dark-muted)}
+.social-meta small,.social-state{color:var(--color-dark-secondary)}
+.social-card{border-radius:var(--radius-control)}
+.footer-directory{gap:var(--space-xl)}
+.footer-menu-group>a{min-height:32px;display:inline-flex;align-items:center}
+@media(hover:hover) and (pointer:fine){
+ .work-card:hover{background:var(--color-dark-hover)}
+ .shop-card-contents summary:hover{color:var(--color-accent);border-color:currentColor}
+}
+@media(max-width:1100px){.nav{gap:var(--space-md)}}
+@media(max-width:1050px){.work-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:880px){.brand-sub{display:none}.footer-middle{gap:var(--space-lg)}}
+@media(max-width:800px){
+ .work-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .hero-art{min-height:0;aspect-ratio:.96;border-radius:50% 50% var(--radius-control) var(--radius-control)}
+ .section-head{align-items:flex-start;gap:var(--space-xs)}
+ .hero-actions{column-gap:var(--space-lg);row-gap:var(--space-md)}
+ .nav.open{gap:var(--space-xs)}.nav a{min-height:var(--control-size);display:inline-flex;align-items:center}
+ .shop-detail-layout{gap:var(--space-lg)}
+}
+@media(max-width:640px){
+ .shop-cover-top{font-size:7px;letter-spacing:.05em;gap:var(--space-xs)}
+ .shop-cover-face{padding:var(--space-sm)}
+ .shop-cover-illustration{width:46%;margin-bottom:var(--space-xs)}
+ .shop-detail-layout .shop-cover-title{font-size:18px}
+ .shop-detail-layout .shop-cover-face{padding:var(--space-sm)}
+ .section-head{flex-direction:column}.shop-overline{font-size:var(--text-caption)}
+ .shop-head h2{font-size:clamp(34px,8.6vw,50px)}
+ .shop-item-name{font-size:16px;line-height:1.5}
+ .shop-item-desc{font-size:12px;line-height:1.8;min-height:64px}
+ .shop-card-spec{font-size:var(--text-caption)}
+ .shop-item-type>span:last-child{font-size:9px;letter-spacing:0}
+ .shop-detail-layout .shop-item-cover{width:150px;margin-inline:auto}
+ .shop-dialog-scroll{padding:var(--space-lg)}
+ .shop-cart-row{flex-wrap:wrap}.shop-cart-row-text{flex-basis:calc(100% - 60px)}
+ .shop-cart-row-price{margin-left:55px}.shop-cart-remove{margin-left:auto;min-height:36px}
+ .project-grid{grid-template-columns:minmax(0,1fr)}
+ .form-caption>span:last-child{white-space:nowrap}
+ .footer-invite-copy h2{font-size:clamp(32px,8.2vw,46px)}
+ .statement-banner strong{font-size:clamp(22px,5.7vw,30px)}
+ .statement-banner .hank-icon{width:16px;height:16px}
+}
+@media(max-width:560px){
+ .head-inner{gap:var(--space-sm)}.header-cta{font-size:var(--text-caption);padding:var(--space-xs)}
+ .hank-logo-header{width:100px}.hero h1{font-size:clamp(42px,11.1vw,62px);line-height:1.3}
+ .hero .eyebrow{font-size:10px;letter-spacing:.12em;line-height:1.6}
+ .hero{padding-top:var(--space-2xl)}.hero-lead{font-size:var(--text-body);line-height:1.95}
+ .hero-art .orange-disc{width:18%}.poster-footer{left:7%;right:7%;bottom:6%;font-size:7px;letter-spacing:.04em}
+ .orbit-tag.c{left:9%;bottom:18%;font-size:7px}.orbit-tag.b{right:4%}
+ .work-card{padding:var(--space-md);min-height:236px}.work-top small{letter-spacing:.035em}
+ .work-card h3{font-size:clamp(19px,4.5vw,23px);letter-spacing:-.02em}
+ .filters{gap:var(--space-xs);margin-top:var(--space-xl)}.filter-btn{min-height:var(--control-size);padding:10px 14px}
+ .service-aside{font-size:24px;line-height:1.35}
+ .brief-form{padding:var(--space-lg)}.form-actions>*{justify-content:center;flex:1 1 100%}
+ .footer-menu-group{gap:var(--space-xs)}
+}
+@media(max-width:370px){
+ .hank-logo-header{width:88px}.head-inner{gap:var(--space-xs)}
+ .work-grid{grid-template-columns:minmax(0,1fr)}.work-card{min-height:190px}
+ .work-card h3{font-size:25px}.work-card p{max-width:none}
+ .hero-actions>.btn{flex-basis:100%}.micro{gap:var(--space-sm);font-size:10px}
+ .shop-grid{grid-template-columns:minmax(0,1fr)}
+ .shop-item-desc{min-height:0}.shop-card-spec{font-size:12px}
+ .footer-social-heading h3{font-size:23px;line-height:1.55}
+}
+
 </style>
+<link rel="stylesheet" href="tokens.css"/>
 </head>
 <body>
 <svg class="hank-icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><defs>
@@ -401,12 +559,12 @@
  <div class="statement-banner"><strong>Work <svg class="hank-icon icon-arrow-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-right"/></svg> Worker <svg class="hank-icon icon-arrow-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-right"/></svg> <span>Outcome.</span></strong><small>人作为界面 / 工作作为单元 / 结果作为承诺<br/>SELL OUTCOMES, NOT AI.</small></div>
 </div></section>
 <section class="contact-section" id="contact"><div class="container contact-grid">
- <div class="contact-copy"><div class="eyebrow" style="color:var(--terracotta)">06 / START WITH A CONVERSATION</div><h2 class="serif">你想让什么<br/><em>事情发生？</em></h2><p>不必先写一份完整需求文档。可以是一个正在卡住的项目、一项急需完成的工作，也可以是一个尚未成形的想法。</p><p>从你面对的真实问题开始，我会先帮助厘清它，再判断是否适合合作，以及需要哪些能力参与。</p><div class="note">当前为可交互网站原型：项目简报仅在你的浏览器内生成，可复制或下载；不会上传到服务器。正式上线时可接入邮箱、微信或客户管理系统。</div></div>
+ <div class="contact-copy"><div class="eyebrow" style="color:var(--terracotta)">06 / START WITH A CONVERSATION</div><h2 class="serif">你想让什么<br/><em>事情发生？</em></h2><p>不必先写一份完整需求文档。可以是一个正在卡住的项目、一项急需完成的工作，也可以是一个尚未成形的想法。</p><p>从你面对的真实问题开始，我会先帮助厘清它，再判断是否适合合作，以及需要哪些能力参与。</p><div class="note">项目简报只在你的浏览器中生成，可复制或下载。生成后请通过双方约定的联系渠道发送给我。</div></div>
  <form class="brief-form" id="briefForm"><div class="form-caption"><span>HANK / PROJECT INTAKE</span><span>NO. 001 — OPEN</span></div><h3>把一个问题交给我。</h3>
-  <div class="field"><label>你现在最需要的是？</label><div class="goal-pills"><label><input type="radio" name="goal" value="解决一个具体项目" checked/><span>解决一个具体项目</span></label><label><input type="radio" name="goal" value="探索新方向"/><span>探索新方向</span></label><label><input type="radio" name="goal" value="寻找长期协作"/><span>寻找长期协作</span></label></div></div>
+  <div class="field"><label id="goalLabel">你现在最需要的是？</label><div class="goal-pills" role="radiogroup" aria-labelledby="goalLabel"><label><input type="radio" name="goal" value="解决一个具体项目" checked/><span>解决一个具体项目</span></label><label><input type="radio" name="goal" value="探索新方向"/><span>探索新方向</span></label><label><input type="radio" name="goal" value="寻找长期协作"/><span>寻找长期协作</span></label></div></div>
   <div class="field"><label for="problem">告诉我你正在面对的问题 <small>（必填）</small></label><textarea id="problem" name="problem" placeholder="例如：我们有一个新业务，但定位不清晰、内容产出慢，也不知道怎样把 AI 放进团队日常……" required></textarea></div>
   <div class="field"><label>你选中的服务 <small>（可选，可返回上方添加）</small></label><div class="chosen-works" id="chosenWorks"><span class="empty-chip">还没有选择，没关系。</span></div></div>
-  <div class="form-row"><div class="field"><label for="contactName">你的称呼 <small>（可选）</small></label><input id="contactName" name="contactName" placeholder="如何称呼你"/></div><div class="field"><label for="contactChannel">方便联系的方式 <small>（可选）</small></label><input id="contactChannel" name="contactChannel" placeholder="微信 / 邮箱 / 手机"/></div></div>
+  <div class="form-row"><div class="field"><label for="contactName">你的称呼 <small>（可选）</small></label><input id="contactName" name="contactName" autocomplete="name" placeholder="如何称呼你"/></div><div class="field"><label for="contactChannel">方便联系的方式 <small>（可选）</small></label><input id="contactChannel" name="contactChannel" placeholder="微信 / 邮箱 / 手机"/></div></div>
   <div class="field"><label for="timeframe">项目节奏 <small>（可选）</small></label><select id="timeframe" name="timeframe"><option value="尚未确定">尚未确定</option><option value="尽快启动">尽快启动</option><option value="一个月内">一个月内</option><option value="中长期规划">中长期规划</option></select></div>
   <div class="form-actions"><button class="btn" type="submit">生成合作简报 <span class="arrow"><svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></span></button><button class="copy-secondary" type="button" id="downloadBrief">下载简报 .txt <svg class="hank-icon icon-download" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-download"/></svg></button></div>
   <p class="form-note">简报不会自动发送给汉克。生成后请复制内容，通过双方约定的联系渠道发送。</p>
@@ -477,11 +635,21 @@ window.hankIcon=name=>'<svg class="hank-icon icon-'+name+'" viewBox="0 0 24 24" 
  const $=s=>document.querySelector(s);
  const $$=s=>Array.from(document.querySelectorAll(s));
  const nav=$('#mainNav'), menu=$('#menuToggle');
- menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.innerHTML=icon(open?'close':'menu');menu.setAttribute('aria-label',open?'关闭菜单':'展开菜单');});
- $$('#mainNav a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.innerHTML=icon('menu');menu.setAttribute('aria-label','展开菜单');}));
+ function setMenu(open){nav.classList.toggle('open',open);menu.setAttribute('aria-expanded',String(open));menu.innerHTML=icon(open?'close':'menu');menu.setAttribute('aria-label',open?'关闭菜单':'展开菜单');}
+ menu.addEventListener('click',()=>setMenu(!nav.classList.contains('open')));
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav.classList.contains('open')){setMenu(false);menu.focus();}});
+ document.addEventListener('click',e=>{if(!nav.contains(e.target)&&!menu.contains(e.target))setMenu(false);});
+ $$('#mainNav a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
+ const locationLinks=$$('#mainNav a');
+ function updateLocation(){
+  const line=innerHeight*.28;
+  const current=locationLinks.find(a=>{const section=$(a.hash);if(!section)return false;const r=section.getBoundingClientRect();return r.top<=line&&r.bottom>line;});
+  locationLinks.forEach(a=>{if(a===current)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});
+ }
  let ticking=false;
- const progress=()=>{const max=document.documentElement.scrollHeight-innerHeight;$('#readProgress').style.width=(max?Math.max(0,Math.min(100,scrollY/max*100)):0)+'%';ticking=false;};
+ const progress=()=>{const max=document.documentElement.scrollHeight-innerHeight;$('#readProgress').style.width=(max?Math.max(0,Math.min(100,scrollY/max*100)):0)+'%';updateLocation();ticking=false;};
  window.addEventListener('scroll',()=>{if(!ticking){ticking=true;requestAnimationFrame(progress)}},{passive:true});progress();
+ window.addEventListener('resize',()=>{if(innerWidth>800)setMenu(false);progress();},{passive:true});
  $$('.filter-btn').forEach(btn=>btn.addEventListener('click',()=>{
   $$('.filter-btn').forEach(b=>b.setAttribute('aria-pressed',String(b===btn)));
   $$('.work-card').forEach(card=>{card.hidden=btn.dataset.filter!=='all'&&card.dataset.group!==btn.dataset.filter});
@@ -500,6 +668,11 @@ window.hankIcon=name=>'<svg class="hank-icon icon-'+name+'" viewBox="0 0 24 24" 
   btn.setAttribute('aria-pressed',String(on));btn.setAttribute('aria-label',`${on?'移除':'添加'} ${name}`);btn.innerHTML=icon(on?'check':'plus');syncSelection();
  }));
  $('#goBrief').addEventListener('click',()=>$('#contact').scrollIntoView({behavior:'smooth'}));
+ $$('.goal-pills label').forEach(label=>label.addEventListener('click',e=>{
+  const radio=label.querySelector('input[type="radio"]');
+  if(!radio)return;
+  e.preventDefault();radio.checked=true;radio.dispatchEvent(new Event('change',{bubbles:true}));radio.focus({preventScroll:true});
+ }));
  let toastTimer;
  function toast(text){const box=$('#toast');box.textContent=text;box.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>box.classList.remove('show'),3000)}
  function briefText(){
@@ -569,13 +742,14 @@ window.hankIcon=name=>'<svg class="hank-icon icon-'+name+'" viewBox="0 0 24 24" 
      '<span class="shop-cover-cn">'+esc(p.coverCN)+'</span></span>'+
      '<span class="shop-cover-foot"><span>'+esc(p.edition)+'</span><span>h.</span></span></span>';
   }
+  function deliveryLabel(p){return {'资料包':'文件 / 下载链接（计划）','技能包':'模板 / 使用说明（计划）','工作流':'流程文件 / 教程（计划）','知识库':'知识库资料包（计划）','付费专栏':'图文 / 阅读入口（计划）'}[p.category]||p.delivery;}
   function card(p){
     const selected=cart.includes(p.id);
     return '<article class="shop-item" data-category="'+esc(p.category)+'" data-product="'+esc(p.id)+'">'+
       '<button class="shop-item-cover" type="button" data-shop-detail="'+esc(p.id)+'" aria-label="查看 '+esc(p.name)+' 商品详情">'+cover(p)+'</button>'+
-      '<div class="shop-item-meta"><div class="shop-item-type"><span>'+esc(p.category)+'</span><span>EXAMPLE SKU / 2026</span></div>'+
+      '<div class="shop-item-meta"><div class="shop-item-type"><span>'+esc(p.category)+'</span><span>示例商品</span></div>'+
       '<div class="shop-item-sku">'+esc(p.sku)+'</div><h3 class="shop-item-name">'+esc(p.name)+'</h3><p class="shop-item-desc">'+esc(p.desc)+'</p>'+
-      '<dl class="shop-card-spec"><div><dt>版本</dt><dd>'+esc(p.version)+'</dd></div><div><dt>交付</dt><dd>'+esc(p.delivery)+'</dd></div><div><dt>状态</dt><dd>'+esc(p.status)+'</dd></div></dl>'+
+      '<dl class="shop-card-spec"><div><dt>版本</dt><dd>'+esc(p.version.replace(/^\d{4} · /,''))+'</dd></div><div><dt>交付</dt><dd>'+esc(deliveryLabel(p))+'</dd></div><div><dt>状态</dt><dd>'+esc(p.status)+'</dd></div></dl>'+
       '<details class="shop-card-contents"><summary>'+icon('chevron')+'拟含 '+p.contents.length+' 项内容</summary><ul>'+p.contents.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul></details>'+
       '<div class="shop-item-bottom"><div class="shop-item-price"><strong>'+money(p.price)+'</strong><small>示意价</small></div>'+
       '<div class="shop-item-actions"><button type="button" data-shop-detail="'+esc(p.id)+'" aria-label="查看 '+esc(p.name)+' 详情">' +icon('arrow-ne')+'</button>'+
