@@ -2,6 +2,9 @@
  * Detail refinement · existing HANK editorial identity · honest/chrome/icons: pass */
 :root {
   --color-paper: var(--paper);
+  --color-selected-paper: #efe3d6;
+  --color-service-panel: #e9e8df;
+  --color-brand-light: #eda881;
   --color-surface: var(--white);
   --color-ink: var(--ink);
   --color-body: var(--body);
