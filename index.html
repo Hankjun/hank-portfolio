@@ -454,6 +454,31 @@ button:disabled{cursor:default}
 @media(max-width:800px){.service-aside{margin-top:24px}.hank-logo-header{max-height:48px}}
 @media(max-width:560px){.service-wrap .section-title{font-size:clamp(31px,8.6vw,44px);margin-top:30px}.service-aside{font-size:24px}}
 
+/* The closing invitation continues the site's warm paper identity. */
+.footer{background:var(--color-paper);color:var(--color-ink);border-top:1px solid var(--color-rule)}
+.footer:before{display:none}
+.footer-eyebrow{color:var(--color-muted)}
+.footer-sun-dot{background:var(--color-accent);box-shadow:none}
+.footer-invite,.footer-social,.footer-legal{border-color:var(--color-rule)}
+.footer-invite-copy h2 em,.footer-social-kicker,.footer-social-heading h3 span,.footer-menu-group h3{color:var(--color-accent)}
+.footer-invite-copy p,.footer-identity p{color:var(--color-body)}
+.footer-action-note,.social-help,.footer-eyebrow-right,.footer-legal,.footer-social-heading p,.footer-identity p span,.footer-menu-group h3 span,.social-meta small,.social-state{color:var(--color-muted)}
+.footer-project-link{background:var(--color-ink);color:var(--color-surface);border-radius:var(--radius-control);transition:background var(--dur-short)}
+.footer-project-link:hover{transform:none;filter:none;background:var(--color-accent)}
+.footer-action-arrow{border-color:currentColor}
+.social-card{background:var(--color-surface);border-color:var(--color-rule)}
+.social-monogram{background:var(--color-service-panel);color:var(--color-accent);border-radius:var(--radius-control)}
+.social-meta strong,.social-card-pending .social-meta strong{color:var(--color-ink)}
+.social-card-live{background:var(--color-selected-paper);border-color:var(--color-field-rule);transition:border-color var(--dur-short),background var(--dur-short)}
+.social-card-live .social-monogram{background:var(--color-ink);color:var(--color-surface)}
+.social-card-live .social-state{color:var(--color-accent)}
+.social-card-live:hover{transform:none;background:var(--color-surface);border-color:var(--color-accent)}
+.footer-menu-group>a{color:var(--color-ink)}
+.footer-menu-group>a span{color:var(--color-muted)}
+.footer-menu-group>a:hover{color:var(--color-accent)}
+.footer-return{color:var(--color-ink);border-color:var(--color-field-rule)}
+.footer-return small{color:var(--color-muted)}
+.footer-return:hover{background:var(--color-selected-paper);color:var(--color-accent);border-color:var(--color-accent)}
 </style>
 <link rel="stylesheet" href="tokens.css?v=hank-brand-20261010"/>
 </head>
@@ -650,7 +675,7 @@ button:disabled{cursor:default}
   </section>
   <div class="footer-middle">
    <div class="footer-identity">
-    <a href="#top" class="footer-logo" aria-label="Hank，回到首页"><img class="hank-logo hank-logo-footer" src="assets/hank-logo-reverse.svg" width="274" height="100" alt="HANK"/></a>
+    <a href="#top" class="footer-logo" aria-label="Hank，回到首页"><img class="hank-logo hank-logo-footer" src="assets/hank-logo.svg" width="274" height="100" alt="HANK"/></a>
     <p>汉克 · 方案师<br/><span>以我为界面，让事情发生。</span></p>
    </div>
    <nav class="footer-directory" aria-label="页脚导航">
