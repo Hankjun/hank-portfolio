@@ -479,6 +479,11 @@ button:disabled{cursor:default}
 .footer-return{color:var(--color-ink);border-color:var(--color-field-rule)}
 .footer-return small{color:var(--color-muted)}
 .footer-return:hover{background:var(--color-selected-paper);color:var(--color-accent);border-color:var(--color-accent)}
+
+/* WORK 16 · research entry */
+.nav-research{color:#b85f43!important;font-weight:800!important}.nav-research-mark{font-size:10px}
+.worklab-entry{background:#1b373a;color:#f8f3e9;padding:clamp(45px,5.8vw,83px) 0}.worklab-entry-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(200px,.65fr);align-items:center;gap:38px}.worklab-mini{font:700 10px/1.7 ui-monospace,Consolas,monospace;letter-spacing:.15em;color:#edac84}.worklab-entry h2{font:500 clamp(34px,4.2vw,60px)/1.35 Georgia,"Songti SC",serif;letter-spacing:-.05em;margin:20px 0}.worklab-entry h2 em{font-style:normal;color:#f2af85}.worklab-entry p{font-size:13px;line-height:2;color:#bed0c4;max-width:580px}.worklab-entry-actions{display:flex;gap:23px;flex-wrap:wrap;align-items:center;margin-top:26px}.worklab-entry-button{background:#eda67e;color:#173235;padding:15px 19px;font-weight:800;font-size:12px}.worklab-entry-button:hover{background:#f5bd96}.worklab-entry-text{font-size:12px;font-weight:700;color:#edb393;border-bottom:1px solid #edb393;padding-bottom:6px}.worklab-entry-art{min-height:235px;position:relative;display:flex;flex-direction:column;justify-content:center;align-items:center;border:1px solid #658078;background:radial-gradient(circle at 62% 43%,#f1aa6e 0 30%,transparent 30.5%)}.worklab-entry-art>span{font:800 clamp(37px,5vw,68px)/1 Arial,sans-serif;letter-spacing:-.08em;mix-blend-mode:screen}.worklab-entry-art>strong{font:800 clamp(80px,9vw,150px)/.92 Georgia,serif;color:#fff4e7;letter-spacing:-.08em}.worklab-entry-art>small{font:700 9px/1.5 ui-monospace,Consolas,monospace;letter-spacing:.1em;color:#bbccc1;position:absolute;bottom:15px;left:15px}
+@media(max-width:780px){.worklab-entry-grid{grid-template-columns:1fr}.worklab-entry-art{min-height:190px;max-width:430px;width:100%}}
 </style>
 <link rel="stylesheet" href="tokens.css?v=hank-brand-20261010"/>
 </head>
@@ -499,7 +504,7 @@ button:disabled{cursor:default}
 <header class="site-header">
  <div class="container head-inner">
   <a class="brand" href="#top" aria-label="汉克，回到首页"><img class="hank-logo hank-logo-header" src="assets/hank-logo.svg" width="274" height="100" alt="HANK"/><span class="brand-sub">汉克 / 方案师</span></a>
-  <nav class="nav" id="mainNav" aria-label="主导航"><a href="#about">认识汉克</a><a href="#services">发现服务</a><a href="#shop" class="nav-shop">汉克小铺 <span aria-hidden="true"><svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></span></a><a href="#projects">项目实践</a><a href="#delivery">交付方式</a></nav>
+  <nav class="nav" id="mainNav" aria-label="主导航"><a href="#about">认识汉克</a><a href="#services">发现服务</a><a href="work16/" class="nav-research">WORK 16 <span class="nav-research-mark">↗</span></a><a href="#shop" class="nav-shop">汉克小铺 <span aria-hidden="true"><svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></span></a><a href="#projects">项目实践</a><a href="#delivery">交付方式</a></nav>
   <a href="#contact" class="header-cta">谈谈你的问题 <svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></a>
   <button class="mobile-menu" id="menuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="展开菜单"><svg class="hank-icon icon-menu" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-menu"/></svg></button>
  </div>
@@ -534,6 +539,9 @@ button:disabled{cursor:default}
  </div></div>
 </div></section>
 <div class="bridge"><div class="container bridge-inner"><p>“我的价值，不是我一个人会做多少件事，<br/>而是我能让多少件<em>正确的事</em>发生。”</p><a class="link-line" href="#services">进入服务发现 <span class="arrow"><svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></span></a></div></div>
+<section class="worklab-entry" aria-labelledby="worklabEntryTitle"><div class="container worklab-entry-grid">
+<div class="worklab-entry-copy"><span class="worklab-mini">HANK WORK LAB / NEW RESEARCH SERIES</span><h2 id="worklabEntryTitle">先理解工作。<br><em>再重新组织工作。</em></h2><p>《WORK 16：人类工作的重新解构》研究计划现已开放。16 个工作领域、三层研究方法、一本正在接受现实检验的研究书稿。</p><div class="worklab-entry-actions"><a href="work16/" class="worklab-entry-button">进入 WORK 16 研究中心 ↗</a><a href="work16/read.html" class="worklab-entry-text">在线阅读书稿 ↗</a></div></div>
+<div class="worklab-entry-art" aria-hidden="true"><span>WORK</span><strong>16.</strong><small>SCIENCE / ENGINEERING / BUSINESS</small></div></div></section>
 <section class="service-wrap" id="services"><div class="container">
  <div class="section-head"><span class="left">02 / SERVICE DISCOVERY</span><span>HANK WORK INDEX · V1.0</span></div>
  <div class="service-lead"><div><h2 class="section-title serif">让想法，<br/><em>成为可交付的工作。</em></h2><p class="service-description">不必先选择一家供应商，也不必先决定使用什么 AI。告诉我你想完成什么工作。每一项 Work 都可以独立交付，也可以组合成一个完整项目。</p></div><div class="service-aside">From needs<br/>to <em>possibilities.</em></div></div>
@@ -680,7 +688,7 @@ button:disabled{cursor:default}
    </div>
    <nav class="footer-directory" aria-label="页脚导航">
     <div class="footer-menu-group"><h3>THE PERSON <span>关于</span></h3><a href="#about">认识汉克 <span aria-hidden="true"><svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></span></a><a href="#projects">项目实践 <span aria-hidden="true"><svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></span></a></div>
-    <div class="footer-menu-group"><h3>THE WORK <span>服务</span></h3><a href="#services">发现服务 <span aria-hidden="true"><svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></span></a><a href="#shop">汉克小铺 <span aria-hidden="true"><svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></span></a><a href="#delivery">交付方式 <span aria-hidden="true"><svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></span></a></div>
+    <div class="footer-menu-group"><h3>THE WORK <span>服务</span></h3><a href="#services">发现服务 <span aria-hidden="true"><svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></span></a><a href="work16/">WORK 16 研究中心 <span aria-hidden="true"><svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></span></a><a href="#shop">汉克小铺 <span aria-hidden="true"><svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></span></a><a href="#delivery">交付方式 <span aria-hidden="true"><svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></span></a></div>
    </nav>
    <a class="footer-return" href="#top" aria-label="回到页面顶部"><span aria-hidden="true"><svg class="hank-icon icon-arrow-up" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-up"/></svg></span><small>TOP</small></a>
   </div>
