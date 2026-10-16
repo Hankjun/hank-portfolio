@@ -494,6 +494,16 @@ button:disabled{cursor:default}
 .training-choice{padding:20px 0;border-bottom:1px solid #c6cfc4}.training-choice[hidden]{display:none}.training-choice>label{display:block;font-size:13px;margin-bottom:10px}.training-choice select{width:100%;padding:12px;border:1px solid #82968d;background:#fffaf1;color:#193236;font:inherit;font-size:13px}.training-choice .training-group{display:flex;gap:10px;align-items:center;margin-top:16px}.training-choice p{font-size:12px;line-height:1.8;color:#586b69}.training-group input{width:18px;height:18px;accent-color:#234344}
 .shop-cart-total{align-items:flex-start;gap:16px}.shop-cart-total strong{font:600 18px/1.8 Georgia,serif;text-align:right;white-space:pre-line}
 @media(max-width:840px){.training-intro{grid-template-columns:1fr}}@media(max-width:420px){.training-plans{gap:0}.training-plans>div{padding-inline:8px}.training-plans strong{font-size:23px}.training-plans small{font-size:10px}}
+
+.wechat-trigger{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:12px 18px;border:1px solid #234344;background:#234344;color:#fff9f0;font-family:inherit;font-size:13px;font-weight:600;line-height:1.5;cursor:pointer}
+.shop-aside .wechat-trigger{margin-top:12px}.shop-cart-actions .wechat-trigger{font-size:12px}.shop-detail-copy .wechat-trigger{margin-top:12px}
+.wechat-dialog{width:min(440px,calc(100vw - 28px));max-height:92dvh;padding:0;border:1px solid #aebdb2;background:#f5f2eb;color:#18383c;box-shadow:0 32px 90px #0006}
+.wechat-dialog::backdrop{background:#0c1c1ecc;backdrop-filter:blur(4px)}
+.wechat-content{padding:24px;max-height:calc(92dvh - 2px);overflow:auto;text-align:center;overscroll-behavior:contain}
+.wechat-content h2{font-size:24px;margin:8px 38px 10px}.wechat-content p{font-size:13px;line-height:1.8;color:#586b69;margin:12px 0}
+.wechat-qr{display:block;width:min(100%,330px);height:auto;margin:16px auto;background:white}
+.wechat-actions{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}.wechat-actions a{font-size:13px;color:#a6503d;text-decoration:underline;text-underline-offset:4px;min-height:44px;display:inline-flex;align-items:center}
+button.social-card{width:100%;text-align:left;color:inherit;font:inherit;cursor:pointer}
 </style>
 <link rel="stylesheet" href="tokens.css?v=hank-brand-20261010"/>
 </head>
@@ -587,6 +597,7 @@ button:disabled{cursor:default}
    </div>
    <div class="shop-aside"><p>11 门智能体应用培训，每门基础板块 4 课时。每周一次课，配合社群与练习，按自己的节奏把方法用起来。原有资料与工具商品也保留在货架。</p>
     <button class="shop-cart-button" id="shopCartOpen" type="button" aria-label="打开小铺选购清单">我的选购清单 <span id="shopCartCount" aria-live="polite">0</span> <svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></button>
+    <button class="wechat-trigger" type="button" data-wechat-open>微信咨询课程</button>
    </div>
   </div>
   <div class="training-intro" aria-label="培训价格与学习安排">
@@ -596,7 +607,7 @@ button:disabled{cursor:default}
     <div><span>2 个月 · 8 课时</span><strong>¥ 2,160</strong><small>每人 / 九折 · 省 ¥ 240</small></div>
     <div><span>3 个月 · 12 课时</span><strong>¥ 2,880</strong><small>每人 / 八折 · 省 ¥ 720</small></div>
    </div>
-   <p class="training-terms">多人拼课单独报价。课程时间、每课时时长与授课方式预约确认；工具账号、订阅及相关费用在报名时说明。这里可整理咨询清单，尚不能在线付款或直接提交报名。</p>
+   <p class="training-terms">多人拼课单独报价。课程时间、每课时时长与授课方式预约确认；工具账号、订阅及相关费用在报名时说明。可先整理咨询清单，再添加“超级工作站”个人微信沟通报名；本站不在线收款。</p>
   </div>
   <div class="shop-filters" role="group" aria-label="按商品类型筛选">
    <button class="shop-filter is-active" type="button" data-kind="智能体培训" aria-pressed="true">智能体培训（11）</button>
@@ -634,6 +645,7 @@ button:disabled{cursor:default}
   <div class="shop-cart-total"><span>培训报价与商品参考金额</span><strong id="shopCartTotal" aria-live="polite">未选择</strong></div>
   <p class="shop-cart-warning">培训与示例商品分开计价。资料商品未开售，培训需确认排期与报名安排；当前不能在线付款。清单仅保存在本浏览器，不会自动发送。</p>
   <div class="shop-cart-actions">
+   <button type="button" class="wechat-trigger" data-wechat-open>微信咨询报名</button>
    <button type="button" class="shop-copy" id="shopCopyList">复制咨询清单 <svg class="hank-icon icon-copy" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-copy"/></svg></button>
    <button type="button" class="shop-export" id="shopExportList">下载 .txt <svg class="hank-icon icon-download" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-download"/></svg></button>
   </div>
@@ -696,7 +708,7 @@ button:disabled{cursor:default}
     <p>文章、影像、作品与项目，也欢迎联系交流。</p>
    </div>
    <div class="social-grid">
-   <div class="social-card social-card-pending" aria-label="个人微信，账号待绑定"><span class="social-monogram" aria-hidden="true">微</span><span class="social-meta"><strong>个人微信</strong><small>合作与日常联系</small></span><span class="social-state ">待绑定</span></div>
+   <button class="social-card social-card-live" type="button" data-wechat-open aria-label="打开超级工作站个人微信二维码"><span class="social-monogram" aria-hidden="true">微</span><span class="social-meta"><strong>超级工作站</strong><small>个人微信 · 培训与合作</small></span><span class="social-state is-live">扫码添加</span></button>
    <div class="social-card social-card-pending" aria-label="微信公众号，账号待绑定"><span class="social-monogram" aria-hidden="true">文</span><span class="social-meta"><strong>微信公众号</strong><small>文章 · 深度思考</small></span><span class="social-state ">待绑定</span></div>
    <div class="social-card social-card-pending" aria-label="微信视频号，账号待绑定"><span class="social-monogram" aria-hidden="true">视</span><span class="social-meta"><strong>微信视频号</strong><small>影像 · 日常更新</small></span><span class="social-state ">待绑定</span></div>
    <div class="social-card social-card-pending" aria-label="小红书，账号待绑定"><span class="social-monogram" aria-hidden="true">红</span><span class="social-meta"><strong>小红书</strong><small>创意 · 作品分享</small></span><span class="social-state ">待绑定</span></div>
@@ -705,7 +717,7 @@ button:disabled{cursor:default}
    <div class="social-card social-card-pending" aria-label="知乎，账号待绑定"><span class="social-monogram" aria-hidden="true">知</span><span class="social-meta"><strong>知乎</strong><small>观点 · 知识分享</small></span><span class="social-state ">待绑定</span></div>
    <a class="social-card social-card-live" href="https://github.com/Hankjun" target="_blank" rel="noopener noreferrer" aria-label="访问汉克的 GitHub 主页（在新窗口打开）"><span class="social-monogram" aria-hidden="true">GH</span><span class="social-meta"><strong>GitHub</strong><small>代码 · 开放项目</small></span><span class="social-state is-live">访问 <svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></span></a>
    </div>
-   <p class="social-help">目前仅 GitHub 已绑定真实主页；其他渠道确认账号后开放链接或二维码。</p>
+   <p class="social-help">个人微信与 GitHub 已开放；其他渠道确认账号后开放链接或二维码。</p>
   </section>
   <div class="footer-middle">
    <div class="footer-identity">
@@ -792,5 +804,16 @@ window.hankIcon=name=>'<svg class="hank-icon icon-'+name+'" viewBox="0 0 24 24" 
  syncSelection();
 })();
 </script>
-<script src="shop.js"></script>
+<dialog class="wechat-dialog" id="wechatContact" aria-labelledby="wechatTitle" aria-describedby="wechatHelp">
+ <div class="wechat-content">
+  <button class="shop-dialog-close" type="button" data-wechat-close aria-label="关闭微信二维码">×</button>
+  <h2 id="wechatTitle">超级工作站</h2>
+  <p id="wechatHelp">个人微信 · 课程咨询与合作<br/>用微信扫一扫添加好友，发送你想学习的课程与报名周期。</p>
+  <img class="wechat-qr" src="assets/wechat-super-workstation.jpg" width="548" height="811" alt="超级工作站个人微信好友二维码"/>
+  <div class="wechat-actions"><a href="assets/wechat-super-workstation.jpg" download="超级工作站-微信二维码.jpg">保存二维码原图</a><a href="assets/wechat-super-workstation.jpg" target="_blank" rel="noopener noreferrer">打开原图</a></div>
+  <p>手机访问可保存原图，在微信“扫一扫”中从相册选择识别。<br/>已有咨询清单可复制后发送；此二维码用于添加好友，不是付款码。</p>
+ </div>
+</dialog>
+<script src="wechat.js"></script>
+<script src="shop.js?v=20261016-wechat"></script>
 </body></html>

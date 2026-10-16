@@ -84,6 +84,7 @@
        '<div class="shop-detail-price">'+money(p.price)+' <small>'+(training?'每人 / 月 · 4 课时':'示意价 · 待确认')+'</small></div>'+
        (training?'<p>连续学习：2 个月 / 8 课时 ¥ 2,160（九折）；3 个月 / 12 课时 ¥ 2,880（八折）。在咨询清单选择周期。</p>':'')+
        '<button class="shop-add-button" type="button" data-shop-add="'+esc(p.id)+'">'+(cart.includes(p.id)?'移出选购清单':'加入我的选购清单')+' '+icon('arrow-ne')+'</button>'+
+       (training?'<button class="wechat-trigger" type="button" data-wechat-open>微信咨询这门课程</button>':'')+
        '<p class="shop-detail-disclaimer">'+(training?esc(trainingNote)+' 咨询清单不会自动提交，报名需另行联系确认。':'此商品为示例，实际文件、交付条件与正式售价待确认。当前未开售，无法付款。')+'</p></div></div>';
     openDialog(detail);
   }
@@ -121,7 +122,7 @@
     return ['HANK / 汉克小铺 · 咨询清单','（仅供沟通，非订单；不会自动发送）','────────────────────',
       ...q.list.map((p,i)=>(i+1)+'. '+p.sku+' / '+p.name+' / '+(isTraining(p)?'基础板块 4 课时，纳入月度方案':money(p.price)+'（示意价，未开售）')),
       ...(q.training.length?['','学习周期意向：'+months+' 个月 / '+months*4+' 课时','报名方式：'+(group?'多人拼课，单独报价':'个人，按人计价'),planNote(q),trainingNote]:[]),
-      '────────────────────',...quoteLines(q),'','请另行联系汉克确认排期、授课方式、每课时时长、工具费用与报名安排。当前无法在线付款；资料商品仍为示例。'].join('\n');
+      '────────────────────',...quoteLines(q),'','请添加“超级工作站”个人微信，发送本清单，确认排期、授课方式、每课时时长、工具费用与报名安排。当前无法在线付款；资料商品仍为示例。'].join('\n');
   }
   function download(txt){
     const blob=new Blob(['\uFEFF'+txt],{type:'text/plain;charset=utf-8'});
