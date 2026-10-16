@@ -378,7 +378,7 @@ button:disabled{cursor:default}
  .shop-item-desc{font-size:12px;line-height:1.8;min-height:64px}
  .shop-card-spec{font-size:var(--text-caption)}
  .shop-item-type>span:last-child{font-size:9px;letter-spacing:0}
- .shop-detail-layout .shop-item-cover{width:150px;margin-inline:auto}
+ .shop-detail-layout .shop-item-cover{width:150px;min-height:220px;margin-inline:auto}
  .shop-dialog-scroll{padding:var(--space-lg)}
  .shop-cart-row{flex-wrap:wrap}.shop-cart-row-text{flex-basis:calc(100% - 60px)}
  .shop-cart-row-price{margin-left:55px}.shop-cart-remove{margin-left:auto;min-height:36px}
@@ -484,6 +484,16 @@ button:disabled{cursor:default}
 .nav-research{color:#b85f43!important;font-weight:800!important}.nav-research-mark{font-size:10px}
 .worklab-entry{background:#1b373a;color:#f8f3e9;padding:clamp(45px,5.8vw,83px) 0}.worklab-entry-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(200px,.65fr);align-items:center;gap:38px}.worklab-mini{font:700 10px/1.7 ui-monospace,Consolas,monospace;letter-spacing:.15em;color:#edac84}.worklab-entry h2{font:500 clamp(34px,4.2vw,60px)/1.35 Georgia,"Songti SC",serif;letter-spacing:-.05em;margin:20px 0}.worklab-entry h2 em{font-style:normal;color:#f2af85}.worklab-entry p{font-size:13px;line-height:2;color:#bed0c4;max-width:580px}.worklab-entry-actions{display:flex;gap:23px;flex-wrap:wrap;align-items:center;margin-top:26px}.worklab-entry-button{background:#eda67e;color:#173235;padding:15px 19px;font-weight:800;font-size:12px}.worklab-entry-button:hover{background:#f5bd96}.worklab-entry-text{font-size:12px;font-weight:700;color:#edb393;border-bottom:1px solid #edb393;padding-bottom:6px}.worklab-entry-art{min-height:235px;position:relative;display:flex;flex-direction:column;justify-content:center;align-items:center;border:1px solid #658078;background:radial-gradient(circle at 62% 43%,#f1aa6e 0 30%,transparent 30.5%)}.worklab-entry-art>span{font:800 clamp(37px,5vw,68px)/1 Arial,sans-serif;letter-spacing:-.08em;mix-blend-mode:screen}.worklab-entry-art>strong{font:800 clamp(80px,9vw,150px)/.92 Georgia,serif;color:#fff4e7;letter-spacing:-.08em}.worklab-entry-art>small{font:700 9px/1.5 ui-monospace,Consolas,monospace;letter-spacing:.1em;color:#bbccc1;position:absolute;bottom:15px;left:15px}
 @media(max-width:780px){.worklab-entry-grid{grid-template-columns:1fr}.worklab-entry-art{min-height:190px;max-width:430px;width:100%}}
+
+.training-intro{border-block:1px solid #a7afa8;padding:28px 0;margin:0 0 32px;display:grid;grid-template-columns:1fr 1.3fr;gap:22px 36px}
+.training-intro h3{font-size:25px;font-weight:500;margin:14px 0}.training-intro p{font-size:13px;line-height:1.9;color:#586b69}
+.training-plans{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;align-items:center}
+.training-plans>div{border-left:1px solid #b7beb4;padding:10px 12px}.training-plans span,.training-plans small{display:block;font-size:11px;line-height:1.7;color:#586b69}
+.training-plans strong{display:block;font:600 clamp(22px,2.5vw,34px)/1.6 Georgia,serif;color:#a6503d;white-space:nowrap}
+.training-intro .training-terms{grid-column:1/-1;margin:0;font-size:12px}
+.training-choice{padding:20px 0;border-bottom:1px solid #c6cfc4}.training-choice[hidden]{display:none}.training-choice>label{display:block;font-size:13px;margin-bottom:10px}.training-choice select{width:100%;padding:12px;border:1px solid #82968d;background:#fffaf1;color:#193236;font:inherit;font-size:13px}.training-choice .training-group{display:flex;gap:10px;align-items:center;margin-top:16px}.training-choice p{font-size:12px;line-height:1.8;color:#586b69}.training-group input{width:18px;height:18px;accent-color:#234344}
+.shop-cart-total{align-items:flex-start;gap:16px}.shop-cart-total strong{font:600 18px/1.8 Georgia,serif;text-align:right;white-space:pre-line}
+@media(max-width:840px){.training-intro{grid-template-columns:1fr}}@media(max-width:420px){.training-plans{gap:0}.training-plans>div{padding-inline:8px}.training-plans strong{font-size:23px}.training-plans small{font-size:10px}}
 </style>
 <link rel="stylesheet" href="tokens.css?v=hank-brand-20261010"/>
 </head>
@@ -573,14 +583,24 @@ button:disabled{cursor:default}
   <div class="shop-overline"><span>03 / HANK'S LITTLE SHOP</span><span>IDEAS <svg class="hank-icon icon-arrow-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-right"/></svg> OBJECTS <svg class="hank-icon icon-arrow-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-right"/></svg> USEFUL THINGS</span></div>
   <div class="shop-head">
    <div><div class="shop-nameplate"><img class="shop-nameplate-mark" src="assets/hank-mark.svg" width="32" height="34" alt=""/> OPEN SHELF / 汉克小铺</div>
-    <h2 class="serif" id="shopTitle">一些想法，<br/><em>整理成 8 件小产品。</em></h2>
+    <h2 class="serif" id="shopTitle">学会一个智能体，<br/><em>用在自己的工作里。</em></h2>
    </div>
-   <div class="shop-aside"><p>先从 8 款商品实例开始。每件都有独立 SKU、统一封皮、商品规格、适用人群与示意价格，可以从一个小产品开始认识汉克的工作方法。</p>
+   <div class="shop-aside"><p>11 门智能体应用培训，每门基础板块 4 课时。每周一次课，配合社群与练习，按自己的节奏把方法用起来。原有资料与工具商品也保留在货架。</p>
     <button class="shop-cart-button" id="shopCartOpen" type="button" aria-label="打开小铺选购清单">我的选购清单 <span id="shopCartCount" aria-live="polite">0</span> <svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></button>
    </div>
   </div>
+  <div class="training-intro" aria-label="培训价格与学习安排">
+   <div class="training-intro-copy"><span class="shop-index">LEARN BY DOING / 智能体应用培训</span><h3>一周一次课，课后继续练。</h3><p>每人每课时 300 元 · 每月 4 课时 · 社群 + 实操练习<br/>单个智能体或课程板块，4 课时完成基础学习。</p></div>
+   <div class="training-plans">
+    <div><span>1 个月 · 4 课时</span><strong>¥ 1,200</strong><small>每人 / 原价</small></div>
+    <div><span>2 个月 · 8 课时</span><strong>¥ 2,160</strong><small>每人 / 九折 · 省 ¥ 240</small></div>
+    <div><span>3 个月 · 12 课时</span><strong>¥ 2,880</strong><small>每人 / 八折 · 省 ¥ 720</small></div>
+   </div>
+   <p class="training-terms">多人拼课单独报价。课程时间、每课时时长与授课方式预约确认；工具账号、订阅及相关费用在报名时说明。这里可整理咨询清单，尚不能在线付款或直接提交报名。</p>
+  </div>
   <div class="shop-filters" role="group" aria-label="按商品类型筛选">
-   <button class="shop-filter is-active" type="button" data-kind="全部" aria-pressed="true">全部 SKU（8）</button>
+   <button class="shop-filter is-active" type="button" data-kind="智能体培训" aria-pressed="true">智能体培训（11）</button>
+   <button class="shop-filter" type="button" data-kind="全部" aria-pressed="false">全部商品（19）</button>
    <button class="shop-filter" type="button" data-kind="付费专栏" aria-pressed="false">付费专栏</button>
    <button class="shop-filter" type="button" data-kind="知识库" aria-pressed="false">知识库</button>
    <button class="shop-filter" type="button" data-kind="技能包" aria-pressed="false">技能包</button>
@@ -589,8 +609,8 @@ button:disabled{cursor:default}
   </div>
   <div class="shop-grid" id="shopGrid" aria-live="polite"></div>
   <div class="shop-after">
-   <div><span class="shop-index">SHELF 01 / 2026 · 8 SKUs / 5 CATEGORIES</span><p>不同类型的东西，放在同一个货架。<br/>想独立购买，也可以组合成适合自己的工具箱。</p></div>
-   <p class="shop-availability"><strong>关于价格与购买：</strong>当前展示的是<strong>8 款示例 SKU</strong>。商品文件及交付条款尚需制作或核验，所有标价均为示意价格而非最终售价。微信优先：计划先人工确认收款与交付，后续接入商户支付与自动交付。当前未配置商户、收款入口与交付内容，未开售，不能直接付款。</p>
+   <div><span class="shop-index">SHELF 01 / 2026 · 19 ITEMS / 6 CATEGORIES</span><p>不同类型的东西，放在同一个货架。<br/>选择课程方向，也可以了解配套资料与工具。</p></div>
+   <p class="shop-availability"><strong>关于价格与咨询：</strong>11 门培训按每人每月 4 课时计价，连续报名 2 个月九折、3 个月八折；多人拼课单独报价。另有 8 款资料与工具示例商品，仍未开售、仅标示意价。咨询清单不会自动发送，排期与报名安排需另行沟通。</p>
   </div>
  </div>
 </section>
@@ -603,15 +623,21 @@ button:disabled{cursor:default}
 <dialog class="shop-dialog shop-cart-dialog" id="shopCart" aria-labelledby="shopCartTitle">
  <div class="shop-dialog-scroll">
   <button class="shop-dialog-close" type="button" data-shop-close="shopCart" aria-label="关闭选购清单"><svg class="hank-icon icon-close" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-close"/></svg></button>
-  <div class="shop-cart-head"><span>HANK / SMALL THINGS, USEFUL WORK.</span><h2 class="serif" id="shopCartTitle">我的选购清单<span>。</span></h2><p>把感兴趣的 SKU 放在一起，整理一张包含编号与示意价格的购买意向清单。</p></div>
+  <div class="shop-cart-head"><span>HANK / SMALL THINGS, USEFUL WORK.</span><h2 class="serif" id="shopCartTitle">我的选购清单<span>。</span></h2><p>选择学习方向与月度方案，生成可复制或下载的咨询清单。此处不会提交报名或生成订单。</p></div>
   <div id="shopCartItems" class="shop-cart-items"></div>
-  <div class="shop-cart-total"><span>示意金额合计</span><strong id="shopCartTotal">¥ 0</strong></div>
-  <p class="shop-cart-warning">以上为示例 SKU 和示意价格，不构成真实订单；尚未接入微信支付与数字内容交付，当前无法付款。</p>
+  <div class="training-choice" id="trainingChoice" hidden>
+   <label for="trainingMonths">学习周期（每人每月 4 课时）</label>
+   <select id="trainingMonths"><option value="1">1 个月 · 4 课时 · ¥ 1,200 / 人</option><option value="2">2 个月 · 8 课时 · ¥ 2,160 / 人（九折）</option><option value="3">3 个月 · 12 课时 · ¥ 2,880 / 人（八折）</option></select>
+   <label class="training-group"><input type="checkbox" id="trainingGroup"/> 多人拼课，咨询单独报价</label>
+   <p id="trainingPlanNote" aria-live="polite"></p>
+  </div>
+  <div class="shop-cart-total"><span>培训报价与商品参考金额</span><strong id="shopCartTotal" aria-live="polite">未选择</strong></div>
+  <p class="shop-cart-warning">培训与示例商品分开计价。资料商品未开售，培训需确认排期与报名安排；当前不能在线付款。清单仅保存在本浏览器，不会自动发送。</p>
   <div class="shop-cart-actions">
    <button type="button" class="shop-copy" id="shopCopyList">复制咨询清单 <svg class="hank-icon icon-copy" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-copy"/></svg></button>
    <button type="button" class="shop-export" id="shopExportList">下载 .txt <svg class="hank-icon icon-download" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-download"/></svg></button>
   </div>
-  <a class="shop-talk-link" id="shopTalkLink" href="#contact">带着清单，发起合作对话 <svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></a>
+  <a class="shop-talk-link" id="shopTalkLink" href="#contact">将清单带入合作简报 <svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></a>
  </div>
 </dialog>
 
@@ -718,7 +744,7 @@ window.hankIcon=name=>'<svg class="hank-icon icon-'+name+'" viewBox="0 0 24 24" 
  const locationLinks=$$('#mainNav a');
  function updateLocation(){
   const line=innerHeight*.28;
-  const current=locationLinks.find(a=>{const section=$(a.hash);if(!section)return false;const r=section.getBoundingClientRect();return r.top<=line&&r.bottom>line;});
+  const current=locationLinks.find(a=>{if(!a.hash||a.pathname!==location.pathname)return false;const section=document.getElementById(a.hash.slice(1));if(!section)return false;const r=section.getBoundingClientRect();return r.top<=line&&r.bottom>line;});
   locationLinks.forEach(a=>{if(a===current)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});
  }
  let ticking=false;
@@ -766,139 +792,5 @@ window.hankIcon=name=>'<svg class="hank-icon icon-'+name+'" viewBox="0 0 24 24" 
  syncSelection();
 })();
 </script>
-<script>
-
-(async function(){
-  'use strict';
-  const icon=window.hankIcon;
-  // Product catalog can be replaced item by item after content, final prices,
-  // delivery terms and merchant-hosted payment URLs have been confirmed.
-  // price = display-only concept price until actual products are approved.
-  const products=await (async()=>{
-    try{
-      const res=await fetch(new URL('shop-skus.json',document.baseURI),{cache:'no-cache'});
-      if(!res.ok)throw new Error('SKU HTTP '+res.status);
-      const data=await res.json();
-      const categories={'资料包':'DAT','技能包':'KIT','工作流':'FLW','知识库':'KNB','付费专栏':'SER'};
-      const themes=['ember','ink','ochre','sage','linen','wine','night','blue'];
-      const fields=['id','sku','category','name','en','coverCN','desc','audience','format','scope','version','edition','status','delivery'];
-      if(!Array.isArray(data)||!data.length||data.some(p=>!p||
-        fields.some(k=>typeof p[k]!=='string'||!p[k].trim())||
-        !categories[p.category]||!new RegExp('^HKS-'+categories[p.category]+'-[0-9]{3}$').test(p.sku)||
-        !themes.includes(p.theme)||typeof p.listed!=='boolean'||
-        !Number.isFinite(p.price)||p.price<0||!Array.isArray(p.contents)||!p.contents.length||
-        p.contents.some(x=>typeof x!=='string'||!x.trim())||p.paymentUrl!==null)||
-        new Set(data.map(p=>p.id)).size!==data.length||new Set(data.map(p=>p.sku)).size!==data.length)
-        throw new Error('Invalid SKU catalog');
-      return data.filter(p=>p.listed);
-    }catch(e){
-      console.error('SKU catalog load error:',e);
-      const el=document.querySelector('#shopGrid');
-      if(el)el.innerHTML='<p class="shop-load-error" role="status">商品目录暂时未能载入，请联网后刷新页面。</p>';
-      return [];
-    }
-  })();
-    // Source of truth: shop-skus.json; payment is deliberately disabled.
-  const $=(sel,root=document)=>root.querySelector(sel), $$=(sel,root=document)=>Array.from(root.querySelectorAll(sel));
-  if(!products.length)return;
-  $('[data-kind="全部"]').textContent='全部 SKU（'+products.length+'）';
-  let activeKind='全部';
-  let cart=[];
-  try{const saved=JSON.parse(localStorage.getItem('hank-shop-interest-v1')||'[]');if(Array.isArray(saved))cart=saved.filter(id=>products.some(p=>p.id===id));}catch(_){}
-  const grid=$('#shopGrid'),detail=$('#shopDetail'),cartDialog=$('#shopCart');
-  if(!grid||!detail||!cartDialog)return;
-  const money=n=>'¥ '+Number(n).toLocaleString('zh-CN');
-  const find=id=>products.find(p=>p.id===id);
-  const esc=str=>String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
-  function cover(p){return '<span class="shop-cover-face theme-'+p.theme+'">'+
-     '<span class="shop-cover-top"><span>HANK / LITTLE SHOP</span><span>© 2026</span></span>'+
-     '<span class="shop-cover-central"><span class="shop-cover-illustration" aria-hidden="true"></span>'+
-     '<span class="shop-cover-title">'+esc(p.en.replace(' / ','<br>')).replace('&lt;br&gt;','<br>')+'</span>'+
-     '<span class="shop-cover-cn">'+esc(p.coverCN)+'</span></span>'+
-     '<span class="shop-cover-foot"><span>'+esc(p.edition)+'</span><span>H.</span></span></span>';
-  }
-  function deliveryLabel(p){return {'资料包':'文件 / 下载链接（计划）','技能包':'模板 / 使用说明（计划）','工作流':'流程文件 / 教程（计划）','知识库':'知识库资料包（计划）','付费专栏':'图文 / 阅读入口（计划）'}[p.category]||p.delivery;}
-  function card(p){
-    const selected=cart.includes(p.id);
-    return '<article class="shop-item" data-category="'+esc(p.category)+'" data-product="'+esc(p.id)+'">'+
-      '<button class="shop-item-cover" type="button" data-shop-detail="'+esc(p.id)+'" aria-label="查看 '+esc(p.name)+' 商品详情">'+cover(p)+'</button>'+
-      '<div class="shop-item-meta"><div class="shop-item-type"><span>'+esc(p.category)+'</span><span>示例商品</span></div>'+
-      '<div class="shop-item-sku">'+esc(p.sku)+'</div><h3 class="shop-item-name">'+esc(p.name)+'</h3><p class="shop-item-desc">'+esc(p.desc)+'</p>'+
-      '<dl class="shop-card-spec"><div><dt>版本</dt><dd>'+esc(p.version.replace(/^\d{4} · /,''))+'</dd></div><div><dt>交付</dt><dd>'+esc(deliveryLabel(p))+'</dd></div><div><dt>状态</dt><dd>'+esc(p.status)+'</dd></div></dl>'+
-      '<details class="shop-card-contents"><summary>'+icon('chevron')+'拟含 '+p.contents.length+' 项内容</summary><ul>'+p.contents.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul></details>'+
-      '<div class="shop-item-bottom"><div class="shop-item-price"><strong>'+money(p.price)+'</strong><small>示意价</small></div>'+
-      '<div class="shop-item-actions"><button type="button" data-shop-detail="'+esc(p.id)+'" aria-label="查看 '+esc(p.name)+' 详情">' +icon('arrow-ne')+'</button>'+
-      '<button type="button" data-shop-add="'+esc(p.id)+'" aria-label="'+(selected?'从选购清单移除 ':'加入选购清单 ')+esc(p.name)+'" aria-pressed="'+selected+'">'+icon(selected?'check':'plus')+'</button></div></div></div></article>';
-  }
-  function render(){
-    grid.innerHTML=products.filter(p=>activeKind==='全部'||p.category===activeKind).map(card).join('');
-    $('#shopCartCount').textContent=String(cart.length);
-  }
-  function save(){try{localStorage.setItem('hank-shop-interest-v1',JSON.stringify(cart));}catch(_){}render();if(cartDialog.open)renderCart();}
-  function toggle(id){if(!find(id))return;cart=cart.includes(id)?cart.filter(x=>x!==id):cart.concat(id);save();}
-  function openDialog(dialog){if(typeof dialog.showModal==='function')dialog.showModal();else dialog.setAttribute('open','');}
-  function closeDialog(dialog){if(typeof dialog.close==='function')dialog.close();else dialog.removeAttribute('open');}
-  function showDetail(id){
-    const p=find(id);if(!p)return;
-    $('#shopDetailContent').innerHTML='<div class="shop-detail-layout"><div><div class="shop-item-cover" aria-hidden="true">'+cover(p)+'</div></div>'+
-       '<div class="shop-detail-copy"><span class="shop-detail-kicker">'+esc(p.sku)+' / '+esc(p.category)+'</span>'+
-       '<h2 class="serif" id="shopDetailTitle">'+esc(p.name)+'</h2><p>'+esc(p.desc)+'</p>'+
-       '<dl class="shop-sku-spec"><div><dt>SKU</dt><dd>'+esc(p.sku)+'</dd></div><div><dt>类别</dt><dd>'+esc(p.category)+'</dd></div><div><dt>适用人群</dt><dd>'+esc(p.audience)+'</dd></div><div><dt>计划交付格式</dt><dd>'+esc(p.format)+'</dd></div><div><dt>交付方式</dt><dd>'+esc(p.delivery)+'</dd></div><div><dt>版本</dt><dd>'+esc(p.version)+'</dd></div><div><dt>产品范围</dt><dd>'+esc(p.scope)+'</dd></div><div><dt>当前状态</dt><dd>'+esc(p.status)+'</dd></div></dl><h3>拟包含的内容</h3><ul>'+p.contents.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>'+
-       '<div class="shop-detail-price">'+money(p.price)+' <small>示意价 · 待确认</small></div>'+
-       '<button class="shop-add-button" type="button" data-shop-add="'+esc(p.id)+'">'+(cart.includes(p.id)?'移出选购清单':'加入我的选购清单')+' '+icon('arrow-ne')+'</button>'+
-       '<p class="shop-detail-disclaimer">此 SKU 为产品实例，实际文件、交付条件与正式售价待确认。微信优先规划：先人工确认收款与交付，后续接入商户支付与自动交付。当前未开售，无法付款。</p></div></div>';
-    openDialog(detail);
-  }
-  function renderCart(){
-    const list=cart.map(find).filter(Boolean);
-    $('#shopCartItems').innerHTML=list.length?list.map(p=>'<div class="shop-cart-row">'+
-      '<div class="shop-cart-mini" aria-hidden="true">H.</div><div class="shop-cart-row-text"><strong>'+esc(p.name)+'</strong><small>'+esc(p.sku)+' · '+esc(p.category)+' · 展示价格</small></div>'+
-      '<span class="shop-cart-row-price">'+money(p.price)+'</span>'+
-      '<button class="shop-cart-remove" type="button" data-shop-remove="'+esc(p.id)+'" aria-label="移除 '+esc(p.name)+'">移除</button></div>').join(''):
-      '<p class="shop-cart-empty">架子上有很多想法，你还没选中任何东西。先挑几件看看吧。</p>';
-    $('#shopCartTotal').textContent=money(list.reduce((sum,p)=>sum+p.price,0));
-    $('#shopCopyList').disabled=!list.length;$('#shopExportList').disabled=!list.length;
-  }
-  function cartText(){
-    const list=cart.map(find).filter(Boolean);
-    if(!list.length)return null;
-    return ['HANK / 汉克小铺 · 购买意向清单','（当前为商品概念与示意价格，非正式订单）','────────────────────',
-      ...list.map((p,i)=>(i+1)+'. '+p.sku+' / '+p.name+' / '+p.category+' / '+money(p.price)+'（示意价） / '+p.version+' / '+p.status+' / '+p.delivery),
-      '────────────────────','示意价格合计：'+money(list.reduce((n,p)=>n+p.price,0)),
-      '','请与汉克进一步确认：正式售价、具体内容、付款方式、交付时间和售后安排。',
-      '微信优先支付仍在规划中，当前未开售且无法付款。以上清单仅供咨询，不会自动发送。'].join('\n');
-  }
-  function download(txt){
-    const blob=new Blob(['\uFEFF'+txt],{type:'text/plain;charset=utf-8'});
-    const url=URL.createObjectURL(blob), a=document.createElement('a');
-    a.href=url;a.download='HANK-小铺选购意向清单.txt';document.body.appendChild(a);a.click();a.remove();
-    setTimeout(()=>URL.revokeObjectURL(url),1500);
-  }
-  async function copy(txt){
-    try{
-      if(navigator.clipboard&&window.isSecureContext)await navigator.clipboard.writeText(txt);
-      else{const el=document.createElement('textarea');el.value=txt;el.style.position='fixed';el.style.opacity='0';document.body.appendChild(el);el.select();if(!document.execCommand('copy'))throw Error('no clipboard');el.remove();}
-      $('#shopCopyList').innerHTML='已复制 '+icon('check');setTimeout(()=>$('#shopCopyList').innerHTML='复制咨询清单 '+icon('copy'),2000);
-    }catch(_){alert('复制受浏览器限制，请下载选购清单。');}
-  }
-  $$('.shop-filter').forEach(btn=>btn.addEventListener('click',()=>{
-    activeKind=btn.dataset.kind;$$('.shop-filter').forEach(el=>{el.classList.toggle('is-active',el===btn);el.setAttribute('aria-pressed',String(el===btn));});
-    render();
-  }));
-  grid.addEventListener('click',e=>{
-    const add=e.target.closest('[data-shop-add]');if(add){toggle(add.dataset.shopAdd);return;}
-    const item=e.target.closest('[data-shop-detail]');if(item)showDetail(item.dataset.shopDetail);
-  });
-  detail.addEventListener('click',e=>{const b=e.target.closest('[data-shop-add]');if(b){toggle(b.dataset.shopAdd);showDetail(b.dataset.shopAdd);}});
-  cartDialog.addEventListener('click',e=>{const b=e.target.closest('[data-shop-remove]');if(b)toggle(b.dataset.shopRemove);});
-  $('#shopCartOpen').addEventListener('click',()=>{renderCart();openDialog(cartDialog);});
-  $$('[data-shop-close]').forEach(b=>b.addEventListener('click',()=>closeDialog($('#'+b.dataset.shopClose))));
-  [detail,cartDialog].forEach(d=>d.addEventListener('click',e=>{if(e.target===d)closeDialog(d);}));
-  $('#shopTalkLink').addEventListener('click',()=>closeDialog(cartDialog));
-  $('#shopCopyList').addEventListener('click',()=>{const txt=cartText();if(txt)copy(txt);});
-  $('#shopExportList').addEventListener('click',()=>{const txt=cartText();if(txt)download(txt);});
-  render();
-})();
-
-</script>
+<script src="shop.js"></script>
 </body></html>
