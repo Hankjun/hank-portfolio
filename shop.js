@@ -71,7 +71,7 @@
       '<div class="shop-item-sku">'+esc(p.sku)+'</div><h3 class="shop-item-name">'+esc(p.name)+'</h3><p class="shop-item-desc">'+esc(p.desc)+'</p>'+
       '<dl class="shop-card-spec"><div><dt>'+(training?'课时':'版本')+'</dt><dd>'+esc(training?'4 课时 / 月':p.version.replace(/^\d{4} · /,''))+'</dd></div><div><dt>交付</dt><dd>'+esc(deliveryLabel(p))+'</dd></div><div><dt>状态</dt><dd>'+esc(p.status)+'</dd></div></dl>'+
       '<details class="shop-card-contents"><summary>'+icon('chevron')+(service?'查看交付范围':resource?'查看练习内容':training?'查看 4 课时安排':'拟含 '+p.contents.length+' 项内容')+'</summary><ul>'+p.contents.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul></details>'+
-      (resource?resourceLinks(p):'')+
+      (resource?resourceLinks(p):training?trainingPdf(p):'')+
       '<div class="shop-item-bottom"><div class="shop-item-price"><strong>'+priceLabel(p)+'</strong><small>'+priceUnit(p)+'</small></div>'+
       '<div class="shop-item-actions"><button type="button" data-shop-detail="'+esc(p.id)+'" aria-label="查看 '+esc(p.name)+' 详情">'+icon('arrow-ne')+'</button>'+
       '<button type="button" data-shop-add="'+esc(p.id)+'" aria-label="'+(selected?'从选购清单移除 ':'加入选购清单 ')+esc(p.name)+'" aria-pressed="'+selected+'">'+icon(selected?'check':'plus')+'</button></div></div></div></article>';
@@ -86,6 +86,7 @@
   function openDialog(dialog){if(typeof dialog.showModal==='function')dialog.showModal();else dialog.setAttribute('open','');}
   function closeDialog(dialog){if(typeof dialog.close==='function')dialog.close();else dialog.removeAttribute('open');}
   function listSection(title,items){return '<h3>'+esc(title)+'</h3><ul>'+items.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>';}
+  function trainingPdf(p){const u=typeof p.pdfUrl==='string'&&/^courses\/[a-z0-9-]+\.pdf$/.test(p.pdfUrl)?p.pdfUrl:null;return u?'<a class="resource-action" href="'+esc(u)+'" target="_blank" rel="noopener noreferrer">打开课程 PDF ↗</a>':'';}
   function caseSection(c){
     const safeURL=c.url==='#projects'||(typeof c.url==='string'&&c.url.startsWith('https://hankjun.github.io/'));
     return '<section class="shop-case" aria-label="项目案例"><h3>项目案例 / '+esc(c.title)+'</h3><p>'+esc(c.summary)+'</p><small>'+esc(c.status)+'</small>'+(safeURL?'<a class="resource-action" href="'+esc(c.url)+'"'+(c.url.startsWith('https:')?' target="_blank" rel="noopener noreferrer"':'')+'>'+esc(c.linkText||'查看项目')+' ↗</a>':'')+'</section>';
@@ -101,7 +102,7 @@
       (service?listSection('开始前需要你提供',p.inputs)+listSection('如何验收',p.acceptance)+caseSection(p.caseStudy):'')+
       '<div class="shop-detail-price">'+priceLabel(p)+' <small>'+priceUnit(p)+'</small></div>'+
       (training?'<p>连续学习：2 个月 / 8 课时 ¥ 2,160（九折）；3 个月 / 12 课时 ¥ 2,880（八折）。在咨询清单选择周期。</p>':'')+
-      (resource?resourceLinks(p):'')+
+      (resource?resourceLinks(p):training?trainingPdf(p):'')+
       '<button class="shop-add-button" type="button" data-shop-add="'+esc(p.id)+'">'+(cart.includes(p.id)?'移出选购清单':'加入我的选购清单')+' '+icon('arrow-ne')+'</button>'+
       (!isLegacy(p)?'<button class="wechat-trigger" type="button" data-wechat-open>'+ (service?'微信沟通这个项目':resource?'微信咨询使用方法':'微信咨询这门课程')+'</button>':'')+
       '<p class="shop-detail-disclaimer">'+(service?'根据需求确认交付物、时间、修改轮次、验收与报价后开始制作。可先复制咨询清单，通过“超级工作站”个人微信沟通。':resource?'公开试用版可以用于个人学习和团队内部讨论。练习数据保存在你的浏览器，可导出为 Markdown；需要定制辅导可微信咨询。':training?esc(trainingNote)+' 咨询清单不会自动提交，报名需另行联系确认。':'此商品为示例，实际文件、交付条件与正式售价待确认。当前未开售，无法付款。')+'</p></div></div>';
