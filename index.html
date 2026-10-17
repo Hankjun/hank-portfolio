@@ -504,6 +504,14 @@ button:disabled{cursor:default}
 .wechat-qr{display:block;width:min(100%,330px);height:auto;margin:16px auto;background:white}
 .wechat-actions{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}.wechat-actions a{font-size:13px;color:#a6503d;text-decoration:underline;text-underline-offset:4px;min-height:44px;display:inline-flex;align-items:center}
 button.social-card{width:100%;text-align:left;color:inherit;font:inherit;cursor:pointer}
+
+.shop-paths{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin:32px 0}.shop-paths a{display:flex;flex-direction:column;gap:14px;border-top:2px solid var(--color-ink);padding:20px 0;color:var(--color-ink)}.shop-paths small{font-size:11px;color:var(--color-accent);letter-spacing:.06em}.shop-paths strong{font:500 26px/1.4 var(--font-display)}.shop-paths span{font-size:13px;color:var(--color-muted)}.shop-paths a:hover strong{color:var(--color-accent)}
+.shop-case{padding:20px 0;border-block:1px solid var(--color-rule);margin-top:24px}.shop-case h3{margin-top:0}.shop-case a,.resource-action{color:var(--color-accent);text-decoration:underline;text-underline-offset:4px}.shop-case small{display:block;font-size:12px;line-height:1.8;color:var(--color-muted)}.shop-resource-links{display:flex;flex-wrap:wrap;gap:14px;margin:16px 0}.resource-action{display:inline-flex;align-items:center;min-height:44px;font-size:13px}.shop-card-resource{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}.shop-card-resource a{font-size:12px;min-height:36px}.shop-detail-copy ol{padding-left:20px;font-size:13px;line-height:1.9}.shop-detail-copy .wechat-trigger{margin-left:0}.shop-item-price strong{font-size:22px}#shopCatalog{scroll-margin-top:100px}
+@media(max-width:640px){.shop-paths{grid-template-columns:1fr;gap:0;margin:24px 0}.shop-paths a{gap:8px;padding:16px 0}.shop-paths strong{font-size:23px}.shop-item-price strong{font-size:20px}}
+.training-intro[hidden]{display:none}
+
+#shopGrid[data-kind="研究工具"]{grid-template-columns:1fr}#shopGrid[data-kind="研究工具"] .shop-item{display:grid;grid-template-columns:minmax(180px,280px) minmax(0,1fr);gap:32px;align-items:start}#shopGrid[data-kind="研究工具"] .shop-item-meta{padding-top:0}#shopGrid[data-kind="研究工具"] .shop-item-cover{max-width:280px}
+@media(max-width:640px){#shopGrid[data-kind="研究工具"] .shop-item{grid-template-columns:1fr;gap:24px}#shopGrid[data-kind="研究工具"] .shop-item-cover{width:220px;max-width:100%}}
 </style>
 <link rel="stylesheet" href="tokens.css?v=hank-brand-20261010"/>
 </head>
@@ -593,14 +601,15 @@ button.social-card{width:100%;text-align:left;color:inherit;font:inherit;cursor:
   <div class="shop-overline"><span>03 / HANK'S LITTLE SHOP</span><span>IDEAS <svg class="hank-icon icon-arrow-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-right"/></svg> OBJECTS <svg class="hank-icon icon-arrow-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-right"/></svg> USEFUL THINGS</span></div>
   <div class="shop-head">
    <div><div class="shop-nameplate"><img class="shop-nameplate-mark" src="assets/hank-mark.svg" width="32" height="34" alt=""/> OPEN SHELF / 汉克小铺</div>
-    <h2 class="serif" id="shopTitle">学会一个智能体，<br/><em>用在自己的工作里。</em></h2>
+    <h2 class="serif" id="shopTitle">从学会方法，<br/><em>到完成一件工作。</em></h2>
    </div>
-   <div class="shop-aside"><p>11 门智能体应用培训，每门基础板块 4 课时。每周一次课，配合社群与练习，按自己的节奏把方法用起来。原有资料与工具商品也保留在货架。</p>
+   <div class="shop-aside"><p>5 项定制服务、11 门智能体培训，以及可以直接下载的 WORK 16 练习包。带着一个具体问题来，选择适合自己的开始方式。</p>
     <button class="shop-cart-button" id="shopCartOpen" type="button" aria-label="打开小铺选购清单">我的选购清单 <span id="shopCartCount" aria-live="polite">0</span> <svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></button>
-    <button class="wechat-trigger" type="button" data-wechat-open>微信咨询课程</button>
+    <button class="wechat-trigger" type="button" data-wechat-open>微信咨询服务与课程</button>
    </div>
   </div>
-  <div class="training-intro" aria-label="培训价格与学习安排">
+  <div class="shop-paths" aria-label="从哪里开始"><a href="#shopCatalog" data-shop-kind="定制服务"><small>01 / 委托完成</small><strong>把工作交给我</strong><span>看交付范围与项目案例 ↗</span></a><a href="#shopCatalog" data-shop-kind="智能体培训"><small>02 / 学会方法</small><strong>自己动手做</strong><span>11 门课 · 每周一次练习 ↗</span></a><a href="#shopCatalog" data-shop-kind="研究工具"><small>03 / 先试一试</small><strong>拿一份工具开始</strong><span>WORK 16 练习包 · 免费下载 ↗</span></a></div>
+  <div class="training-intro" id="trainingOverview" hidden aria-label="培训价格与学习安排">
    <div class="training-intro-copy"><span class="shop-index">LEARN BY DOING / 智能体应用培训</span><h3>一周一次课，课后继续练。</h3><p>每人每课时 300 元 · 每月 4 课时 · 社群 + 实操练习<br/>单个智能体或课程板块，4 课时完成基础学习。</p></div>
    <div class="training-plans">
     <div><span>1 个月 · 4 课时</span><strong>¥ 1,200</strong><small>每人 / 原价</small></div>
@@ -609,9 +618,12 @@ button.social-card{width:100%;text-align:left;color:inherit;font:inherit;cursor:
    </div>
    <p class="training-terms">多人拼课单独报价。课程时间、每课时时长与授课方式预约确认；工具账号、订阅及相关费用在报名时说明。可先整理咨询清单，再添加“超级工作站”个人微信沟通报名；本站不在线收款。</p>
   </div>
-  <div class="shop-filters" role="group" aria-label="按商品类型筛选">
-   <button class="shop-filter is-active" type="button" data-kind="智能体培训" aria-pressed="true">智能体培训（11）</button>
-   <button class="shop-filter" type="button" data-kind="全部" aria-pressed="false">全部商品（19）</button>
+
+  <div class="shop-filters" id="shopCatalog" role="group" aria-label="按商品类型筛选">
+   <button class="shop-filter is-active" type="button" data-kind="定制服务" aria-pressed="true">定制服务（5）</button>
+   <button class="shop-filter" type="button" data-kind="研究工具" aria-pressed="false">研究工具（1）</button>
+   <button class="shop-filter" type="button" data-kind="智能体培训" aria-pressed="false">智能体培训（11）</button>
+   <button class="shop-filter" type="button" data-kind="全部" aria-pressed="false">全部商品（25）</button>
    <button class="shop-filter" type="button" data-kind="付费专栏" aria-pressed="false">付费专栏</button>
    <button class="shop-filter" type="button" data-kind="知识库" aria-pressed="false">知识库</button>
    <button class="shop-filter" type="button" data-kind="技能包" aria-pressed="false">技能包</button>
@@ -620,8 +632,8 @@ button.social-card{width:100%;text-align:left;color:inherit;font:inherit;cursor:
   </div>
   <div class="shop-grid" id="shopGrid" aria-live="polite"></div>
   <div class="shop-after">
-   <div><span class="shop-index">SHELF 01 / 2026 · 19 ITEMS / 6 CATEGORIES</span><p>不同类型的东西，放在同一个货架。<br/>选择课程方向，也可以了解配套资料与工具。</p></div>
-   <p class="shop-availability"><strong>关于价格与咨询：</strong>11 门培训按每人每月 4 课时计价，连续报名 2 个月九折、3 个月八折；多人拼课单独报价。另有 8 款资料与工具示例商品，仍未开售、仅标示意价。咨询清单不会自动发送，排期与报名安排需另行沟通。</p>
+   <div><span class="shop-index">SHELF 01 / 2026 · 25 ITEMS / 8 CATEGORIES</span><p>不同类型的东西，放在同一个货架。<br/>从服务、课程与练习工具开始，找到下一步。</p></div>
+   <p class="shop-availability"><strong>关于价格与咨询：</strong>定制服务确认范围后单独报价；培训按每人每月 4 课时计价，两个月九折、三个月八折；WORK 16 练习包可直接免费下载。另有 8 款原有示例商品未开售，清单中分别说明。</p>
   </div>
  </div>
 </section>
@@ -634,7 +646,7 @@ button.social-card{width:100%;text-align:left;color:inherit;font:inherit;cursor:
 <dialog class="shop-dialog shop-cart-dialog" id="shopCart" aria-labelledby="shopCartTitle">
  <div class="shop-dialog-scroll">
   <button class="shop-dialog-close" type="button" data-shop-close="shopCart" aria-label="关闭选购清单"><svg class="hank-icon icon-close" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-close"/></svg></button>
-  <div class="shop-cart-head"><span>HANK / SMALL THINGS, USEFUL WORK.</span><h2 class="serif" id="shopCartTitle">我的选购清单<span>。</span></h2><p>选择学习方向与月度方案，生成可复制或下载的咨询清单。此处不会提交报名或生成订单。</p></div>
+  <div class="shop-cart-head"><span>HANK / SMALL THINGS, USEFUL WORK.</span><h2 class="serif" id="shopCartTitle">我的选购清单<span>。</span></h2><p>把服务需求、学习方向和工具放在一起，生成咨询清单，通过微信继续沟通。</p></div>
   <div id="shopCartItems" class="shop-cart-items"></div>
   <div class="training-choice" id="trainingChoice" hidden>
    <label for="trainingMonths">学习周期（每人每月 4 课时）</label>
@@ -642,8 +654,8 @@ button.social-card{width:100%;text-align:left;color:inherit;font:inherit;cursor:
    <label class="training-group"><input type="checkbox" id="trainingGroup"/> 多人拼课，咨询单独报价</label>
    <p id="trainingPlanNote" aria-live="polite"></p>
   </div>
-  <div class="shop-cart-total"><span>培训报价与商品参考金额</span><strong id="shopCartTotal" aria-live="polite">未选择</strong></div>
-  <p class="shop-cart-warning">培训与示例商品分开计价。资料商品未开售，培训需确认排期与报名安排；当前不能在线付款。清单仅保存在本浏览器，不会自动发送。</p>
+  <div class="shop-cart-total"><span>费用与交付说明</span><strong id="shopCartTotal" aria-live="polite">未选择</strong></div>
+  <p class="shop-cart-warning">定制服务单独报价，培训按周期计价，公开练习包免费。原有示例商品未开售。此清单用于沟通，不会自动发送或收款。</p>
   <div class="shop-cart-actions">
    <button type="button" class="wechat-trigger" data-wechat-open>微信咨询报名</button>
    <button type="button" class="shop-copy" id="shopCopyList">复制咨询清单 <svg class="hank-icon icon-copy" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-copy"/></svg></button>
@@ -815,5 +827,5 @@ window.hankIcon=name=>'<svg class="hank-icon icon-'+name+'" viewBox="0 0 24 24" 
  </div>
 </dialog>
 <script src="wechat.js"></script>
-<script src="shop.js?v=20261016-wechat"></script>
+<script src="shop.js?v=20261017-services"></script>
 </body></html>
