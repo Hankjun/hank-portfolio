@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
 <meta name="theme-color" content="#f5f2eb" />
-<meta name="description" content="汉克 HANK，一名方案师。以人为入口，以工作为单元，以结果为终点。探索商业研究、品牌设计、AI 工作流、资源连接与项目交付。" />
+<meta name="description" content="汉克 HANK，一名方案师。以人为入口，以工作为单元，以结果为终点。围绕认知、培训、项目、组织、共创五大链条，把方法、能力与长期结果组织起来。" />
 <title>HANK 汉克 — 以我为界面，让事情发生。</title>
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/>
 <style>
@@ -512,6 +512,8 @@ button.social-card{width:100%;text-align:left;color:inherit;font:inherit;cursor:
 
 #shopGrid[data-kind="研究工具"]{grid-template-columns:1fr}#shopGrid[data-kind="研究工具"] .shop-item{display:grid;grid-template-columns:minmax(180px,280px) minmax(0,1fr);gap:32px;align-items:start}#shopGrid[data-kind="研究工具"] .shop-item-meta{padding-top:0}#shopGrid[data-kind="研究工具"] .shop-item-cover{max-width:280px}
 @media(max-width:640px){#shopGrid[data-kind="研究工具"] .shop-item{grid-template-columns:1fr;gap:24px}#shopGrid[data-kind="研究工具"] .shop-item-cover{width:220px;max-width:100%}}
+
+.business-chain{padding:clamp(78px,9vw,130px) 0;background:#f0eee6}.chain-intro{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end}.chain-intro .section-title{margin-bottom:0}.chain-intro .section-title em{color:var(--terracotta);font-style:normal}.chain-intro>p{font-size:15px;line-height:2;color:#5c6b69;max-width:560px;margin:0 0 8px auto}.chain-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:#bbc4ba;margin-top:55px;border-top:1px solid #bbc4ba;border-bottom:1px solid #bbc4ba}.chain-card{background:#f0eee6;padding:23px 19px 28px;min-height:260px}.chain-card+ .chain-card{border-left:1px solid #bbc4ba}.chain-card>span{display:block;color:#a65c45;font:800 10px/1.4 ui-monospace,monospace;letter-spacing:.1em}.chain-card h3{font:500 34px/1.2 Georgia,serif;margin:40px 0 16px;color:#193236}.chain-card p{font-size:12px;line-height:1.85;color:#5e706b;margin:0;min-height:108px}.chain-card strong{display:block;border-top:1px solid #c1c9c0;padding-top:13px;margin-top:20px;font-size:11px;line-height:1.6;color:#3f625c}@media(max-width:900px){.chain-intro{grid-template-columns:1fr}.chain-intro>p{margin:0}.chain-grid{grid-template-columns:repeat(2,1fr)}.chain-card+ .chain-card{border-left:0}.chain-card:nth-child(even){border-left:1px solid #bbc4ba}}@media(max-width:560px){.chain-grid{grid-template-columns:1fr}.chain-card{min-height:0}.chain-card+ .chain-card,.chain-card:nth-child(even){border-left:0;border-top:1px solid #bbc4ba}.chain-card p{min-height:0}}
 </style>
 <link rel="stylesheet" href="tokens.css?v=hank-brand-20261010"/>
 </head>
@@ -532,7 +534,7 @@ button.social-card{width:100%;text-align:left;color:inherit;font:inherit;cursor:
 <header class="site-header">
  <div class="container head-inner">
   <a class="brand" href="#top" aria-label="汉克，回到首页"><img class="hank-logo hank-logo-header" src="assets/hank-logo.svg" width="274" height="100" alt="HANK"/><span class="brand-sub">汉克 / 方案师</span></a>
-  <nav class="nav" id="mainNav" aria-label="主导航"><a href="#about">认识汉克</a><a href="#services">发现服务</a><a href="work16/" class="nav-research">WORK 16 <span class="nav-research-mark">↗</span></a><a href="#shop" class="nav-shop">汉克小铺 <span aria-hidden="true"><svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></span></a><a href="#projects">项目实践</a><a href="#delivery">交付方式</a></nav>
+  <nav class="nav" id="mainNav" aria-label="主导航"><a href="#about">认识汉克</a><a href="#services">发现服务</a><a href="#business">五大链条</a><a href="work16/" class="nav-research">WORK 16 <span class="nav-research-mark">↗</span></a><a href="#shop" class="nav-shop">汉克小铺 <span aria-hidden="true"><svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></span></a><a href="#projects">项目实践</a><a href="#delivery">交付方式</a></nav>
   <a href="#contact" class="header-cta">谈谈你的问题 <svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></a>
   <button class="mobile-menu" id="menuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="展开菜单"><svg class="hank-icon icon-menu" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-menu"/></svg></button>
  </div>
@@ -543,7 +545,7 @@ button.social-card{width:100%;text-align:left;color:inherit;font:inherit;cursor:
  <div>
   <div class="eyebrow">HANK / HUMAN-FIRST SOLUTION ARCHITECT</div>
   <h1 class="serif" id="heroTitle">以我为<span>界面</span>，<br/>让事情发生。</h1>
-  <p class="hero-lead">你好，我是汉克，一名方案师。<br/>我站在真实问题的最前端，理解需求、设计方案、连接人才与 AI，再把复杂的工作组织成可以交付的结果。</p>
+  <p class="hero-lead">你好，我是汉克，一名方案师。<br/>我围绕认知、培训、项目、组织、共创五条链路工作：把方法变成知识，把能力变成训练，把真实场景变成项目，再与企业长期共建可持续的工作系统。</p>
   <div class="hero-actions"><a class="btn" href="#about">先认识我 <span class="arrow"><svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></span></a><a class="link-line" href="#services">直接探索服务 <span class="arrow"><svg class="hank-icon icon-arrow-se" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-se"/></svg></span></a><a class="hero-shop-link" href="#shop">逛逛汉克小铺 <svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></a></div>
   <div class="micro">一个人作为入口，一张网络共同完成。</div>
  </div>
@@ -570,8 +572,19 @@ button.social-card{width:100%;text-align:left;color:inherit;font:inherit;cursor:
 <section class="worklab-entry" aria-labelledby="worklabEntryTitle"><div class="container worklab-entry-grid">
 <div class="worklab-entry-copy"><span class="worklab-mini">HANK WORK LAB / NEW RESEARCH SERIES</span><h2 id="worklabEntryTitle">先理解工作。<br><em>再重新组织工作。</em></h2><p>《WORK 16：人类工作的重新解构》研究计划现已开放。16 个工作领域、三层研究方法、一本正在接受现实检验的研究书稿。</p><div class="worklab-entry-actions"><a href="work16/" class="worklab-entry-button">进入 WORK 16 研究中心 ↗</a><a href="work16/read.html" class="worklab-entry-text">在线阅读书稿 ↗</a></div></div>
 <div class="worklab-entry-art" aria-hidden="true"><span>WORK</span><strong>16.</strong><small>SCIENCE / ENGINEERING / BUSINESS</small></div></div></section>
+<section class="business-chain" id="business" aria-labelledby="businessChainTitle"><div class="container">
+ <div class="section-head"><span class="left">02 / HANK BUSINESS CHAIN</span><span>认知 · 培训 · 项目 · 组织 · 共创</span></div>
+ <div class="chain-intro"><div><h2 class="section-title serif" id="businessChainTitle">从理解问题，<br/><em>到共同做成。</em></h2></div><p>汉克的业务不是五个孤立的服务栏目，而是一条可以从认识、学习、立项到长期共建的工作链。客户可以从一个方法、一门课或一个具体场景开始，逐步走向组织能力与共同结果。</p></div>
+ <div class="chain-grid">
+  <article class="chain-card"><span>01 / KNOWLEDGE</span><h3>认知</h3><p>以方法论、图书、研究报告和资料包为交付，把复杂问题整理成可以阅读、讨论和复用的知识。</p><strong>方法 · 图书 · 报告 · 资料包</strong></article>
+  <article class="chain-card"><span>02 / TRAINING</span><h3>培训</h3><p>围绕单个智能体或课程板块展开，按入门、中阶、高阶逐步学习。每课时 299 元，每月 4 课时，课程制 1,200 元 / 月。</p><strong>入门 · 中阶 · 高阶</strong></article>
+  <article class="chain-card"><span>03 / PROJECT</span><h3>项目</h3><p>从客户真实场景立项，围绕决策调研、客服、数字化办公等问题，明确范围、路径、交付物与验收标准。</p><strong>场景立项 · 方案交付 · 结果验收</strong></article>
+  <article class="chain-card"><span>04 / ORGANIZATION</span><h3>组织</h3><p>研究组织心智、数字化转型一号位、AI 原生组织等运营经营管理课题，帮助团队重新设计协作与决策方式。</p><strong>组织心智 · 一号位 · AI 原生组织</strong></article>
+  <article class="chain-card"><span>05 / CO-CREATION</span><h3>共创</h3><p>与企业共同成立超级工作站，长期共同投入、共同发展、共享结果，把一次项目变成持续运行的能力系统。</p><strong>超级工作站 · 长期共建 · 共享结果</strong></article>
+ </div>
+</div></section>
 <section class="service-wrap" id="services"><div class="container">
- <div class="section-head"><span class="left">02 / SERVICE DISCOVERY</span><span>HANK WORK INDEX · V1.0</span></div>
+ <div class="section-head"><span class="left">03 / SERVICE DISCOVERY</span><span>HANK WORK INDEX · V1.0</span></div>
  <div class="service-lead"><div><h2 class="section-title serif">让想法，<br/><em>成为可交付的工作。</em></h2><p class="service-description">不必先选择一家供应商，也不必先决定使用什么 AI。告诉我你想完成什么工作。每一项 Work 都可以独立交付，也可以组合成一个完整项目。</p></div><div class="service-aside">From needs<br/>to <em>possibilities.</em></div></div>
  <div class="filters" role="group" aria-label="按工作类型筛选"><button class="filter-btn" data-filter="all" aria-pressed="true">全部服务 <span>16</span></button><button class="filter-btn" data-filter="insight" aria-pressed="false">研究与判断</button><button class="filter-btn" data-filter="create" aria-pressed="false">内容与设计</button><button class="filter-btn" data-filter="system" aria-pressed="false">数字与运营</button><button class="filter-btn" data-filter="delivery" aria-pressed="false">连接与执行</button></div>
  <div class="work-grid" id="workGrid">
@@ -598,7 +611,7 @@ button.social-card{width:100%;text-align:left;color:inherit;font:inherit;cursor:
 
 <section class="hank-shop" id="shop" aria-labelledby="shopTitle">
  <div class="container">
-  <div class="shop-overline"><span>03 / HANK'S LITTLE SHOP</span><span>IDEAS <svg class="hank-icon icon-arrow-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-right"/></svg> OBJECTS <svg class="hank-icon icon-arrow-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-right"/></svg> USEFUL THINGS</span></div>
+  <div class="shop-overline"><span>04 / HANK'S LITTLE SHOP</span><span>IDEAS <svg class="hank-icon icon-arrow-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-right"/></svg> OBJECTS <svg class="hank-icon icon-arrow-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-right"/></svg> USEFUL THINGS</span></div>
   <div class="shop-head">
    <div><div class="shop-nameplate"><img class="shop-nameplate-mark" src="assets/hank-mark.svg" width="32" height="34" alt=""/> OPEN SHELF / 汉克小铺</div>
     <h2 class="serif" id="shopTitle">从学会方法，<br/><em>到完成一件工作。</em></h2>
@@ -610,7 +623,7 @@ button.social-card{width:100%;text-align:left;color:inherit;font:inherit;cursor:
   </div>
   <div class="shop-paths" aria-label="从哪里开始"><a href="#shopCatalog" data-shop-kind="定制服务"><small>01 / 委托完成</small><strong>把工作交给我</strong><span>看交付范围与项目案例 ↗</span></a><a href="#shopCatalog" data-shop-kind="智能体培训"><small>02 / 学会方法</small><strong>自己动手做</strong><span>23 门课 · 每周一次练习 ↗</span></a><a href="#shopCatalog" data-shop-kind="研究工具"><small>03 / 先试一试</small><strong>拿一份工具开始</strong><span>WORK 16 练习包 · 免费下载 ↗</span></a></div>
   <div class="training-intro" id="trainingOverview" hidden aria-label="培训价格与学习安排">
-   <div class="training-intro-copy"><span class="shop-index">LEARN BY DOING / 智能体应用培训</span><h3>一周一次课，课后继续练。</h3><p>每人每课时 300 元 · 每月 4 课时 · 社群 + 实操练习<br/>单个智能体或课程板块，4 课时完成基础学习。</p></div>
+   <div class="training-intro-copy"><span class="shop-index">LEARN BY DOING / 智能体应用培训</span><h3>一周一次课，课后继续练。</h3><p>每人每课时 299 元 · 每月 4 课时 · 社群 + 实操练习<br/>单个智能体或课程板块，4 课时完成基础学习。</p></div>
    <div class="training-plans">
     <div><span>1 个月 · 4 课时</span><strong>¥ 1,200</strong><small>每人 / 原价</small></div>
     <div><span>2 个月 · 8 课时</span><strong>¥ 2,160</strong><small>每人 / 九折 · 省 ¥ 240</small></div>
@@ -666,7 +679,7 @@ button.social-card{width:100%;text-align:left;color:inherit;font:inherit;cursor:
 </dialog>
 
 <section class="practice-section" id="projects"><div class="container">
- <div class="section-head"><span class="left">04 / SELECTED PRACTICES</span><span>跨行业的实践，始终围绕同一种工作方法</span></div>
+ <div class="section-head"><span class="left">05 / SELECTED PRACTICES</span><span>跨行业的实践，始终围绕同一种工作方法</span></div>
  <div class="practice-title"><h2 class="serif">看起来不同的项目，<br/>其实在做<em>同一件事。</em></h2><p>这些是真实涉足的领域和项目方向。不是用漂亮的行业标签证明“什么都会”，而是展示如何在不同情境里理解需求、组织方案。</p></div>
  <div class="project-grid">
   <article class="project-card"><div class="project-meta"><span>01 / AI SYSTEM</span><span>WORKSTATION</span></div><div class="project-symbol">DLY<svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></div><h3>大鲤鱼超级工作站</h3><p>面向超级个体和企业，把 AI Agent、业务流程与协作能力组织成可调用的工作系统。</p><div class="project-tags">AI 原生工作流 / 服务产品体系</div></article>
@@ -678,13 +691,13 @@ button.social-card{width:100%;text-align:left;color:inherit;font:inherit;cursor:
  </div>
 </div></section>
 <section class="delivery-wrap" id="delivery"><div class="container">
- <div class="section-head"><span class="left">05 / FROM PROBLEM TO OUTCOME</span><span>不是推荐工具，而是组织结果</span></div>
+ <div class="section-head"><span class="left">06 / FROM PROBLEM TO OUTCOME</span><span>不是推荐工具，而是组织结果</span></div>
  <div class="delivery-intro"><h2 class="section-title serif">一个人是入口，<br/><em>不是全部。</em></h2><p>我作为统一的沟通和判断界面，背后可组合 AI Agent、数字员工、专业伙伴和现场执行资源。每个项目从明确问题开始，以双方确认的交付物和验收标准结束。</p></div>
  <div class="steps"><div class="step"><small>STEP 01</small><h3>理解问题<span>Discover</span></h3><p>先对话、调研与诊断，确认目标、优先级、资源条件和限制。</p></div><div class="step"><small>STEP 02</small><h3>组合工作<span>Design</span></h3><p>拆解任务，选择合适的 Work 模块，形成范围、计划与交付清单。</p></div><div class="step"><small>STEP 03</small><h3>组织执行<span>Orchestrate</span></h3><p>编排 AI、专业人员及协作网络，跟踪进度与关键质量节点。</p></div><div class="step"><small>STEP 04</small><h3>交付结果<span>Deliver</span></h3><p>交付方案、作品、系统或业务成果，并按约定标准验收与复盘。</p></div></div>
  <div class="statement-banner"><strong>Work <svg class="hank-icon icon-arrow-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-right"/></svg> Worker <svg class="hank-icon icon-arrow-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-right"/></svg> <span>Outcome.</span></strong><small>人作为界面 / 工作作为单元 / 结果作为承诺<br/>SELL OUTCOMES, NOT AI.</small></div>
 </div></section>
 <section class="contact-section" id="contact"><div class="container contact-grid">
- <div class="contact-copy"><div class="eyebrow" style="color:var(--terracotta)">06 / START WITH A CONVERSATION</div><h2 class="serif">你想让什么<br/><em>事情发生？</em></h2><p>不必先写一份完整需求文档。可以是一个正在卡住的项目、一项急需完成的工作，也可以是一个尚未成形的想法。</p><p>从你面对的真实问题开始，我会先帮助厘清它，再判断是否适合合作，以及需要哪些能力参与。</p><div class="note">项目简报只在你的浏览器中生成，可复制或下载。生成后请通过双方约定的联系渠道发送给我。</div></div>
+ <div class="contact-copy"><div class="eyebrow" style="color:var(--terracotta)">07 / START WITH A CONVERSATION</div><h2 class="serif">你想让什么<br/><em>事情发生？</em></h2><p>不必先写一份完整需求文档。可以是一个正在卡住的项目、一项急需完成的工作，也可以是一个尚未成形的想法。</p><p>从你面对的真实问题开始，我会先帮助厘清它，再判断是否适合合作，以及需要哪些能力参与。</p><div class="note">项目简报只在你的浏览器中生成，可复制或下载。生成后请通过双方约定的联系渠道发送给我。</div></div>
  <form class="brief-form" id="briefForm"><div class="form-caption"><span>HANK / PROJECT INTAKE</span><span>NO. 001 — OPEN</span></div><h3>把一个问题交给我。</h3>
   <div class="field"><label id="goalLabel">你现在最需要的是？</label><div class="goal-pills" role="radiogroup" aria-labelledby="goalLabel"><label><input type="radio" name="goal" value="解决一个具体项目" checked/><span>解决一个具体项目</span></label><label><input type="radio" name="goal" value="探索新方向"/><span>探索新方向</span></label><label><input type="radio" name="goal" value="寻找长期协作"/><span>寻找长期协作</span></label></div></div>
   <div class="field"><label for="problem">告诉我你正在面对的问题 <small>（必填）</small></label><textarea id="problem" name="problem" placeholder="例如：我们有一个新业务，但定位不清晰、内容产出慢，也不知道怎样把 AI 放进团队日常……" required></textarea></div>

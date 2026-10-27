@@ -15,7 +15,7 @@
         !categories[p.category]||!new RegExp('^HKS-'+categories[p.category]+'-[0-9]{3}$').test(p.sku)||
         !themes.includes(p.theme)||typeof p.listed!=='boolean'||
         (p.category==='定制服务'?p.price!==null:!Number.isFinite(p.price)||p.price<0)||!Array.isArray(p.contents)||!p.contents.length||
-        (p.category==='智能体培训'&&(p.sessions!==4||p.sessionPrice!==300||p.price!==1200||p.contents.length!==4))||
+        (p.category==='智能体培训'&&(p.sessions!==4||p.sessionPrice!==299||p.price!==1200||p.contents.length!==4))||
         (p.category==='定制服务'&&(!['inputs','acceptance'].every(k=>Array.isArray(p[k])&&p[k].length&&p[k].every(x=>typeof x==='string'&&x.trim()))||!p.caseStudy||!['title','summary','status'].every(k=>typeof p.caseStudy[k]==='string'&&p.caseStudy[k].trim())))||
         (p.category==='研究工具'&&(p.price!==0||!/^downloads\/[a-z0-9-]+\.zip$/.test(p.downloadUrl)||!/^work16\/[a-z0-9-]+\.html$/.test(p.previewUrl)))||
         p.contents.some(x=>typeof x!=='string'||!x.trim())||p.paymentUrl!==null)||
@@ -51,7 +51,7 @@
   const money=n=>'¥ '+Number(n).toLocaleString('zh-CN');
   const find=id=>products.find(p=>p.id===id);
   const esc=str=>String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
-  const trainingNote='每人每月 4 课时，每周 1 次，配合社群与练习。单个课程板块 4 课时完成基础学习；每课时时长、授课方式和排期预约确认。工具账号与相关费用报名时说明。多人拼课单独报价。';
+  const trainingNote='每人每课时 299 元；每月 4 课时按课程制计价 1,200 元，每周 1 次，配合社群与练习。单个课程板块 4 课时完成基础学习；每课时时长、授课方式和排期预约确认。工具账号与相关费用报名时说明。多人拼课单独报价。';
   function cover(p){return '<span class="shop-cover-face theme-'+p.theme+'">'+
      '<span class="shop-cover-top"><span>HANK / LITTLE SHOP</span><span>© 2026</span></span>'+
      '<span class="shop-cover-central"><span class="shop-cover-illustration" aria-hidden="true"></span>'+
@@ -94,7 +94,7 @@
   function showDetail(id){
     const p=find(id);if(!p)return;
     const training=isTraining(p),service=isService(p),resource=isResource(p);
-    const specs=[['SKU',p.sku],['类别',p.category],['适用人群',p.audience],[training?'学习安排':'交付形式',p.format],['交付方式',p.delivery],['版本',p.version],['服务范围',p.scope],['当前状态',p.status]];
+    const specs=[['SKU',p.sku],['类别',p.category],['适用人群',p.audience],[training?'学习安排':'交付形式',p.format],['交付方式',p.delivery],...(training?[['课程层级','入门 / 中阶 / 高阶（按学习目标确认）']]:[]),['版本',p.version],['服务范围',p.scope],['当前状态',p.status]];
     $('#shopDetailContent').innerHTML='<div class="shop-detail-layout"><div><div class="shop-item-cover" aria-hidden="true">'+cover(p)+'</div></div><div class="shop-detail-copy">'+
       '<span class="shop-detail-kicker">'+esc(p.sku)+' / '+esc(p.category)+'</span><h2 class="serif" id="shopDetailTitle">'+esc(p.name)+'</h2><p>'+esc(p.desc)+'</p>'+
       '<dl class="shop-sku-spec">'+specs.map(([label,value])=>'<div><dt>'+esc(label)+'</dt><dd>'+esc(value)+'</dd></div>').join('')+'</dl>'+
