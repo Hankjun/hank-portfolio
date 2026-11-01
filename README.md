@@ -1,80 +1,45 @@
-# HANK · 汉克小铺
+# HANK · Personal website & little shop
 
-GitHub Pages 从 `main` 分支根目录发布 `index.html`。商品内容统一维护在 `shop-skus.json`。
+静态站点。保留米白、深墨绿、赤陶橙和 HANK 品牌系统。首页只展示三项旗舰服务；完整目录位于 `/shop/`。右上角可切换中文与英文。
 
-## 当前货架
+## 修改内容
 
-展示 5 项定制服务、11 门智能体培训、1 份免费研究工具和 8 件原有示例商品，共 25 件。默认展示定制服务，提供委托、学习和获取工具三种入口。目录统一维护在 `shop-skus.json`，交互逻辑在 `shop.js`。
+- `data/flagships.json`：三项旗舰服务与详情页。
+- `data/products.json`：全部商品。分类为 `knowledge`、`training`、`projects`、`organization`、`cocreation`；`published: false` 不出现在页面、计数和咨询清单中。
+- `data/services.json`：16 项 Work 标签。
+- `data/cases.json`：项目实践；补充客户确认的交付物、结果或评价后更新。不要填入未经确认的经营数据。
+- `data/brands.json`：已提供的合作品牌标志。自有 IP 与未具名设计标记不作为客户品牌展示。
+- `data/channels.json`：微信、GitHub，以及待配置的 Email、预约、LinkedIn、WhatsApp。只有 `published: true` 且提供有效地址的渠道才启用。
+- `i18n/zh.json` 与 `i18n/en.json`：界面文案；每项商品、服务和案例同时维护中英文内容。
+- `data/config.json`：默认中文、公开 canonical 地址、培训价格与可选统计服务。
 
-## 定制服务与研究工具
+新增商品只需在 `data/products.json` 添加同结构记录，使用唯一 ID、SKU，并填写双语字段、分类、标签、价格与状态。页面会自动筛选和计算数量；未发布记录保留为草稿。
 
-- `HKS-SVC-001` 至 `005`：个人主页与品牌展示站、品牌 VI、品牌 IP、产品展示短片、公众号内容。每项提供范围、客户输入、验收和对应项目案例说明，具体时间与修改轮次确认后报价。
-- 定制服务 `price: null` 表示待报价，不能当作 0 元或免费。`inputs`、`acceptance` 和 `caseStudy` 是服务必填字段。
-- `HKS-RES-001`：WORK 16 工作诊断与 AI 落地练习包，`price: 0` 为真实免费公开试用版，和未开售的旧示例商品不同。
-- 资源路径 `downloadUrl` 指向 `downloads/work16-practice-v1.zip`，`previewUrl` 指向 `work16/practice.html`。下载包包含离线 HTML、研究档案、CSV 评估表、试验记录、完整模拟示例和两份指南，共 7 个文件。
-- 练习工具仅使用浏览器本地存储，支持 Markdown 导出与打印；数据不会提交。评分范围 1–5，可留空，不计算总分。示例不代表客户或真实成效。
-- 修改 `work16/practice.html` 或 `work16/practice-kit/` 后，运行 `python3 scripts/build-practice-archive.py` 同步 ZIP。包内 HTML 与在线 HTML 内容一致，不依赖外部脚本或网络服务。
-- 咨询清单分别呈现培训报价、服务待报价、免费资源和旧商品示意金额；服务和资源不参与培训折扣。
+## 构建与预览
 
-## 智能体培训
+```sh
+node scripts/build-site.mjs
+python3 -m http.server 8765
+```
 
-新增 `HKS-TRN-001` 至 `HKS-TRN-011`：Codex、Claude、Gemini、Muse（Meta）、WorkBuddy、豆包工作、千问办公、Hermes Agent、企业微信、飞书、钉钉。每项独立成课，基础板块 4 课时。
+构建生成首页、小铺、三个服务详情页、三个实践详情页、WORK 16 双语研究入口和 sitemap。生成后的 HTML 自带中文正文，不依赖 JavaScript 才能阅读；浏览器加载后启用语言切换、过滤与咨询清单。
 
-- 每人每课时 300 元，每周 1 次、每月 4 课时，配合社群与练习。
-- 1 个月 4 课时 1,200 元；连续 2 个月 8 课时九折 2,160 元；连续 3 个月 12 课时八折 2,880 元。
-- 咨询清单按总学习周期计价，所选课程为周期内的方向，不逐项乘以套餐价。新增多个方向会建议相应周期；方向数量超过周期容量时，不输出培训总价。后续板块与学习顺序预约确认。
-- 多人拼课单独报价；原有资料商品不参与培训折扣，示意金额与培训报价分开显示。
-- 每课时时长、授课方式、排期和工具费用在报名时说明；未承诺一对一或班额。
-- 咨询清单可复制、下载或带入本地合作简报，不会提交报名或收款。
-- 咨询渠道为“超级工作站”个人微信，原图位于 `assets/wechat-super-workstation.jpg`。小铺、课程详情、咨询清单和页脚均可打开二维码弹窗；可保存或打开原图。`wechat.js` 独立于商品目录加载，未接入自动发消息或付款。
+GitHub Pages 从 main 根目录发布。Sites 使用同一页面与数据，同步到它的 `dist/` 静态目录后发布。根目录的旧版页面与货架源文件保存在 `archive/2026-11-01-before-refactor/`；WORK 16 的完整中文书稿和练习工具保留原有路径。
 
-### 原有示例商品
+## 价格与咨询
 
-保留原编号、状态与示意价格。
+标准培训每课时 299 元，课程制 1,200 元 / 月（4 课时）。连续 2 个月 2,160 元，3 个月 2,880 元。所选课程是同一学习周期内的方向，不逐门乘以月费；超出当前周期容量时先确认排期。定制项目、企业培训与多人拼课单独询价。英文版显示 International pricing on request，未擅自换算汇率。
 
-| SKU | 类别 | 商品 | 示意售价 |
-| --- | --- | --- | --- |
-| HKS-DAT-001 | 资料包 | 2026 AI Agent 全景地图 | ¥59 |
-| HKS-DAT-002 | 资料包 | OPC 超级个体作战地图 | ¥39 |
-| HKS-KIT-001 | 技能包 | AI 数字员工上岗工具包 | ¥99 |
-| HKS-FLW-001 | 工作流 | DLY-6C 经营诊断工作流 | ¥129 |
-| HKS-FLW-002 | 工作流 | 一人公司内容生产线 | ¥199 |
-| HKS-KNB-001 | 知识库 | 锦鲤智库 · 知识库起步包 | ¥149 |
-| HKS-SER-001 | 付费专栏 | 方案师的工作方法 | ¥49 |
-| HKS-KNB-002 | 知识库 | 法国艺术教育渠道研究库 | ¥89 |
+清单和语言偏好保存在当前浏览器，存储不可用时仍可使用页面。项目简报可复制、下载，或复制后打开微信二维码。没有在线付款与自动发消息。配置可用 Email 后，邮件按钮会用 mailto 带入简报主题与正文。
 
-8 件均为 `2026 · V0.1（筹备）`、`示例上架 · 未开售`。实际内容、最终售价、交付时间与条款待确认。历史新增的 4 条 SKU 保留为 `listed: false` 草稿；不显示在货架，也不能加入选购清单。
+## 联系与统计的配置
 
-## 商品字段
+在 `data/channels.json` 填入实际邮箱或链接，并设为 `published: true`。邮箱记录使用 `value`，预约、LinkedIn 和 WhatsApp 使用 `url`。不要发布空链接。
 
-- `id`：稳定内部标识，用于详情和本地选购清单。
-- `sku`：唯一编号，`HKS-{类别代码}-{三位序号}`。DAT 资料包、KIT 技能包、FLW 工作流、KNB 知识库、SER 付费专栏、TRN 智能体培训、SVC 定制服务、RES 研究工具。不要重用编号。
-- `category`、`name`、`desc`、`audience`：类别、名称、简介和适用人群。
-- `theme`、`en`、`coverCN`、`edition`：封皮主题、英文标题、中文标题和封皮系列标记。封皮沿用网站配色与书架风格，无需外部图片。
-- `price`：培训为每人单月 4 课时的 1,200 元；服务为 null（咨询报价）；公开资源为 0（免费）；原有示例商品为示意价。
-- `contents`：拟交付内容清单。
-- `version`：实际内容的筹备版本；与封皮系列标记分开。
-- `format`：计划文件格式；`delivery`：计划交付方式；`scope`：产品范围。
-- `status`：面向访客的状态；`listed`：是否展示。
-- `paymentUrl`：当前必须为 `null`，页面不会创建付款链接。
+统计默认关闭。确认统计账户和站点后，在 `data/config.json` 的 analytics 填入 provider（plausible 或 umami）、src 与 domain（Umami 为 website ID）。事件包括 project_brief_create、brief_copy、brief_download、shortlist_change、shortlist_open、wechat_qr_open、email_enquiry、outbound_click；不发送简报内容或联系信息。
 
-页面校验必填字段、唯一 SKU/ID、类别与编号对应、有效主题、价格、内容清单及付款链接。目录加载或校验失败时显示错误提示。正式调整商品数量时，同步修改标题、说明与货架索引；筛选按钮数量按实际展示条目生成。
+## 媒体与保留内容
 
-培训另有 `sessions: 4`、`sessionPrice: 300` 字段，`contents` 为四课时学习安排。课程提纲为本站教学安排，不代表平台官方课程或官方认证。
+Logo 使用保留 alpha 的 WebP，原透明 PNG 与原图保留。视频采用 1280×720 H.264/AAC、faststart，保留封面与 preload=none。分享图为 `assets/hank-social-card.png`，可编辑的版式源为 `assets/social-card.html`。
 
-## 微信优先规划
-
-1. 先准备实际商品、正式价格、交付条款与收款配置；计划人工确认收款后交付。
-2. 后续使用独立后端接入微信支付商户系统，核验支付结果后自动交付。商户密钥不得进入静态页面或公开仓库。
-
-当前有详情、筛选、咨询清单、微信咨询和公开资源直接下载功能；尚无在线支付、真实订单或付费内容自动交付。配置 `paymentUrl` 也不会启用支付，需要独立实施及验证。
-
-## 本轮验证（2026-10-17）
-
-原有 23 条目录记录保持不变。已检查五项服务的范围、输入、验收与案例；25 件展示商品、免费资源与咨询报价区别；混合清单和培训周期报价；清单带入合作简报；ZIP 下载与内容一致；练习记录保存恢复和 Markdown 导出；390px 手机显示与服务详情。检查记录和模拟示例均不包含真实客户数据。
-
-## 验证记录（2026-10-16）
-
-浏览器验证：默认 11 门培训、全部 19 件；课程详情；个人 1/2/3 月报价；多人拼课询价；培训与资料混合清单；周期不足提示；刷新恢复清单与周期；下载文本及带入合作简报。390px 手机视口无横向溢出，详情可滚动。原有 12 条目录记录保持不变（8 条展示、4 条草稿）。
-
-产品命名参考：[Muse](https://ai.meta.com/tools/muse/)、[豆包工作](https://www.feishu.cn/content/article/7680041109057178898)、[千问办公](https://help.aliyun.com/zh/qwenwork/qwenwork-intro)、[WorkBuddy](https://www.codebuddy.ai/docs/zh/workbuddy/Quickstart)、[Hermes Agent](https://hermes-agent.nousresearch.com/docs)。
+WORK 16 研究入口为双语；完整书稿、PDF 课件和练习工具仍为中文原稿，英文入口明确标注。12 门研究课件链接已与实际 PDF 文件名核对。

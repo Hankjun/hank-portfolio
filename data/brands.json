@@ -1,0 +1,65 @@
+[
+  {
+    "id": "nanbanyuan-tech",
+    "name": {
+      "zh": "南半园科创",
+      "en": "Nanbanyuan Tech"
+    },
+    "image": "assets/brands/clean/nanbanyuan-tech-transparent.webp",
+    "published": true
+  },
+  {
+    "id": "zhongyu-cloud",
+    "name": {
+      "zh": "中域云仓",
+      "en": "Zhongyu Cloud"
+    },
+    "image": "assets/brands/clean/zhongyu-cloud-transparent.webp",
+    "published": true
+  },
+  {
+    "id": "ruishijuan",
+    "name": {
+      "zh": "瑞士卷",
+      "en": "Ruishijuan"
+    },
+    "image": "assets/brands/clean/ruishijuan-transparent.webp",
+    "published": true
+  },
+  {
+    "id": "campus-film",
+    "name": {
+      "zh": "校影",
+      "en": "Campus Film"
+    },
+    "image": "assets/brands/clean/campus-film-transparent.webp",
+    "published": true
+  },
+  {
+    "id": "yiwai-jingxi",
+    "name": {
+      "zh": "译外惊喜",
+      "en": "Yiwai Jingxi"
+    },
+    "image": "assets/brands/clean/yiwai-jingxi-transparent.webp",
+    "published": true
+  },
+  {
+    "id": "lanyueshe",
+    "name": {
+      "zh": "岚悅社",
+      "en": "Lanyueshe"
+    },
+    "image": "assets/brands/clean/lanyueshe-transparent.webp",
+    "published": true
+  },
+  {
+    "id": "xiyou-ip",
+    "name": {
+      "zh": "锡有 IP",
+      "en": "Xiyou IP"
+    },
+    "image": "assets/brands/clean/xiyou-ip-transparent.webp",
+    "published": true
+  }
+]

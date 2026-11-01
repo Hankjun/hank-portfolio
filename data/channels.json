@@ -1,0 +1,60 @@
+[
+  {
+    "id": "wechat",
+    "published": true,
+    "label": {
+      "zh": "个人微信",
+      "en": "WeChat"
+    },
+    "description": {
+      "zh": "培训、项目与合作咨询",
+      "en": "Training, projects and partnerships"
+    },
+    "image": "assets/wechat-super-workstation.jpg"
+  },
+  {
+    "id": "github",
+    "published": true,
+    "label": {
+      "zh": "GitHub",
+      "en": "GitHub"
+    },
+    "url": "https://github.com/Hankjun"
+  },
+  {
+    "id": "email",
+    "published": false,
+    "value": "",
+    "label": {
+      "zh": "邮件联系",
+      "en": "Email"
+    }
+  },
+  {
+    "id": "booking",
+    "published": false,
+    "url": "",
+    "label": {
+      "zh": "预约对话",
+      "en": "Book a conversation"
+    }
+  },
+  {
+    "id": "linkedin",
+    "published": false,
+    "url": "",
+    "label": {
+      "zh": "LinkedIn",
+      "en": "LinkedIn"
+    }
+  },
+  {
+    "id": "whatsapp",
+    "published": false,
+    "url": "",
+    "label": {
+      "zh": "WhatsApp",
+      "en": "WhatsApp"
+    }
+  }
+]

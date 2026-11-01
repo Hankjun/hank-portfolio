@@ -1,0 +1,288 @@
+[
+  {
+    "id": "agent-workshop",
+    "category": "training",
+    "name": {
+      "zh": "定制智能体培训工坊",
+      "en": "Custom AI Agent Workshop"
+    },
+    "short": {
+      "zh": "把一次学习，变成能独立完成的工作。",
+      "en": "Learn an agent. Put it to work."
+    },
+    "audience": {
+      "zh": "企业团队、创业者与个人学习者",
+      "en": "Teams, founders and individual learners"
+    },
+    "problem": {
+      "zh": "工具学过不少，回到真实工作却不知道如何开始。",
+      "en": "You have tried the tools, but need a practical way to use them in your own work."
+    },
+    "description": {
+      "zh": "围绕你的真实场景定制课程，从入门、中阶到高阶，把智能体用进实际任务。",
+      "en": "Hands-on learning built around your real tasks, from the first workflow to more advanced agent use."
+    },
+    "deliverables": {
+      "zh": [
+        "场景诊断与分级学习安排",
+        "智能体配置与工作流练习",
+        "一个可演示的实际任务成果",
+        "课件、练习与复盘建议"
+      ],
+      "en": [
+        "A task-based learning plan at the right level",
+        "Agent setup and workflow exercises",
+        "A demonstrable piece of practical work",
+        "Learning materials, exercises and review notes"
+      ]
+    },
+    "start": {
+      "zh": "带一个想用 AI 完成的任务来。",
+      "en": "Bring one task you want to complete with AI."
+    },
+    "process": {
+      "zh": [
+        "确认场景、基础与学习目标",
+        "约定工具、课时与课程安排",
+        "边学边做，完成场景练习",
+        "演示成果，明确下一步训练"
+      ],
+      "en": [
+        "Define the task and learning goal",
+        "Agree on tools, sessions and schedule",
+        "Build and practise during the workshop",
+        "Review the work and plan the next steps"
+      ]
+    },
+    "timing": {
+      "zh": "按需求安排；可按每月 4 课时持续学习。",
+      "en": "Scheduled to fit your needs. A four-session monthly format is available."
+    },
+    "pricing": {
+      "zh": "标准课程：299 元 / 课时；1,200 元 / 月（4 课时）。企业定制与多人拼课按范围报价。",
+      "en": "International pricing on request. Team workshops are scoped separately."
+    },
+    "faqs": [
+      {
+        "q": {
+          "zh": "零基础可以参加吗？",
+          "en": "Can I join with no experience?"
+        },
+        "a": {
+          "zh": "可以。先了解你的工作任务与基础，再确定入门、中阶或高阶安排。",
+          "en": "Yes. We agree on the right level after a short discussion about your work and experience."
+        }
+      },
+      {
+        "q": {
+          "zh": "工具账号费用包含在课程里吗？",
+          "en": "Are tool subscriptions included?"
+        },
+        "a": {
+          "zh": "所需工具、账号与相关费用在排期前说明，并单独确认。",
+          "en": "Required accounts, subscriptions and any additional costs are agreed before scheduling."
+        }
+      }
+    ],
+    "tags": [
+      "AIwork",
+      "Knowledgework",
+      "Teamwork"
+    ],
+    "caseIds": [
+      "daliyu-workstation"
+    ],
+    "theme": "ember"
+  },
+  {
+    "id": "founder-ai",
+    "category": "organization",
+    "name": {
+      "zh": "一号位 AI 陪跑",
+      "en": "AI Partner for Founders"
+    },
+    "short": {
+      "zh": "让 AI 落地，从一号位的真实工作开始。",
+      "en": "Make AI useful at the top of the business."
+    },
+    "audience": {
+      "zh": "老板、创始人与业务一号位",
+      "en": "Founders, owners and business leaders"
+    },
+    "problem": {
+      "zh": "知道 AI 重要，却难以判断先做什么、怎么配置、如何带动团队。",
+      "en": "You see the opportunity, but need help choosing where to start and bringing the team with you."
+    },
+    "description": {
+      "zh": "从一号位亲自使用出发，梳理硬件与工具、智能体配置、工作架构和使用界面，在持续实践中带动组织落地。",
+      "en": "A practical partnership covering tool and hardware choices, agent setup, work architecture and everyday interfaces."
+    },
+    "deliverables": {
+      "zh": [
+        "一号位工作场景与优先级地图",
+        "硬件、工具与智能体配置方案",
+        "日常工作的使用界面与操作路径",
+        "分阶段试点与持续复盘机制"
+      ],
+      "en": [
+        "A map of leadership tasks and priorities",
+        "A hardware, tool and agent setup plan",
+        "Practical interfaces and everyday working routines",
+        "A phased pilot with ongoing reviews"
+      ]
+    },
+    "start": {
+      "zh": "从一个最耗精力的日常决策或业务任务开始。",
+      "en": "Start with one recurring decision or task that takes too much of your time."
+    },
+    "process": {
+      "zh": [
+        "访谈并梳理一号位工作",
+        "选择可验证的小范围试点",
+        "配置工具、智能体与使用界面",
+        "复盘试点，逐步带入团队"
+      ],
+      "en": [
+        "Map the leader’s real work",
+        "Choose a small, testable pilot",
+        "Set up tools, agents and interfaces",
+        "Review the pilot and extend it to the team"
+      ]
+    },
+    "timing": {
+      "zh": "按阶段与陪跑频率约定。",
+      "en": "Phases and meeting frequency are agreed together."
+    },
+    "pricing": {
+      "zh": "按场景、周期与参与范围报价；硬件及第三方订阅另行确认。",
+      "en": "Quoted by scope, duration and involvement. Hardware and subscriptions are agreed separately."
+    },
+    "faqs": [
+      {
+        "q": {
+          "zh": "一定要先部署全公司的系统吗？",
+          "en": "Do we need a company-wide system first?"
+        },
+        "a": {
+          "zh": "从一号位实际使用的小场景切入，验证有用后再逐步扩展。",
+          "en": "We start with a small task the leader actually uses, then expand when it proves useful."
+        }
+      },
+      {
+        "q": {
+          "zh": "这是一次培训还是长期顾问服务？",
+          "en": "Is this a workshop or an ongoing engagement?"
+        },
+        "a": {
+          "zh": "以持续实践与复盘为主，可包含必要培训；周期与边界在合作前约定。",
+          "en": "The focus is implementation and review, with training where needed. Duration and boundaries are agreed upfront."
+        }
+      }
+    ],
+    "tags": [
+      "Brainwork",
+      "AIwork",
+      "Opswork",
+      "Teamwork"
+    ],
+    "caseIds": [],
+    "theme": "ink"
+  },
+  {
+    "id": "super-workstation",
+    "category": "projects",
+    "name": {
+      "zh": "超级工作站搭建",
+      "en": "Super Workstation Setup"
+    },
+    "short": {
+      "zh": "把分散的能力，组织成运行中的系统。",
+      "en": "Turn separate tools into a working system."
+    },
+    "audience": {
+      "zh": "希望把 AI 带入业务的企业与团队",
+      "en": "Businesses and teams bringing AI into operations"
+    },
+    "problem": {
+      "zh": "工具、知识与流程彼此分散，演示能跑，实际交付却接不起来。",
+      "en": "Tools, knowledge and processes are disconnected. A good demo does not yet make a reliable operation."
+    },
+    "description": {
+      "zh": "围绕客户场景，把 AI 智能体、知识与工具、业务流程和人的协作组织成一套可运行、可验收的工作系统。",
+      "en": "Bring agents, knowledge, tools, business processes and human collaboration together around a real operating task."
+    },
+    "deliverables": {
+      "zh": [
+        "场景、任务与交付边界清单",
+        "智能体、知识与工具的协作架构",
+        "约定范围的工作流与使用界面",
+        "验收标准、交接说明与改进计划"
+      ],
+      "en": [
+        "A defined task, scope and delivery checklist",
+        "An architecture for agents, knowledge and tools",
+        "Agreed workflows and operating interfaces",
+        "Acceptance criteria, handover notes and an improvement plan"
+      ]
+    },
+    "start": {
+      "zh": "带一个需要反复交付的业务场景来。",
+      "en": "Bring one business task your team needs to deliver repeatedly."
+    },
+    "process": {
+      "zh": [
+        "理解问题与现有流程",
+        "设计系统与最小交付范围",
+        "搭建、测试并组织协作",
+        "验收、交接与持续改进"
+      ],
+      "en": [
+        "Understand the task and current process",
+        "Design the smallest useful system",
+        "Build, test and organise collaboration",
+        "Review, hand over and improve"
+      ]
+    },
+    "timing": {
+      "zh": "按系统边界与试点范围确认；长期共建可单独约定。",
+      "en": "Timing follows the pilot scope. Long-term co-development is available by agreement."
+    },
+    "pricing": {
+      "zh": "按范围报价；长期共同投入、共同发展、共享结果的合作机制单独约定。",
+      "en": "Quoted by scope. Long-term investment and shared outcomes are agreed separately."
+    },
+    "faqs": [
+      {
+        "q": {
+          "zh": "可以从一个小项目开始吗？",
+          "en": "Can we start small?"
+        },
+        "a": {
+          "zh": "可以。优先选择能明确输入、输出与验收方式的场景，再逐步扩展。",
+          "en": "Yes. We start with a task whose inputs, outputs and acceptance criteria can be defined."
+        }
+      },
+      {
+        "q": {
+          "zh": "交付后如何继续使用？",
+          "en": "What happens after delivery?"
+        },
+        "a": {
+          "zh": "交付时提供约定的使用与维护说明；持续运营、维护和共建范围另行确认。",
+          "en": "Agreed operating and maintenance notes are included. Ongoing support and co-development are scoped separately."
+        }
+      }
+    ],
+    "tags": [
+      "AIwork",
+      "Codework",
+      "Opswork",
+      "Teamwork"
+    ],
+    "caseIds": [
+      "daliyu-workstation"
+    ],
+    "theme": "sage",
+    "video": true
+  }
+]

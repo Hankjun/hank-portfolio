@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /archive/
+Sitemap: https://hankjun.github.io/hank-portfolio/sitemap.xml

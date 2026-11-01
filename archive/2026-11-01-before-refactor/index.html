@@ -1,0 +1,878 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<meta name="theme-color" content="#f5f2eb" />
+<meta name="description" content="汉克 HANK，一名方案师。以人为入口，以工作为单元，以结果为终点。围绕认知、培训、项目、组织、共创五大链条，把方法、能力与长期结果组织起来。" />
+<title>HANK 汉克 — 以我为界面，让事情发生。</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/>
+<style>
+:root{--paper:#f5f2eb;--paper2:#ebe8de;--white:#fffdf7;--ink:#183238;--ink-deep:#101b1d;--body:#57666a;--terracotta:#c36141;--mint:#dbf77c;--stroke:#d6d9d1;--stroke-dark:#344643;--ease:cubic-bezier(.22,1,.36,1);--w:1300px;--pad:clamp(22px,5.2vw,88px)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:86px}body{background:var(--paper);color:var(--ink);margin:0;font-family:Inter,"Helvetica Neue","PingFang SC","Microsoft Yahei",sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #c78b4f;outline-offset:3px}::selection{background:#d8ed99;color:#183238}.container{width:min(var(--w),calc(100% - var(--pad)*2));margin-inline:auto}.eyebrow{font-size:11px;letter-spacing:.17em;font-weight:750;text-transform:uppercase}.section-number{font:500 11px/1.3 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.12em;text-transform:uppercase}.serif{font-family:Georgia,"Songti SC","Noto Serif SC","SimSun",serif;font-weight:500}.sans{font-family:Inter,"Helvetica Neue","PingFang SC",sans-serif}.muted{color:var(--body)}.divider{height:1px;background:var(--stroke)}.link-line{display:inline-flex;align-items:center;gap:12px;font-size:13px;font-weight:750;padding-bottom:8px;border-bottom:1px solid currentColor;transition:gap .2s}.link-line:hover{gap:20px}.arrow{font-size:20px;font-weight:400;line-height:.9}.btn{display:inline-flex;align-items:center;justify-content:center;gap:18px;padding:16px 22px;background:var(--ink);color:var(--white);border:1px solid var(--ink);border-radius:3px;font-size:13px;font-weight:650;transition:transform .2s,background .2s}.btn:hover{transform:translateY(-2px);background:#294950}.btn.outline{background:transparent;color:var(--ink)}.btn.outline:hover{background:#ebece2}.btn.sm{padding:12px 17px}.big-section{padding:clamp(75px,9vw,138px) 0}.section-head{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:18px 0;border-top:1px solid var(--stroke);font-size:11px;color:#75817f}.section-head .left{font-weight:750;color:var(--ink);letter-spacing:.12em}.section-title{font-size:clamp(38px,5.4vw,78px);line-height:1.22;letter-spacing:-.055em;margin:42px 0 25px}.section-intro{color:var(--body);font-size:16px;line-height:2;max-width:660px}
+/* header */
+.site-header{height:80px;position:sticky;z-index:50;top:0;border-bottom:1px solid rgba(24,50,56,.13);background:rgba(245,242,235,.91);backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px)}.head-inner{height:100%;display:flex;justify-content:space-between;align-items:center;gap:25px}.brand{display:flex;align-items:baseline;gap:15px;white-space:nowrap}.brand-word{font:bold italic 32px/1 Georgia,serif;letter-spacing:-.09em}.brand-dot{color:var(--terracotta);font-size:31px}.brand-sub{font-size:11px;letter-spacing:.09em;font-weight:700}.nav{display:flex;gap:32px;align-items:center;margin-left:auto;font-size:12px;font-weight:650}.nav a:hover{color:var(--terracotta)}.header-cta{font-size:12px;border:1px solid var(--ink);padding:12px 17px;border-radius:2px;font-weight:750}.header-cta:hover{background:var(--ink);color:white}.mobile-menu{display:none;border:1px solid var(--stroke);background:transparent;width:41px;height:41px;font-size:23px;color:var(--ink)}.read-progress{height:2px;position:absolute;left:0;bottom:-1px;background:var(--terracotta);width:0%;pointer-events:none;z-index:2}
+/* hero */
+.hero{padding-top:clamp(60px,8vw,122px);padding-bottom:clamp(65px,7vw,105px);overflow:hidden}.hero-grid{display:grid;grid-template-columns:minmax(0,1.17fr) minmax(340px,.83fr);gap:clamp(36px,5vw,90px);align-items:center}.hero .eyebrow{color:var(--terracotta);margin-bottom:29px}.hero h1{font-size:clamp(56px,6.5vw,103px);line-height:1.23;letter-spacing:-.075em;margin:0 0 29px}.hero h1 span{color:var(--terracotta)}.hero-lead{font-size:clamp(16px,1.3vw,19px);line-height:2.03;color:#536468;max-width:635px;margin:0}.hero-actions{display:flex;gap:29px;align-items:center;margin-top:40px;flex-wrap:wrap}.micro{display:flex;gap:21px;margin-top:63px;align-items:center;color:#667577;font-size:11px;font-weight:650;letter-spacing:.04em}.micro:before{content:"";height:1px;width:46px;background:var(--terracotta)}
+.hero-art{aspect-ratio:.85;background:#dfe3d9;border-radius:250px 250px 5px 5px;position:relative;overflow:hidden;min-height:455px;isolation:isolate;box-shadow:20px 25px 0 #ebe9df}.hero-art:before{content:"";position:absolute;inset:21px;border:1px solid #b7c8c0;border-radius:240px 240px 1px 1px}.poster-grid{position:absolute;inset:0;background:linear-gradient(90deg,transparent 49.8%,#829c8c24 50%,transparent 50.2%),linear-gradient(transparent 49.8%,#829c8c24 50%,transparent 50.2%);background-size:80px 80px;opacity:.65}.halo{position:absolute;width:76%;aspect-ratio:1;left:12%;top:18%;border:1px solid #809d9480;border-radius:50%}.halo:before{content:"";position:absolute;width:140%;aspect-ratio:1;left:-20%;top:-20%;border:1px dashed #a6bbb2c9;border-radius:50%;transform:rotate(-15deg)}.halo:after{content:"";position:absolute;width:64%;aspect-ratio:1;left:18%;top:18%;border:1px solid #79998c99;border-radius:50%}.h-character{position:absolute;top:25%;left:19%;font:italic 400 clamp(200px,28vw,430px)/.85 Georgia,serif;letter-spacing:-.15em;color:var(--ink);transform:rotate(-7deg);text-shadow:10px 19px 0 #1832380a}.h-character i{color:var(--terracotta);font-style:normal;position:relative;left:2%;font-size:.8em}.orbit-tag{position:absolute;z-index:1;background:var(--white);box-shadow:0 6px 30px #152c3019;border:1px solid #d5ded6;padding:11px 14px;font:700 10px/1.5 ui-monospace,monospace;letter-spacing:.08em}.orbit-tag.a{left:3%;top:19%;transform:rotate(-7deg)}.orbit-tag.b{right:1%;top:39%;transform:rotate(5deg)}.orbit-tag.c{left:9%;bottom:17%;transform:rotate(3deg)}.poster-footer{position:absolute;bottom:34px;left:35px;right:35px;display:flex;justify-content:space-between;gap:10px;font-size:10px;letter-spacing:.1em;font-weight:700;color:#395f59}.hero-art .orange-disc{position:absolute;width:80px;aspect-ratio:1;background:#c8764e;border-radius:50%;right:13%;top:11%;filter:blur(.4px);box-shadow:0 0 50px #c8764e44}
+/* principle spine */
+.spine{background:var(--ink);color:#f9faf0}.spine-inner{min-height:116px;display:grid;grid-template-columns:repeat(3,1fr);align-items:center}.spine-item{display:flex;align-items:center;gap:20px;padding:27px 25px;border-right:1px solid #5871715e;min-width:0}.spine-item:first-child{padding-left:0}.spine-item:last-child{border:0}.spine-item b{font:italic 40px Georgia,serif;letter-spacing:-.06em;color:var(--mint)}.spine-item span{font-size:12px;color:#d2dcd7;line-height:1.8}.spine-item small{display:block;font-size:10px;letter-spacing:.12em;color:#99aca4;margin-bottom:3px}
+/* introduction */
+.intro-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(40px,8vw,140px);margin-top:55px}.intro-marker{font:italic clamp(58px,9vw,130px)/.9 Georgia,serif;color:var(--terracotta);letter-spacing:-.09em}.intro-left p{font-size:13px;color:#788481;margin-top:36px;line-height:2}.intro-copy{font-size:clamp(25px,2.75vw,39px);line-height:1.65;letter-spacing:-.04em;margin:0 0 32px}.intro-copy em{font-style:normal;color:var(--terracotta)}.intro-detail{font-size:15px;line-height:2.1;color:var(--body);max-width:700px}.capabilities{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--stroke);border-bottom:1px solid var(--stroke);margin-top:38px}.capabilities>div{padding:25px 18px 25px 0;border-right:1px solid var(--stroke)}.capabilities>div+div{padding-left:18px}.capabilities>div:last-child{border:0}.capabilities b{font-size:15px}.capabilities small{display:block;color:#84938c;font-size:11px;margin-top:9px;line-height:1.8}
+/* bridge to service */
+.bridge{background:#e7e9dd;padding:46px 0}.bridge-inner{display:flex;justify-content:space-between;align-items:center;gap:35px}.bridge p{max-width:830px;font-family:Georgia,"Songti SC",serif;font-size:clamp(21px,2.5vw,35px);line-height:1.6;margin:0}.bridge em{font-style:normal;color:var(--terracotta)}
+/* dark services */
+.service-wrap{background:var(--ink-deep);color:#e6eee4;padding:clamp(78px,9vw,140px) 0;position:relative;overflow:hidden}.service-wrap .section-head{border-color:var(--stroke-dark);color:#8eaaa0}.service-wrap .section-head .left{color:var(--mint)}.service-wrap .section-title{font:700 clamp(58px,8.8vw,134px)/.99 Inter,"Helvetica Neue",sans-serif;letter-spacing:-.09em;margin:47px 0 28px}.service-wrap .section-title em{color:var(--mint);font-style:normal}.service-wrap .section-intro{color:#aabdb2}.service-lead{display:flex;justify-content:space-between;align-items:end;gap:40px}.service-description{margin-top:21px;max-width:560px;font-size:15px;line-height:2;color:#afbeb3}.service-aside{font:italic clamp(26px,3vw,47px)/1.1 Georgia,serif;color:#96a9a0;white-space:nowrap}.service-aside em{color:var(--mint);font-style:normal}.filters{margin:61px 0 25px;display:flex;gap:10px;flex-wrap:wrap}.filter-btn{border-radius:40px;border:1px solid #455951;background:transparent;color:#becbc2;font-size:12px;padding:11px 19px;transition:all .2s}.filter-btn:hover{border-color:var(--mint)}.filter-btn[aria-pressed="true"]{background:var(--mint);color:var(--ink-deep);border-color:var(--mint);font-weight:750}.work-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#36443d;border:1px solid #36443d}.work-card{background:var(--ink-deep);min-height:220px;padding:24px;display:flex;flex-direction:column;position:relative;transition:background .2s,transform .2s}.work-card:hover{background:#1e2d28}.work-card[hidden]{display:none}.work-card.selected{background:#263629}.work-card.selected .work-add{background:var(--mint);color:#13211a;border-color:var(--mint)}.work-top{display:flex;align-items:center;justify-content:space-between}.work-top small{font:10px ui-monospace,monospace;color:#75887b;letter-spacing:.12em}.work-add{font-size:20px;font-weight:400;color:#9baea3;border-radius:50%;width:33px;height:33px;border:1px solid #486156;background:transparent;display:grid;place-items:center;line-height:1;transition:all .2s}.work-add:hover{background:#374c3f}.work-card h3{font-size:clamp(20px,2vw,30px);letter-spacing:-.06em;margin:auto 0 11px}.work-card p{font-size:12px;color:#98aa9c;line-height:1.7;margin:0;max-width:220px}.work-bottom{margin-top:20px;border-top:1px solid #36483d;padding-top:9px;font-size:10px;color:#758a7b}.work-selection{margin-top:24px;padding:21px 25px;border:1px solid #344a39;background:#1a2920;display:flex;gap:22px;align-items:center;justify-content:space-between}.work-selection b{font-size:13px;color:var(--mint)}.work-selection p{color:#a7bbad;font-size:12px;margin:8px 0 0;line-height:1.7}.work-selection button{background:var(--mint);color:#14251e;border:0;font-weight:800;padding:13px 18px;white-space:nowrap;font-size:12px}.work-selection button:disabled{opacity:.4;cursor:not-allowed}.work-hint{display:flex;gap:15px;justify-content:space-between;align-items:center;color:#7f988b;font-size:11px;margin-top:22px;line-height:1.6}
+/* projects */
+.practice-section{background:var(--paper);padding:clamp(80px,9vw,130px) 0}.practice-title{display:flex;align-items:end;justify-content:space-between;gap:25px;margin-bottom:45px}.practice-title h2{margin:36px 0 0;font-size:clamp(38px,5.6vw,79px);line-height:1.2}.practice-title h2 em{color:var(--terracotta);font-style:normal}.practice-title p{max-width:290px;color:var(--body);font-size:13px;line-height:1.95;margin:0 0 6px}.project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.project-card{border:1px solid var(--stroke);background:#f9f7f0;min-height:350px;padding:30px;display:flex;flex-direction:column;gap:20px;transition:background .2s,transform .2s}.project-card:hover{background:#fffefb;transform:translateY(-4px)}.project-meta{display:flex;justify-content:space-between;gap:10px;align-items:center;font:700 10px ui-monospace,monospace;letter-spacing:.1em;color:#89938f}.project-symbol{font-size:64px;line-height:1;letter-spacing:-.08em;font-family:Georgia,serif;color:var(--terracotta);margin:27px 0 5px}.project-card:nth-child(2) .project-symbol,.project-card:nth-child(5) .project-symbol{color:#2d6266}.project-card:nth-child(3) .project-symbol,.project-card:nth-child(6) .project-symbol{color:#808a5f}.project-card h3{margin:auto 0 0;font-size:25px;letter-spacing:-.04em}.project-card p{line-height:1.8;font-size:13px;color:#61716c;margin:0}.project-tags{font-size:10px;letter-spacing:.08em;color:#9d6a52;border-top:1px solid var(--stroke);padding-top:13px}
+/* delivery */
+.delivery-wrap{background:#e5e8df;padding:clamp(80px,9vw,130px) 0}.delivery-wrap .section-head{border-color:#b7c5bc}.delivery-intro{display:grid;grid-template-columns:1fr 1fr;align-items:end;gap:40px}.delivery-intro .section-title{margin-bottom:0}.delivery-intro .section-title em{color:var(--terracotta);font-style:normal}.delivery-intro p{font-size:15px;line-height:2;color:#5c6b69;max-width:530px;margin-left:auto}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:75px;border-top:1px solid #afbcb3;border-bottom:1px solid #afbcb3}.step{padding:26px 23px 38px;border-right:1px solid #afbcb3;min-height:250px}.step:first-child{padding-left:0}.step:last-child{border-right:0}.step small{color:var(--terracotta);font:800 11px ui-monospace,monospace}.step h3{font-size:27px;letter-spacing:-.04em;margin:31px 0 14px}.step h3 span{display:block;font:italic 21px Georgia,serif;color:#8b9992;margin-top:3px}.step p{font-size:13px;color:#64716a;line-height:1.85;max-width:225px}.statement-banner{display:flex;gap:30px;justify-content:space-between;align-items:center;margin-top:55px}.statement-banner strong{font:italic clamp(25px,3vw,43px) Georgia,serif;letter-spacing:-.05em}.statement-banner strong span{color:var(--terracotta)}.statement-banner small{color:#71817b;font-size:11px;text-align:right;line-height:1.8}
+/* contact */
+.contact-section{padding:clamp(80px,9vw,130px) 0;background:var(--paper)}.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(40px,8vw,135px)}.contact-copy h2{font-size:clamp(45px,6vw,85px);margin:40px 0 20px;line-height:1.23;letter-spacing:-.055em}.contact-copy h2 em{color:var(--terracotta);font-style:normal}.contact-copy p{line-height:2;color:var(--body);font-size:15px}.note{margin-top:66px;border-top:1px solid var(--stroke);padding-top:20px;font-size:12px;line-height:1.9;color:#71817c}.brief-form{background:var(--white);border:1px solid #d5d9d0;padding:clamp(24px,3vw,47px);box-shadow:13px 13px 0 #e7e9df}.form-caption{display:flex;align-items:center;justify-content:space-between;gap:15px;color:#84918a;font-size:10px;letter-spacing:.11em;font-weight:750}.brief-form h3{font-size:26px;letter-spacing:-.03em;margin:22px 0 33px}.field{margin-bottom:24px}.field label,.field legend{display:block;font-weight:750;font-size:12px;margin-bottom:10px}.field small{color:#90a09a;font-weight:400}.field textarea,.field input,.field select{width:100%;border:1px solid #ccd5cb;border-radius:0;background:#faf9f4;color:var(--ink);padding:14px 15px;font-size:13px;outline:none;transition:border-color .2s}.field textarea:focus,.field input:focus,.field select:focus{border-color:#54766a}.field textarea{min-height:125px;resize:vertical;line-height:1.8}.field textarea::placeholder,.field input::placeholder{color:#a2aca8}.goal-pills{display:flex;flex-wrap:wrap;gap:7px}.goal-pills label{display:flex;position:relative;cursor:pointer;margin:0}.goal-pills input{position:absolute;opacity:0;pointer-events:none}.goal-pills span{padding:10px 13px;background:#f6f5ee;border:1px solid #d7dcd2;font-size:12px;color:#64726b}.goal-pills input:checked+span{background:var(--ink);color:white;border-color:var(--ink)}.goal-pills input:focus-visible+span{outline:3px solid #c78b4f;outline-offset:2px}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:15px}.chosen-works{display:flex;flex-wrap:wrap;gap:7px;margin-top:5px}.chosen-chip{border:1px solid #cbdbb3;background:#edf5db;color:#45603a;padding:7px 10px;font-size:11px}.empty-chip{font-size:11px;color:#9aa89b}.form-note{font-size:11px;color:#7f8c84;line-height:1.8;margin:15px 0}.form-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.copy-secondary{background:none;border:1px solid #abb9b0;color:var(--ink);padding:16px 17px;font-size:12px;font-weight:650}.draft-preview{white-space:pre-wrap;overflow-wrap:anywhere;font:12px/1.85 ui-monospace,"PingFang SC",monospace;background:#f4f5ee;border-left:3px solid var(--terracotta);padding:18px;margin-top:23px;color:#374c49;max-height:300px;overflow:auto}.draft-preview[hidden]{display:none}.toast{position:fixed;z-index:100;bottom:24px;left:50%;transform:translate(-50%,25px);background:#193a31;color:white;padding:13px 21px;font-size:12px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;box-shadow:0 15px 35px #0002}.toast.show{opacity:1;transform:translate(-50%,0)}
+/* footer — personal brand, service discovery, project briefing */
+.footer{position:relative;isolation:isolate;overflow:hidden;background:#152c2e;color:#f7f4ec;padding:0}
+.footer:before{content:"";position:absolute;z-index:-1;inset:0;pointer-events:none;background:radial-gradient(ellipse at 94% 12%,rgba(233,141,88,.105),transparent 36%),radial-gradient(ellipse at 8% 94%,rgba(100,147,132,.09),transparent 36%)}
+.footer-eyebrow{display:flex;justify-content:space-between;gap:20px;align-items:center;padding:31px 0 0;color:#b0c1b8;font:600 10px/1.6 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.17em}
+.footer-eyebrow-left{display:inline-flex;align-items:center;gap:13px}.footer-sun-dot{width:9px;height:9px;flex:none;border-radius:50%;background:linear-gradient(135deg,#f2ad50,#ed6b5c);box-shadow:0 0 0 5px rgba(234,131,83,.10)}.footer-eyebrow-right{color:#7e9892}
+.footer-invite{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:50px;align-items:end;padding:55px 0 76px;border-bottom:1px solid rgba(220,235,226,.20)}
+.footer-invite-copy h2{margin:0;font:500 clamp(38px,5vw,72px)/1.24 Georgia,"Songti SC","Noto Serif SC","SimSun",serif;letter-spacing:-.055em}
+.footer-invite-copy h2 em{font-style:normal;color:#eea87d}
+.footer-invite-copy p{margin:23px 0 0;color:#aabfb6;font-size:14px;line-height:1.95}
+.footer-action{display:flex;flex-direction:column;align-items:flex-start;gap:12px;padding-bottom:3px}
+.footer-project-link{display:flex;align-items:center;justify-content:space-between;gap:28px;min-width:232px;padding:18px 19px 18px 22px;background:linear-gradient(115deg,#f0ae70,#ed8067);color:#1c3233;font-size:14px;font-weight:800;transition:transform .22s,filter .22s}
+.footer-project-link:hover{transform:translateY(-3px);filter:brightness(1.08)}
+.footer-action-arrow{display:grid;place-items:center;width:33px;height:33px;border:1px solid rgba(26,48,49,.35);border-radius:50%;font-size:19px;font-weight:400}
+.footer-action-note{color:#8fa59e;font-size:11px;line-height:1.7}
+
+/* FIND ME ONLINE — verified links only */
+.footer-social{padding:43px 0 49px;border-bottom:1px solid rgba(220,235,226,.20)}
+.footer-social-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:22px;margin-bottom:23px}
+.footer-social-kicker{display:block;margin-bottom:15px;color:#eda881;font:650 10px/1.6 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.14em}
+.footer-social-heading h3{font:500 clamp(22px,2.5vw,34px)/1.35 Georgia,"Songti SC","Noto Serif SC","SimSun",serif;letter-spacing:-.03em;margin:0}
+.footer-social-heading h3 span{color:#eda881}
+.footer-social-heading p{font-size:12px;color:#9fb8af;margin:0 0 5px;line-height:1.8}
+.social-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.social-card{display:flex;align-items:center;gap:12px;min-width:0;min-height:78px;padding:14px 13px;background:rgba(255,255,255,.035);border:1px solid rgba(220,235,226,.15);border-radius:3px}
+.social-monogram{flex:none;width:37px;height:37px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:rgba(238,168,125,.10);color:#f3b28f;font:700 13px/1 ui-monospace,SFMono-Regular,Consolas,monospace}
+.social-meta{display:flex;flex-direction:column;gap:7px;min-width:0}.social-meta strong{color:#e7ece6;font-size:12px;font-weight:700;white-space:nowrap}.social-meta small{color:#91a99f;font-size:10px;line-height:1.25;white-space:nowrap}
+.social-state{flex:none;margin-left:auto;color:#7f9a91;font-size:10px;white-space:nowrap}
+.social-card-pending{opacity:.65;cursor:default}
+.social-card-live{background:rgba(240,174,112,.10);border-color:rgba(240,174,112,.45);transition:transform .22s,border-color .22s,background .22s}
+.social-card-live .social-monogram{background:linear-gradient(135deg,#f0ae70,#ed8067);color:#172d2f}
+.social-card-live .social-state{color:#f0ae70}
+.social-card-live:hover{transform:translateY(-3px);background:rgba(240,174,112,.16);border-color:#f0ae70}
+.social-help{margin:16px 0 0;color:#7b958a;font-size:10px;line-height:1.8}
+@media(max-width:1100px){.social-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.social-card{min-height:76px}}
+@media(max-width:630px){.footer-social{padding:37px 0 42px}.footer-social-heading{display:block;margin-bottom:20px}.footer-social-heading p{margin:13px 0 0}.social-grid{gap:8px}.social-card{min-height:96px;flex-wrap:wrap;gap:8px;padding:12px}.social-meta{flex:1;min-width:calc(100% - 49px)}.social-meta small{font-size:10px;white-space:normal}.social-state{margin-left:0;flex-basis:100%;text-align:right}.social-help{font-size:10px}}
+@media(max-width:390px){.social-card{padding:10px}.social-monogram{width:30px;height:30px}.social-meta strong{font-size:11px}.social-meta{min-width:calc(100% - 40px)}}
+.footer-middle{display:grid;grid-template-columns:minmax(230px,1.25fr) minmax(300px,1fr) 72px;align-items:start;gap:clamp(25px,4vw,74px);padding:49px 0 58px}
+.footer-identity .footer-logo{display:inline-flex;align-items:center}
+.footer-identity .hank-logo-footer{width:min(272px,100%);height:auto}
+.footer-identity p{margin:10px 0 0 7px;font-size:12px;font-weight:650;line-height:2;color:#e6eee8}
+.footer-identity p span{font-size:12px;color:#a9c0b6;font-weight:400}
+.footer-directory{display:grid;grid-template-columns:1fr 1fr;gap:clamp(18px,3vw,50px);padding-top:21px}
+.footer-menu-group{display:flex;flex-direction:column;align-items:flex-start;gap:15px}
+.footer-menu-group h3{margin:0 0 6px;color:#edac87;font:650 10px/1.5 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.14em;white-space:nowrap}
+.footer-menu-group h3 span{color:#809992;letter-spacing:0;font:400 11px/1.5 "PingFang SC","Microsoft Yahei",sans-serif}
+.footer-menu-group>a{font-size:13px;font-weight:550;color:#e1e9e2;transition:color .2s,transform .2s}
+.footer-menu-group>a span{font-size:12px;margin-left:8px;color:#779890;transition:color .2s}
+.footer-menu-group>a:hover{color:#f2a67e;transform:translateX(3px)}
+.footer-menu-group>a:hover span{color:#f2a67e}
+.footer-return{width:68px;height:68px;border:1px solid #627a71;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;transition:background .2s,border-color .2s,color .2s}
+.footer-return>span{font:400 27px/1 Georgia,serif}.footer-return small{font:600 9px/1.8 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.12em;color:#96afa3}
+.footer-return:hover{background:rgba(238,168,125,.11);border-color:#eea87d;color:#eea87d}
+.footer-legal{border-top:1px solid rgba(220,235,226,.17);display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:21px 0 25px;color:#829b90;font:500 10px/1.7 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.085em}
+@media(max-width:880px){.footer-middle{grid-template-columns:minmax(210px,1fr) minmax(260px,1.2fr);gap:30px}.footer-return{grid-column:2;justify-self:end;width:54px;height:54px;margin-top:-74px}.footer-invite{gap:25px}.footer-project-link{min-width:206px}}
+@media(max-width:630px){.footer-eyebrow{padding-top:26px}.footer-eyebrow-right{display:none}.footer-invite{grid-template-columns:1fr;gap:30px;padding:43px 0 49px}.footer-invite-copy h2{font-size:clamp(37px,9vw,57px)}.footer-invite-copy p{font-size:13px}.footer-desktop-break{display:none}.footer-action{width:100%}.footer-project-link{width:100%;max-width:360px}.footer-middle{grid-template-columns:1fr;gap:37px;padding:39px 0 46px}.footer-directory{padding-top:0;gap:22px}.footer-return{grid-column:1;justify-self:start;margin-top:0;width:65px;height:65px}.footer-identity .hank-logo-footer{width:min(250px,75vw)}.footer-legal{padding:19px 0 23px;font-size:9px;gap:9px}}
+@media(max-width:1050px){.hero-grid{grid-template-columns:1.18fr .82fr;gap:35px}.hero-art{min-height:400px}.work-grid{grid-template-columns:repeat(3,1fr)}.project-grid{grid-template-columns:repeat(2,1fr)}.nav{gap:17px}.capabilities b{font-size:14px}}@media(max-width:800px){.site-header{height:70px}.nav{display:none;position:absolute;top:70px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--stroke);padding:20px var(--pad);box-shadow:0 20px 25px #00000010}.nav.open{display:flex;flex-direction:column;align-items:start;gap:22px}.nav a{font-size:15px}.mobile-menu{display:block}.brand-sub{font-size:10px}.header-cta{margin-left:auto}.hero-grid{grid-template-columns:1fr}.hero-art{max-width:480px;min-height:auto;aspect-ratio:1.0;margin-inline:auto;width:100%;border-radius:300px 300px 3px 3px}.h-character{font-size:320px}.spine-inner{grid-template-columns:1fr 1fr 1fr}.spine-item{padding:25px 11px;gap:11px}.spine-item b{font-size:30px}.spine-item span{font-size:11px}.intro-layout{grid-template-columns:1fr;gap:35px}.intro-left{display:flex;align-items:end;gap:32px}.intro-left p{margin:0}.service-lead,.practice-title,.bridge-inner{display:block}.service-aside{margin-top:25px}.work-grid{grid-template-columns:repeat(2,1fr)}.practice-title p{margin-top:20px}.delivery-intro{grid-template-columns:1fr}.delivery-intro p{margin:0}.steps{grid-template-columns:repeat(2,1fr)}.step:nth-child(2){border-right:0}.step:nth-child(-n+2){border-bottom:1px solid #afbcb3}.step:nth-child(3){padding-left:0}.contact-grid{grid-template-columns:1fr}.note{margin-top:25px}.contact-copy h2{margin-top:25px}.footer-logo{font-size:100px}}
+@media(max-width:560px){.header-cta{font-size:11px;padding:11px}.brand-word{font-size:29px}.brand-sub{display:none}.hero{padding-top:59px}.hero h1{font-size:clamp(48px,11.7vw,70px)}.hero-lead{font-size:15px}.hero-actions{gap:23px}.micro{margin-top:39px}.hero-art{min-height:340px;max-width:400px}.h-character{font-size:270px}.poster-footer{bottom:28px;left:29px;right:29px;font-size:8px}.orbit-tag{padding:8px;font-size:8px}.spine-inner{grid-template-columns:1fr}.spine-item{border-right:none;border-bottom:1px solid #45645b;padding:18px 0}.spine-item:last-child{border:0}.spine-item b{font-size:35px}.spine-item span{font-size:12px}.intro-left{display:block}.intro-left p{margin-top:20px}.intro-copy{font-size:27px}.capabilities{grid-template-columns:1fr}.capabilities>div,.capabilities>div+div{padding:18px 0;border-right:0;border-bottom:1px solid var(--stroke)}.capabilities>div:last-child{border:0}.bridge{padding:35px 0}.service-wrap .section-title{font-size:clamp(65px,15vw,85px)}.service-aside{font-size:25px}.work-grid{grid-template-columns:1fr 1fr}.work-card{min-height:205px;padding:16px}.work-card h3{font-size:21px;overflow-wrap:anywhere}.work-card p{font-size:11px}.work-selection{display:block;padding:20px}.work-selection button{margin-top:18px;width:100%}.work-hint{display:block}.project-grid{grid-template-columns:1fr}.project-card{min-height:290px}.delivery-intro .section-title{font-size:43px}.steps{grid-template-columns:1fr}.step,.step:nth-child(3){padding:23px 0;min-height:200px;border-right:0;border-bottom:1px solid #afbcb3}.step:last-child{border-bottom:0}.step h3{margin-top:20px}.statement-banner{display:block}.statement-banner small{display:block;text-align:left;margin-top:20px}.brief-form{box-shadow:6px 6px 0 #e7e9df}.form-row{grid-template-columns:1fr}.footer-top{display:block}.footer-tag{margin-top:35px}.footer-base{flex-wrap:wrap}.footer-logo{font-size:86px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+/* HANK sunset signature · responsive brand identity */
+.brand{align-items:center;gap:11px}
+.hank-logo{display:block;flex:none;height:auto;overflow:visible}
+.hank-logo-header{width:134px;max-height:70px}
+.footer-logo{font-size:inherit;line-height:normal;letter-spacing:normal}
+.hank-logo-footer{width:min(450px,70vw);max-width:100%;filter:none}
+@media(max-width:800px){.hank-logo-header{width:116px;max-height:62px}}
+@media(max-width:560px){.hank-logo-header{width:112px;max-height:60px}}
+
+/* HANK'S LITTLE SHOP — modular digital-product shelf */
+.nav-shop{color:#bd6045!important;font-weight:800!important}
+.hero-shop-link{font-size:12px;font-weight:700;color:#b85f46;border-bottom:1px solid currentColor;padding-bottom:6px}
+.hank-shop{padding:clamp(70px,8vw,120px) 0 clamp(66px,8vw,110px);background:#e9e8df;color:#193236;position:relative;overflow:hidden}
+.hank-shop:before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 98% 4%,rgba(238,140,101,.11),transparent 34%),linear-gradient(90deg,rgba(24,50,56,.023) 1px,transparent 1px);background-size:auto,72px 72px}
+.hank-shop .container{position:relative;z-index:1}
+.shop-overline{border-top:1px solid #a7afa8;display:flex;justify-content:space-between;gap:20px;padding-top:17px;font:700 11px/1.5 ui-monospace,Consolas,monospace;letter-spacing:.12em;color:#60716e}
+.shop-overline span:first-child{color:#a55442}
+.shop-head{display:flex;align-items:flex-end;justify-content:space-between;gap:45px;margin:49px 0 35px}
+.shop-nameplate{display:flex;align-items:center;gap:12px;font:750 12px/1.5 ui-monospace,Consolas,monospace;letter-spacing:.11em;color:#677771}
+.shop-nameplate-mark{display:inline-flex;justify-content:center;align-items:center;width:32px;height:32px;border-radius:50%;font:bold italic 21px/1 Georgia,serif;background:linear-gradient(145deg,#f3aa52,#e66d61);color:white;letter-spacing:-.12em}
+.shop-head h2{font-size:clamp(37px,4.8vw,70px);line-height:1.21;letter-spacing:-.05em;font-weight:500;margin:25px 0 0}
+.shop-head h2 em{font-style:normal;color:#b75e43}
+.shop-aside{max-width:310px;flex:0 0 310px}
+.shop-aside p{color:#586b69;font-size:14px;line-height:1.9;margin:0 0 24px}
+.shop-cart-button{border:1px solid #224243;background:#224243;color:#f7f4eb;display:inline-flex;align-items:center;gap:11px;padding:15px 18px;font-weight:750;font-size:12px;transition:background .2s,transform .2s}
+.shop-cart-button:hover{background:#345654;transform:translateY(-2px)}
+.shop-cart-button span{min-width:21px;height:21px;padding:2px 6px;display:inline-flex;align-items:center;justify-content:center;background:#ed9574;color:#193236;border-radius:20px;font-size:11px}
+.shop-filters{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin:0 0 29px;border-top:1px solid #b7beb4;padding-top:21px}
+.shop-filter{border:1px solid #c5cac0;background:transparent;color:#566967;padding:10px 15px;font-size:12px;font-weight:650;transition:all .18s}
+.shop-filter:hover{border-color:#203e40;color:#203e40}
+.shop-filter.is-active{background:#213f40;border-color:#213f40;color:#f8f4ed}
+.shop-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:clamp(14px,2vw,30px);row-gap:34px}
+.shop-item{min-width:0}
+.shop-item[hidden]{display:none!important}
+.shop-item-cover{width:100%;aspect-ratio:4/5;position:relative;display:flex;flex-direction:column;overflow:hidden;text-align:left;isolation:isolate;border:0;padding:0;background:transparent;box-shadow:10px 14px 22px rgba(31,49,47,.11);transition:transform .28s,box-shadow .28s;cursor:pointer}
+.shop-item-cover:hover{transform:translateY(-5px);box-shadow:12px 19px 30px rgba(31,49,47,.17)}
+.shop-cover-face{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;padding:clamp(16px,2vw,27px);background:var(--cover-bg);color:var(--cover-fg)}
+.shop-cover-face:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.18;background:repeating-linear-gradient(115deg,transparent 0 38px,rgba(255,255,255,.35) 39px 40px)}
+.shop-cover-face:after{content:"";position:absolute;left:0;top:0;bottom:0;width:7px;background:rgba(0,0,0,.13);box-shadow:3px 0 7px rgba(0,0,0,.11)}
+.shop-cover-face.theme-ember{--cover-bg:#e77b62;--cover-fg:#183238;--accent:#f7d6a5}
+.shop-cover-face.theme-ink{--cover-bg:#173a3d;--cover-fg:#f7f4ec;--accent:#df9d72}
+.shop-cover-face.theme-ochre{--cover-bg:#f0c276;--cover-fg:#183238;--accent:#f8eee0}
+.shop-cover-face.theme-sage{--cover-bg:#aebfa7;--cover-fg:#243f3a;--accent:#ebede0}
+.shop-cover-face.theme-linen{--cover-bg:#e9e1cf;--cover-fg:#1f403c;--accent:#c97b5f}
+.shop-cover-face.theme-wine{--cover-bg:#8e5c54;--cover-fg:#fff5e9;--accent:#eeac7d}
+.shop-cover-face.theme-night{--cover-bg:#28333b;--cover-fg:#f6f1e6;--accent:#e0a576}
+.shop-cover-face.theme-blue{--cover-bg:#a7bbbd;--cover-fg:#193c48;--accent:#e8d3a7}
+.shop-cover-top,.shop-cover-foot{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:center;gap:12px;font:800 clamp(9px,.78vw,11px)/1.2 ui-monospace,Consolas,monospace;letter-spacing:.11em}
+.shop-cover-foot{border-top:1px solid currentColor;padding-top:12px}
+.shop-cover-central{position:relative;z-index:1;margin:auto 0;min-width:0}
+.shop-cover-illustration{width:56%;max-width:190px;aspect-ratio:1;position:relative;margin:0 auto 17px;opacity:.95}
+.shop-cover-illustration:before{content:"";position:absolute;inset:5%;border-radius:50%;border:clamp(9px,1.35vw,19px) solid var(--accent)}
+.shop-cover-illustration:after{content:"";position:absolute;inset:34%;transform:rotate(45deg);background:var(--accent);box-shadow:30px -30px 0 -12px var(--accent),-24px 24px 0 -13px var(--accent)}
+.shop-item:nth-child(3n+2) .shop-cover-illustration:before{border-radius:5%;transform:rotate(-18deg)}
+.shop-item:nth-child(3n) .shop-cover-illustration:before{border-radius:0 100% 40% 70%;transform:rotate(25deg)}
+.shop-cover-title{font:700 clamp(24px,2.4vw,37px)/1.0 Georgia,serif;letter-spacing:-.045em;word-break:break-word}
+.shop-cover-cn{font-size:clamp(12px,1.12vw,17px);line-height:1.4;font-weight:800;margin-top:9px;letter-spacing:.03em}
+.shop-cover-foot span:last-child{font:italic 800 21px/1 Georgia,serif;letter-spacing:-.08em}
+.shop-item-meta{padding-top:17px}
+.shop-item-type{display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:.05em;color:#74837d}
+.shop-item-name{margin:8px 0 8px;font-size:18px;line-height:1.45;font-weight:750;color:#1c383b}
+.shop-item-desc{min-height:45px;margin:0;font-size:12px;line-height:1.85;color:#61716e}
+.shop-item-bottom{display:flex;justify-content:space-between;align-items:flex-end;gap:11px;border-top:1px solid #c8cec3;padding-top:11px;margin-top:14px}
+.shop-item-price{display:flex;align-items:baseline;gap:9px}
+.shop-item-price strong{font:700 23px/1 Georgia,serif;letter-spacing:-.04em;color:#a6503d}
+.shop-item-price small{font-size:10px;color:#8a978c;white-space:nowrap}
+.shop-item-actions{display:flex;gap:7px}
+.shop-item-actions button{width:34px;height:34px;background:transparent;border:1px solid #82968d;color:#234343;font-size:18px;display:grid;place-items:center;transition:background .2s,color .2s}
+.shop-item-actions button:hover{background:#234343;color:white}
+.shop-item-actions button[aria-pressed="true"]{background:#b8664c;border-color:#b8664c;color:white}
+.shop-after{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start;margin-top:44px;padding-top:21px;border-top:1px solid #aeb8ad}
+.shop-index{font:700 11px/1.5 ui-monospace,Consolas,monospace;letter-spacing:.12em;color:#a65c45}
+.shop-after p{margin:10px 0 0;color:#5e716a;font-size:13px;line-height:1.9}
+.shop-after .shop-availability{margin:0;font-size:12px;color:#687670}
+.shop-after .shop-availability strong{color:#a65c45}
+.shop-dialog{max-width:min(720px,calc(100vw - 28px));width:100%;max-height:min(88vh,850px);padding:0;background:#f5f2eb;border:1px solid #aebdb2;color:#18383c;box-shadow:0 32px 90px rgba(0,0,0,.4)}
+.shop-dialog::backdrop{background:rgba(12,28,30,.78);backdrop-filter:blur(5px)}
+.shop-dialog-scroll{max-height:calc(88vh - 2px);overflow:auto;padding:clamp(24px,4.5vw,47px)}
+.shop-dialog-close{position:sticky;z-index:4;top:0;float:right;width:40px;height:40px;display:grid;place-items:center;border:1px solid #bac6ba;background:#f5f2eb;color:#18383c;font-size:24px;margin:-10px -11px 0 0}
+.shop-detail-layout{display:grid;grid-template-columns:minmax(0,225px) minmax(0,1fr);gap:35px;clear:both;padding-top:9px}
+.shop-detail-layout .shop-item-cover{pointer-events:none}
+.shop-detail-layout .shop-cover-face{padding:18px}
+.shop-detail-layout .shop-cover-title{font-size:24px}
+.shop-detail-layout .shop-cover-illustration{margin-bottom:8px}
+.shop-detail-layout .shop-cover-cn{font-size:12px}
+.shop-detail-layout .shop-cover-top,.shop-detail-layout .shop-cover-foot{font-size:8px}
+.shop-detail-kicker{color:#b25d46;font-size:11px;letter-spacing:.14em;font-weight:700}
+.shop-detail-copy h2{font-size:clamp(25px,3vw,38px);font-weight:500;line-height:1.35;margin:16px 0}
+.shop-detail-copy p{font-size:13px;color:#576d68;line-height:1.9}
+.shop-detail-copy h3{font-size:12px;margin:24px 0 10px;letter-spacing:.05em}
+.shop-detail-copy ul{padding:0 0 0 18px;color:#536c66;font-size:12px;line-height:2}
+.shop-detail-price{font:700 26px/1.4 Georgia,serif;color:#b45b44;padding:14px 0 6px}
+.shop-detail-price small{font:400 11px/1.5 sans-serif;color:#778984;margin-left:8px}
+.shop-add-button{padding:15px 19px;background:#234344;border:1px solid #234344;color:#fff9f0;font-weight:700;font-size:12px;margin-top:10px}
+.shop-add-button:hover{background:#385656}
+.shop-detail-disclaimer{margin-top:13px;font-size:11px!important;color:#9d6555!important}
+.shop-cart-head>span{color:#af634e;font:700 10px/1.4 ui-monospace,Consolas,monospace;letter-spacing:.13em}
+.shop-cart-head h2{font-size:clamp(34px,5vw,50px);font-weight:500;margin:17px 0 6px}
+.shop-cart-head h2 span{color:#c26b50}
+.shop-cart-head p{font-size:12px;color:#637a71}
+.shop-cart-items{border-top:1px solid #c6cfc4;margin-top:27px}
+.shop-cart-row{display:flex;align-items:center;gap:13px;padding:18px 0;border-bottom:1px solid #c6cfc4}
+.shop-cart-mini{display:grid;place-items:center;flex:none;width:42px;height:52px;background:#24494b;color:#f2ac7b;font:800 21px/1 Georgia,serif}
+.shop-cart-row-text{flex:1;min-width:0}
+.shop-cart-row-text strong{display:block;font-size:14px}
+.shop-cart-row-text small{display:block;margin-top:7px;font-size:10px;color:#6b7d76}
+.shop-cart-row-price{font:700 16px/1 Georgia,serif;color:#9e5141}
+.shop-cart-remove{padding:6px;border:0;background:transparent;color:#a65a4b;font-size:11px;text-decoration:underline}
+.shop-cart-empty{color:#677b71;padding:28px 0;font-size:14px}
+.shop-cart-total{display:flex;justify-content:space-between;align-items:center;margin:21px 0}
+.shop-cart-total span{font-size:12px;color:#60756c}
+.shop-cart-total strong{font:700 29px/1 Georgia,serif;color:#a65440}
+.shop-cart-warning{padding:12px 15px;border-left:3px solid #cd7961;background:#ece5d8;font-size:11px;line-height:1.85;color:#6d5b4f}
+.shop-cart-actions{display:flex;gap:9px;margin-top:23px}
+.shop-copy,.shop-export{padding:14px 18px;font-size:12px;font-weight:750}
+.shop-copy{background:#244547;border:1px solid #244547;color:#fff9f0}.shop-export{border:1px solid #244547;background:transparent;color:#244547}
+.shop-talk-link{display:block;margin-top:18px;font-size:12px;color:#ab6048;text-decoration:underline;text-underline-offset:5px}
+@media(max-width:1120px){.shop-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.shop-cover-title{font-size:clamp(23px,3vw,37px)}}
+@media(max-width:840px){.shop-head{align-items:flex-start;gap:22px}.shop-aside{flex-basis:260px}.shop-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.nav{gap:15px}}
+@media(max-width:640px){.shop-overline span:last-child{display:none}.shop-head{display:block;margin:32px 0 27px}.shop-head h2{font-size:clamp(35px,9vw,52px)}.shop-aside{max-width:100%;margin-top:25px}.shop-aside p{font-size:13px;margin-bottom:15px}.shop-filters{gap:6px}.shop-filter{padding:9px 11px;font-size:11px}.shop-grid{column-gap:13px;row-gap:28px}.shop-cover-face{padding:14px}.shop-cover-title{font-size:clamp(19px,5.5vw,29px)}.shop-cover-cn{font-size:11px}.shop-cover-top,.shop-cover-foot{font-size:8px}.shop-cover-illustration{margin-bottom:9px}.shop-item-name{font-size:15px}.shop-item-desc{font-size:11px;min-height:60px}.shop-item-price{display:block}.shop-item-price strong{display:block;font-size:21px}.shop-item-price small{font-size:9px}.shop-item-bottom{gap:5px}.shop-item-actions{gap:4px}.shop-item-actions button{width:31px;height:31px}.shop-after{grid-template-columns:1fr}.shop-detail-layout{grid-template-columns:1fr;gap:25px}.shop-detail-layout .shop-item-cover{max-width:240px}.shop-cart-actions{flex-wrap:wrap}.shop-dialog-scroll{padding:24px}}
+@media(max-width:370px){.shop-grid{grid-template-columns:1fr}.shop-item-cover{max-width:320px}.shop-cover-title{font-size:34px}.shop-item-desc{min-height:0}}
+
+
+/* HANK shop SKU catalog */
+.shop-cover-illustration,.shop-cover-title,.shop-cover-cn{display:block}
+.shop-card-spec{margin:13px 0 0;font-size:11px;line-height:1.75;color:#61716e}
+.shop-card-spec>div{display:grid;grid-template-columns:28px minmax(0,1fr);gap:8px;margin:5px 0}
+.shop-card-spec dt{color:#74837d}.shop-card-spec dd{margin:0;overflow-wrap:anywhere}
+.shop-card-spec>div:last-child dd{color:#a6503d;font-weight:650}
+.shop-card-contents{margin-top:12px;font-size:11px;line-height:1.8;color:#536c66}
+.shop-card-contents summary{cursor:pointer;text-decoration:underline;text-underline-offset:4px}
+.shop-card-contents ul{padding-left:18px;margin:8px 0}
+
+.shop-item-sku{margin:12px 0 0;color:#9e5945;font:750 10px/1.5 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.1em}
+.shop-item-sku+.shop-item-name{margin-top:5px}
+.shop-sku-spec{border-top:1px solid #c8cec3;border-bottom:1px solid #c8cec3;margin:20px 0}
+.shop-sku-spec>div{display:grid;grid-template-columns:100px minmax(0,1fr);gap:12px;padding:10px 0;border-bottom:1px solid #dbe0d6;font-size:12px;line-height:1.65}
+.shop-sku-spec>div:last-child{border-bottom:none}
+.shop-sku-spec dt{font-weight:650;color:#829085}.shop-sku-spec dd{margin:0;color:#264841;font-weight:550;overflow-wrap:anywhere}
+.shop-load-error{grid-column:1/-1;padding:30px 0;color:#ad5744}
+@media(max-width:640px){.shop-sku-spec>div{grid-template-columns:78px minmax(0,1fr);gap:9px;font-size:11px}}
+
+/* HANK utility icons: editorial strokes with a terracotta point of origin. */
+.hank-icon-library{position:absolute;width:0;height:0;overflow:hidden;pointer-events:none}
+.hank-icon{display:inline-block;width:20px;height:20px;flex:none;vertical-align:middle;fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:square;stroke-linejoin:miter;pointer-events:none;transition:transform .2s ease}
+.icon-accent{fill:var(--terracotta);stroke:none}
+.arrow{display:inline-flex;line-height:1}.arrow .hank-icon{width:24px;height:24px}
+.header-cta,.hero-shop-link,.shop-talk-link,.shop-copy,.shop-export,.copy-secondary,.shop-add-button{display:inline-flex;align-items:center;gap:9px}
+.shop-talk-link{margin-top:18px}.shop-copy:disabled,.shop-export:disabled{opacity:.45;cursor:default}
+.mobile-menu .hank-icon{width:24px;height:24px}
+.footer-action-arrow .hank-icon{width:19px;height:19px}.footer-return>.hank-icon{width:25px;height:25px}
+.nav-shop .hank-icon,.footer-menu-group .hank-icon,.social-state .hank-icon{width:16px;height:16px}
+.project-symbol .hank-icon{width:.65em;height:.65em;margin-left:.12em}
+.shop-item-actions .hank-icon,.work-add .hank-icon{width:19px;height:19px}
+.shop-dialog-close .hank-icon{width:22px;height:22px}
+.work-add{display:grid;place-items:center}
+.shop-card-contents summary{list-style:none;display:flex;align-items:center;gap:5px}
+.shop-card-contents summary::-webkit-details-marker{display:none}
+.shop-card-contents summary .hank-icon{width:13px;height:13px}
+.shop-card-contents[open] summary .hank-icon{transform:rotate(90deg)}
+:is(a,button):hover>.icon-arrow-ne,:is(a,button):hover>.arrow>.icon-arrow-ne{transform:translate(2px,-2px)}
+:is(a,button):hover>.icon-arrow-se,:is(a,button):hover>.arrow>.icon-arrow-se{transform:translate(2px,2px)}
+:is(a,button):hover>.icon-arrow-up{transform:translateY(-2px)}
+.orbit-tag.a{left:14%;top:20%;transform:rotate(-6deg)}
+.field select{appearance:none;padding-right:43px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='m5 8 7 7 7-7' fill='none' stroke='%23183238' stroke-width='1.65'/%3E%3Ccircle cx='12' cy='15' r='1.65' fill='%23bf6044'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:18px}
+@media(prefers-reduced-motion:reduce){.hank-icon{transition:none}:is(a,button):hover .hank-icon{transform:none}}
+
+
+/* Detail refinement: typography, reading rhythm, alignment, touch and focus. */
+html,body{overflow-x:clip}
+html{scroll-padding-top:calc(var(--header-height) + var(--space-md));scrollbar-gutter:stable}
+body{font-family:var(--font-body)}
+h1,h2,h3{min-width:0;overflow-wrap:anywhere;text-wrap:pretty;font-style:normal}
+.serif{font-family:var(--font-display)}
+:is(.hero h1,.section-title,.practice-title h2,.shop-head h2,.contact-copy h2,.footer-invite-copy h2){letter-spacing:-.025em}
+:is(a,button,summary){-webkit-tap-highlight-color:transparent}
+:is(button,.btn,.header-cta,.link-line,.hero-shop-link,.shop-talk-link,.footer-project-link,.nav a,.footer-menu-group>a){white-space:nowrap}
+:is(button,a,summary,input,textarea,select):focus-visible{outline:2px solid var(--color-focus);outline-offset:4px}
+button:active,.btn:active,.header-cta:active{transform:translateY(1px)}
+button:disabled{cursor:default}
+.header-cta{display:inline-flex;align-items:center;gap:var(--space-xs);flex-shrink:0;min-height:var(--control-size)}
+.mobile-menu{flex-shrink:0;min-width:var(--control-size);min-height:var(--control-size)}
+.head-inner{gap:var(--space-md)}
+.nav a{position:relative;padding-block:var(--space-xs)}
+.nav a[aria-current="location"]{color:var(--color-accent)}
+.nav a[aria-current="location"]:after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:currentColor}
+.hero-lead{max-width:35em}
+.hero-art{container-type:inline-size}
+.h-character{font-size:70cqw;top:26%;left:19%}
+.micro{line-height:1.8}
+.section-head{color:var(--color-muted);font-size:var(--text-caption)}
+.hero-shop-link,.shop-index,.project-tags,.shop-talk-link{color:var(--color-accent)}
+.nav-shop{color:var(--color-accent)!important}
+.shop-detail-disclaimer{color:var(--color-accent)!important}
+.shop-nameplate,.shop-overline,.shop-availability{color:var(--color-muted)}
+.shop-overline>span:first-child{color:var(--color-accent)}
+.intro-left p,.capabilities small,.project-meta{color:var(--color-muted)}
+.intro-detail{max-width:42em}
+.capabilities small{font-size:12px}
+.filters{margin-top:var(--space-2xl)}
+.filter-btn{transition:background var(--dur-short),color var(--dur-short),border-color var(--dur-short)}
+.work-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.work-add{width:var(--control-size);height:var(--control-size);transition:background var(--dur-short),color var(--dur-short),border-color var(--dur-short)}
+.work-card h3{letter-spacing:-.035em;font-size:clamp(21px,1.8vw,28px)}
+.work-card p{font-size:var(--text-small);color:var(--color-dark-muted);line-height:1.85}
+.work-top small,.work-bottom,.work-hint{color:var(--color-dark-secondary);font-size:var(--text-caption)}
+.work-bottom{margin-top:var(--space-lg)}
+.service-aside{font-style:normal}
+.shop-filter{min-height:var(--control-size);transition:background var(--dur-short),color var(--dur-short),border-color var(--dur-short)}
+.shop-item{display:flex;flex-direction:column}
+.shop-item-cover{container-type:inline-size}
+.shop-cover-title{font-size:clamp(18px,10cqw,36px);line-height:1.04}
+.shop-item-meta{display:flex;flex-direction:column;flex:1}
+.shop-item-sku{font-size:var(--text-caption);color:var(--color-accent)}
+.shop-item-type,.shop-item-desc,.shop-card-spec,.shop-item-price small{color:var(--color-muted)}
+.shop-item-type{letter-spacing:.025em}
+.shop-card-spec{font-size:12px;line-height:1.75;margin-top:var(--space-sm)}
+.shop-card-spec dt{color:var(--color-muted)}
+.shop-card-spec>div:last-child dd{color:var(--color-accent)}
+.shop-card-contents{margin-bottom:var(--space-md);font-size:12px}
+.shop-card-contents summary{min-height:32px;width:fit-content;text-decoration:none;border-bottom:1px solid var(--color-rule)}
+.shop-item-bottom{margin-top:auto;padding-top:var(--space-md);align-items:center;flex-wrap:wrap;row-gap:var(--space-xs)}
+.shop-item-actions{margin-left:auto}
+.shop-item-actions button{width:var(--control-size);height:var(--control-size)}
+.shop-item-price strong,.shop-detail-price{font-variant-numeric:tabular-nums}
+.shop-overline,.shop-nameplate{letter-spacing:.08em}
+.shop-after p{font-size:var(--text-small)}
+.shop-dialog{max-height:90dvh}
+.shop-dialog-scroll{max-height:calc(90dvh - 2px);overscroll-behavior:contain;scroll-padding-block:var(--space-2xl)}
+.shop-dialog-close{width:var(--control-size);height:var(--control-size);border-radius:var(--radius-control)}
+.shop-detail-copy p{font-size:14px;line-height:1.9}
+.shop-detail-copy ul{font-size:var(--text-small);line-height:2}
+.shop-sku-spec dt{color:var(--color-muted)}
+.shop-cart-row-text small,.shop-detail-price small{color:var(--color-muted);font-size:var(--text-caption)}
+.shop-cart-actions{flex-wrap:wrap}
+.shop-detail-layout{align-items:start}
+.project-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.project-card{gap:var(--space-md);padding:clamp(24px,2.3vw,34px)}
+.project-card h3{font-size:clamp(22px,2vw,27px);line-height:1.4}
+.project-card p{font-size:14px;line-height:1.9}
+.project-tags{line-height:1.8;font-size:var(--text-caption)}
+.project-card:hover{transform:none}
+.step h3 span,.statement-banner strong{font-style:normal}
+.step p{font-size:14px;line-height:1.9}
+.field textarea,.field input,.field select{font-size:16px;border-color:var(--color-field-rule);border-radius:var(--radius-control)}
+.field textarea:focus,.field input:focus,.field select:focus{border-color:var(--color-focus);box-shadow:0 0 0 3px var(--color-focus-halo)}
+.field :is(textarea,input)::placeholder{color:var(--color-muted)}
+.field small,.form-caption,.form-note,.empty-chip,.note{color:var(--color-muted)}
+.form-caption{gap:var(--space-sm);line-height:1.7;letter-spacing:.07em}
+.field label,.field legend{line-height:1.7}
+.goal-pills span{min-height:var(--control-size);display:flex;align-items:center;font-size:var(--text-small)}
+.form-actions{gap:var(--space-sm)}
+.form-actions>.btn,.form-actions>.copy-secondary{min-height:48px}
+.toast{width:min(420px,calc(100% - var(--pad)*2));text-align:center;line-height:1.7}
+.brief-form h3{font-size:clamp(23px,2.1vw,28px);line-height:1.5;margin-bottom:var(--space-lg)}
+.footer-invite-copy h2{font-size:clamp(34px,4.8vw,68px);line-height:1.32}
+.footer-action-note,.social-help,.footer-eyebrow-right,.footer-legal{color:var(--color-dark-secondary)}
+.social-card-pending{opacity:1}
+.social-card-pending .social-meta strong{color:var(--color-dark-muted)}
+.social-meta small,.social-state{color:var(--color-dark-secondary)}
+.social-card{border-radius:var(--radius-control)}
+.footer-directory{gap:var(--space-xl)}
+.footer-menu-group>a{min-height:32px;display:inline-flex;align-items:center}
+@media(hover:hover) and (pointer:fine){
+ .work-card:hover{background:var(--color-dark-hover)}
+ .shop-card-contents summary:hover{color:var(--color-accent);border-color:currentColor}
+}
+@media(max-width:1100px){.nav{gap:var(--space-md)}}
+@media(max-width:1050px){.work-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:880px){.brand-sub{display:none}.footer-middle{gap:var(--space-lg)}}
+@media(max-width:800px){
+ .work-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .hero-art{min-height:0;aspect-ratio:.96;border-radius:50% 50% var(--radius-control) var(--radius-control)}
+ .section-head{align-items:flex-start;gap:var(--space-xs)}
+ .hero-actions{column-gap:var(--space-lg);row-gap:var(--space-md)}
+ .nav.open{gap:var(--space-xs)}.nav a{min-height:var(--control-size);display:inline-flex;align-items:center}
+ .shop-detail-layout{gap:var(--space-lg)}
+}
+@media(max-width:640px){
+ .shop-cover-top{font-size:7px;letter-spacing:.05em;gap:var(--space-xs)}
+ .shop-cover-face{padding:var(--space-sm)}
+ .shop-cover-illustration{width:46%;margin-bottom:var(--space-xs)}
+ .shop-detail-layout .shop-cover-title{font-size:18px}
+ .shop-detail-layout .shop-cover-face{padding:var(--space-sm)}
+ .section-head{flex-direction:column}.shop-overline{font-size:var(--text-caption)}
+ .shop-head h2{font-size:clamp(34px,8.6vw,50px)}
+ .shop-item-name{font-size:16px;line-height:1.5}
+ .shop-item-desc{font-size:12px;line-height:1.8;min-height:64px}
+ .shop-card-spec{font-size:var(--text-caption)}
+ .shop-item-type>span:last-child{font-size:9px;letter-spacing:0}
+ .shop-detail-layout .shop-item-cover{width:150px;min-height:220px;margin-inline:auto}
+ .shop-dialog-scroll{padding:var(--space-lg)}
+ .shop-cart-row{flex-wrap:wrap}.shop-cart-row-text{flex-basis:calc(100% - 60px)}
+ .shop-cart-row-price{margin-left:55px}.shop-cart-remove{margin-left:auto;min-height:36px}
+ .project-grid{grid-template-columns:minmax(0,1fr)}
+ .form-caption>span:last-child{white-space:nowrap}
+ .footer-invite-copy h2{font-size:clamp(32px,8.2vw,46px)}
+ .statement-banner strong{font-size:clamp(22px,5.7vw,30px)}
+ .statement-banner .hank-icon{width:16px;height:16px}
+}
+@media(max-width:560px){
+ .head-inner{gap:var(--space-sm)}.header-cta{font-size:var(--text-caption);padding:var(--space-xs)}
+ .hank-logo-header{width:100px}.hero h1{font-size:clamp(42px,11.1vw,62px);line-height:1.3}
+ .hero .eyebrow{font-size:10px;letter-spacing:.12em;line-height:1.6}
+ .hero{padding-top:var(--space-2xl)}.hero-lead{font-size:var(--text-body);line-height:1.95}
+ .hero-art .orange-disc{width:18%}.poster-footer{left:7%;right:7%;bottom:6%;font-size:7px;letter-spacing:.04em}
+ .orbit-tag.c{left:9%;bottom:18%;font-size:7px}.orbit-tag.b{right:4%}
+ .work-card{padding:var(--space-md);min-height:236px}.work-top small{letter-spacing:.035em}
+ .work-card h3{font-size:clamp(19px,4.5vw,23px);letter-spacing:-.02em}
+ .filters{gap:var(--space-xs);margin-top:var(--space-xl)}.filter-btn{min-height:var(--control-size);padding:10px 14px}
+ .service-aside{font-size:24px;line-height:1.35}
+ .brief-form{padding:var(--space-lg)}.form-actions>*{justify-content:center;flex:1 1 100%}
+ .footer-menu-group{gap:var(--space-xs)}
+}
+@media(max-width:370px){
+ .hank-logo-header{width:88px}.head-inner{gap:var(--space-xs)}
+ .work-grid{grid-template-columns:minmax(0,1fr)}.work-card{min-height:190px}
+ .work-card h3{font-size:25px}.work-card p{max-width:none}
+ .hero-actions>.btn{flex-basis:100%}.micro{gap:var(--space-sm);font-size:10px}
+ .shop-grid{grid-template-columns:minmax(0,1fr)}
+ .shop-item-desc{min-height:0}.shop-card-spec{font-size:12px}
+ .footer-social-heading h3{font-size:23px;line-height:1.55}
+}
+
+
+/* HANK brand alignment · warm paper, editorial serif, terracotta signals. */
+.service-wrap{background:var(--color-paper);color:var(--color-ink);padding:clamp(76px,8vw,120px) 0;overflow:visible}
+.service-wrap .section-head{border-color:var(--color-rule);color:var(--color-muted)}
+.service-wrap .section-head .left{color:var(--color-ink)}
+.service-wrap .section-title{font-family:var(--font-display);font-size:clamp(38px,4.8vw,70px);font-weight:500;line-height:1.3;letter-spacing:-.025em;margin:40px 0 26px}
+.service-wrap .section-title em,.service-aside em{color:var(--color-accent)}
+.service-description,.service-wrap .section-intro{color:var(--color-body)}
+.service-description{max-width:36em}
+.service-aside{font-family:var(--font-display);font-size:clamp(24px,2.3vw,34px);font-style:normal;line-height:1.4;color:var(--color-muted);padding-bottom:8px}
+.filter-btn{border-radius:var(--radius-control);border-color:var(--color-rule);color:var(--color-body);min-height:var(--control-size)}
+.filter-btn:hover{border-color:var(--color-ink)}
+.filter-btn[aria-pressed="true"]{background:var(--color-ink);color:var(--color-surface);border-color:var(--color-ink)}
+.work-grid{background:var(--color-rule);border-color:var(--color-rule)}
+.work-card{background:var(--color-surface);transition:background var(--dur-short)}
+.work-card h3{font-family:var(--font-display);font-weight:500;letter-spacing:-.03em;line-height:1.25}
+.work-card p{color:var(--color-body)}
+.work-top small,.work-bottom,.work-hint{color:var(--color-muted)}
+.work-bottom{border-color:var(--color-rule)}
+.work-add{color:var(--color-ink);border-color:var(--color-field-rule);border-radius:var(--radius-control)}
+.work-add:hover{background:var(--color-paper)}
+.work-card.selected{background:var(--color-selected-paper)}
+.work-card.selected .work-add{background:var(--color-accent);border-color:var(--color-accent);color:var(--color-surface)}
+.work-card.selected .icon-accent{fill:var(--color-surface)}
+.work-card.selected .hank-icon{--terracotta:var(--color-surface)}
+.chosen-chip{background:var(--color-selected-paper);border-color:var(--color-rule);color:var(--color-ink)}
+::selection{background:var(--color-selected-paper);color:var(--color-ink)}
+.work-selection{background:var(--color-service-panel);border-color:var(--color-rule)}
+.work-selection b{color:var(--color-ink)}
+.work-selection p{color:var(--color-body)}
+.work-selection button{background:var(--color-ink);color:var(--color-surface);border-radius:var(--radius-control);min-height:var(--control-size)}
+.work-selection button:disabled{opacity:.5}
+.spine-item b{color:var(--color-brand-light)}
+.shop-nameplate-mark{display:block;background:none;border-radius:0;object-fit:contain}
+.shop-cover-foot span:last-child{font-family:var(--font-display);font-style:italic;letter-spacing:-.06em}
+.shop-cart-mini{font-family:var(--font-display);font-style:italic}
+.hank-logo-header{max-height:56px}
+.footer-identity .hank-logo-footer{width:min(258px,100%)}
+@media(hover:hover) and (pointer:fine){.work-card:hover{background:var(--color-paper)}.work-card.selected:hover{background:var(--color-selected-paper)}}
+@media(max-width:800px){.service-aside{margin-top:24px}.hank-logo-header{max-height:48px}}
+@media(max-width:560px){.service-wrap .section-title{font-size:clamp(31px,8.6vw,44px);margin-top:30px}.service-aside{font-size:24px}}
+
+/* The closing invitation continues the site's warm paper identity. */
+.footer{background:var(--color-paper);color:var(--color-ink);border-top:1px solid var(--color-rule)}
+.footer:before{display:none}
+.footer-eyebrow{color:var(--color-muted)}
+.footer-sun-dot{background:var(--color-accent);box-shadow:none}
+.footer-invite,.footer-social,.footer-legal{border-color:var(--color-rule)}
+.footer-invite-copy h2 em,.footer-social-kicker,.footer-social-heading h3 span,.footer-menu-group h3{color:var(--color-accent)}
+.footer-invite-copy p,.footer-identity p{color:var(--color-body)}
+.footer-action-note,.social-help,.footer-eyebrow-right,.footer-legal,.footer-social-heading p,.footer-identity p span,.footer-menu-group h3 span,.social-meta small,.social-state{color:var(--color-muted)}
+.footer-project-link{background:var(--color-ink);color:var(--color-surface);border-radius:var(--radius-control);transition:background var(--dur-short)}
+.footer-project-link:hover{transform:none;filter:none;background:var(--color-accent)}
+.footer-action-arrow{border-color:currentColor}
+.social-card{background:var(--color-surface);border-color:var(--color-rule)}
+.social-monogram{background:var(--color-service-panel);color:var(--color-accent);border-radius:var(--radius-control)}
+.social-meta strong,.social-card-pending .social-meta strong{color:var(--color-ink)}
+.social-card-live{background:var(--color-selected-paper);border-color:var(--color-field-rule);transition:border-color var(--dur-short),background var(--dur-short)}
+.social-card-live .social-monogram{background:var(--color-ink);color:var(--color-surface)}
+.social-card-live .social-state{color:var(--color-accent)}
+.social-card-live:hover{transform:none;background:var(--color-surface);border-color:var(--color-accent)}
+.footer-menu-group>a{color:var(--color-ink)}
+.footer-menu-group>a span{color:var(--color-muted)}
+.footer-menu-group>a:hover{color:var(--color-accent)}
+.footer-return{color:var(--color-ink);border-color:var(--color-field-rule)}
+.footer-return small{color:var(--color-muted)}
+.footer-return:hover{background:var(--color-selected-paper);color:var(--color-accent);border-color:var(--color-accent)}
+
+/* WORK 16 · research entry */
+.nav-research{color:#b85f43!important;font-weight:800!important}.nav-research-mark{font-size:10px}
+.worklab-entry{background:#1b373a;color:#f8f3e9;padding:clamp(45px,5.8vw,83px) 0}.worklab-entry-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(200px,.65fr);align-items:center;gap:38px}.worklab-mini{font:700 10px/1.7 ui-monospace,Consolas,monospace;letter-spacing:.15em;color:#edac84}.worklab-entry h2{font:500 clamp(34px,4.2vw,60px)/1.35 Georgia,"Songti SC",serif;letter-spacing:-.05em;margin:20px 0}.worklab-entry h2 em{font-style:normal;color:#f2af85}.worklab-entry p{font-size:13px;line-height:2;color:#bed0c4;max-width:580px}.worklab-entry-actions{display:flex;gap:23px;flex-wrap:wrap;align-items:center;margin-top:26px}.worklab-entry-button{background:#eda67e;color:#173235;padding:15px 19px;font-weight:800;font-size:12px}.worklab-entry-button:hover{background:#f5bd96}.worklab-entry-text{font-size:12px;font-weight:700;color:#edb393;border-bottom:1px solid #edb393;padding-bottom:6px}.worklab-entry-art{min-height:235px;position:relative;display:flex;flex-direction:column;justify-content:center;align-items:center;border:1px solid #658078;background:radial-gradient(circle at 62% 43%,#f1aa6e 0 30%,transparent 30.5%)}.worklab-entry-art>span{font:800 clamp(37px,5vw,68px)/1 Arial,sans-serif;letter-spacing:-.08em;mix-blend-mode:screen}.worklab-entry-art>strong{font:800 clamp(80px,9vw,150px)/.92 Georgia,serif;color:#fff4e7;letter-spacing:-.08em}.worklab-entry-art>small{font:700 9px/1.5 ui-monospace,Consolas,monospace;letter-spacing:.1em;color:#bbccc1;position:absolute;bottom:15px;left:15px}
+@media(max-width:780px){.worklab-entry-grid{grid-template-columns:1fr}.worklab-entry-art{min-height:190px;max-width:430px;width:100%}}
+
+.training-intro{border-block:1px solid #a7afa8;padding:28px 0;margin:0 0 32px;display:grid;grid-template-columns:1fr 1.3fr;gap:22px 36px}
+.training-intro h3{font-size:25px;font-weight:500;margin:14px 0}.training-intro p{font-size:13px;line-height:1.9;color:#586b69}
+.training-plans{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;align-items:center}
+.training-plans>div{border-left:1px solid #b7beb4;padding:10px 12px}.training-plans span,.training-plans small{display:block;font-size:11px;line-height:1.7;color:#586b69}
+.training-plans strong{display:block;font:600 clamp(22px,2.5vw,34px)/1.6 Georgia,serif;color:#a6503d;white-space:nowrap}
+.training-intro .training-terms{grid-column:1/-1;margin:0;font-size:12px}
+.training-choice{padding:20px 0;border-bottom:1px solid #c6cfc4}.training-choice[hidden]{display:none}.training-choice>label{display:block;font-size:13px;margin-bottom:10px}.training-choice select{width:100%;padding:12px;border:1px solid #82968d;background:#fffaf1;color:#193236;font:inherit;font-size:13px}.training-choice .training-group{display:flex;gap:10px;align-items:center;margin-top:16px}.training-choice p{font-size:12px;line-height:1.8;color:#586b69}.training-group input{width:18px;height:18px;accent-color:#234344}
+.shop-cart-total{align-items:flex-start;gap:16px}.shop-cart-total strong{font:600 18px/1.8 Georgia,serif;text-align:right;white-space:pre-line}
+@media(max-width:840px){.training-intro{grid-template-columns:1fr}}@media(max-width:420px){.training-plans{gap:0}.training-plans>div{padding-inline:8px}.training-plans strong{font-size:23px}.training-plans small{font-size:10px}}
+
+.wechat-trigger{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:12px 18px;border:1px solid #234344;background:#234344;color:#fff9f0;font-family:inherit;font-size:13px;font-weight:600;line-height:1.5;cursor:pointer}
+.shop-aside .wechat-trigger{margin-top:12px}.shop-cart-actions .wechat-trigger{font-size:12px}.shop-detail-copy .wechat-trigger{margin-top:12px}
+.wechat-dialog{width:min(440px,calc(100vw - 28px));max-height:92dvh;padding:0;border:1px solid #aebdb2;background:#f5f2eb;color:#18383c;box-shadow:0 32px 90px #0006}
+.wechat-dialog::backdrop{background:#0c1c1ecc;backdrop-filter:blur(4px)}
+.wechat-content{padding:24px;max-height:calc(92dvh - 2px);overflow:auto;text-align:center;overscroll-behavior:contain}
+.wechat-content h2{font-size:24px;margin:8px 38px 10px}.wechat-content p{font-size:13px;line-height:1.8;color:#586b69;margin:12px 0}
+.wechat-qr{display:block;width:min(100%,330px);height:auto;margin:16px auto;background:white}
+.wechat-actions{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}.wechat-actions a{font-size:13px;color:#a6503d;text-decoration:underline;text-underline-offset:4px;min-height:44px;display:inline-flex;align-items:center}
+button.social-card{width:100%;text-align:left;color:inherit;font:inherit;cursor:pointer}
+
+.shop-paths{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin:32px 0}.shop-paths a{display:flex;flex-direction:column;gap:14px;border-top:2px solid var(--color-ink);padding:20px 0;color:var(--color-ink)}.shop-paths small{font-size:11px;color:var(--color-accent);letter-spacing:.06em}.shop-paths strong{font:500 26px/1.4 var(--font-display)}.shop-paths span{font-size:13px;color:var(--color-muted)}.shop-paths a:hover strong{color:var(--color-accent)}
+.shop-case{padding:20px 0;border-block:1px solid var(--color-rule);margin-top:24px}.shop-case h3{margin-top:0}.shop-case a,.resource-action{color:var(--color-accent);text-decoration:underline;text-underline-offset:4px}.shop-case small{display:block;font-size:12px;line-height:1.8;color:var(--color-muted)}.shop-resource-links{display:flex;flex-wrap:wrap;gap:14px;margin:16px 0}.resource-action{display:inline-flex;align-items:center;min-height:44px;font-size:13px}.shop-card-resource{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}.shop-card-resource a{font-size:12px;min-height:36px}.shop-detail-copy ol{padding-left:20px;font-size:13px;line-height:1.9}.shop-detail-copy .wechat-trigger{margin-left:0}.shop-item-price strong{font-size:22px}#shopCatalog{scroll-margin-top:100px}
+@media(max-width:640px){.shop-paths{grid-template-columns:1fr;gap:0;margin:24px 0}.shop-paths a{gap:8px;padding:16px 0}.shop-paths strong{font-size:23px}.shop-item-price strong{font-size:20px}}
+.training-intro[hidden]{display:none}
+
+#shopGrid[data-kind="研究工具"]{grid-template-columns:1fr}#shopGrid[data-kind="研究工具"] .shop-item{display:grid;grid-template-columns:minmax(180px,280px) minmax(0,1fr);gap:32px;align-items:start}#shopGrid[data-kind="研究工具"] .shop-item-meta{padding-top:0}#shopGrid[data-kind="研究工具"] .shop-item-cover{max-width:280px}
+@media(max-width:640px){#shopGrid[data-kind="研究工具"] .shop-item{grid-template-columns:1fr;gap:24px}#shopGrid[data-kind="研究工具"] .shop-item-cover{width:220px;max-width:100%}}
+
+.business-chain{padding:clamp(78px,9vw,130px) 0;background:#f0eee6}.chain-intro{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end}.chain-intro .section-title{margin-bottom:0}.chain-intro .section-title em{color:var(--terracotta);font-style:normal}.chain-intro>p{font-size:15px;line-height:2;color:#5c6b69;max-width:560px;margin:0 0 8px auto}.chain-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:#bbc4ba;margin-top:55px;border-top:1px solid #bbc4ba;border-bottom:1px solid #bbc4ba}.chain-card{background:#f0eee6;padding:23px 19px 28px;min-height:260px}.chain-card+ .chain-card{border-left:1px solid #bbc4ba}.chain-card>span{display:block;color:#a65c45;font:800 10px/1.4 ui-monospace,monospace;letter-spacing:.1em}.chain-card h3{font:500 34px/1.2 Georgia,serif;margin:40px 0 16px;color:#193236}.chain-card p{font-size:12px;line-height:1.85;color:#5e706b;margin:0;min-height:108px}.chain-card strong{display:block;border-top:1px solid #c1c9c0;padding-top:13px;margin-top:20px;font-size:11px;line-height:1.6;color:#3f625c}@media(max-width:900px){.chain-intro{grid-template-columns:1fr}.chain-intro>p{margin:0}.chain-grid{grid-template-columns:repeat(2,1fr)}.chain-card+ .chain-card{border-left:0}.chain-card:nth-child(even){border-left:1px solid #bbc4ba}}@media(max-width:560px){.chain-grid{grid-template-columns:1fr}.chain-card{min-height:0}.chain-card+ .chain-card,.chain-card:nth-child(even){border-left:0;border-top:1px solid #bbc4ba}.chain-card p{min-height:0}}
+
+.workstation-film{margin:45px 0 0;background:#132b30;color:#f5f2eb;padding:clamp(12px,2vw,24px)}.workstation-film-head{display:flex;justify-content:space-between;gap:15px;font:700 10px/1.6 ui-monospace,monospace;letter-spacing:.08em;padding:0 0 17px;color:#c5d5cf}.workstation-film video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:#080c0d}.workstation-film figcaption{display:flex;justify-content:space-between;gap:14px;font-size:12px;line-height:1.7;color:#becdc6;padding-top:16px}.workstation-film figcaption a{color:#efb28b;text-decoration:underline;text-underline-offset:4px}.workstation-pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:30px}.workstation-pillars article{border-top:1px solid #afbcb3;padding-top:20px}.workstation-pillars small{color:#a6503d;font-size:11px;letter-spacing:.08em}.workstation-pillars h3{font-size:21px;font-weight:600;margin:13px 0}.workstation-pillars p{font-size:13px;line-height:1.9;color:#5c6b69;margin:0}@media(max-width:640px){.workstation-film-head,.workstation-film figcaption{flex-direction:column;gap:6px}.workstation-pillars{grid-template-columns:1fr;gap:22px}}
+
+/* Daliyu practice logo wall */
+.practice-logos{margin:40px 0 52px;padding:26px 0 32px;border-block:1px solid var(--stroke)}.practice-logos-label{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:24px;font-size:12px;color:var(--body)}.practice-logos-label strong{color:var(--ink);letter-spacing:.08em}.practice-logo-wall{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:22px;list-style:none;padding:0;margin:0}.practice-logo-wall li{min-width:0;aspect-ratio:1;display:flex;align-items:center;justify-content:center;border-radius:50%;background:#fff;padding:16%;overflow:hidden}.practice-logo-wall img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:contain;border-radius:0;padding:0;background:transparent}.practice-logo-wall li:hover img{transform:scale(1.035)}@media(prefers-reduced-motion:no-preference){.practice-logo-wall img{transition:transform .2s}}@media(max-width:900px){.practice-logo-wall{grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}}@media(max-width:600px){.practice-logo-wall{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.practice-logos-label{line-height:1.8}.practice-logos{padding:22px 0}}
+
+</style>
+<link rel="stylesheet" href="tokens.css?v=hank-brand-20261010"/>
+</head>
+<body>
+<svg class="hank-icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><defs>
+<symbol id="hank-icon-arrow-ne" viewBox="0 0 24 24"><path d="M5 19 19 5M8 5h11v11"/><circle class="icon-accent" cx="5" cy="19" r="1.65"/></symbol>
+<symbol id="hank-icon-arrow-se" viewBox="0 0 24 24"><path d="m5 5 14 14M8 19h11V8"/><circle class="icon-accent" cx="5" cy="5" r="1.65"/></symbol>
+<symbol id="hank-icon-arrow-right" viewBox="0 0 24 24"><path d="M4 12h16m-7-7 7 7-7 7"/><circle class="icon-accent" cx="4" cy="12" r="1.65"/></symbol>
+<symbol id="hank-icon-arrow-up" viewBox="0 0 24 24"><path d="M12 20V4m-7 7 7-7 7 7"/><circle class="icon-accent" cx="12" cy="20" r="1.65"/></symbol>
+<symbol id="hank-icon-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/><circle class="icon-accent" cx="12" cy="12" r="1.65"/></symbol>
+<symbol id="hank-icon-check" viewBox="0 0 24 24"><path d="m4.5 12.5 5 5 10-11"/><circle class="icon-accent" cx="19.5" cy="6.5" r="1.65"/></symbol>
+<symbol id="hank-icon-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/><circle class="icon-accent" cx="18" cy="6" r="1.65"/></symbol>
+<symbol id="hank-icon-menu" viewBox="0 0 24 24"><path d="M5 6h14M5 12h10M5 18h14"/><circle class="icon-accent" cx="19" cy="12" r="1.65"/></symbol>
+<symbol id="hank-icon-chevron" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+<symbol id="hank-icon-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4"/><circle class="icon-accent" cx="12" cy="3" r="1.65"/></symbol>
+<symbol id="hank-icon-copy" viewBox="0 0 24 24"><path d="M8 8h12v12H8zM15 4H4v11"/><circle class="icon-accent" cx="4" cy="4" r="1.65"/></symbol>
+</defs></svg>
+<header class="site-header">
+ <div class="container head-inner">
+  <a class="brand" href="#top" aria-label="汉克，回到首页"><img class="hank-logo hank-logo-header" src="assets/hank-logo.svg" width="274" height="100" alt="HANK"/><span class="brand-sub">汉克 / 方案师</span></a>
+  <nav class="nav" id="mainNav" aria-label="主导航"><a href="#about">认识汉克</a><a href="#services">发现服务</a><a href="#business">五大链条</a><a href="work16/" class="nav-research">WORK 16 <span class="nav-research-mark">↗</span></a><a href="#shop" class="nav-shop">汉克小铺 <span aria-hidden="true"><svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></span></a><a href="#projects">项目实践</a><a href="#delivery">交付方式</a></nav>
+  <a href="#contact" class="header-cta">谈谈你的问题 <svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></a>
+  <button class="mobile-menu" id="menuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="展开菜单"><svg class="hank-icon icon-menu" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-menu"/></svg></button>
+ </div>
+ <div class="read-progress" id="readProgress"></div>
+</header>
+<main id="top">
+<section class="hero" aria-labelledby="heroTitle"><div class="container hero-grid">
+ <div>
+  <div class="eyebrow">HANK / HUMAN-FIRST SOLUTION ARCHITECT</div>
+  <h1 class="serif" id="heroTitle">以我为<span>界面</span>，<br/>让事情发生。</h1>
+  <p class="hero-lead">你好，我是汉克，一名方案师。<br/>我围绕认知、培训、项目、组织、共创五条链路工作：把方法变成知识，把能力变成训练，把真实场景变成项目，再与企业长期共建可持续的工作系统。</p>
+  <div class="hero-actions"><a class="btn" href="#about">先认识我 <span class="arrow"><svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></span></a><a class="link-line" href="#services">直接探索服务 <span class="arrow"><svg class="hank-icon icon-arrow-se" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-se"/></svg></span></a><a class="hero-shop-link" href="#shop">逛逛汉克小铺 <svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></a></div>
+  <div class="micro">一个人作为入口，一张网络共同完成。</div>
+ </div>
+ <div class="hero-art" role="img" aria-label="代表汉克个人品牌的 H 字母和环绕其间的研究、设计、连接、交付能力的抽象视觉图形">
+  <div class="poster-grid" aria-hidden="true"></div><div class="orange-disc" aria-hidden="true"></div><div class="halo" aria-hidden="true"></div><div class="h-character" aria-hidden="true">H<i>.</i></div>
+  <div class="orbit-tag a">01 / THINK</div><div class="orbit-tag b">02 / CREATE</div><div class="orbit-tag c">03 / CONNECT & DELIVER</div><div class="poster-footer"><span>THE PERSON IS THE INTERFACE</span><span>2026 © HANK</span></div>
+ </div>
+</div></section>
+<section class="spine" aria-label="网站的三个阶段"><div class="container spine-inner">
+ <a class="spine-item" href="#about"><b>01</b><span><small>PERSON / 人</small>认识汉克 · 理解判断</span></a>
+ <a class="spine-item" href="#services"><b>02</b><span><small>WORK / 事</small>发现服务 · 组合能力</span></a>
+ <a class="spine-item" href="#delivery"><b>03</b><span><small>OUTCOME / 果</small>组织项目 · 完成交付</span></a>
+</div></section>
+<section class="big-section" id="about"><div class="container">
+ <div class="section-head"><span class="left">01 / ABOUT HANK</span><span>一个人的工作方式</span></div>
+ <div class="intro-layout"><div class="intro-left"><div class="intro-marker">H.</div><p>独立方案师<br/>AI 原生服务探索者<br/>大鲤鱼超级工作站主理人</p></div>
+ <div><h2 class="intro-copy serif">我不想把自己定义为<br/>某个工具、职位或行业。<br/><em>我希望成为解决问题的入口。</em></h2>
+ <p class="intro-detail">过去的项目涉及产业技术、品牌视觉、会展供应链、科创服务、教育合作与 AI 智能体。表面上，它们属于不同的行业；对我而言，它们有同一条主线：理解复杂现实，把分散的人、信息和资源组织成一套有效的方案。</p>
+ <p class="intro-detail">我把个人判断放在前端，把 AI、专业伙伴和执行系统放在身后。客户无需先懂技术，也不用先知道该找哪种服务——我们先把问题说清楚。</p>
+ <div class="capabilities"><div><b>理解问题</b><small>商业洞察 · 需求诊断<br/>目标与约束</small></div><div><b>设计方案</b><small>系统思考 · 服务组合<br/>计划与路径</small></div><div><b>组织交付</b><small>AI · 专业协作<br/>执行与复盘</small></div></div>
+ </div></div>
+</div></section>
+<div class="bridge"><div class="container bridge-inner"><p>“我的价值，不是我一个人会做多少件事，<br/>而是我能让多少件<em>正确的事</em>发生。”</p><a class="link-line" href="#services">进入服务发现 <span class="arrow"><svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></span></a></div></div>
+<section class="worklab-entry" aria-labelledby="worklabEntryTitle"><div class="container worklab-entry-grid">
+<div class="worklab-entry-copy"><span class="worklab-mini">HANK WORK LAB / NEW RESEARCH SERIES</span><h2 id="worklabEntryTitle">先理解工作。<br><em>再重新组织工作。</em></h2><p>《WORK 16：人类工作的重新解构》研究计划现已开放。16 个工作领域、三层研究方法、一本正在接受现实检验的研究书稿。</p><div class="worklab-entry-actions"><a href="work16/" class="worklab-entry-button">进入 WORK 16 研究中心 ↗</a><a href="work16/read.html" class="worklab-entry-text">在线阅读书稿 ↗</a></div></div>
+<div class="worklab-entry-art" aria-hidden="true"><span>WORK</span><strong>16.</strong><small>SCIENCE / ENGINEERING / BUSINESS</small></div></div></section>
+<section class="business-chain" id="business" aria-labelledby="businessChainTitle"><div class="container">
+ <div class="section-head"><span class="left">02 / HANK BUSINESS CHAIN</span><span>认知 · 培训 · 项目 · 组织 · 共创</span></div>
+ <div class="chain-intro"><div><h2 class="section-title serif" id="businessChainTitle">从理解问题，<br/><em>到共同做成。</em></h2></div><p>汉克的业务不是五个孤立的服务栏目，而是一条可以从认识、学习、立项到长期共建的工作链。客户可以从一个方法、一门课或一个具体场景开始，逐步走向组织能力与共同结果。</p></div>
+ <div class="chain-grid">
+  <article class="chain-card"><span>01 / KNOWLEDGE</span><h3>认知</h3><p>以方法论、图书、研究报告和资料包为交付，把复杂问题整理成可以阅读、讨论和复用的知识。</p><strong>方法 · 图书 · 报告 · 资料包</strong></article>
+  <article class="chain-card"><span>02 / TRAINING</span><h3>培训</h3><p>围绕单个智能体或课程板块展开，按入门、中阶、高阶逐步学习。每课时 299 元，每月 4 课时，课程制 1,200 元 / 月。</p><strong>入门 · 中阶 · 高阶</strong></article>
+  <article class="chain-card"><span>03 / PROJECT</span><h3>项目</h3><p>从客户真实场景立项，围绕决策调研、客服、数字化办公等问题，明确范围、路径、交付物与验收标准。</p><strong>场景立项 · 方案交付 · 结果验收</strong></article>
+  <article class="chain-card"><span>04 / ORGANIZATION</span><h3>组织</h3><p>研究组织心智、数字化转型一号位、AI 原生组织等运营经营管理课题，帮助团队重新设计协作与决策方式。</p><strong>组织心智 · 一号位 · AI 原生组织</strong></article>
+  <article class="chain-card"><span>05 / CO-CREATION</span><h3>共创</h3><p>与企业共同成立超级工作站，长期共同投入、共同发展、共享结果，把一次项目变成持续运行的能力系统。</p><strong>超级工作站 · 长期共建 · 共享结果</strong></article>
+ </div>
+</div></section>
+<section class="service-wrap" id="services"><div class="container">
+ <div class="section-head"><span class="left">03 / SERVICE DISCOVERY</span><span>HANK WORK INDEX · V1.0</span></div>
+ <div class="service-lead"><div><h2 class="section-title serif">让想法，<br/><em>成为可交付的工作。</em></h2><p class="service-description">不必先选择一家供应商，也不必先决定使用什么 AI。告诉我你想完成什么工作。每一项 Work 都可以独立交付，也可以组合成一个完整项目。</p></div><div class="service-aside">From needs<br/>to <em>possibilities.</em></div></div>
+ <div class="filters" role="group" aria-label="按工作类型筛选"><button class="filter-btn" data-filter="all" aria-pressed="true">全部服务 <span>16</span></button><button class="filter-btn" data-filter="insight" aria-pressed="false">研究与判断</button><button class="filter-btn" data-filter="create" aria-pressed="false">内容与设计</button><button class="filter-btn" data-filter="system" aria-pressed="false">数字与运营</button><button class="filter-btn" data-filter="delivery" aria-pressed="false">连接与执行</button></div>
+ <div class="work-grid" id="workGrid">
+  <article class="work-card" data-group="insight" data-name="Brainwork"><div class="work-top"><small>01 / INSIGHT</small><button class="work-add" type="button" aria-label="添加 Brainwork" aria-pressed="false"><svg class="hank-icon icon-plus" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-plus"/></svg></button></div><h3>Brainwork</h3><p>商业判断、策略制定、方案架构</p><div class="work-bottom">思考与决策</div></article>
+  <article class="work-card" data-group="insight" data-name="Researchwork"><div class="work-top"><small>02 / INSIGHT</small><button class="work-add" type="button" aria-label="添加 Researchwork" aria-pressed="false"><svg class="hank-icon icon-plus" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-plus"/></svg></button></div><h3>Researchwork</h3><p>行业调研、竞品分析、机会识别</p><div class="work-bottom">调研与研究</div></article>
+  <article class="work-card" data-group="insight" data-name="Datawork"><div class="work-top"><small>03 / INSIGHT</small><button class="work-add" type="button" aria-label="添加 Datawork" aria-pressed="false"><svg class="hank-icon icon-plus" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-plus"/></svg></button></div><h3>Datawork</h3><p>数据整理、商业分析、可视化</p><div class="work-bottom">数据与分析</div></article>
+  <article class="work-card" data-group="insight" data-name="Knowledgework"><div class="work-top"><small>04 / INSIGHT</small><button class="work-add" type="button" aria-label="添加 Knowledgework" aria-pressed="false"><svg class="hank-icon icon-plus" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-plus"/></svg></button></div><h3>Knowledgework</h3><p>知识组织、知识库、智能问答</p><div class="work-bottom">知识管理</div></article>
+  <article class="work-card" data-group="create" data-name="Designwork"><div class="work-top"><small>05 / CREATE</small><button class="work-add" type="button" aria-label="添加 Designwork" aria-pressed="false"><svg class="hank-icon icon-plus" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-plus"/></svg></button></div><h3>Designwork</h3><p>品牌视觉、界面体验、设计系统</p><div class="work-bottom">创意与设计</div></article>
+  <article class="work-card" data-group="create" data-name="Contentwork"><div class="work-top"><small>06 / CREATE</small><button class="work-add" type="button" aria-label="添加 Contentwork" aria-pressed="false"><svg class="hank-icon icon-plus" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-plus"/></svg></button></div><h3>Contentwork</h3><p>内容策略、写作、脚本与策划</p><div class="work-bottom">内容与表达</div></article>
+  <article class="work-card" data-group="create" data-name="Mediawork"><div class="work-top"><small>07 / CREATE</small><button class="work-add" type="button" aria-label="添加 Mediawork" aria-pressed="false"><svg class="hank-icon icon-plus" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-plus"/></svg></button></div><h3>Mediawork</h3><p>图片、视频、传播物料与内容制作</p><div class="work-bottom">多媒体制作</div></article>
+  <article class="work-card" data-group="create" data-name="Paperwork"><div class="work-top"><small>08 / CREATE</small><button class="work-add" type="button" aria-label="添加 Paperwork" aria-pressed="false"><svg class="hank-icon icon-plus" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-plus"/></svg></button></div><h3>Paperwork</h3><p>报告、提案、表格与商务文书</p><div class="work-bottom">文书与文档</div></article>
+  <article class="work-card" data-group="system" data-name="Codework"><div class="work-top"><small>09 / SYSTEM</small><button class="work-add" type="button" aria-label="添加 Codework" aria-pressed="false"><svg class="hank-icon icon-plus" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-plus"/></svg></button></div><h3>Codework</h3><p>网站、应用、轻量软件与工具</p><div class="work-bottom">数字产品开发</div></article>
+  <article class="work-card" data-group="system" data-name="AIwork"><div class="work-top"><small>10 / SYSTEM</small><button class="work-add" type="button" aria-label="添加 AIwork" aria-pressed="false"><svg class="hank-icon icon-plus" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-plus"/></svg></button></div><h3>AIwork</h3><p>AI 智能体、数字员工、自动化方案</p><div class="work-bottom">AI 能力建设</div></article>
+  <article class="work-card" data-group="system" data-name="Opswork"><div class="work-top"><small>11 / SYSTEM</small><button class="work-add" type="button" aria-label="添加 Opswork" aria-pressed="false"><svg class="hank-icon icon-plus" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-plus"/></svg></button></div><h3>Opswork</h3><p>流程优化、业务运营、日常执行</p><div class="work-bottom">运营与流程</div></article>
+  <article class="work-card" data-group="delivery" data-name="Network"><div class="work-top"><small>12 / CONNECT</small><button class="work-add" type="button" aria-label="添加 Network" aria-pressed="false"><svg class="hank-icon icon-plus" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-plus"/></svg></button></div><h3>Network</h3><p>资源匹配、渠道拓展、合作连接</p><div class="work-bottom">资源与连接</div></article>
+  <article class="work-card" data-group="delivery" data-name="Saleswork"><div class="work-top"><small>13 / DELIVER</small><button class="work-add" type="button" aria-label="添加 Saleswork" aria-pressed="false"><svg class="hank-icon icon-plus" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-plus"/></svg></button></div><h3>Saleswork</h3><p>销售支持、客户开发、商务转化</p><div class="work-bottom">销售与商务</div></article>
+  <article class="work-card" data-group="delivery" data-name="Growthwork"><div class="work-top"><small>14 / DELIVER</small><button class="work-add" type="button" aria-label="添加 Growthwork" aria-pressed="false"><svg class="hank-icon icon-plus" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-plus"/></svg></button></div><h3>Growthwork</h3><p>用户增长、获客与转化实验</p><div class="work-bottom">增长与获客</div></article>
+  <article class="work-card" data-group="delivery" data-name="Fieldwork"><div class="work-top"><small>15 / DELIVER</small><button class="work-add" type="button" aria-label="添加 Fieldwork" aria-pressed="false"><svg class="hank-icon icon-plus" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-plus"/></svg></button></div><h3>Fieldwork</h3><p>线下活动、现场调研、项目落地</p><div class="work-bottom">现场与执行</div></article>
+  <article class="work-card" data-group="delivery" data-name="Teamwork"><div class="work-top"><small>16 / DELIVER</small><button class="work-add" type="button" aria-label="添加 Teamwork" aria-pressed="false"><svg class="hank-icon icon-plus" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-plus"/></svg></button></div><h3>Teamwork</h3><p>团队协作、项目组织、资源调度</p><div class="work-bottom">协作与管理</div></article>
+ </div>
+ <div class="work-selection" aria-live="polite"><div><b id="selectedCount">已选择 0 项 Work</b><p id="selectedSummary">点击服务卡片右上角的添加按钮，组合你需要的工作。</p></div><button id="goBrief" type="button" disabled>带着这些服务发起项目 <svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></button></div>
+ <div class="work-hint"><span>* 分类为服务导航语言；部分英文名称属于品牌命名，并非通用职业术语。</span><span>WORK IS MODULAR. OUTCOMES ARE PERSONAL.</span></div>
+</div></section>
+
+<section class="hank-shop" id="shop" aria-labelledby="shopTitle">
+ <div class="container">
+  <div class="shop-overline"><span>04 / HANK'S LITTLE SHOP</span><span>IDEAS <svg class="hank-icon icon-arrow-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-right"/></svg> OBJECTS <svg class="hank-icon icon-arrow-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-right"/></svg> USEFUL THINGS</span></div>
+  <div class="shop-head">
+   <div><div class="shop-nameplate"><img class="shop-nameplate-mark" src="assets/hank-mark.svg" width="32" height="34" alt=""/> OPEN SHELF / 汉克小铺</div>
+    <h2 class="serif" id="shopTitle">从学会方法，<br/><em>到完成一件工作。</em></h2>
+   </div>
+   <div class="shop-aside"><p>5 项定制服务、23 门智能体培训，以及可以直接下载的 WORK 16 练习包。带着一个具体问题来，选择适合自己的开始方式。</p>
+    <button class="shop-cart-button" id="shopCartOpen" type="button" aria-label="打开小铺选购清单">我的选购清单 <span id="shopCartCount" aria-live="polite">0</span> <svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></button>
+    <button class="wechat-trigger" type="button" data-wechat-open>微信咨询服务与课程</button>
+   </div>
+  </div>
+  <div class="shop-paths" aria-label="从哪里开始"><a href="#shopCatalog" data-shop-kind="定制服务"><small>01 / 委托完成</small><strong>把工作交给我</strong><span>看交付范围与项目案例 ↗</span></a><a href="#shopCatalog" data-shop-kind="智能体培训"><small>02 / 学会方法</small><strong>自己动手做</strong><span>23 门课 · 每周一次练习 ↗</span></a><a href="#shopCatalog" data-shop-kind="研究工具"><small>03 / 先试一试</small><strong>拿一份工具开始</strong><span>WORK 16 练习包 · 免费下载 ↗</span></a></div>
+  <div class="training-intro" id="trainingOverview" hidden aria-label="培训价格与学习安排">
+   <div class="training-intro-copy"><span class="shop-index">LEARN BY DOING / 智能体应用培训</span><h3>一周一次课，课后继续练。</h3><p>每人每课时 299 元 · 每月 4 课时 · 社群 + 实操练习<br/>单个智能体或课程板块，4 课时完成基础学习。</p></div>
+   <div class="training-plans">
+    <div><span>1 个月 · 4 课时</span><strong>¥ 1,200</strong><small>每人 / 原价</small></div>
+    <div><span>2 个月 · 8 课时</span><strong>¥ 2,160</strong><small>每人 / 九折 · 省 ¥ 240</small></div>
+    <div><span>3 个月 · 12 课时</span><strong>¥ 2,880</strong><small>每人 / 八折 · 省 ¥ 720</small></div>
+   </div>
+   <p class="training-terms">多人拼课单独报价。课程时间、每课时时长与授课方式预约确认；工具账号、订阅及相关费用在报名时说明。可先整理咨询清单，再添加“超级工作站”个人微信沟通报名；本站不在线收款。</p>
+  </div>
+
+  <div class="shop-filters" id="shopCatalog" role="group" aria-label="按商品类型筛选">
+   <button class="shop-filter is-active" type="button" data-kind="定制服务" aria-pressed="true">定制服务（5）</button>
+   <button class="shop-filter" type="button" data-kind="研究工具" aria-pressed="false">研究工具（1）</button>
+   <button class="shop-filter" type="button" data-kind="智能体培训" aria-pressed="false">智能体培训（23）</button>
+   <button class="shop-filter" type="button" data-kind="全部" aria-pressed="false">全部商品（25）</button>
+   <button class="shop-filter" type="button" data-kind="付费专栏" aria-pressed="false">付费专栏</button>
+   <button class="shop-filter" type="button" data-kind="知识库" aria-pressed="false">知识库</button>
+   <button class="shop-filter" type="button" data-kind="技能包" aria-pressed="false">技能包</button>
+   <button class="shop-filter" type="button" data-kind="工作流" aria-pressed="false">工作流</button>
+   <button class="shop-filter" type="button" data-kind="资料包" aria-pressed="false">资料包</button>
+  </div>
+  <div class="shop-grid" id="shopGrid" aria-live="polite"></div>
+  <div class="shop-after">
+   <div><span class="shop-index">SHELF 01 / 2026 · 25 ITEMS / 8 CATEGORIES</span><p>不同类型的东西，放在同一个货架。<br/>从服务、课程与练习工具开始，找到下一步。</p></div>
+   <p class="shop-availability"><strong>关于价格与咨询：</strong>定制服务确认范围后单独报价；培训按每人每月 4 课时计价，两个月九折、三个月八折；WORK 16 练习包可直接免费下载。另有 8 款原有示例商品未开售，清单中分别说明。</p>
+  </div>
+ </div>
+</section>
+<dialog class="shop-dialog" id="shopDetail" aria-labelledby="shopDetailTitle">
+ <div class="shop-dialog-scroll">
+  <button class="shop-dialog-close" type="button" data-shop-close="shopDetail" aria-label="关闭商品详情"><svg class="hank-icon icon-close" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-close"/></svg></button>
+  <div id="shopDetailContent"></div>
+ </div>
+</dialog>
+<dialog class="shop-dialog shop-cart-dialog" id="shopCart" aria-labelledby="shopCartTitle">
+ <div class="shop-dialog-scroll">
+  <button class="shop-dialog-close" type="button" data-shop-close="shopCart" aria-label="关闭选购清单"><svg class="hank-icon icon-close" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-close"/></svg></button>
+  <div class="shop-cart-head"><span>HANK / SMALL THINGS, USEFUL WORK.</span><h2 class="serif" id="shopCartTitle">我的选购清单<span>。</span></h2><p>把服务需求、学习方向和工具放在一起，生成咨询清单，通过微信继续沟通。</p></div>
+  <div id="shopCartItems" class="shop-cart-items"></div>
+  <div class="training-choice" id="trainingChoice" hidden>
+   <label for="trainingMonths">学习周期（每人每月 4 课时）</label>
+   <select id="trainingMonths"><option value="1">1 个月 · 4 课时 · ¥ 1,200 / 人</option><option value="2">2 个月 · 8 课时 · ¥ 2,160 / 人（九折）</option><option value="3">3 个月 · 12 课时 · ¥ 2,880 / 人（八折）</option></select>
+   <label class="training-group"><input type="checkbox" id="trainingGroup"/> 多人拼课，咨询单独报价</label>
+   <p id="trainingPlanNote" aria-live="polite"></p>
+  </div>
+  <div class="shop-cart-total"><span>费用与交付说明</span><strong id="shopCartTotal" aria-live="polite">未选择</strong></div>
+  <p class="shop-cart-warning">定制服务单独报价，培训按周期计价，公开练习包免费。原有示例商品未开售。此清单用于沟通，不会自动发送或收款。</p>
+  <div class="shop-cart-actions">
+   <button type="button" class="wechat-trigger" data-wechat-open>微信咨询报名</button>
+   <button type="button" class="shop-copy" id="shopCopyList">复制咨询清单 <svg class="hank-icon icon-copy" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-copy"/></svg></button>
+   <button type="button" class="shop-export" id="shopExportList">下载 .txt <svg class="hank-icon icon-download" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-download"/></svg></button>
+  </div>
+  <a class="shop-talk-link" id="shopTalkLink" href="#contact">将清单带入合作简报 <svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></a>
+ </div>
+</dialog>
+
+<section class="practice-section" id="projects"><div class="container">
+ <div class="section-head"><span class="left">05 / SELECTED PRACTICES</span><span>跨行业的实践，始终围绕同一种工作方法</span></div>
+ <div class="practice-title"><h2 class="serif">看起来不同的项目，<br/>其实在做<em>同一件事。</em></h2><p>从大鲤鱼的社区、工作站与智能体实践出发，连接不同行业的真实需求。在这里，了解我们如何理解问题、组织协作，并把方案推进到交付。</p></div>
+ <div class="practice-logos" aria-labelledby="practiceLogosTitle">
+  <div class="practice-logos-label"><strong id="practiceLogosTitle">项目与品牌 · 实践展示墙</strong><span>在不同场景里，一起把事情做成。</span></div>
+  <ul class="practice-logo-wall" aria-label="项目与品牌 Logo 展示墙">
+   <li><img src="assets/brands/clean/daliyu-opc-community-transparent.png" alt="大鲤鱼 OPC 社区" title="大鲤鱼 OPC 社区" width="1254" height="1254" loading="lazy" decoding="async"/></li>
+   <li><img src="assets/brands/clean/daliyu-super-workstation-transparent.png" alt="大鲤鱼超级工作站" title="大鲤鱼超级工作站" width="1254" height="1254" loading="lazy" decoding="async"/></li>
+   <li><img src="assets/brands/clean/daliyu-super-assistant-transparent.png" alt="大鲤鱼超级助手" title="大鲤鱼超级助手" width="1254" height="1254" loading="lazy" decoding="async"/></li>
+   <li><img src="assets/brands/clean/nanbanyuan-tech-transparent.png" alt="南半园科创" title="南半园科创" width="400" height="400" loading="lazy" decoding="async"/></li>
+   <li><img src="assets/brands/clean/ruishijuan-transparent.png" alt="瑞士卷" title="瑞士卷" width="400" height="400" loading="lazy" decoding="async"/></li>
+   <li><img src="assets/brands/clean/campus-film-transparent.png" alt="校影" title="校影" width="400" height="400" loading="lazy" decoding="async"/></li>
+   <li><img src="assets/brands/clean/yiwai-jingxi-transparent.png" alt="译外惊喜" title="译外惊喜" width="400" height="400" loading="lazy" decoding="async"/></li>
+   <li><img src="assets/brands/clean/lanyueshe-transparent.png" alt="岚悅社" title="岚悅社" width="400" height="400" loading="lazy" decoding="async"/></li>
+   <li><img src="assets/brands/clean/xiyou-ip-transparent.png" alt="锡有 IP" title="锡有 IP" width="400" height="400" loading="lazy" decoding="async"/></li>
+   <li><img src="assets/brands/clean/zhongyu-cloud-transparent.png" alt="中域云仓" title="中域云仓" width="400" height="400" loading="lazy" decoding="async"/></li>
+   <li><img src="assets/brands/clean/whale-mark-transparent.png" alt="鲸鱼图形标志" title="鲸鱼图形标志" width="400" height="400" loading="lazy" decoding="async"/></li>
+   <li><img src="assets/brands/clean/hat-beard-mark-transparent.png" alt="帽子与胡须图形标志" title="帽子与胡须图形标志" width="400" height="400" loading="lazy" decoding="async"/></li>
+   <li><img src="assets/brands/clean/wujun-station-transparent.png" alt="吴俊小站" title="吴俊小站" width="400" height="400" loading="lazy" decoding="async"/></li>
+  </ul>
+ </div>
+ <div class="project-grid">
+  <article class="project-card"><div class="project-meta"><span>01 / AI SYSTEM</span><span>WORKSTATION</span></div><div class="project-symbol">DLY<svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></div><h3>大鲤鱼超级工作站</h3><p>面向超级个体和企业，把 AI Agent、业务流程与协作能力组织成可调用的工作系统。</p><div class="project-tags">AI 原生工作流 / 服务产品体系</div></article>
+  <article class="project-card"><div class="project-meta"><span>02 / INDUSTRIAL</span><span>BRANDING</span></div><div class="project-symbol">G.</div><h3>Gauss Control</h3><p>围绕工业热处理过程控制，探索专业技术的品牌语言、内容结构与视觉表达。</p><div class="project-tags">工业品牌 / 技术传播 / 视觉系统</div></article>
+  <article class="project-card"><div class="project-meta"><span>03 / SUPPLY CHAIN</span><span>SERVICE</span></div><div class="project-symbol">云.</div><h3>中域云仓</h3><p>以会展道具租赁为业务基底，梳理服务场景、品牌 IP、物料体系与跨城仓网表达。</p><div class="project-tags">业务理解 / 品牌与内容 / 线下服务</div></article>
+  <article class="project-card"><div class="project-meta"><span>04 / PUBLIC INNOVATION</span><span>IDENTITY</span></div><div class="project-symbol">南.</div><h3>南半园科创</h3><p>将苏州园林的人文气质与现代科创服务结合，探索统一的视觉识别与传播体系。</p><div class="project-tags">科创服务 / 品牌形象 / 文化表达</div></article>
+  <article class="project-card"><div class="project-meta"><span>05 / SOLO BUSINESS</span><span>COMMUNITY</span></div><div class="project-symbol">1+∞</div><h3>OPC 超级个体实践</h3><p>面向一人公司与 AI 服务创业者，探索实战项目、社群协作和能力交付机制。</p><div class="project-tags">社群生态 / 商业化实践 / 人才协作</div></article>
+  <article class="project-card"><div class="project-meta"><span>06 / ART EDUCATION</span><span>NETWORK</span></div><div class="project-symbol">FR.</div><h3>法国艺术教育合作</h3><p>探索法国艺术院校与中国市场之间的项目沟通、渠道建设与教育资源连接。</p><div class="project-tags">跨境教育 / 渠道连接 / 资源合作</div></article>
+ </div>
+</div></section>
+<section class="delivery-wrap" id="delivery"><div class="container">
+ <div class="section-head"><span class="left">06 / FROM PROBLEM TO OUTCOME</span><span>不是推荐工具，而是组织结果</span></div>
+ <div class="delivery-intro"><h2 class="section-title serif">超级工作站，<br/><em>让交付发生的场。</em></h2><p>汉克是理解问题与承担责任的入口，超级工作站是重要的交付场。在这里，人与 AI、知识与工具、任务与流程共同协作，把客户的真实场景组织成可以执行、验收和持续改进的工作。</p></div>
+ <figure class="workstation-film" aria-labelledby="workstationFilmTitle">
+  <div class="workstation-film-head"><span>SUPER WORKSTATION / 超级工作站</span><span>从个人能力，到协同交付</span></div>
+  <video controls playsinline preload="none" poster="assets/video/super-workstation-poster.jpg" aria-label="超级工作站介绍视频" aria-describedby="workstationFilmTitle"><source src="assets/video/super-workstation.mp4" type="video/mp4"/>你的浏览器暂不支持视频播放。<a href="assets/video/super-workstation.mp4">打开超级工作站视频</a></video>
+  <figcaption id="workstationFilmTitle">超级工作站 · 交付场景介绍 <a href="assets/video/super-workstation.mp4" target="_blank" rel="noopener">独立打开视频 ↗</a></figcaption>
+ </figure>
+ <div class="workstation-pillars">
+  <article><small>01 / 人机协作</small><h3>把能力组织起来</h3><p>围绕任务组合专业伙伴、AI 智能体、知识库与工具，让协作落到具体工作中。</p></article>
+  <article><small>02 / 项目交付</small><h3>把场景做成结果</h3><p>从决策调研、客服到数字化办公，明确输入、执行过程、交付物与验收标准。</p></article>
+  <article><small>03 / 长期共创</small><h3>把成果沉淀为能力</h3><p>与企业共同建设超级工作站，在持续运营中共同投入、共同发展、共享结果。</p></article>
+ </div>
+ <div class="steps"><div class="step"><small>STEP 01</small><h3>理解问题<span>Discover</span></h3><p>先对话、调研与诊断，确认目标、优先级、资源条件和限制。</p></div><div class="step"><small>STEP 02</small><h3>组合工作<span>Design</span></h3><p>拆解任务，选择合适的 Work 模块，形成范围、计划与交付清单。</p></div><div class="step"><small>STEP 03</small><h3>组织执行<span>Orchestrate</span></h3><p>编排 AI、专业人员及协作网络，跟踪进度与关键质量节点。</p></div><div class="step"><small>STEP 04</small><h3>交付结果<span>Deliver</span></h3><p>交付方案、作品、系统或业务成果，并按约定标准验收与复盘。</p></div></div>
+ <div class="statement-banner"><strong>Work <svg class="hank-icon icon-arrow-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-right"/></svg> Worker <svg class="hank-icon icon-arrow-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-right"/></svg> <span>Outcome.</span></strong><small>人作为界面 / 工作作为单元 / 结果作为承诺<br/>SELL OUTCOMES, NOT AI.</small></div>
+</div></section>
+<section class="contact-section" id="contact"><div class="container contact-grid">
+ <div class="contact-copy"><div class="eyebrow" style="color:var(--terracotta)">07 / START WITH A CONVERSATION</div><h2 class="serif">你想让什么<br/><em>事情发生？</em></h2><p>不必先写一份完整需求文档。可以是一个正在卡住的项目、一项急需完成的工作，也可以是一个尚未成形的想法。</p><p>从你面对的真实问题开始，我会先帮助厘清它，再判断是否适合合作，以及需要哪些能力参与。</p><div class="note">项目简报只在你的浏览器中生成，可复制或下载。生成后请通过双方约定的联系渠道发送给我。</div></div>
+ <form class="brief-form" id="briefForm"><div class="form-caption"><span>HANK / PROJECT INTAKE</span><span>NO. 001 — OPEN</span></div><h3>把一个问题交给我。</h3>
+  <div class="field"><label id="goalLabel">你现在最需要的是？</label><div class="goal-pills" role="radiogroup" aria-labelledby="goalLabel"><label><input type="radio" name="goal" value="解决一个具体项目" checked/><span>解决一个具体项目</span></label><label><input type="radio" name="goal" value="探索新方向"/><span>探索新方向</span></label><label><input type="radio" name="goal" value="寻找长期协作"/><span>寻找长期协作</span></label></div></div>
+  <div class="field"><label for="problem">告诉我你正在面对的问题 <small>（必填）</small></label><textarea id="problem" name="problem" placeholder="例如：我们有一个新业务，但定位不清晰、内容产出慢，也不知道怎样把 AI 放进团队日常……" required></textarea></div>
+  <div class="field"><label>你选中的服务 <small>（可选，可返回上方添加）</small></label><div class="chosen-works" id="chosenWorks"><span class="empty-chip">还没有选择，没关系。</span></div></div>
+  <div class="form-row"><div class="field"><label for="contactName">你的称呼 <small>（可选）</small></label><input id="contactName" name="contactName" autocomplete="name" placeholder="如何称呼你"/></div><div class="field"><label for="contactChannel">方便联系的方式 <small>（可选）</small></label><input id="contactChannel" name="contactChannel" placeholder="微信 / 邮箱 / 手机"/></div></div>
+  <div class="field"><label for="timeframe">项目节奏 <small>（可选）</small></label><select id="timeframe" name="timeframe"><option value="尚未确定">尚未确定</option><option value="尽快启动">尽快启动</option><option value="一个月内">一个月内</option><option value="中长期规划">中长期规划</option></select></div>
+  <div class="form-actions"><button class="btn" type="submit">生成合作简报 <span class="arrow"><svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></span></button><button class="copy-secondary" type="button" id="downloadBrief">下载简报 .txt <svg class="hank-icon icon-download" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-download"/></svg></button></div>
+  <p class="form-note">简报不会自动发送给汉克。生成后请复制内容，通过双方约定的联系渠道发送。</p>
+  <div class="draft-preview" id="draftPreview" aria-live="polite" hidden></div>
+  <button class="copy-secondary" id="copyBrief" type="button" style="margin-top:12px;display:none">复制上方项目简报 <svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></button>
+ </form>
+</div></section>
+</main>
+<footer class="footer" aria-label="网站页脚">
+ <div class="container">
+  <div class="footer-eyebrow">
+   <span class="footer-eyebrow-left"><span class="footer-sun-dot" aria-hidden="true"></span> HANK / LET'S MAKE IT WORK.</span>
+   <span class="footer-eyebrow-right">ONE PERSON AS THE INTERFACE.</span>
+  </div>
+  <div class="footer-invite">
+   <div class="footer-invite-copy">
+    <h2>复杂的事，<br/><em>从说清问题开始。</em></h2>
+    <p>不需要一份完美的需求。带着你的问题来，<br class="footer-desktop-break"/>我们一起寻找可执行的方案。</p>
+   </div>
+   <div class="footer-action">
+    <a href="#contact" class="footer-project-link" aria-label="前往合作简报填写区">整理我的项目简报 <span class="footer-action-arrow" aria-hidden="true"><svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></span></a>
+    <span class="footer-action-note">在浏览器中生成 · 不会自动发送</span>
+   </div>
+  </div>
+  <section class="footer-social" aria-labelledby="footerSocialTitle">
+   <div class="footer-social-heading">
+    <div><span class="footer-social-kicker">FIND ME ONLINE / 与我连接</span><h3 id="footerSocialTitle">每个平台，都是另一种交流方式<span>。</span></h3></div>
+    <p>文章、影像、作品与项目，也欢迎联系交流。</p>
+   </div>
+   <div class="social-grid">
+   <button class="social-card social-card-live" type="button" data-wechat-open aria-label="打开超级工作站个人微信二维码"><span class="social-monogram" aria-hidden="true">微</span><span class="social-meta"><strong>超级工作站</strong><small>个人微信 · 培训与合作</small></span><span class="social-state is-live">扫码添加</span></button>
+   <div class="social-card social-card-pending" aria-label="微信公众号，账号待绑定"><span class="social-monogram" aria-hidden="true">文</span><span class="social-meta"><strong>微信公众号</strong><small>文章 · 深度思考</small></span><span class="social-state ">待绑定</span></div>
+   <div class="social-card social-card-pending" aria-label="微信视频号，账号待绑定"><span class="social-monogram" aria-hidden="true">视</span><span class="social-meta"><strong>微信视频号</strong><small>影像 · 日常更新</small></span><span class="social-state ">待绑定</span></div>
+   <div class="social-card social-card-pending" aria-label="小红书，账号待绑定"><span class="social-monogram" aria-hidden="true">红</span><span class="social-meta"><strong>小红书</strong><small>创意 · 作品分享</small></span><span class="social-state ">待绑定</span></div>
+   <div class="social-card social-card-pending" aria-label="抖音，账号待绑定"><span class="social-monogram" aria-hidden="true">抖</span><span class="social-meta"><strong>抖音</strong><small>短视频 · 项目观察</small></span><span class="social-state ">待绑定</span></div>
+   <div class="social-card social-card-pending" aria-label="哔哩哔哩，账号待绑定"><span class="social-monogram" aria-hidden="true">B</span><span class="social-meta"><strong>哔哩哔哩</strong><small>视频 · 长内容</small></span><span class="social-state ">待绑定</span></div>
+   <div class="social-card social-card-pending" aria-label="知乎，账号待绑定"><span class="social-monogram" aria-hidden="true">知</span><span class="social-meta"><strong>知乎</strong><small>观点 · 知识分享</small></span><span class="social-state ">待绑定</span></div>
+   <a class="social-card social-card-live" href="https://github.com/Hankjun" target="_blank" rel="noopener noreferrer" aria-label="访问汉克的 GitHub 主页（在新窗口打开）"><span class="social-monogram" aria-hidden="true">GH</span><span class="social-meta"><strong>GitHub</strong><small>代码 · 开放项目</small></span><span class="social-state is-live">访问 <svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></span></a>
+   </div>
+   <p class="social-help">个人微信与 GitHub 已开放；其他渠道确认账号后开放链接或二维码。</p>
+  </section>
+  <div class="footer-middle">
+   <div class="footer-identity">
+    <a href="#top" class="footer-logo" aria-label="Hank，回到首页"><img class="hank-logo hank-logo-footer" src="assets/hank-logo.svg" width="274" height="100" alt="HANK"/></a>
+    <p>汉克 · 方案师<br/><span>以我为界面，让事情发生。</span></p>
+   </div>
+   <nav class="footer-directory" aria-label="页脚导航">
+    <div class="footer-menu-group"><h3>THE PERSON <span>关于</span></h3><a href="#about">认识汉克 <span aria-hidden="true"><svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></span></a><a href="#projects">项目实践 <span aria-hidden="true"><svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></span></a></div>
+    <div class="footer-menu-group"><h3>THE WORK <span>服务</span></h3><a href="#services">发现服务 <span aria-hidden="true"><svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></span></a><a href="work16/">WORK 16 研究中心 <span aria-hidden="true"><svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></span></a><a href="#shop">汉克小铺 <span aria-hidden="true"><svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></span></a><a href="#delivery">交付方式 <span aria-hidden="true"><svg class="hank-icon icon-arrow-ne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-ne"/></svg></span></a></div>
+   </nav>
+   <a class="footer-return" href="#top" aria-label="回到页面顶部"><span aria-hidden="true"><svg class="hank-icon icon-arrow-up" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-up"/></svg></span><small>TOP</small></a>
+  </div>
+  <div class="footer-legal">
+   <span>© 2026 HANK · INDEPENDENT SOLUTION ARCHITECT</span>
+   <span>PERSON <svg class="hank-icon icon-arrow-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-right"/></svg> WORK <svg class="hank-icon icon-arrow-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-arrow-right"/></svg> OUTCOME</span>
+  </div>
+ </div>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+// Only fixed icon names are passed here; symbols live in the inline SVG library.
+window.hankIcon=name=>'<svg class="hank-icon icon-'+name+'" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#hank-icon-'+name+'"/></svg>';
+
+(async function(){
+ 'use strict';
+ const icon=window.hankIcon;
+ const selected=new Set();
+ const $=s=>document.querySelector(s);
+ const $$=s=>Array.from(document.querySelectorAll(s));
+ const nav=$('#mainNav'), menu=$('#menuToggle');
+ function setMenu(open){nav.classList.toggle('open',open);menu.setAttribute('aria-expanded',String(open));menu.innerHTML=icon(open?'close':'menu');menu.setAttribute('aria-label',open?'关闭菜单':'展开菜单');}
+ menu.addEventListener('click',()=>setMenu(!nav.classList.contains('open')));
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav.classList.contains('open')){setMenu(false);menu.focus();}});
+ document.addEventListener('click',e=>{if(!nav.contains(e.target)&&!menu.contains(e.target))setMenu(false);});
+ $$('#mainNav a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
+ const locationLinks=$$('#mainNav a');
+ function updateLocation(){
+  const line=innerHeight*.28;
+  const current=locationLinks.find(a=>{if(!a.hash||a.pathname!==location.pathname)return false;const section=document.getElementById(a.hash.slice(1));if(!section)return false;const r=section.getBoundingClientRect();return r.top<=line&&r.bottom>line;});
+  locationLinks.forEach(a=>{if(a===current)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});
+ }
+ let ticking=false;
+ const progress=()=>{const max=document.documentElement.scrollHeight-innerHeight;$('#readProgress').style.width=(max?Math.max(0,Math.min(100,scrollY/max*100)):0)+'%';updateLocation();ticking=false;};
+ window.addEventListener('scroll',()=>{if(!ticking){ticking=true;requestAnimationFrame(progress)}},{passive:true});progress();
+ window.addEventListener('resize',()=>{if(innerWidth>800)setMenu(false);progress();},{passive:true});
+ $$('.filter-btn').forEach(btn=>btn.addEventListener('click',()=>{
+  $$('.filter-btn').forEach(b=>b.setAttribute('aria-pressed',String(b===btn)));
+  $$('.work-card').forEach(card=>{card.hidden=btn.dataset.filter!=='all'&&card.dataset.group!==btn.dataset.filter});
+ }));
+ function syncSelection(){
+  $('#selectedCount').textContent=`已选择 ${selected.size} 项 Work`;
+  $('#selectedSummary').textContent=selected.size?[...selected].join(' / '):'点击服务卡片右上角的添加按钮，组合你需要的工作。';
+  $('#goBrief').disabled=!selected.size;
+  const chips=$('#chosenWorks');chips.replaceChildren();
+  if(!selected.size){const e=document.createElement('span');e.className='empty-chip';e.textContent='还没有选择，没关系。';chips.append(e)}
+  else [...selected].forEach(name=>{const e=document.createElement('span');e.className='chosen-chip';e.textContent=name;chips.append(e)});
+ }
+ $$('.work-card').forEach(card=>card.querySelector('.work-add').addEventListener('click',()=>{
+  const name=card.dataset.name;if(selected.has(name))selected.delete(name);else selected.add(name);
+  const on=selected.has(name),btn=card.querySelector('.work-add');card.classList.toggle('selected',on);
+  btn.setAttribute('aria-pressed',String(on));btn.setAttribute('aria-label',`${on?'移除':'添加'} ${name}`);btn.innerHTML=icon(on?'check':'plus');syncSelection();
+ }));
+ $('#goBrief').addEventListener('click',()=>$('#contact').scrollIntoView({behavior:'smooth'}));
+ $$('.goal-pills label').forEach(label=>label.addEventListener('click',e=>{
+  const radio=label.querySelector('input[type="radio"]');
+  if(!radio)return;
+  e.preventDefault();radio.checked=true;radio.dispatchEvent(new Event('change',{bubbles:true}));radio.focus({preventScroll:true});
+ }));
+ let toastTimer;
+ function toast(text){const box=$('#toast');box.textContent=text;box.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>box.classList.remove('show'),3000)}
+ function briefText(){
+  const problem=$('#problem').value.trim();
+  if(!problem){$('#problem').focus();toast('请先描述你面对的问题。');return null}
+  const name=$('#contactName').value.trim()||'未填写', channel=$('#contactChannel').value.trim()||'未填写';
+  const goal=$('input[name="goal"]:checked').value;
+  return ['HANK / 项目合作简报','━━━━━━━━━━━━━━━━━━━━━━',`合作类型：${goal}`,`称呼：${name}`,`联系方式：${channel}`,`项目节奏：${$('#timeframe').value}`,'', '【问题与需求】',problem,'','【关注的 Work 服务】',selected.size?[...selected].join(' / '):'暂未选择，待进一步讨论','','【下一步】','与汉克交流并确认问题、服务范围、交付方式及合作条件。','','— 由 HANK 个人主页本地生成（未自动发送）'].join('\n');
+ }
+ let current='';
+ function reveal(){const t=briefText();if(!t)return null;current=t;$('#draftPreview').textContent=t;$('#draftPreview').hidden=false;$('#copyBrief').style.display='inline-block';return t}
+ $('#briefForm').addEventListener('submit',e=>{e.preventDefault();if(reveal()){toast('简报已生成。可复制或下载，再通过联系渠道发送。');$('#draftPreview').scrollIntoView({behavior:'smooth',block:'nearest'});}});
+ async function copy(t){try{if(navigator.clipboard && window.isSecureContext){await navigator.clipboard.writeText(t)}else{const el=document.createElement('textarea');el.value=t;el.style.position='fixed';el.style.opacity='0';document.body.appendChild(el);el.select();if(!document.execCommand('copy'))throw new Error('copy');el.remove()}toast('简报已复制到剪贴板。')}catch(e){toast('复制受浏览器限制，请手动选中上方简报复制。')}}
+ $('#copyBrief').addEventListener('click',()=>{if(current)copy(current)});
+ $('#downloadBrief').addEventListener('click',()=>{const t=reveal();if(!t)return;const blob=new Blob(['\uFEFF'+t],{type:'text/plain;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='HANK-项目合作简报.txt';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);toast('简报已下载。')});
+ syncSelection();
+})();
+</script>
+<dialog class="wechat-dialog" id="wechatContact" aria-labelledby="wechatTitle" aria-describedby="wechatHelp">
+ <div class="wechat-content">
+  <button class="shop-dialog-close" type="button" data-wechat-close aria-label="关闭微信二维码">×</button>
+  <h2 id="wechatTitle">超级工作站</h2>
+  <p id="wechatHelp">个人微信 · 课程咨询与合作<br/>用微信扫一扫添加好友，发送你想学习的课程与报名周期。</p>
+  <img class="wechat-qr" src="assets/wechat-super-workstation.jpg" width="548" height="811" alt="超级工作站个人微信好友二维码"/>
+  <div class="wechat-actions"><a href="assets/wechat-super-workstation.jpg" download="超级工作站-微信二维码.jpg">保存二维码原图</a><a href="assets/wechat-super-workstation.jpg" target="_blank" rel="noopener noreferrer">打开原图</a></div>
+  <p>手机访问可保存原图，在微信“扫一扫”中从相册选择识别。<br/>已有咨询清单可复制后发送；此二维码用于添加好友，不是付款码。</p>
+ </div>
+</dialog>
+<script src="wechat.js"></script>
+<script src="shop.js?v=20261017-services"></script>
+</body></html>

@@ -1,0 +1,164 @@
+[
+  {
+    "id": "daliyu-workstation",
+    "name": {
+      "zh": "大鲤鱼超级工作站",
+      "en": "Daliyu Super Workstation"
+    },
+    "type": {
+      "zh": "自有实践 · AI 工作系统",
+      "en": "Own practice · AI working system"
+    },
+    "summary": {
+      "zh": "把智能体、知识、工具与人的协作，组织成可调用的工作系统。",
+      "en": "Organising agents, knowledge, tools and people into a usable working system."
+    },
+    "image": "assets/brands/clean/daliyu-super-workstation-transparent.webp",
+    "background": {
+      "zh": "面向超级个体与企业，探索 AI 原生的服务与项目交付方式。",
+      "en": "An ongoing practice in AI-native services and project delivery for independent professionals and businesses."
+    },
+    "challenge": {
+      "zh": "不同工具与能力需要围绕实际任务建立协作，而不只是分别演示。",
+      "en": "Separate tools and capabilities need to cooperate around an actual task."
+    },
+    "approach": {
+      "zh": [
+        "从客户场景与任务边界开始",
+        "组合智能体、知识与工具",
+        "在项目中组织人与 AI 协作"
+      ],
+      "en": [
+        "Start with the task and its boundaries",
+        "Combine agents, knowledge and tools",
+        "Organise human and AI collaboration in delivery"
+      ]
+    },
+    "deliverables": {
+      "zh": [
+        "超级工作站交付方式介绍视频",
+        "大鲤鱼角色与品牌应用",
+        "服务与课程的展示入口"
+      ],
+      "en": [
+        "A video introducing the delivery model",
+        "Daliyu character and brand applications",
+        "A website connecting services and training"
+      ]
+    },
+    "evidence": {
+      "zh": "本页展示自有实践中的品牌素材与交付方式视频。",
+      "en": "This page shows brand assets and the delivery-model video from our own practice."
+    },
+    "service": "super-workstation",
+    "published": true,
+    "video": true
+  },
+  {
+    "id": "gauss-control",
+    "name": {
+      "zh": "高思控制 · 产品内容表达",
+      "en": "Gauss Control · Product Communication"
+    },
+    "type": {
+      "zh": "工业技术 · 内容与影像",
+      "en": "Industrial technology · Content and film"
+    },
+    "summary": {
+      "zh": "把工业产品资料，梳理成脚本、分镜与可观看的产品短片。",
+      "en": "Turning technical product materials into scripts, storyboards and product films."
+    },
+    "background": {
+      "zh": "围绕工业热处理过程控制，整理专业技术的品牌语言与内容结构。",
+      "en": "Communicating specialist knowledge in industrial heat-treatment process control."
+    },
+    "challenge": {
+      "zh": "既要讲清产品与使用场景，也需要对参数和技术表述逐项核对。",
+      "en": "Communicate the product clearly while checking technical statements and specifications."
+    },
+    "approach": {
+      "zh": [
+        "梳理产品资料与关键说法",
+        "组织脚本、分镜与影像表达",
+        "对成片与技术内容分别检查"
+      ],
+      "en": [
+        "Review product information and key statements",
+        "Develop scripts, storyboards and visual communication",
+        "Check the film and its technical claims"
+      ]
+    },
+    "deliverables": {
+      "zh": [
+        "多批产品展示短片",
+        "脚本与分镜",
+        "成片检查记录"
+      ],
+      "en": [
+        "Multiple batches of product films",
+        "Scripts and storyboards",
+        "Film review records"
+      ]
+    },
+    "evidence": {
+      "zh": "已有产品短片、脚本、分镜与检查记录。部分画面为资料示意渲染，技术表述需经客户审核。",
+      "en": "The project has films, scripts, storyboards and review records. Some visuals are illustrative renders; technical statements require client review."
+    },
+    "service": null,
+    "published": true
+  },
+  {
+    "id": "zhongyu-cloud",
+    "name": {
+      "zh": "中域云仓 · 服务与品牌表达",
+      "en": "Zhongyu Cloud · Service and Brand Communication"
+    },
+    "type": {
+      "zh": "会展供应链 · 服务表达",
+      "en": "Exhibition supply chain · Service communication"
+    },
+    "summary": {
+      "zh": "围绕会展道具租赁，梳理服务场景、品牌形象与跨城仓网表达。",
+      "en": "Making exhibition rental services, brand identity and a multi-city warehouse network easier to understand."
+    },
+    "image": "assets/brands/clean/zhongyu-cloud-transparent.webp",
+    "background": {
+      "zh": "以会展道具租赁为业务基础，连接品牌表达与线下服务场景。",
+      "en": "An exhibition-prop rental business connecting brand communication with offline service."
+    },
+    "challenge": {
+      "zh": "业务范围、服务资源与角色形象需要放在同一套表达中。",
+      "en": "Bring service scope, resources and character identity into one coherent presentation."
+    },
+    "approach": {
+      "zh": [
+        "梳理业务与服务场景",
+        "探索仓小云角色与品牌物料",
+        "组织仓网和线下服务的信息表达"
+      ],
+      "en": [
+        "Map business and service scenarios",
+        "Explore the Cang Xiaoyun character and brand materials",
+        "Organise warehouse-network and offline-service information"
+      ]
+    },
+    "deliverables": {
+      "zh": [
+        "品牌角色与形象应用探索",
+        "服务场景与内容梳理",
+        "品牌展示素材"
+      ],
+      "en": [
+        "Character and brand application explorations",
+        "Service-scenario and content organisation",
+        "Brand presentation assets"
+      ]
+    },
+    "evidence": {
+      "zh": "已提供的品牌标志、角色应用探索与服务场景构成这份项目展示的基础。",
+      "en": "This project presentation draws on the supplied brand mark, character explorations and service scenarios."
+    },
+    "service": null,
+    "published": true
+  }
+]

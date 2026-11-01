@@ -1,0 +1,28 @@
+{
+  "defaultLanguage": "zh",
+  "publicUrl": "https://hankjun.github.io/hank-portfolio/",
+  "brand": {
+    "zh": "大鲤鱼超级工作站",
+    "en": "Daliyu Super Workstation"
+  },
+  "analytics": {
+    "provider": null,
+    "domain": "",
+    "src": ""
+  },
+  "training": {
+    "sessionPrice": 299,
+    "monthlyPrice": 1200,
+    "sessionsPerMonth": 4,
+    "discounts": {
+      "1": 1,
+      "2": 0.9,
+      "3": 0.8
+    }
+  },
+  "author": {
+    "name": "Hank",
+    "email": null,
+    "bookingUrl": null
+  }
+}

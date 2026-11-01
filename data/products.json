@@ -1,0 +1,2664 @@
+[
+  {
+    "id": "flagship-agent-workshop",
+    "sku": "HKS-FLG-001",
+    "published": true,
+    "category": "training",
+    "name": {
+      "zh": "定制智能体培训工坊",
+      "en": "Custom AI Agent Workshop"
+    },
+    "description": {
+      "zh": "围绕你的真实场景定制课程，从入门、中阶到高阶，把智能体用进实际任务。",
+      "en": "Hands-on learning built around your real tasks, from the first workflow to more advanced agent use."
+    },
+    "audience": {
+      "zh": "企业团队、创业者与个人学习者",
+      "en": "Teams, founders and individual learners"
+    },
+    "deliverables": {
+      "zh": [
+        "场景诊断与分级学习安排",
+        "智能体配置与工作流练习",
+        "一个可演示的实际任务成果",
+        "课件、练习与复盘建议"
+      ],
+      "en": [
+        "A task-based learning plan at the right level",
+        "Agent setup and workflow exercises",
+        "A demonstrable piece of practical work",
+        "Learning materials, exercises and review notes"
+      ]
+    },
+    "tags": [
+      "AIwork",
+      "Knowledgework",
+      "Teamwork"
+    ],
+    "price_cny": null,
+    "price_usd": null,
+    "type": "flagship",
+    "flagship": true,
+    "featured": false,
+    "status": "inquiry",
+    "theme": "ember",
+    "serviceUrl": "services/agent-workshop/"
+  },
+  {
+    "id": "flagship-founder-ai",
+    "sku": "HKS-FLG-002",
+    "published": true,
+    "category": "organization",
+    "name": {
+      "zh": "一号位 AI 陪跑",
+      "en": "AI Partner for Founders"
+    },
+    "description": {
+      "zh": "从一号位亲自使用出发，梳理硬件与工具、智能体配置、工作架构和使用界面，在持续实践中带动组织落地。",
+      "en": "A practical partnership covering tool and hardware choices, agent setup, work architecture and everyday interfaces."
+    },
+    "audience": {
+      "zh": "老板、创始人与业务一号位",
+      "en": "Founders, owners and business leaders"
+    },
+    "deliverables": {
+      "zh": [
+        "一号位工作场景与优先级地图",
+        "硬件、工具与智能体配置方案",
+        "日常工作的使用界面与操作路径",
+        "分阶段试点与持续复盘机制"
+      ],
+      "en": [
+        "A map of leadership tasks and priorities",
+        "A hardware, tool and agent setup plan",
+        "Practical interfaces and everyday working routines",
+        "A phased pilot with ongoing reviews"
+      ]
+    },
+    "tags": [
+      "Brainwork",
+      "AIwork",
+      "Opswork",
+      "Teamwork"
+    ],
+    "price_cny": null,
+    "price_usd": null,
+    "type": "flagship",
+    "flagship": true,
+    "featured": false,
+    "status": "inquiry",
+    "theme": "ink",
+    "serviceUrl": "services/founder-ai/"
+  },
+  {
+    "id": "flagship-super-workstation",
+    "sku": "HKS-FLG-003",
+    "published": true,
+    "category": "projects",
+    "name": {
+      "zh": "超级工作站搭建",
+      "en": "Super Workstation Setup"
+    },
+    "description": {
+      "zh": "围绕客户场景，把 AI 智能体、知识与工具、业务流程和人的协作组织成一套可运行、可验收的工作系统。",
+      "en": "Bring agents, knowledge, tools, business processes and human collaboration together around a real operating task."
+    },
+    "audience": {
+      "zh": "希望把 AI 带入业务的企业与团队",
+      "en": "Businesses and teams bringing AI into operations"
+    },
+    "deliverables": {
+      "zh": [
+        "场景、任务与交付边界清单",
+        "智能体、知识与工具的协作架构",
+        "约定范围的工作流与使用界面",
+        "验收标准、交接说明与改进计划"
+      ],
+      "en": [
+        "A defined task, scope and delivery checklist",
+        "An architecture for agents, knowledge and tools",
+        "Agreed workflows and operating interfaces",
+        "Acceptance criteria, handover notes and an improvement plan"
+      ]
+    },
+    "tags": [
+      "AIwork",
+      "Codework",
+      "Opswork",
+      "Teamwork"
+    ],
+    "price_cny": null,
+    "price_usd": null,
+    "type": "flagship",
+    "flagship": true,
+    "featured": false,
+    "status": "inquiry",
+    "theme": "sage",
+    "serviceUrl": "services/super-workstation/"
+  },
+  {
+    "id": "service-website",
+    "sku": "HKS-SVC-001",
+    "published": true,
+    "category": "projects",
+    "name": {
+      "zh": "个人主页与品牌展示站搭建",
+      "en": "Personal and brand websites"
+    },
+    "description": {
+      "zh": "从内容结构到页面发布，为个人或品牌建立清楚、可用的展示入口。",
+      "en": "A clear, responsive website from content structure to launch."
+    },
+    "audience": {
+      "zh": "独立服务者、创业团队、小型品牌",
+      "en": "Independent professionals, founders and small brands"
+    },
+    "deliverables": {
+      "zh": [
+        "需求与内容结构梳理",
+        "响应式展示页面制作",
+        "发布配置与维护说明"
+      ],
+      "en": [
+        "Content and information architecture",
+        "Responsive pages and publishing setup",
+        "Agreed source files and maintenance notes"
+      ]
+    },
+    "tags": [
+      "Codework",
+      "Designwork",
+      "Contentwork"
+    ],
+    "price_cny": null,
+    "price_usd": null,
+    "theme": "ink",
+    "type": "service",
+    "status": "inquiry",
+    "featured": true,
+    "scope": {
+      "zh": "展示站为基础范围；页面数量、文案制作、域名费用、修改轮次与维护周期确认后报价。后台、支付与定制业务系统另议。",
+      "en": "The exact scope, schedule, formats and revision rounds are agreed before work begins."
+    },
+    "inputs": {
+      "zh": [
+        "品牌介绍、文字、图片与标志素材",
+        "参考页面、目标受众与主要行动",
+        "域名与发布平台条件"
+      ],
+      "en": [
+        "Existing brand and source materials",
+        "Your audience, objective and reference examples",
+        "Delivery format and practical constraints"
+      ]
+    },
+    "acceptance": {
+      "zh": [
+        "按约定的页面清单交付，手机与桌面可正常浏览",
+        "导航、链接与咨询入口可用",
+        "交付约定范围的源文件与维护说明"
+      ],
+      "en": [
+        "Deliverables match the agreed scope",
+        "Files and interfaces are usable in the agreed format",
+        "Handover notes are supplied as agreed"
+      ]
+    }
+  },
+  {
+    "id": "service-visual",
+    "sku": "HKS-SVC-002",
+    "published": true,
+    "category": "projects",
+    "name": {
+      "zh": "品牌 VI 起步与视觉深化",
+      "en": "Brand identity and visual applications"
+    },
+    "description": {
+      "zh": "把已有标志与品牌方向整理为一致的视觉规则和日常应用。",
+      "en": "Turn an existing identity into consistent rules and everyday applications."
+    },
+    "audience": {
+      "zh": "已有标志但应用不统一的品牌、初创团队",
+      "en": "Brands with an existing logo and growing visual needs"
+    },
+    "deliverables": {
+      "zh": [
+        "标志组合、色彩与字体使用建议",
+        "简明视觉规范文档",
+        "按约定数量制作名片、信纸或社媒等应用"
+      ],
+      "en": [
+        "Logo, colour and typography guidance",
+        "A concise visual guideline",
+        "Agreed stationery or social applications"
+      ]
+    },
+    "tags": [
+      "Designwork",
+      "Contentwork"
+    ],
+    "price_cny": null,
+    "price_usd": null,
+    "theme": "ember",
+    "type": "service",
+    "status": "inquiry",
+    "featured": true,
+    "scope": {
+      "zh": "以现有标志为起点；应用数量、修改轮次和源文件格式另行约定。印刷打样、刀模及实物生产单独确认。",
+      "en": "The exact scope, schedule, formats and revision rounds are agreed before work begins."
+    },
+    "inputs": {
+      "zh": [
+        "现有标志原文件与可用字体",
+        "品牌定位、受众与参考方向",
+        "优先应用的尺寸及生产条件"
+      ],
+      "en": [
+        "Existing brand and source materials",
+        "Your audience, objective and reference examples",
+        "Delivery format and practical constraints"
+      ]
+    },
+    "acceptance": {
+      "zh": [
+        "规范与应用遵循同一套视觉规则",
+        "按约定格式提供可编辑文件和预览",
+        "印刷文件如在范围内，按约定印厂规格交付"
+      ],
+      "en": [
+        "Deliverables match the agreed scope",
+        "Files and interfaces are usable in the agreed format",
+        "Handover notes are supplied as agreed"
+      ]
+    }
+  },
+  {
+    "id": "service-ip",
+    "sku": "HKS-SVC-003",
+    "published": true,
+    "category": "projects",
+    "name": {
+      "zh": "品牌 IP 形象与应用设计",
+      "en": "Brand characters and applications"
+    },
+    "description": {
+      "zh": "从角色设定到动作与场景应用，让品牌有一个可以持续使用的形象。",
+      "en": "Build a reusable character, from its visual direction to practical applications."
+    },
+    "audience": {
+      "zh": "希望建立品牌角色的企业、社区与个人品牌",
+      "en": "Brands, communities and independent professionals"
+    },
+    "deliverables": {
+      "zh": [
+        "角色定位与视觉方向",
+        "约定数量的标准形象、表情或动作",
+        "海报或社媒场景应用与使用说明"
+      ],
+      "en": [
+        "Character direction and identity",
+        "Agreed poses, expressions or variations",
+        "Application images and usage notes"
+      ]
+    },
+    "tags": [
+      "Designwork",
+      "Mediawork"
+    ],
+    "price_cny": null,
+    "price_usd": null,
+    "theme": "sage",
+    "type": "service",
+    "status": "inquiry",
+    "featured": false,
+    "scope": {
+      "zh": "角色数量、视角、动作、应用图和修改轮次确认后报价。三维建模、动画、商标申请及实物打样另议。",
+      "en": "The exact scope, schedule, formats and revision rounds are agreed before work begins."
+    },
+    "inputs": {
+      "zh": [
+        "品牌定位、受众、既有标志与形象资料",
+        "角色性格、使用场景与参考方向",
+        "交付数量、尺寸及使用范围"
+      ],
+      "en": [
+        "Existing brand and source materials",
+        "Your audience, objective and reference examples",
+        "Delivery format and practical constraints"
+      ]
+    },
+    "acceptance": {
+      "zh": [
+        "角色在约定视角与动作中保持主要识别特征",
+        "按用途提供尺寸、底色与格式",
+        "交付清单与约定数量一致"
+      ],
+      "en": [
+        "Deliverables match the agreed scope",
+        "Files and interfaces are usable in the agreed format",
+        "Handover notes are supplied as agreed"
+      ]
+    }
+  },
+  {
+    "id": "service-film",
+    "sku": "HKS-SVC-004",
+    "published": true,
+    "category": "projects",
+    "name": {
+      "zh": "产品展示短片制作",
+      "en": "Product showcase films"
+    },
+    "description": {
+      "zh": "将产品资料整理为脚本、分镜与短片，清楚呈现产品和使用场景。",
+      "en": "Translate product materials into scripts, storyboards and a focused film."
+    },
+    "audience": {
+      "zh": "有产品图片与技术资料的品牌、制造企业",
+      "en": "Product brands and manufacturing businesses"
+    },
+    "deliverables": {
+      "zh": [
+        "脚本与分镜规划",
+        "约定画幅和时长的产品展示成片",
+        "字幕及约定的封面、语言版本"
+      ],
+      "en": [
+        "Script and storyboard",
+        "Film in the agreed format and duration",
+        "Subtitles, cover and agreed language versions"
+      ]
+    },
+    "tags": [
+      "Mediawork",
+      "Contentwork"
+    ],
+    "price_cny": null,
+    "price_usd": null,
+    "theme": "night",
+    "type": "service",
+    "status": "inquiry",
+    "featured": false,
+    "scope": {
+      "zh": "可从单产品约 30 秒短片开始；配音、音乐、语言、修改轮次和源工程范围确认后报价。",
+      "en": "The exact scope, schedule, formats and revision rounds are agreed before work begins."
+    },
+    "inputs": {
+      "zh": [
+        "可使用的产品图片、标志和资料",
+        "经客户确认的功能、参数与关键说法",
+        "受众、渠道、时长、画幅与语言要求"
+      ],
+      "en": [
+        "Existing brand and source materials",
+        "Your audience, objective and reference examples",
+        "Delivery format and practical constraints"
+      ]
+    },
+    "acceptance": {
+      "zh": [
+        "时长、分辨率、画幅、语言符合约定",
+        "参数与产品表述通过客户核对",
+        "成片可播放，文字与音频检查通过"
+      ],
+      "en": [
+        "Deliverables match the agreed scope",
+        "Files and interfaces are usable in the agreed format",
+        "Handover notes are supplied as agreed"
+      ]
+    }
+  },
+  {
+    "id": "service-content",
+    "sku": "HKS-SVC-005",
+    "published": true,
+    "category": "projects",
+    "name": {
+      "zh": "公众号内容策划与制作",
+      "en": "WeChat content planning and production"
+    },
+    "description": {
+      "zh": "把选题、写作、配图和排版组织成一份按周期交付的内容计划。",
+      "en": "Organise topics, writing, images and layout into a recurring delivery plan."
+    },
+    "audience": {
+      "zh": "需要稳定更新公众号的品牌、小团队与独立服务者",
+      "en": "Brands and small teams publishing on WeChat"
+    },
+    "deliverables": {
+      "zh": [
+        "周期选题与内容计划",
+        "约定篇数的文章、封面与配图",
+        "排版、发布前校对与修改记录"
+      ],
+      "en": [
+        "An editorial plan",
+        "Agreed articles, covers and images",
+        "Layout and pre-publication checks"
+      ]
+    },
+    "tags": [
+      "Contentwork",
+      "Mediawork",
+      "Opswork"
+    ],
+    "price_cny": null,
+    "price_usd": null,
+    "theme": "ochre",
+    "type": "service",
+    "status": "inquiry",
+    "featured": false,
+    "scope": {
+      "zh": "按篇数、篇幅、素材与排版范围报价；发布代操作需另行授权，未包含账号增长或阅读量承诺。",
+      "en": "The exact scope, schedule, formats and revision rounds are agreed before work begins."
+    },
+    "inputs": {
+      "zh": [
+        "品牌资料、事实来源与发布目标",
+        "已有账号内容、版式偏好与素材",
+        "交付周期、篇数及客户审核人"
+      ],
+      "en": [
+        "Existing brand and source materials",
+        "Your audience, objective and reference examples",
+        "Delivery format and practical constraints"
+      ]
+    },
+    "acceptance": {
+      "zh": [
+        "篇数与内容类型符合确认的排期",
+        "事实、图片和引用经约定审核流程确认",
+        "交付可阅读的排版稿及约定源文件"
+      ],
+      "en": [
+        "Deliverables match the agreed scope",
+        "Files and interfaces are usable in the agreed format",
+        "Handover notes are supplied as agreed"
+      ]
+    }
+  },
+  {
+    "id": "work16-practice",
+    "sku": "HKS-RES-001",
+    "published": true,
+    "category": "knowledge",
+    "name": {
+      "zh": "WORK 16 工作诊断与 AI 落地练习包",
+      "en": "WORK 16: Work Diagnosis & AI Practice Kit"
+    },
+    "description": {
+      "zh": "把一个工作任务写清楚，建立人工基线，再设计一次可检验的 AI 协作试验。",
+      "en": "Define a task, establish a human baseline and design a testable AI collaboration experiment."
+    },
+    "audience": {
+      "zh": "独立服务者、团队负责人、智能体培训学员",
+      "en": "Independent professionals, team leaders and learners"
+    },
+    "deliverables": {
+      "zh": [
+        "工作研究档案：目标、输入输出、角色与边界",
+        "任务与交付评估矩阵：逐项说明，不生成自动化总分",
+        "试验记录：基线、观察、异常、结论与下一步",
+        "填写指南与“周报整理”完整模拟示例"
+      ],
+      "en": [
+        "A work research brief",
+        "A task and delivery assessment matrix",
+        "An experiment log",
+        "A guide and a complete worked example (Chinese materials)"
+      ]
+    },
+    "tags": [
+      "Researchwork",
+      "Paperwork",
+      "AIwork"
+    ],
+    "price_cny": 0,
+    "price_usd": null,
+    "theme": "linen",
+    "type": "resource",
+    "status": "available",
+    "featured": true,
+    "downloadUrl": "downloads/work16-practice-v1.zip",
+    "previewUrl": "work16/practice.html"
+  },
+  {
+    "id": "training-codex",
+    "sku": "HKS-TRN-001",
+    "published": true,
+    "category": "training",
+    "name": {
+      "zh": "Codex 应用培训",
+      "en": "Codex Applied Training"
+    },
+    "description": {
+      "zh": "从一个工作任务出发，练习任务拆解、文件协作与成果检查。",
+      "en": "Use Codex in a practical workflow built around your own work."
+    },
+    "audience": {
+      "zh": "希望将智能体用于实际工作的个人；团队拼课另询",
+      "en": "Individuals, teams and business leaders learning to use AI in real work"
+    },
+    "deliverables": {
+      "zh": [
+        "环境与任务：认识工作区，定义目标和验收标准",
+        "任务表达：准备资料与指令，拆解可执行步骤",
+        "场景实操：完成一个文件或轻量工具任务",
+        "独立练习：检查成果，沉淀可复用操作步骤"
+      ],
+      "en": [
+        "Orientation and tool setup",
+        "A task-based workflow exercise",
+        "Practice with your own materials",
+        "Review, demonstration and next steps"
+      ]
+    },
+    "tags": [
+      "AIwork",
+      "Knowledgework"
+    ],
+    "price_cny": 1200,
+    "price_usd": null,
+    "theme": "ink",
+    "type": "course",
+    "status": "inquiry",
+    "featured": true,
+    "session_price_cny": 299,
+    "sessions": 4,
+    "levels": {
+      "zh": [
+        "入门",
+        "中阶",
+        "高阶"
+      ],
+      "en": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ]
+    }
+  },
+  {
+    "id": "training-claude",
+    "sku": "HKS-TRN-002",
+    "published": true,
+    "category": "training",
+    "name": {
+      "zh": "Claude 应用培训",
+      "en": "Claude Applied Training"
+    },
+    "description": {
+      "zh": "围绕资料阅读、内容组织与实际工作任务，建立稳定的协作方法。",
+      "en": "Use Claude in a practical workflow built around your own work."
+    },
+    "audience": {
+      "zh": "希望将智能体用于实际工作的个人；团队拼课另询",
+      "en": "Individuals, teams and business leaders learning to use AI in real work"
+    },
+    "deliverables": {
+      "zh": [
+        "任务准备：明确目标，组织背景材料",
+        "资料理解：提炼要点，核对来源与结论",
+        "场景实操：形成一份结构清晰的工作成果",
+        "独立练习：迭代成果，整理个人工作模板"
+      ],
+      "en": [
+        "Orientation and tool setup",
+        "A task-based workflow exercise",
+        "Practice with your own materials",
+        "Review, demonstration and next steps"
+      ]
+    },
+    "tags": [
+      "AIwork",
+      "Knowledgework"
+    ],
+    "price_cny": 1200,
+    "price_usd": null,
+    "theme": "ember",
+    "type": "course",
+    "status": "inquiry",
+    "featured": false,
+    "session_price_cny": 299,
+    "sessions": 4,
+    "levels": {
+      "zh": [
+        "入门",
+        "中阶",
+        "高阶"
+      ],
+      "en": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ]
+    }
+  },
+  {
+    "id": "training-gemini",
+    "sku": "HKS-TRN-003",
+    "published": true,
+    "category": "training",
+    "name": {
+      "zh": "Gemini 应用培训",
+      "en": "Gemini Applied Training"
+    },
+    "description": {
+      "zh": "围绕信息整理与办公任务，练习从需求表达走向成果交付。",
+      "en": "Use Gemini in a practical workflow built around your own work."
+    },
+    "audience": {
+      "zh": "希望将智能体用于实际工作的个人；团队拼课另询",
+      "en": "Individuals, teams and business leaders learning to use AI in real work"
+    },
+    "deliverables": {
+      "zh": [
+        "环境与目标：了解可用功能，确定练习任务",
+        "资料整理：输入材料，提取与核验关键信息",
+        "场景实操：完成一项日常办公任务",
+        "独立练习：复核结果，整理可复用流程"
+      ],
+      "en": [
+        "Orientation and tool setup",
+        "A task-based workflow exercise",
+        "Practice with your own materials",
+        "Review, demonstration and next steps"
+      ]
+    },
+    "tags": [
+      "AIwork",
+      "Knowledgework"
+    ],
+    "price_cny": 1200,
+    "price_usd": null,
+    "theme": "blue",
+    "type": "course",
+    "status": "inquiry",
+    "featured": false,
+    "session_price_cny": 299,
+    "sessions": 4,
+    "levels": {
+      "zh": [
+        "入门",
+        "中阶",
+        "高阶"
+      ],
+      "en": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ]
+    }
+  },
+  {
+    "id": "training-muse",
+    "sku": "HKS-TRN-004",
+    "published": true,
+    "category": "training",
+    "name": {
+      "zh": "Muse（Meta） 应用培训",
+      "en": "Muse (Meta) Applied Training"
+    },
+    "description": {
+      "zh": "学习用 Meta 个人智能体助理规划任务，设置边界并检查执行结果。",
+      "en": "Use Muse (Meta) in a practical workflow built around your own work."
+    },
+    "audience": {
+      "zh": "希望将智能体用于实际工作的个人；团队拼课另询",
+      "en": "Individuals, teams and business leaders learning to use AI in real work"
+    },
+    "deliverables": {
+      "zh": [
+        "认识助理：确认账号可用性与任务范围",
+        "任务规划：表达个人目标，安排多步任务",
+        "场景实操：在授权范围内完成助理任务",
+        "独立练习：复核执行结果，整理使用习惯"
+      ],
+      "en": [
+        "Orientation and tool setup",
+        "A task-based workflow exercise",
+        "Practice with your own materials",
+        "Review, demonstration and next steps"
+      ]
+    },
+    "tags": [
+      "AIwork",
+      "Knowledgework"
+    ],
+    "price_cny": 1200,
+    "price_usd": null,
+    "theme": "sage",
+    "type": "course",
+    "status": "inquiry",
+    "featured": false,
+    "session_price_cny": 299,
+    "sessions": 4,
+    "levels": {
+      "zh": [
+        "入门",
+        "中阶",
+        "高阶"
+      ],
+      "en": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ]
+    }
+  },
+  {
+    "id": "training-workbuddy",
+    "sku": "HKS-TRN-005",
+    "published": true,
+    "category": "training",
+    "name": {
+      "zh": "WorkBuddy 应用培训",
+      "en": "WorkBuddy Applied Training"
+    },
+    "description": {
+      "zh": "以办公任务为练习对象，学习工作台操作、资料处理与结果检查。",
+      "en": "Use WorkBuddy in a practical workflow built around your own work."
+    },
+    "audience": {
+      "zh": "希望将智能体用于实际工作的个人；团队拼课另询",
+      "en": "Individuals, teams and business leaders learning to use AI in real work"
+    },
+    "deliverables": {
+      "zh": [
+        "工作台入门：准备环境与任务材料",
+        "任务拆解：描述目标，组织资料与步骤",
+        "场景实操：产出一份可检查的办公成果",
+        "独立练习：复用工作步骤，检查质量"
+      ],
+      "en": [
+        "Orientation and tool setup",
+        "A task-based workflow exercise",
+        "Practice with your own materials",
+        "Review, demonstration and next steps"
+      ]
+    },
+    "tags": [
+      "AIwork",
+      "Knowledgework"
+    ],
+    "price_cny": 1200,
+    "price_usd": null,
+    "theme": "ochre",
+    "type": "course",
+    "status": "inquiry",
+    "featured": false,
+    "session_price_cny": 299,
+    "sessions": 4,
+    "levels": {
+      "zh": [
+        "入门",
+        "中阶",
+        "高阶"
+      ],
+      "en": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ]
+    }
+  },
+  {
+    "id": "training-doubao",
+    "sku": "HKS-TRN-006",
+    "published": true,
+    "category": "training",
+    "name": {
+      "zh": "豆包工作应用培训",
+      "en": "Doubao Work Applied Training"
+    },
+    "description": {
+      "zh": "结合豆包工作与飞书办公场景，练习资料理解、任务执行和成果协作。",
+      "en": "Use Doubao Work in a practical workflow built around your own work."
+    },
+    "audience": {
+      "zh": "希望将智能体用于实际工作的个人；团队拼课另询",
+      "en": "Individuals, teams and business leaders learning to use AI in real work"
+    },
+    "deliverables": {
+      "zh": [
+        "环境与权限：认识豆包工作与飞书的连接方式",
+        "资料与上下文：整理任务材料，明确可访问范围",
+        "场景实操：完成一项文档或信息整理任务",
+        "协作与复盘：检查成果，整理后续协作步骤"
+      ],
+      "en": [
+        "Orientation and tool setup",
+        "A task-based workflow exercise",
+        "Practice with your own materials",
+        "Review, demonstration and next steps"
+      ]
+    },
+    "tags": [
+      "AIwork",
+      "Knowledgework"
+    ],
+    "price_cny": 1200,
+    "price_usd": null,
+    "theme": "wine",
+    "type": "course",
+    "status": "inquiry",
+    "featured": false,
+    "session_price_cny": 299,
+    "sessions": 4,
+    "levels": {
+      "zh": [
+        "入门",
+        "中阶",
+        "高阶"
+      ],
+      "en": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ]
+    }
+  },
+  {
+    "id": "training-qwen",
+    "sku": "HKS-TRN-007",
+    "published": true,
+    "category": "training",
+    "name": {
+      "zh": "千问办公应用培训",
+      "en": "Qwen Office Applied Training"
+    },
+    "description": {
+      "zh": "学习用阿里千问办公处理工作资料，把自然语言需求转成可检查的成果。",
+      "en": "Use Qwen Office in a practical workflow built around your own work."
+    },
+    "audience": {
+      "zh": "希望将智能体用于实际工作的个人；团队拼课另询",
+      "en": "Individuals, teams and business leaders learning to use AI in real work"
+    },
+    "deliverables": {
+      "zh": [
+        "工作空间：准备账号、文件和练习目标",
+        "任务规划：表达需求，拆解执行步骤",
+        "场景实操：完成一项文档或表格相关任务",
+        "独立练习：复核成果，形成复用清单"
+      ],
+      "en": [
+        "Orientation and tool setup",
+        "A task-based workflow exercise",
+        "Practice with your own materials",
+        "Review, demonstration and next steps"
+      ]
+    },
+    "tags": [
+      "AIwork",
+      "Knowledgework"
+    ],
+    "price_cny": 1200,
+    "price_usd": null,
+    "theme": "linen",
+    "type": "course",
+    "status": "inquiry",
+    "featured": false,
+    "session_price_cny": 299,
+    "sessions": 4,
+    "levels": {
+      "zh": [
+        "入门",
+        "中阶",
+        "高阶"
+      ],
+      "en": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ]
+    }
+  },
+  {
+    "id": "training-hermes",
+    "sku": "HKS-TRN-008",
+    "published": true,
+    "category": "training",
+    "name": {
+      "zh": "Hermes Agent 应用培训",
+      "en": "Hermes Agent Applied Training"
+    },
+    "description": {
+      "zh": "认识 Nous Research 的 Hermes Agent，练习任务执行与技能复用。",
+      "en": "Use Hermes Agent in a practical workflow built around your own work."
+    },
+    "audience": {
+      "zh": "希望将智能体用于实际工作的个人；团队拼课另询",
+      "en": "Individuals, teams and business leaders learning to use AI in real work"
+    },
+    "deliverables": {
+      "zh": [
+        "环境准备：选择适合的使用方式，明确权限范围",
+        "基础任务：组织上下文，执行并检查一个任务",
+        "技能复用：把重复步骤整理成可复用的方法",
+        "独立练习：完成场景任务，复盘操作与结果"
+      ],
+      "en": [
+        "Orientation and tool setup",
+        "A task-based workflow exercise",
+        "Practice with your own materials",
+        "Review, demonstration and next steps"
+      ]
+    },
+    "tags": [
+      "AIwork",
+      "Knowledgework"
+    ],
+    "price_cny": 1200,
+    "price_usd": null,
+    "theme": "night",
+    "type": "course",
+    "status": "inquiry",
+    "featured": false,
+    "session_price_cny": 299,
+    "sessions": 4,
+    "levels": {
+      "zh": [
+        "入门",
+        "中阶",
+        "高阶"
+      ],
+      "en": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ]
+    }
+  },
+  {
+    "id": "training-wecom",
+    "sku": "HKS-TRN-009",
+    "published": true,
+    "category": "training",
+    "name": {
+      "zh": "企业微信智能体应用培训",
+      "en": "WeCom Applied Training"
+    },
+    "description": {
+      "zh": "围绕企业微信中的协作需求，学习规划智能体应用与业务流程。",
+      "en": "Use WeCom in a practical workflow built around your own work."
+    },
+    "audience": {
+      "zh": "希望将智能体用于实际工作的个人；团队拼课另询",
+      "en": "Individuals, teams and business leaders learning to use AI in real work"
+    },
+    "deliverables": {
+      "zh": [
+        "场景梳理：选择团队需求，明确权限与数据边界",
+        "应用规划：设计智能体输入、输出与协作步骤",
+        "场景实操：按账号可用能力完成一个应用练习",
+        "验证与复盘：检查流程，整理团队使用说明"
+      ],
+      "en": [
+        "Orientation and tool setup",
+        "A task-based workflow exercise",
+        "Practice with your own materials",
+        "Review, demonstration and next steps"
+      ]
+    },
+    "tags": [
+      "AIwork",
+      "Knowledgework"
+    ],
+    "price_cny": 1200,
+    "price_usd": null,
+    "theme": "sage",
+    "type": "course",
+    "status": "inquiry",
+    "featured": false,
+    "session_price_cny": 299,
+    "sessions": 4,
+    "levels": {
+      "zh": [
+        "入门",
+        "中阶",
+        "高阶"
+      ],
+      "en": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ]
+    }
+  },
+  {
+    "id": "training-feishu",
+    "sku": "HKS-TRN-010",
+    "published": true,
+    "category": "training",
+    "name": {
+      "zh": "飞书智能体应用培训",
+      "en": "Feishu Applied Training"
+    },
+    "description": {
+      "zh": "围绕飞书中的团队资料与协作场景，学习设计和使用智能体应用。",
+      "en": "Use Feishu in a practical workflow built around your own work."
+    },
+    "audience": {
+      "zh": "希望将智能体用于实际工作的个人；团队拼课另询",
+      "en": "Individuals, teams and business leaders learning to use AI in real work"
+    },
+    "deliverables": {
+      "zh": [
+        "场景梳理：整理团队任务、材料与权限",
+        "应用规划：设计任务流程与成果检查标准",
+        "场景实操：按账号可用能力完成协作任务",
+        "验证与复盘：整理操作规范与后续练习"
+      ],
+      "en": [
+        "Orientation and tool setup",
+        "A task-based workflow exercise",
+        "Practice with your own materials",
+        "Review, demonstration and next steps"
+      ]
+    },
+    "tags": [
+      "AIwork",
+      "Knowledgework"
+    ],
+    "price_cny": 1200,
+    "price_usd": null,
+    "theme": "blue",
+    "type": "course",
+    "status": "inquiry",
+    "featured": false,
+    "session_price_cny": 299,
+    "sessions": 4,
+    "levels": {
+      "zh": [
+        "入门",
+        "中阶",
+        "高阶"
+      ],
+      "en": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ]
+    }
+  },
+  {
+    "id": "training-dingtalk",
+    "sku": "HKS-TRN-011",
+    "published": true,
+    "category": "training",
+    "name": {
+      "zh": "钉钉智能体应用培训",
+      "en": "DingTalk Applied Training"
+    },
+    "description": {
+      "zh": "围绕钉钉中的组织协作与办公任务，学习智能体应用的设计和实践。",
+      "en": "Use DingTalk in a practical workflow built around your own work."
+    },
+    "audience": {
+      "zh": "希望将智能体用于实际工作的个人；团队拼课另询",
+      "en": "Individuals, teams and business leaders learning to use AI in real work"
+    },
+    "deliverables": {
+      "zh": [
+        "场景梳理：选择办公任务，明确协作与权限",
+        "应用规划：定义输入、步骤和预期成果",
+        "场景实操：按账号可用能力完成一个应用练习",
+        "验证与复盘：检查结果，形成团队使用清单"
+      ],
+      "en": [
+        "Orientation and tool setup",
+        "A task-based workflow exercise",
+        "Practice with your own materials",
+        "Review, demonstration and next steps"
+      ]
+    },
+    "tags": [
+      "AIwork",
+      "Knowledgework"
+    ],
+    "price_cny": 1200,
+    "price_usd": null,
+    "theme": "ochre",
+    "type": "course",
+    "status": "inquiry",
+    "featured": false,
+    "session_price_cny": 299,
+    "sessions": 4,
+    "levels": {
+      "zh": [
+        "入门",
+        "中阶",
+        "高阶"
+      ],
+      "en": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ]
+    }
+  },
+  {
+    "id": "agent-atlas",
+    "sku": "HKS-DAT-001",
+    "published": false,
+    "category": "knowledge",
+    "name": {
+      "zh": "2026 AI Agent 全景地图",
+      "en": "AGENT ATLAS"
+    },
+    "description": {
+      "zh": "从工具到行业场景，建立全球智能体生态速查视角。",
+      "en": "Details available on request."
+    },
+    "audience": {
+      "zh": "AI 创业者、负责人、方案师",
+      "en": "Individuals and teams"
+    },
+    "deliverables": {
+      "zh": [
+        "Agent 类型与代表平台索引",
+        "应用场景与能力对照表",
+        "研究线索和选型清单"
+      ],
+      "en": [
+        "Scope and deliverables agreed before starting"
+      ]
+    },
+    "tags": [
+      "AIwork"
+    ],
+    "price_cny": 59,
+    "price_usd": null,
+    "theme": "ember",
+    "type": "service",
+    "status": "coming",
+    "featured": false
+  },
+  {
+    "id": "opc-fieldmap",
+    "sku": "HKS-DAT-002",
+    "published": false,
+    "category": "knowledge",
+    "name": {
+      "zh": "OPC 超级个体作战地图",
+      "en": "ONE PERSON"
+    },
+    "description": {
+      "zh": "把个人业务的定位、获客、生产和交付拆成步骤。",
+      "en": "Details available on request."
+    },
+    "audience": {
+      "zh": "一人公司、超级个体",
+      "en": "Individuals and teams"
+    },
+    "deliverables": {
+      "zh": [
+        "个人业务能力地图",
+        "客户旅程与资源清单",
+        "30 天行动优先级表"
+      ],
+      "en": [
+        "Scope and deliverables agreed before starting"
+      ]
+    },
+    "tags": [
+      "AIwork"
+    ],
+    "price_cny": 39,
+    "price_usd": null,
+    "theme": "ink",
+    "type": "service",
+    "status": "coming",
+    "featured": false
+  },
+  {
+    "id": "agent-worker",
+    "sku": "HKS-KIT-001",
+    "published": false,
+    "category": "knowledge",
+    "name": {
+      "zh": "AI 数字员工上岗工具包",
+      "en": "AI WORKER"
+    },
+    "description": {
+      "zh": "围绕一个岗位，明确 AI 数字员工的边界与验收。",
+      "en": "Details available on request."
+    },
+    "audience": {
+      "zh": "管理者、AI 实施人员",
+      "en": "Individuals and teams"
+    },
+    "deliverables": {
+      "zh": [
+        "岗位职责定义卡",
+        "输入输出与边界表",
+        "上岗验收清单"
+      ],
+      "en": [
+        "Scope and deliverables agreed before starting"
+      ]
+    },
+    "tags": [
+      "AIwork"
+    ],
+    "price_cny": 99,
+    "price_usd": null,
+    "theme": "ochre",
+    "type": "service",
+    "status": "coming",
+    "featured": false
+  },
+  {
+    "id": "dly-diagnostic",
+    "sku": "HKS-FLW-001",
+    "published": false,
+    "category": "knowledge",
+    "name": {
+      "zh": "DLY-6C 经营诊断工作流",
+      "en": "THINK SYSTEM"
+    },
+    "description": {
+      "zh": "用结构化问诊，把模糊的经营问题整理成行动建议。",
+      "en": "Details available on request."
+    },
+    "audience": {
+      "zh": "经营者、顾问",
+      "en": "Individuals and teams"
+    },
+    "deliverables": {
+      "zh": [
+        "六维访谈问题",
+        "证据梳理模板",
+        "行动简报模板"
+      ],
+      "en": [
+        "Scope and deliverables agreed before starting"
+      ]
+    },
+    "tags": [
+      "AIwork"
+    ],
+    "price_cny": 129,
+    "price_usd": null,
+    "theme": "sage",
+    "type": "service",
+    "status": "coming",
+    "featured": false
+  },
+  {
+    "id": "content-line",
+    "sku": "HKS-FLW-002",
+    "published": false,
+    "category": "knowledge",
+    "name": {
+      "zh": "一人公司内容生产线",
+      "en": "MAKE MEDIA"
+    },
+    "description": {
+      "zh": "将内容策划、改写、发布与复盘串成重复使用的流程。",
+      "en": "Details available on request."
+    },
+    "audience": {
+      "zh": "内容创作者、团队运营者",
+      "en": "Individuals and teams"
+    },
+    "deliverables": {
+      "zh": [
+        "选题与素材采集",
+        "多平台改写链路",
+        "发布复盘清单"
+      ],
+      "en": [
+        "Scope and deliverables agreed before starting"
+      ]
+    },
+    "tags": [
+      "AIwork"
+    ],
+    "price_cny": 199,
+    "price_usd": null,
+    "theme": "wine",
+    "type": "service",
+    "status": "coming",
+    "featured": false
+  },
+  {
+    "id": "knowledge-seed",
+    "sku": "HKS-KNB-001",
+    "published": false,
+    "category": "knowledge",
+    "name": {
+      "zh": "锦鲤智库 · 知识库起步包",
+      "en": "KNOW MORE"
+    },
+    "description": {
+      "zh": "建立个人或小团队可维护的知识结构。",
+      "en": "Details available on request."
+    },
+    "audience": {
+      "zh": "方案师、知识工作者",
+      "en": "Individuals and teams"
+    },
+    "deliverables": {
+      "zh": [
+        "知识分类与标签模板",
+        "资料入库规范",
+        "检索和维护流程"
+      ],
+      "en": [
+        "Scope and deliverables agreed before starting"
+      ]
+    },
+    "tags": [
+      "AIwork"
+    ],
+    "price_cny": 149,
+    "price_usd": null,
+    "theme": "night",
+    "type": "service",
+    "status": "coming",
+    "featured": false
+  },
+  {
+    "id": "solution-notes",
+    "sku": "HKS-SER-001",
+    "published": false,
+    "category": "knowledge",
+    "name": {
+      "zh": "方案师的工作方法",
+      "en": "SOLVE THINGS"
+    },
+    "description": {
+      "zh": "用工作案例讨论如何从问题判断走到项目交付。",
+      "en": "Details available on request."
+    },
+    "audience": {
+      "zh": "顾问、方案师、管理者",
+      "en": "Individuals and teams"
+    },
+    "deliverables": {
+      "zh": [
+        "问题定义方法",
+        "方案结构模板",
+        "交付复盘案例"
+      ],
+      "en": [
+        "Scope and deliverables agreed before starting"
+      ]
+    },
+    "tags": [
+      "AIwork"
+    ],
+    "price_cny": 49,
+    "price_usd": null,
+    "theme": "linen",
+    "type": "service",
+    "status": "coming",
+    "featured": false
+  },
+  {
+    "id": "france-arts",
+    "sku": "HKS-KNB-002",
+    "published": false,
+    "category": "knowledge",
+    "name": {
+      "zh": "法国艺术教育渠道研究库",
+      "en": "ART FRANCE"
+    },
+    "description": {
+      "zh": "帮助系统梳理法国艺术教育与中国区渠道信息。",
+      "en": "Details available on request."
+    },
+    "audience": {
+      "zh": "留学顾问、渠道合作人员",
+      "en": "Individuals and teams"
+    },
+    "deliverables": {
+      "zh": [
+        "院校信息字段",
+        "渠道筛选框架",
+        "跟进记录模板"
+      ],
+      "en": [
+        "Scope and deliverables agreed before starting"
+      ]
+    },
+    "tags": [
+      "AIwork"
+    ],
+    "price_cny": 89,
+    "price_usd": null,
+    "theme": "blue",
+    "type": "service",
+    "status": "coming",
+    "featured": false
+  },
+  {
+    "id": "agent-eval",
+    "sku": "HKS-DAT-003",
+    "published": false,
+    "category": "knowledge",
+    "name": {
+      "zh": "AI Agent 选型评估表",
+      "en": "PICK AGENT"
+    },
+    "description": {
+      "zh": "对任务完成率、推理效率和单位结果成本进行结构化比较。",
+      "en": "Details available on request."
+    },
+    "audience": {
+      "zh": "FDE、部门主管、方案师",
+      "en": "Individuals and teams"
+    },
+    "deliverables": {
+      "zh": [
+        "任务完成质量评分",
+        "单位结果成本测算",
+        "试用对照与复盘表"
+      ],
+      "en": [
+        "Scope and deliverables agreed before starting"
+      ]
+    },
+    "tags": [
+      "AIwork"
+    ],
+    "price_cny": 69,
+    "price_usd": null,
+    "theme": "blue",
+    "type": "service",
+    "status": "coming",
+    "featured": false
+  },
+  {
+    "id": "service-card",
+    "sku": "HKS-KIT-002",
+    "published": false,
+    "category": "knowledge",
+    "name": {
+      "zh": "Work 服务产品化卡片包",
+      "en": "WORK CARDS"
+    },
+    "description": {
+      "zh": "把专业能力打包成可组合、可报价的工作单元。",
+      "en": "Details available on request."
+    },
+    "audience": {
+      "zh": "顾问、设计师、自由职业者",
+      "en": "Individuals and teams"
+    },
+    "deliverables": {
+      "zh": [
+        "Work 服务定义卡",
+        "范围与交付清单",
+        "Work → Worker → Outcome 示例"
+      ],
+      "en": [
+        "Scope and deliverables agreed before starting"
+      ]
+    },
+    "tags": [
+      "AIwork"
+    ],
+    "price_cny": 79,
+    "price_usd": null,
+    "theme": "linen",
+    "type": "service",
+    "status": "coming",
+    "featured": false
+  },
+  {
+    "id": "outcome-quote",
+    "sku": "HKS-KIT-003",
+    "published": false,
+    "category": "knowledge",
+    "name": {
+      "zh": "Outcome 结果交付报价模板",
+      "en": "SELL RESULTS"
+    },
+    "description": {
+      "zh": "从工时清单切换到交付物和验收的报价表达。",
+      "en": "Details available on request."
+    },
+    "audience": {
+      "zh": "独立服务者、项目负责人",
+      "en": "Individuals and teams"
+    },
+    "deliverables": {
+      "zh": [
+        "结果计价表",
+        "里程碑验收卡",
+        "范围变更提醒"
+      ],
+      "en": [
+        "Scope and deliverables agreed before starting"
+      ]
+    },
+    "tags": [
+      "AIwork"
+    ],
+    "price_cny": 89,
+    "price_usd": null,
+    "theme": "sage",
+    "type": "service",
+    "status": "coming",
+    "featured": false
+  },
+  {
+    "id": "ai-600hours",
+    "sku": "HKS-SER-002",
+    "published": false,
+    "category": "knowledge",
+    "name": {
+      "zh": "AI 服务创业 600 小时笔记",
+      "en": "600 HOURS"
+    },
+    "description": {
+      "zh": "从工具试错到业务交付，梳理 AI 服务创业中的判断。",
+      "en": "Details available on request."
+    },
+    "audience": {
+      "zh": "AI 创业者、OPC",
+      "en": "Individuals and teams"
+    },
+    "deliverables": {
+      "zh": [
+        "AI 学习投入反思",
+        "Agent 选型与落地",
+        "从卖工具转向卖结果"
+      ],
+      "en": [
+        "Scope and deliverables agreed before starting"
+      ]
+    },
+    "tags": [
+      "AIwork"
+    ],
+    "price_cny": 69,
+    "price_usd": null,
+    "theme": "ember",
+    "type": "service",
+    "status": "coming",
+    "featured": false
+  },
+  {
+    "id": "research-training-01-business-architect",
+    "sku": "HKS-TRN-012",
+    "published": true,
+    "category": "training",
+    "name": {
+      "zh": "商业架构师：AI 时代的企业设计",
+      "en": "Business Architecture in the AI Era"
+    },
+    "description": {
+      "zh": "围绕企业设计、商业定位与价值捕获的研究型课程。",
+      "en": "A research-led course exploring business architecture in the ai era, with a report, discussion and applied exercises."
+    },
+    "audience": {
+      "zh": "希望系统学习 AI 智能体与商业工程的个人、团队和企业负责人",
+      "en": "Individuals, teams and business leaders learning to use AI in real work"
+    },
+    "deliverables": {
+      "zh": [
+        "研究报告与核心概念",
+        "课程重点与实践框架",
+        "课后练习与讨论",
+        "PDF 研究资料（已上传）"
+      ],
+      "en": [
+        "Research report and key concepts",
+        "An applied framework",
+        "Exercises and discussion",
+        "Course PDF (Chinese research material)"
+      ]
+    },
+    "tags": [
+      "AIwork",
+      "Knowledgework",
+      "Brainwork",
+      "Researchwork"
+    ],
+    "price_cny": 1200,
+    "price_usd": null,
+    "theme": "linen",
+    "type": "course",
+    "status": "inquiry",
+    "featured": false,
+    "session_price_cny": 299,
+    "sessions": 4,
+    "pdfUrl": "courses/01-business-architect.pdf",
+    "levels": {
+      "zh": [
+        "入门",
+        "中阶",
+        "高阶"
+      ],
+      "en": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ]
+    }
+  },
+  {
+    "id": "research-training-02-business-orchestrator",
+    "sku": "HKS-TRN-013",
+    "published": true,
+    "category": "training",
+    "name": {
+      "zh": "业务编排者：AI 时代企业运营的判断交汇点",
+      "en": "Business Orchestration"
+    },
+    "description": {
+      "zh": "面向 AI 时代运营判断、流程编排与组织协作。",
+      "en": "A research-led course exploring business orchestration, with a report, discussion and applied exercises."
+    },
+    "audience": {
+      "zh": "希望系统学习 AI 智能体与商业工程的个人、团队和企业负责人",
+      "en": "Individuals, teams and business leaders learning to use AI in real work"
+    },
+    "deliverables": {
+      "zh": [
+        "研究报告与核心概念",
+        "课程重点与实践框架",
+        "课后练习与讨论",
+        "PDF 研究资料（已上传）"
+      ],
+      "en": [
+        "Research report and key concepts",
+        "An applied framework",
+        "Exercises and discussion",
+        "Course PDF (Chinese research material)"
+      ]
+    },
+    "tags": [
+      "AIwork",
+      "Knowledgework",
+      "Brainwork",
+      "Researchwork"
+    ],
+    "price_cny": 1200,
+    "price_usd": null,
+    "theme": "wine",
+    "type": "course",
+    "status": "inquiry",
+    "featured": false,
+    "session_price_cny": 299,
+    "sessions": 4,
+    "pdfUrl": "courses/02-business-orchestrator.pdf",
+    "levels": {
+      "zh": [
+        "入门",
+        "中阶",
+        "高阶"
+      ],
+      "en": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ]
+    }
+  },
+  {
+    "id": "research-training-03-agentic-organization",
+    "sku": "HKS-TRN-014",
+    "published": true,
+    "category": "training",
+    "name": {
+      "zh": "代理式组织：从个体生产率到大战略",
+      "en": "The Agentic Organisation"
+    },
+    "description": {
+      "zh": "理解智能体组织如何从个人工具走向组织战略。",
+      "en": "A research-led course exploring the agentic organisation, with a report, discussion and applied exercises."
+    },
+    "audience": {
+      "zh": "希望系统学习 AI 智能体与商业工程的个人、团队和企业负责人",
+      "en": "Individuals, teams and business leaders learning to use AI in real work"
+    },
+    "deliverables": {
+      "zh": [
+        "研究报告与核心概念",
+        "课程重点与实践框架",
+        "课后练习与讨论",
+        "PDF 研究资料（已上传）"
+      ],
+      "en": [
+        "Research report and key concepts",
+        "An applied framework",
+        "Exercises and discussion",
+        "Course PDF (Chinese research material)"
+      ]
+    },
+    "tags": [
+      "AIwork",
+      "Knowledgework",
+      "Brainwork",
+      "Researchwork"
+    ],
+    "price_cny": 1200,
+    "price_usd": null,
+    "theme": "night",
+    "type": "course",
+    "status": "inquiry",
+    "featured": false,
+    "session_price_cny": 299,
+    "sessions": 4,
+    "pdfUrl": "courses/03-agentic-organization.pdf",
+    "levels": {
+      "zh": [
+        "入门",
+        "中阶",
+        "高阶"
+      ],
+      "en": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ]
+    }
+  },
+  {
+    "id": "research-training-04-ai-economics",
+    "sku": "HKS-TRN-015",
+    "published": true,
+    "category": "training",
+    "name": {
+      "zh": "AI 经济学：为工作定价、构建毛利与重读资本账本",
+      "en": "AI Economics"
+    },
+    "description": {
+      "zh": "用单位经济与定价框架评估 AI 工作的真实价值。",
+      "en": "A research-led course exploring ai economics, with a report, discussion and applied exercises."
+    },
+    "audience": {
+      "zh": "希望系统学习 AI 智能体与商业工程的个人、团队和企业负责人",
+      "en": "Individuals, teams and business leaders learning to use AI in real work"
+    },
+    "deliverables": {
+      "zh": [
+        "研究报告与核心概念",
+        "课程重点与实践框架",
+        "课后练习与讨论",
+        "PDF 研究资料（已上传）"
+      ],
+      "en": [
+        "Research report and key concepts",
+        "An applied framework",
+        "Exercises and discussion",
+        "Course PDF (Chinese research material)"
+      ]
+    },
+    "tags": [
+      "AIwork",
+      "Knowledgework",
+      "Brainwork",
+      "Researchwork"
+    ],
+    "price_cny": 1200,
+    "price_usd": null,
+    "theme": "blue",
+    "type": "course",
+    "status": "inquiry",
+    "featured": false,
+    "session_price_cny": 299,
+    "sessions": 4,
+    "pdfUrl": "courses/04-ai-economics.pdf",
+    "levels": {
+      "zh": [
+        "入门",
+        "中阶",
+        "高阶"
+      ],
+      "en": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ]
+    }
+  },
+  {
+    "id": "research-training-05-ai-engineering",
+    "sku": "HKS-TRN-016",
+    "published": true,
+    "category": "training",
+    "name": {
+      "zh": "AI 工程：租用模型、拥有循环、冻结裁判",
+      "en": "AI Engineering"
+    },
+    "description": {
+      "zh": "从工作循环、测量和评估理解 AI 工程。",
+      "en": "A research-led course exploring ai engineering, with a report, discussion and applied exercises."
+    },
+    "audience": {
+      "zh": "希望系统学习 AI 智能体与商业工程的个人、团队和企业负责人",
+      "en": "Individuals, teams and business leaders learning to use AI in real work"
+    },
+    "deliverables": {
+      "zh": [
+        "研究报告与核心概念",
+        "课程重点与实践框架",
+        "课后练习与讨论",
+        "PDF 研究资料（已上传）"
+      ],
+      "en": [
+        "Research report and key concepts",
+        "An applied framework",
+        "Exercises and discussion",
+        "Course PDF (Chinese research material)"
+      ]
+    },
+    "tags": [
+      "AIwork",
+      "Knowledgework",
+      "Brainwork",
+      "Researchwork"
+    ],
+    "price_cny": 1200,
+    "price_usd": null,
+    "theme": "ember",
+    "type": "course",
+    "status": "inquiry",
+    "featured": false,
+    "session_price_cny": 299,
+    "sessions": 4,
+    "pdfUrl": "courses/05-ai-engineering.pdf",
+    "levels": {
+      "zh": [
+        "入门",
+        "中阶",
+        "高阶"
+      ],
+      "en": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ]
+    }
+  },
+  {
+    "id": "research-training-06-context-engineering",
+    "sku": "HKS-TRN-017",
+    "published": true,
+    "category": "training",
+    "name": {
+      "zh": "上下文工程：为模型所读之物建立预算、底座与治理",
+      "en": "Context Engineering"
+    },
+    "description": {
+      "zh": "建立上下文预算、知识底座与读取治理的方法。",
+      "en": "A research-led course exploring context engineering, with a report, discussion and applied exercises."
+    },
+    "audience": {
+      "zh": "希望系统学习 AI 智能体与商业工程的个人、团队和企业负责人",
+      "en": "Individuals, teams and business leaders learning to use AI in real work"
+    },
+    "deliverables": {
+      "zh": [
+        "研究报告与核心概念",
+        "课程重点与实践框架",
+        "课后练习与讨论",
+        "PDF 研究资料（已上传）"
+      ],
+      "en": [
+        "Research report and key concepts",
+        "An applied framework",
+        "Exercises and discussion",
+        "Course PDF (Chinese research material)"
+      ]
+    },
+    "tags": [
+      "AIwork",
+      "Knowledgework",
+      "Brainwork",
+      "Researchwork"
+    ],
+    "price_cny": 1200,
+    "price_usd": null,
+    "theme": "ink",
+    "type": "course",
+    "status": "inquiry",
+    "featured": false,
+    "session_price_cny": 299,
+    "sessions": 4,
+    "pdfUrl": "courses/06-context-engineering.pdf",
+    "levels": {
+      "zh": [
+        "入门",
+        "中阶",
+        "高阶"
+      ],
+      "en": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ]
+    }
+  },
+  {
+    "id": "research-training-07-inference-engineering",
+    "sku": "HKS-TRN-018",
+    "published": true,
+    "category": "training",
+    "name": {
+      "zh": "推理工程：模型如何成为可靠且经济的服务",
+      "en": "Inference Engineering"
+    },
+    "description": {
+      "zh": "围绕服务目标、工作记忆和利用率设计可靠推理服务。",
+      "en": "A research-led course exploring inference engineering, with a report, discussion and applied exercises."
+    },
+    "audience": {
+      "zh": "希望系统学习 AI 智能体与商业工程的个人、团队和企业负责人",
+      "en": "Individuals, teams and business leaders learning to use AI in real work"
+    },
+    "deliverables": {
+      "zh": [
+        "研究报告与核心概念",
+        "课程重点与实践框架",
+        "课后练习与讨论",
+        "PDF 研究资料（已上传）"
+      ],
+      "en": [
+        "Research report and key concepts",
+        "An applied framework",
+        "Exercises and discussion",
+        "Course PDF (Chinese research material)"
+      ]
+    },
+    "tags": [
+      "AIwork",
+      "Knowledgework",
+      "Brainwork",
+      "Researchwork"
+    ],
+    "price_cny": 1200,
+    "price_usd": null,
+    "theme": "ochre",
+    "type": "course",
+    "status": "inquiry",
+    "featured": false,
+    "session_price_cny": 299,
+    "sessions": 4,
+    "pdfUrl": "courses/07-inference-engineering.pdf",
+    "levels": {
+      "zh": [
+        "入门",
+        "中阶",
+        "高阶"
+      ],
+      "en": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ]
+    }
+  },
+  {
+    "id": "research-training-08-security-engineering",
+    "sku": "HKS-TRN-019",
+    "published": true,
+    "category": "training",
+    "name": {
+      "zh": "安全工程：双向边界下的机器劳动力治理",
+      "en": "Security Engineering"
+    },
+    "description": {
+      "zh": "面向智能体系统的权限边界、威胁与治理机制。",
+      "en": "A research-led course exploring security engineering, with a report, discussion and applied exercises."
+    },
+    "audience": {
+      "zh": "希望系统学习 AI 智能体与商业工程的个人、团队和企业负责人",
+      "en": "Individuals, teams and business leaders learning to use AI in real work"
+    },
+    "deliverables": {
+      "zh": [
+        "研究报告与核心概念",
+        "课程重点与实践框架",
+        "课后练习与讨论",
+        "PDF 研究资料（已上传）"
+      ],
+      "en": [
+        "Research report and key concepts",
+        "An applied framework",
+        "Exercises and discussion",
+        "Course PDF (Chinese research material)"
+      ]
+    },
+    "tags": [
+      "AIwork",
+      "Knowledgework",
+      "Brainwork",
+      "Researchwork"
+    ],
+    "price_cny": 1200,
+    "price_usd": null,
+    "theme": "sage",
+    "type": "course",
+    "status": "inquiry",
+    "featured": false,
+    "session_price_cny": 299,
+    "sessions": 4,
+    "pdfUrl": "courses/08-security-engineering.pdf",
+    "levels": {
+      "zh": [
+        "入门",
+        "中阶",
+        "高阶"
+      ],
+      "en": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ]
+    }
+  },
+  {
+    "id": "research-training-09-ai-product-engineering",
+    "sku": "HKS-TRN-020",
+    "published": true,
+    "category": "training",
+    "name": {
+      "zh": "AI 产品工程：从演示到可验证结果的产品学科",
+      "en": "AI Product Engineering"
+    },
+    "description": {
+      "zh": "把 AI 产品从演示推进到可评估、可交付的结果。",
+      "en": "A research-led course exploring ai product engineering, with a report, discussion and applied exercises."
+    },
+    "audience": {
+      "zh": "希望系统学习 AI 智能体与商业工程的个人、团队和企业负责人",
+      "en": "Individuals, teams and business leaders learning to use AI in real work"
+    },
+    "deliverables": {
+      "zh": [
+        "研究报告与核心概念",
+        "课程重点与实践框架",
+        "课后练习与讨论",
+        "PDF 研究资料（已上传）"
+      ],
+      "en": [
+        "Research report and key concepts",
+        "An applied framework",
+        "Exercises and discussion",
+        "Course PDF (Chinese research material)"
+      ]
+    },
+    "tags": [
+      "AIwork",
+      "Knowledgework",
+      "Brainwork",
+      "Researchwork"
+    ],
+    "price_cny": 1200,
+    "price_usd": null,
+    "theme": "linen",
+    "type": "course",
+    "status": "inquiry",
+    "featured": false,
+    "session_price_cny": 299,
+    "sessions": 4,
+    "pdfUrl": "courses/09-ai-product-engineering.pdf",
+    "levels": {
+      "zh": [
+        "入门",
+        "中阶",
+        "高阶"
+      ],
+      "en": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ]
+    }
+  },
+  {
+    "id": "research-training-10-ai-growth-engineering",
+    "sku": "HKS-TRN-021",
+    "published": true,
+    "category": "training",
+    "name": {
+      "zh": "AI 增长工程：从漏斗到闭环",
+      "en": "AI Growth Engineering"
+    },
+    "description": {
+      "zh": "理解代理用户、发现线与结果留存的增长闭环。",
+      "en": "A research-led course exploring ai growth engineering, with a report, discussion and applied exercises."
+    },
+    "audience": {
+      "zh": "希望系统学习 AI 智能体与商业工程的个人、团队和企业负责人",
+      "en": "Individuals, teams and business leaders learning to use AI in real work"
+    },
+    "deliverables": {
+      "zh": [
+        "研究报告与核心概念",
+        "课程重点与实践框架",
+        "课后练习与讨论",
+        "PDF 研究资料（已上传）"
+      ],
+      "en": [
+        "Research report and key concepts",
+        "An applied framework",
+        "Exercises and discussion",
+        "Course PDF (Chinese research material)"
+      ]
+    },
+    "tags": [
+      "AIwork",
+      "Knowledgework",
+      "Brainwork",
+      "Researchwork"
+    ],
+    "price_cny": 1200,
+    "price_usd": null,
+    "theme": "wine",
+    "type": "course",
+    "status": "inquiry",
+    "featured": false,
+    "session_price_cny": 299,
+    "sessions": 4,
+    "pdfUrl": "courses/10-ai-growth-engineering.pdf",
+    "levels": {
+      "zh": [
+        "入门",
+        "中阶",
+        "高阶"
+      ],
+      "en": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ]
+    }
+  },
+  {
+    "id": "research-training-11-enterprise-sales",
+    "sku": "HKS-TRN-022",
+    "published": true,
+    "category": "training",
+    "name": {
+      "zh": "AI 时代的企业销售：从出售软件到交付结果",
+      "en": "Enterprise Sales in the AI Era"
+    },
+    "description": {
+      "zh": "以生产环境证据、采购流程和结果定价推进企业销售。",
+      "en": "A research-led course exploring enterprise sales in the ai era, with a report, discussion and applied exercises."
+    },
+    "audience": {
+      "zh": "希望系统学习 AI 智能体与商业工程的个人、团队和企业负责人",
+      "en": "Individuals, teams and business leaders learning to use AI in real work"
+    },
+    "deliverables": {
+      "zh": [
+        "研究报告与核心概念",
+        "课程重点与实践框架",
+        "课后练习与讨论",
+        "PDF 研究资料（已上传）"
+      ],
+      "en": [
+        "Research report and key concepts",
+        "An applied framework",
+        "Exercises and discussion",
+        "Course PDF (Chinese research material)"
+      ]
+    },
+    "tags": [
+      "AIwork",
+      "Knowledgework",
+      "Brainwork",
+      "Researchwork"
+    ],
+    "price_cny": 1200,
+    "price_usd": null,
+    "theme": "night",
+    "type": "course",
+    "status": "inquiry",
+    "featured": false,
+    "session_price_cny": 299,
+    "sessions": 4,
+    "pdfUrl": "courses/11-enterprise-sales.pdf",
+    "levels": {
+      "zh": [
+        "入门",
+        "中阶",
+        "高阶"
+      ],
+      "en": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ]
+    }
+  },
+  {
+    "id": "research-training-12-fde-playbook",
+    "sku": "HKS-TRN-023",
+    "published": true,
+    "category": "training",
+    "name": {
+      "zh": "前线部署工程师：AI“最后一公里”的组织机制",
+      "en": "The Forward-Deployed Engineer Playbook"
+    },
+    "description": {
+      "zh": "学习前线部署、现场交付与残留物产品化的方法。",
+      "en": "A research-led course exploring the forward-deployed engineer playbook, with a report, discussion and applied exercises."
+    },
+    "audience": {
+      "zh": "希望系统学习 AI 智能体与商业工程的个人、团队和企业负责人",
+      "en": "Individuals, teams and business leaders learning to use AI in real work"
+    },
+    "deliverables": {
+      "zh": [
+        "研究报告与核心概念",
+        "课程重点与实践框架",
+        "课后练习与讨论",
+        "PDF 研究资料（已上传）"
+      ],
+      "en": [
+        "Research report and key concepts",
+        "An applied framework",
+        "Exercises and discussion",
+        "Course PDF (Chinese research material)"
+      ]
+    },
+    "tags": [
+      "AIwork",
+      "Knowledgework",
+      "Brainwork",
+      "Researchwork"
+    ],
+    "price_cny": 1200,
+    "price_usd": null,
+    "theme": "blue",
+    "type": "course",
+    "status": "inquiry",
+    "featured": false,
+    "session_price_cny": 299,
+    "sessions": 4,
+    "pdfUrl": "courses/12-fde-playbook.pdf",
+    "levels": {
+      "zh": [
+        "入门",
+        "中阶",
+        "高阶"
+      ],
+      "en": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ]
+    }
+  },
+  {
+    "id": "decision-research",
+    "sku": "HKS-NEW-001",
+    "published": true,
+    "category": "projects",
+    "name": {
+      "zh": "决策调研与方案梳理",
+      "en": "Decision Research & Planning"
+    },
+    "description": {
+      "zh": "围绕一个业务决策，组织信息、判断与下一步方案。",
+      "en": "Turn a business question into organised evidence, options and a practical next step."
+    },
+    "audience": {
+      "zh": "希望围绕真实问题展开合作的个人、企业与团队",
+      "en": "Individuals and teams with a real problem to work on"
+    },
+    "deliverables": {
+      "zh": [
+        "问题与目标梳理",
+        "约定范围的方案、工作坊或项目成果",
+        "复盘与下一步建议"
+      ],
+      "en": [
+        "A clear problem and objective",
+        "Agreed project or workshop deliverables",
+        "A review and proposed next steps"
+      ]
+    },
+    "tags": [
+      "Researchwork",
+      "Brainwork",
+      "Datawork"
+    ],
+    "price_cny": null,
+    "price_usd": null,
+    "theme": "sage",
+    "type": "service",
+    "status": "inquiry",
+    "featured": false
+  },
+  {
+    "id": "customer-service",
+    "sku": "HKS-NEW-002",
+    "published": true,
+    "category": "projects",
+    "name": {
+      "zh": "客服场景与智能体试点",
+      "en": "Customer Service Agent Pilot"
+    },
+    "description": {
+      "zh": "从客服任务、知识与升级机制入手，设计可验收的智能体试点。",
+      "en": "Design a scoped customer service pilot with a knowledge base, task boundaries and human escalation."
+    },
+    "audience": {
+      "zh": "希望围绕真实问题展开合作的个人、企业与团队",
+      "en": "Individuals and teams with a real problem to work on"
+    },
+    "deliverables": {
+      "zh": [
+        "问题与目标梳理",
+        "约定范围的方案、工作坊或项目成果",
+        "复盘与下一步建议"
+      ],
+      "en": [
+        "A clear problem and objective",
+        "Agreed project or workshop deliverables",
+        "A review and proposed next steps"
+      ]
+    },
+    "tags": [
+      "AIwork",
+      "Knowledgework",
+      "Opswork"
+    ],
+    "price_cny": null,
+    "price_usd": null,
+    "theme": "ink",
+    "type": "service",
+    "status": "inquiry",
+    "featured": false
+  },
+  {
+    "id": "digital-office",
+    "sku": "HKS-NEW-003",
+    "published": true,
+    "category": "projects",
+    "name": {
+      "zh": "数字化办公工作流",
+      "en": "Digital Office Workflows"
+    },
+    "description": {
+      "zh": "梳理团队日常文档、信息与协作任务，设计工具与工作流。",
+      "en": "Organise documents, information and recurring collaboration into practical workflows."
+    },
+    "audience": {
+      "zh": "希望围绕真实问题展开合作的个人、企业与团队",
+      "en": "Individuals and teams with a real problem to work on"
+    },
+    "deliverables": {
+      "zh": [
+        "问题与目标梳理",
+        "约定范围的方案、工作坊或项目成果",
+        "复盘与下一步建议"
+      ],
+      "en": [
+        "A clear problem and objective",
+        "Agreed project or workshop deliverables",
+        "A review and proposed next steps"
+      ]
+    },
+    "tags": [
+      "Paperwork",
+      "Codework",
+      "Opswork"
+    ],
+    "price_cny": null,
+    "price_usd": null,
+    "theme": "ember",
+    "type": "service",
+    "status": "inquiry",
+    "featured": false
+  },
+  {
+    "id": "org-mindset",
+    "sku": "HKS-NEW-004",
+    "published": true,
+    "category": "organization",
+    "name": {
+      "zh": "组织心智与 AI 共识工作坊",
+      "en": "Organisational Mindset Workshop"
+    },
+    "description": {
+      "zh": "围绕真实业务议题建立共同语言，梳理判断与协作方式。",
+      "en": "Build shared language around a business issue and review how the team decides and collaborates."
+    },
+    "audience": {
+      "zh": "希望围绕真实问题展开合作的个人、企业与团队",
+      "en": "Individuals and teams with a real problem to work on"
+    },
+    "deliverables": {
+      "zh": [
+        "问题与目标梳理",
+        "约定范围的方案、工作坊或项目成果",
+        "复盘与下一步建议"
+      ],
+      "en": [
+        "A clear problem and objective",
+        "Agreed project or workshop deliverables",
+        "A review and proposed next steps"
+      ]
+    },
+    "tags": [
+      "Brainwork",
+      "Teamwork"
+    ],
+    "price_cny": null,
+    "price_usd": null,
+    "theme": "sage",
+    "type": "service",
+    "status": "inquiry",
+    "featured": false
+  },
+  {
+    "id": "transformation-lead",
+    "sku": "HKS-NEW-005",
+    "published": true,
+    "category": "organization",
+    "name": {
+      "zh": "数字化转型一号位议题",
+      "en": "Digital Transformation Leadership"
+    },
+    "description": {
+      "zh": "围绕一号位的责任、优先级与落地机制，梳理转型路径。",
+      "en": "Clarify leadership responsibilities, priorities and a practical transformation path."
+    },
+    "audience": {
+      "zh": "希望围绕真实问题展开合作的个人、企业与团队",
+      "en": "Individuals and teams with a real problem to work on"
+    },
+    "deliverables": {
+      "zh": [
+        "问题与目标梳理",
+        "约定范围的方案、工作坊或项目成果",
+        "复盘与下一步建议"
+      ],
+      "en": [
+        "A clear problem and objective",
+        "Agreed project or workshop deliverables",
+        "A review and proposed next steps"
+      ]
+    },
+    "tags": [
+      "Brainwork",
+      "Opswork",
+      "Teamwork"
+    ],
+    "price_cny": null,
+    "price_usd": null,
+    "theme": "ink",
+    "type": "service",
+    "status": "inquiry",
+    "featured": false
+  },
+  {
+    "id": "ai-native-org",
+    "sku": "HKS-NEW-006",
+    "published": true,
+    "category": "organization",
+    "name": {
+      "zh": "AI 原生组织设计",
+      "en": "AI-Native Organisation Design"
+    },
+    "description": {
+      "zh": "从任务、角色、流程与治理出发，讨论适合团队的组织运行方式。",
+      "en": "Review tasks, roles, workflows and governance for an organisation working with AI."
+    },
+    "audience": {
+      "zh": "希望围绕真实问题展开合作的个人、企业与团队",
+      "en": "Individuals and teams with a real problem to work on"
+    },
+    "deliverables": {
+      "zh": [
+        "问题与目标梳理",
+        "约定范围的方案、工作坊或项目成果",
+        "复盘与下一步建议"
+      ],
+      "en": [
+        "A clear problem and objective",
+        "Agreed project or workshop deliverables",
+        "A review and proposed next steps"
+      ]
+    },
+    "tags": [
+      "AIwork",
+      "Opswork",
+      "Teamwork"
+    ],
+    "price_cny": null,
+    "price_usd": null,
+    "theme": "ember",
+    "type": "service",
+    "status": "inquiry",
+    "featured": false
+  },
+  {
+    "id": "long-term-station",
+    "sku": "HKS-NEW-007",
+    "published": true,
+    "category": "cocreation",
+    "name": {
+      "zh": "企业超级工作站长期共建",
+      "en": "Long-Term Workstation Co-Development"
+    },
+    "description": {
+      "zh": "与企业共同投入、共同发展、共享结果，持续建设工作系统。",
+      "en": "Co-invest, develop together and agree on shared outcomes for a working business system."
+    },
+    "audience": {
+      "zh": "希望围绕真实问题展开合作的个人、企业与团队",
+      "en": "Individuals and teams with a real problem to work on"
+    },
+    "deliverables": {
+      "zh": [
+        "问题与目标梳理",
+        "约定范围的方案、工作坊或项目成果",
+        "复盘与下一步建议"
+      ],
+      "en": [
+        "A clear problem and objective",
+        "Agreed project or workshop deliverables",
+        "A review and proposed next steps"
+      ]
+    },
+    "tags": [
+      "AIwork",
+      "Opswork",
+      "Network",
+      "Teamwork"
+    ],
+    "price_cny": null,
+    "price_usd": null,
+    "theme": "sage",
+    "type": "service",
+    "status": "inquiry",
+    "featured": false
+  },
+  {
+    "id": "opc-cocreation",
+    "sku": "HKS-NEW-008",
+    "published": true,
+    "category": "cocreation",
+    "name": {
+      "zh": "OPC 超级个体项目共创",
+      "en": "Independent Professional Co-Creation"
+    },
+    "description": {
+      "zh": "围绕真实项目连接专业伙伴，明确分工、交付与合作机制。",
+      "en": "Bring independent professionals together around a real project, with clear roles and delivery responsibilities."
+    },
+    "audience": {
+      "zh": "希望围绕真实问题展开合作的个人、企业与团队",
+      "en": "Individuals and teams with a real problem to work on"
+    },
+    "deliverables": {
+      "zh": [
+        "问题与目标梳理",
+        "约定范围的方案、工作坊或项目成果",
+        "复盘与下一步建议"
+      ],
+      "en": [
+        "A clear problem and objective",
+        "Agreed project or workshop deliverables",
+        "A review and proposed next steps"
+      ]
+    },
+    "tags": [
+      "Network",
+      "Fieldwork",
+      "Teamwork"
+    ],
+    "price_cny": null,
+    "price_usd": null,
+    "theme": "ink",
+    "type": "service",
+    "status": "inquiry",
+    "featured": false
+  },
+  {
+    "id": "work16-book",
+    "sku": "HKS-NEW-009",
+    "published": true,
+    "category": "knowledge",
+    "name": {
+      "zh": "《WORK 16》在线书稿",
+      "en": "WORK 16: Online Manuscript"
+    },
+    "description": {
+      "zh": "从任务、能力、工作流与结果出发，重新理解人类工作。",
+      "en": "A research manuscript on human work through tasks, capabilities, workflows and outcomes."
+    },
+    "audience": {
+      "zh": "希望围绕真实问题展开合作的个人、企业与团队",
+      "en": "Individuals and teams with a real problem to work on"
+    },
+    "deliverables": {
+      "zh": [
+        "在线研究书稿",
+        "16 个工作研究领域",
+        "三层研究方法"
+      ],
+      "en": [
+        "An online research manuscript (Chinese)",
+        "Sixteen fields of work",
+        "A three-layer research approach"
+      ]
+    },
+    "tags": [
+      "Researchwork",
+      "Knowledgework",
+      "Brainwork"
+    ],
+    "price_cny": 0,
+    "price_usd": null,
+    "theme": "ember",
+    "type": "resource",
+    "status": "available",
+    "featured": false,
+    "previewUrl": "work16/"
+  }
+]

@@ -1,0 +1,114 @@
+[
+  {
+    "id": "Brainwork",
+    "label": {
+      "zh": "思考与决策",
+      "en": "Strategy and decisions"
+    }
+  },
+  {
+    "id": "Researchwork",
+    "label": {
+      "zh": "调研与研究",
+      "en": "Research"
+    }
+  },
+  {
+    "id": "Datawork",
+    "label": {
+      "zh": "数据与分析",
+      "en": "Data and analysis"
+    }
+  },
+  {
+    "id": "Knowledgework",
+    "label": {
+      "zh": "知识管理",
+      "en": "Knowledge systems"
+    }
+  },
+  {
+    "id": "Designwork",
+    "label": {
+      "zh": "创意与设计",
+      "en": "Design"
+    }
+  },
+  {
+    "id": "Contentwork",
+    "label": {
+      "zh": "内容与表达",
+      "en": "Content"
+    }
+  },
+  {
+    "id": "Mediawork",
+    "label": {
+      "zh": "多媒体制作",
+      "en": "Media"
+    }
+  },
+  {
+    "id": "Paperwork",
+    "label": {
+      "zh": "文书与文档",
+      "en": "Documents"
+    }
+  },
+  {
+    "id": "Codework",
+    "label": {
+      "zh": "数字产品开发",
+      "en": "Web and software"
+    }
+  },
+  {
+    "id": "AIwork",
+    "label": {
+      "zh": "AI 能力建设",
+      "en": "AI agents"
+    }
+  },
+  {
+    "id": "Opswork",
+    "label": {
+      "zh": "运营与流程",
+      "en": "Operations"
+    }
+  },
+  {
+    "id": "Network",
+    "label": {
+      "zh": "资源与连接",
+      "en": "Partnerships"
+    }
+  },
+  {
+    "id": "Saleswork",
+    "label": {
+      "zh": "销售与商务",
+      "en": "Sales"
+    }
+  },
+  {
+    "id": "Growthwork",
+    "label": {
+      "zh": "增长与获客",
+      "en": "Growth"
+    }
+  },
+  {
+    "id": "Fieldwork",
+    "label": {
+      "zh": "现场与执行",
+      "en": "Field delivery"
+    }
+  },
+  {
+    "id": "Teamwork",
+    "label": {
+      "zh": "协作与管理",
+      "en": "Teamwork"
+    }
+  }
+]
