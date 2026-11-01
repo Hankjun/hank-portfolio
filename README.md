@@ -34,7 +34,7 @@ GitHub Pages 从 main 根目录发布。Sites 使用同一页面与数据，同�
 
 ## 联系与统计的配置
 
-在 `data/channels.json` 填入实际邮箱或链接，并设为 `published: true`。邮箱记录使用 `value`，预约、LinkedIn 和 WhatsApp 使用 `url`。不要发布空链接。
+邮箱与预约统一填写 `data/config.json` 的 `contact.email`、`contact.bookingUrl`，填写有效地址后自动启用。LinkedIn 和 WhatsApp 仍在 `data/channels.json` 中配置 URL 与发布状态。
 
 统计默认关闭。确认统计账户和站点后，在 `data/config.json` 的 analytics 填入 provider（plausible 或 umami）、src 与 domain（Umami 为 website ID）。事件包括 project_brief_create、brief_copy、brief_download、shortlist_change、shortlist_open、wechat_qr_open、email_enquiry、outbound_click；不发送简报内容或联系信息。
 
@@ -43,3 +43,9 @@ GitHub Pages 从 main 根目录发布。Sites 使用同一页面与数据，同�
 Logo 使用保留 alpha 的 WebP，原透明 PNG 与原图保留。视频采用 1280×720 H.264/AAC、faststart，保留封面与 preload=none。分享图为 `assets/hank-social-card.png`，可编辑的版式源为 `assets/social-card.html`。
 
 WORK 16 研究入口为双语；完整书稿、PDF 课件和练习工具仍为中文原稿，英文入口明确标注。12 门研究课件链接已与实际 PDF 文件名核对。
+
+## 联系地址（本轮配置入口）
+
+在 `data/config.json` 的 `contact` 中填写 `email` 和 `bookingUrl`，无需修改页面代码或再改渠道开关。有效邮箱/预约 URL 填入后，联系区自动显示对应链接；英文版顺序为 Email、微信、预约。留空时不展示空地址入口。
+
+合作简报和选购清单均提供“用邮件发送”，以 mailto 打开已带入主题与正文的邮件草稿；邮箱留空时草稿不预填收件人。浏览器不会自动发送邮件。
