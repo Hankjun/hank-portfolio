@@ -52,7 +52,9 @@ html[lang="en"] .product-cover .cover-title{font-size:clamp(21px,2vw,30px)}html[
 .workbench-flow { display: none; gap: 14px; padding: 0; margin: 0; list-style: none; }
 .hero-workbench:has([value="support"]:checked) [data-scenario="support"],
 .hero-workbench:has([value="research"]:checked) [data-scenario="research"],
-.hero-workbench:has([value="office"]:checked) [data-scenario="office"] { display: grid; }
+.hero-workbench:has([value="office"]:checked) [data-scenario="office"],
+.hero-workbench:has([value="ip"]:checked) [data-scenario="ip"],
+.hero-workbench:has([value="boss"]:checked) [data-scenario="boss"] { display: grid; }
 .workbench-flow li { position: relative; display: flex; gap: 12px; align-items: flex-start; padding: 11px 12px; background: #193637; border: 1px solid #50736a; border-radius: 8px; }
 .workbench-flow li:not(:last-child)::after { content: ""; position: absolute; top: 100%; left: 23px; width: 2px; height: 14px; background: #688980; }
 .workbench-flow li:last-child { border-color: #a6e6c8; background: #214742; }
