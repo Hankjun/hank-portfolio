@@ -153,5 +153,10 @@
   "research.practice": "Get the work diagnosis kit",
   "research.filter": "Fields of work",
   "cart.wechatSend": "Copy brief & open WeChat",
-  "about.intro": "Notes and questions on work, organizations, and AI. Start with the WORK 16 manuscript and research materials."
+  "about.intro": "Notes and questions on work, organizations, and AI. Start with the WORK 16 manuscript and research materials.",
+  "nav.workstation": "Workstation",
+  "workstation.kicker": "05 / DELIVERY ARCHITECTURE",
+  "workstation.title": "Super Workstation Architecture",
+  "workstation.intro": "Select a market or a node to explore how the workstation connects the content, leads and sales, and delivery engines. Scroll sideways to see the full diagram. The interactive map is in Chinese.",
+  "workstation.full": "Open the full operating map"
 }

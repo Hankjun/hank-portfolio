@@ -153,5 +153,10 @@
   "research.practice": "获取工作诊断练习包",
   "research.filter": "工作领域",
   "cart.wechatSend": "复制简报并打开微信",
-  "about.intro": "围绕工作、组织与 AI，记录阅读中的问题与思考。先从《WORK 16》书稿与研究材料读起。"
+  "about.intro": "围绕工作、组织与 AI，记录阅读中的问题与思考。先从《WORK 16》书稿与研究材料读起。",
+  "nav.workstation": "超级工作站",
+  "workstation.kicker": "05 / 交付架构",
+  "workstation.title": "超级工作站架构图",
+  "workstation.intro": "选择市场或点击图中节点，查看超级工作站如何连接内容、线索与转化、交付三个引擎。图可横向滑动。",
+  "workstation.full": "打开完整运营地图"
 }

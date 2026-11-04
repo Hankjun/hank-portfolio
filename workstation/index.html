@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>全媒体运营地图 · Social Media OS</title>
+<style>
+:root{color-scheme:dark;--bg:#101716;--surface:#172220;--line:#354641;--ink:#edf2e9;--muted:#b0c0b6;--mint:#9bedcb;--sand:#e9c697}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "PingFang SC","Microsoft YaHei",sans-serif;text-wrap:pretty}main,header>div{max-width:1380px;margin:auto;padding-inline:clamp(18px,4vw,58px)}header{border-bottom:1px solid var(--line)}header>div{min-height:66px;display:flex;justify-content:space-between;align-items:center;gap:12px}button,a{color:inherit}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible{outline:2px solid var(--mint);outline-offset:3px}button:hover{border-color:var(--mint)}.mono,.index,.eyebrow{font:600 11px/1.4 ui-monospace,monospace;letter-spacing:.13em}.eyebrow,.index{color:var(--mint)}.hero{padding:45px 0 27px;display:flex;gap:25px;align-items:end;justify-content:space-between}h1,h2,h3,p{margin:0}h1{font-size:clamp(38px,6vw,78px);line-height:1.14;letter-spacing:-.05em;margin:8px 0 11px}p{color:var(--muted)}.hero aside{border-left:1px solid var(--line);padding-left:18px;min-width:190px}.hero aside b{font-size:23px;color:var(--sand)}.canvas{border:1px solid var(--line);border-radius:14px;padding:clamp(13px,2.2vw,30px);background:radial-gradient(#354641 0.8px,transparent 0.8px) 0 0/18px 18px}.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:15px;flex-wrap:wrap}h2{font-size:23px}.section-head small{color:var(--muted)}.journey,.stagegrid{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:8px}.journey span{background:var(--surface);border-top:1px solid var(--mint);padding:6px 9px;font-size:12px;color:var(--mint);margin-bottom:8px}.stage{position:relative;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:8px;min-height:142px;padding:12px 10px;display:flex;flex-direction:column;align-items:start;gap:6px}.stage strong{font-size:19px}.stage small{font-size:12px;color:var(--muted)}.stage[aria-pressed=true],.platform[aria-pressed=true]{background:#223a32;border-color:var(--mint)}.stage.linked{border-color:var(--sand)}.backloop{margin:12px 0 15px;border:1px solid #588571;border-top:0;text-align:center;border-radius:0 0 10px 10px;background:var(--bg);color:var(--mint);font-size:12px;padding:5px}.detail{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:14px 16px}.detail>div{display:grid;grid-template-columns:2fr 1fr 1fr;gap:13px}.detail b{display:block;color:var(--sand);font-size:12px;margin-bottom:2px}.detail p{font-size:13px}.channels,.extras{margin:32px 0}.filters{display:flex;gap:6px;flex-wrap:wrap}.filters button,.control{border:1px solid var(--line);border-radius:30px;background:var(--surface);padding:5px 12px;font-size:13px}.filters button[aria-pressed=true]{background:var(--mint);color:#11221b;border-color:var(--mint)}.platformgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-bottom:10px}.platform{display:flex;align-items:center;text-align:left;gap:12px;min-height:67px;padding:9px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface)}.platform small{display:block;color:var(--muted);font-size:12px}.platform svg{width:24px;height:24px;flex:none}.extras{display:grid;grid-template-columns:1fr 1fr;gap:12px}.extras article,details{padding:17px 20px;background:var(--surface);border:1px solid var(--line);border-radius:8px}.extras h3{margin:4px 0 8px}.extras p+p,details p+p{margin-top:10px}details{margin-bottom:28px}summary{cursor:pointer}details p{margin-top:12px}footer{padding:0 0 28px;color:var(--muted);font-size:12px}a:hover{color:var(--mint)}
+@media(max-width:950px){.stagegrid{grid-template-columns:repeat(4,1fr)}.journey{grid-template-columns:repeat(4,1fr)}.journey span{grid-column:auto!important}.stage{min-height:115px}}
+@media(max-width:610px){.hero{display:block;padding-top:30px}.hero aside{margin-top:14px}.stagegrid,.platformgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.journey{grid-template-columns:1fr 1fr}.detail>div,.extras{grid-template-columns:1fr}.platform{gap:8px}.platform svg{width:19px}}
+@media print{body{print-color-adjust:exact;-webkit-print-color-adjust:exact}.control,.filters{display:none}.canvas,.channels,.extras article{break-inside:avoid}main,header>div{padding-inline:12px}}
+.architecture{margin-bottom:28px;padding:20px;border:1px solid var(--line);border-radius:14px;background:#121d1b}
+.architecture .section-head{margin-bottom:12px}.architecture h2{font-size:27px}
+.circuit-tools,.legend{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.circuit-tools button[aria-pressed=true]{border-color:var(--mint);color:var(--mint)}
+.market-note{font-size:13px;margin-bottom:12px}
+.circuit-scroll{overflow:auto;border:1px solid var(--line);border-radius:10px;background:#101816;scrollbar-color:#58756a #15211d}
+.circuit{position:relative;min-width:820px;height:587px;background:radial-gradient(#31423a .8px,transparent .8px) 0 0/16px 16px}
+.circuit svg.wires{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.wire{fill:none;stroke:var(--signal);stroke-width:1.25;opacity:.45;vector-effect:non-scaling-stroke}
+.pulse{opacity:1;stroke-width:2.3;stroke-dasharray:4 42;animation:signal 2.25s linear infinite;filter:drop-shadow(0 0 3px var(--signal))}
+.wire-group.station .wire{stroke-dasharray:3 5}.wire-group.station .pulse{stroke-dasharray:3 46}
+.reverse{animation-direction:reverse;animation-duration:3.5s}
+.dim .wire{opacity:.13}.dim .pulse{opacity:0}
+@keyframes signal{to{stroke-dashoffset:-92}}
+.paused .pulse{animation-play-state:paused}
+.circuit-label{position:absolute;color:var(--muted);font-size:11px;letter-spacing:.08em}
+.circuit-node{position:absolute;display:flex;align-items:center;justify-content:flex-start;gap:7px;padding:5px 9px;background:#192721;border:1px solid #476158;border-radius:7px;text-align:left;line-height:1.23;font-size:13px}
+.circuit-node:not(.engine){padding-block:0}
+.circuit-node svg{width:19px;height:19px;flex:none}
+.circuit-node small{display:block;margin-top:4px;color:var(--muted);font-size:11px}
+.circuit-node.engine{padding:12px;display:block;border-top:2px solid var(--signal)}
+.engine strong{display:block;font-size:clamp(18px,2.2vw,24px);margin:3px 0 8px}
+.engine .mono{color:var(--signal);font-size:10px}
+.circuit-node[aria-pressed=true]{border-color:var(--signal);box-shadow:0 0 14px color-mix(in srgb,var(--signal) 28%,transparent)}
+.circuit-node.hub{background:#22332e;border-color:#9eb7ad;box-shadow:0 0 24px #9bedcb22}
+.circuit-node.hub strong{font-size:25px}
+.subgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px;margin-top:8px}
+.subgrid span{background:#101d19;border:1px solid #496158;border-radius:4px;padding:5px 6px;font-size:12px;line-height:1.2}
+.wechat-platform{gap:4px;padding-inline:4px}.wechat-platform svg{width:13px}.wechat-platform>span{min-width:0}.wechat-entries{display:grid;grid-template-columns:auto auto;gap:2px 4px;margin-top:2px;font-size:10px;line-height:1.15;color:var(--muted);white-space:nowrap}.channel-head{color:var(--mint);font-weight:700;letter-spacing:0}.community-node{font-size:11px}.community-node span{white-space:nowrap}.channel-bank{position:absolute;pointer-events:none;border:1px solid #3f5a50;border-radius:8px;background:#18302932}
+.circuit-node.muted{border-color:#3b5148;background:#15211d}
+.legend{margin:10px 0;font-size:12px;color:var(--muted);gap:16px}
+.legend span::before{content:'';display:inline-block;width:14px;border-top:2px solid var(--signal);margin-right:7px;vertical-align:middle}
+.circuit-detail{min-height:77px}
+@media(max-width:610px){.architecture{padding:12px}.circuit-detail{min-height:0}}
+@media(prefers-reduced-motion:reduce){.pulse{animation:none}}
+@media print{.pulse{animation:none}.architecture{break-inside:avoid}.circuit-scroll{overflow:visible}.circuit{min-width:0}.circuit-tools{display:none}}
+.archive-panel>div.archive-grid{grid-template-columns:repeat(auto-fit,minmax(205px,1fr));margin:12px 0}
+.archive-panel label{display:inline-flex;align-items:center;gap:8px;margin:0 10px 10px 0;font-size:13px}
+.archive-panel select{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:6px}
+.archive-card{padding:12px;background:var(--surface);border:1px solid var(--line);border-radius:8px}
+.entry-details{margin:4px 0 0;padding-left:18px;color:var(--muted);font-size:13px}.entry-details strong{color:var(--ink)}
+.archive-card h3{font-size:15px;margin:5px 0}.archive-card small{color:var(--muted);font-size:11px}
+html.embed main{padding:0}
+html.embed body>header,html.embed main>:not(.architecture),html.embed .circuit-detail a[href="#archive"]{display:none}
+html.embed .architecture{margin:0;border:0;border-radius:0}
+</style>
+<script>if(new URLSearchParams(location.search).has('embed'))document.documentElement.classList.add('embed');</script>
+</head>
+<body>
+<header><div><span class="mono">◈ &nbsp; SOCIAL MEDIA OS / 01</span><button class="control" id="print">打印 / 导出 PDF</button></div></header>
+<main>
+<div class="hero"><div><div class="eyebrow">OPERATING MAP &nbsp; / &nbsp; 全平台运营框架</div><h1>全媒体运营地图</h1><p>把内容生产、渠道触达、线索转化与产品服务交付放进同一个循环。</p></div><aside><div class="eyebrow">起点 · NORTH STAR</div><b>每周有效行动数</b><p>先选一个目标，例如新增有效订阅。</p></aside></div>
+<section class="architecture" aria-labelledby="arch">
+<div class="section-head"><div><div class="index">SYSTEM MAP / 01</div><h2 id="arch">三引擎信号架构</h2></div><div class="circuit-tools"><div class="filters" id="markets" role="group" aria-label="切换市场"></div><button class="control" id="motion" aria-pressed="false">暂停流动</button></div></div>
+<p class="market-note"><span id="market-note"></span> 这里按市场展示示例组合，选型时按受众和平台规则调整。</p>
+<div class="circuit-scroll" tabindex="0" aria-label="三引擎架构图，窄屏可横向滚动"><div class="circuit" id="circuit"></div></div>
+<div class="legend"><span style="--signal:#9bedcb">内容分发</span><span style="--signal:#91cfff">互动与意向信号</span><span style="--signal:#f2c38c">成交与订单交接</span><span style="--signal:#d9aefa">交付反馈</span><span style="--signal:#a7b4cf">工作站双向同步</span></div>
+<div class="detail circuit-detail" id="circuit-detail" aria-live="polite"></div>
+</section>
+<section class="channels" id="archive" aria-labelledby="archive-title">
+<div class="section-head"><div><h2 id="archive-title"><span class="index">02 /</span> 内容引擎 · 内容档案</h2><small>核心品类标记内容解决什么问题，内容形式标记它如何呈现。同一母内容可归档多个平台版本。</small></div></div>
+<div class="detail archive-panel">
+<label>核心品类 <select id="category"></select></label>
+<label>内容形式 <select id="format"></select></label>
+<p id="archive-count" role="status"></p>
+<div class="archive-grid" id="archive-grid"></div>
+<p>归档字段建议 · 母内容 ID、核心品类、内容形式、目标受众、来源、平台版本链接、CTA、发布状态和复盘结论。</p>
+</div></section>
+<section class="canvas" aria-labelledby="ops">
+<div class="section-head"><h2 id="ops"><span class="index">03 /</span> 运营闭环</h2><small>选择任一环节，查看动作、交接与指标</small></div>
+<div class="journey" aria-label="受众旅程与内部运营"><span style="grid-column:span 4">01 吸引 · ATTRACT</span><span style="grid-column:span 2">02 互动与转化 · ENGAGE</span><span>03 留存与推荐 · DELIGHT</span><span>内部反馈</span></div>
+<div class="stagegrid" id="stages"></div>
+<div class="backloop">↶ &nbsp; 评论、转化与留存信号回流到定位和下一轮选题</div>
+<div class="detail" id="stage-detail" aria-live="polite"></div>
+</section>
+<section class="channels" aria-labelledby="ch">
+<div class="section-head"><div><h2 id="ch"><span class="index">04 /</span> 渠道地图</h2><small>选择平台可高亮它常承担的运营环节。</small></div><div class="filters" id="filters" role="group" aria-label="筛选渠道"></div></div>
+<div class="platformgrid" id="platforms"></div><div class="detail" id="platform-detail" aria-live="polite"></div>
+</section>
+<section class="extras" aria-label="运营示例与协作节奏">
+<article><div class="index">05 / EXAMPLE</div><h3>一份母内容如何跑完整圈</h3><p>从评论里发现「怎样写第一份内容日历」→ 做一篇教程与空白模板 → 拆成小红书清单、抖音演示、YouTube 完整教程 → 收集问题 → 通过各平台允许的入口承接模板订阅 → 交付模板与填写说明，并在回访邮件中收集使用反馈 → 把常见卡点做成下一期。</p></article>
+<article><div class="index">06 / CADENCE</div><h3>每周怎么用这张图</h3><p><strong>周初</strong> 选 1 个受众问题、1 个目标行动与 2 个优先渠道。<br><strong>周中</strong> 跟进制作、发布、回复和承接。<br><strong>周末</strong> 按平台及内容格式对比结果，记录一个继续、改版或停止的决策。</p><p>运营表最小字段：内容 ID、负责人、目标、平台、版本、发布日期、CTA、结果、下一步。</p></article>
+</section>
+<details><summary>调研笔记与来源</summary>
+<p><strong>公开观察</strong> · Reels 封面反复展示深色大画布，以远景交代全图、近景指向具体模块，彩色小图标紧贴相关文字。点开抽样 Reel 触发登录提示，观察范围以公开封面与官网为主。<a href="https://www.instagram.com/business.framwork/reels/">账号 Reels ↗</a></p>
+<p><strong>官网核实</strong> · 作者把营销运营地图做成 Figma 大画布。公开说明列出市场定位、Offer、品牌、内容、流量与获客、销售转化、客户增长、分析优化八个支柱，并单列工具栈。<a href="https://framwork.co/products/marketing-operational-map">FramWork 产品说明 ↗</a></p>
+<p><strong>渠道细分</strong> · 「小绿书」沿用图文内容的俗称。飞书归为协作与交付入口。<a href="https://www.feishu.cn/hc/zh-CN/articles/640457584004">飞书云文档说明 ↗</a></p>
+<p><strong>附件视频</strong> · 房地产案例演示了 Content Engine、Lead Intelligence、Booking &amp; Qualification。此图以三段交接为起点，新增交付引擎与超级工作站。市场预设、内容档案与反馈回路为本看板设计。</p>
+<p><strong>原创改编</strong> · 用 HubSpot 的吸引、互动、取悦作为受众旅程参考，再叠加内容团队的八步交接。渠道角色、指标和示例均为这份看板的设计。<a href="https://www.hubspot.com/flywheel">HubSpot 飞轮 ↗</a></p>
+</details>
+<footer>V4 · 通用运营模板 · 平台角色按内容与受众调整 · 品牌图标主要来自 Simple Icons，飞书和闲鱼使用品牌风格的内嵌 SVG</footer>
+</main>
+<script>
+const stages=[["定位", "POSITION", "确定为谁解决什么问题", "访谈与评论采样｜提炼受众痛点｜定义内容支柱与目标", "受众卡 + 内容支柱表", "进入选题库", "每周新增已验证需求数"], ["企划", "PLAN", "把需求变成可验证的选题", "梳理关键词与问题｜设定目标与 CTA｜排定选题优先级", "内容简报 + 实验假设", "交给制作", "已验证需求进入选题的比例"], ["制作", "CREATE", "一份母内容，多平台原生改编", "脚本与素材｜拍摄或撰写｜剪辑、封面、字幕与审核", "母内容 + 平台版本", "交给发布", "每份母内容产出的可发布版本数"], ["分发", "DISTRIBUTE", "让目标受众在合适的场景发现你", "适配标题与首屏｜排期发布｜记录内容 ID 与来源标签", "发布链接 + 来源记录", "进入互动", "目标受众触达、有效观看"], ["互动", "ENGAGE", "用回复与讨论建立信任", "回复评论与私信｜归类高频问题｜识别高意向信号", "问答库 + 意向记录", "交给承接", "有效对话数、响应时长"], ["转化", "CONVERT", "给有意向的人一个清晰的下一步", "匹配 CTA｜承接到合规入口｜记录订阅、预约或购买", "有效线索或转化事件", "交给留存", "有效转化数 / 承接页访客数"], ["留存", "RETAIN", "让订阅者或客户持续获得价值", "欢迎与上手｜定期内容或答疑｜收集案例与推荐", "反馈、案例与推荐素材", "进入复盘", "复访、续订或推荐数"], ["复盘", "LEARN", "根据证据调整下一轮内容", "按平台与格式对比｜定位卡点｜决定继续、改版或停止", "实验结论 + 下一轮选题", "回流定位与企划", "有明确决策的实验数"]], platforms=[["小红书", "Xiaohongshu", "国内", "搜索与收藏", "图文笔记、清单", "搜索词、收藏与有效咨询", [1, 3, 4], "#FF2442", "M22.405 9.879c.002.016.01.02.07.019h.725a.797.797 0 0 0 .78-.972.794.794 0 0 0-.884-.618.795.795 0 0 0-.692.794c0 .101-.002.666.001.777zm-11.509 4.808c-.203.001-1.353.004-1.685.003a2.528 2.528 0 0 1-.766-.126.025.025 0 0 0-.03.014L7.7 16.127a.025.025 0 0 0 .01.032c.111.06.336.124.495.124.66.01 1.32.002 1.981 0 .01 0 .02-.006.023-.015l.712-1.545a.025.025 0 0 0-.024-.036zM.477 9.91c-.071 0-.076.002-.076.01a.834.834 0 0 0-.01.08c-.027.397-.038.495-.234 3.06-.012.24-.034.389-.135.607-.026.057-.033.042.003.112.046.092.681 1.523.787 1.74.008.015.011.02.017.02.008 0 .033-.026.047-.044.147-.187.268-.391.371-.606.306-.635.44-1.325.486-1.706.014-.11.021-.22.03-.33l.204-2.616.022-.293c.003-.029 0-.033-.03-.034zm7.203 3.757a1.427 1.427 0 0 1-.135-.607c-.004-.084-.031-.39-.235-3.06a.443.443 0 0 0-.01-.082c-.004-.011-.052-.008-.076-.008h-1.48c-.03.001-.034.005-.03.034l.021.293c.076.982.153 1.964.233 2.946.05.4.186 1.085.487 1.706.103.215.223.419.37.606.015.018.037.051.048.049.02-.003.742-1.642.804-1.765.036-.07.03-.055.003-.112zm3.861-.913h-.872a.126.126 0 0 1-.116-.178l1.178-2.625a.025.025 0 0 0-.023-.035l-1.318-.003a.148.148 0 0 1-.135-.21l.876-1.954a.025.025 0 0 0-.023-.035h-1.56c-.01 0-.02.006-.024.015l-.926 2.068c-.085.169-.314.634-.399.938a.534.534 0 0 0-.02.191.46.46 0 0 0 .23.378.981.981 0 0 0 .46.119h.59c.041 0-.688 1.482-.834 1.972a.53.53 0 0 0-.023.172.465.465 0 0 0 .23.398c.15.092.342.12.475.12l1.66-.001c.01 0 .02-.006.023-.015l.575-1.28a.025.025 0 0 0-.024-.035zm-6.93-4.937H3.1a.032.032 0 0 0-.034.033c0 1.048-.01 2.795-.01 6.829 0 .288-.269.262-.28.262h-.74c-.04.001-.044.004-.04.047.001.037.465 1.064.555 1.263.01.02.03.033.051.033.157.003.767.009.938-.014.153-.02.3-.06.438-.132.3-.156.49-.419.595-.765.052-.172.075-.353.075-.533.002-2.33 0-4.66-.007-6.991a.032.032 0 0 0-.032-.032zm11.784 6.896c0-.014-.01-.021-.024-.022h-1.465c-.048-.001-.049-.002-.05-.049v-4.66c0-.072-.005-.07.07-.07h.863c.08 0 .075.004.075-.074V8.393c0-.082.006-.076-.08-.076h-3.5c-.064 0-.075-.006-.075.073v1.445c0 .083-.006.077.08.077h.854c.075 0 .07-.004.07.07v4.624c0 .095.008.084-.085.084-.37 0-1.11-.002-1.304 0-.048.001-.06.03-.06.03l-.697 1.519s-.014.025-.008.036c.006.01.013.008.058.008 1.748.003 3.495.002 5.243.002.03-.001.034-.006.035-.033v-1.539zm4.177-3.43c0 .013-.007.023-.02.024-.346.006-.692.004-1.037.004-.014-.002-.022-.01-.022-.024-.005-.434-.007-.869-.01-1.303 0-.072-.006-.071.07-.07l.733-.003c.041 0 .081.002.12.015.093.025.16.107.165.204.006.431.002 1.153.001 1.153zm2.67.244a1.953 1.953 0 0 0-.883-.222h-.18c-.04-.001-.04-.003-.042-.04V10.21c0-.132-.007-.263-.025-.394a1.823 1.823 0 0 0-.153-.53 1.533 1.533 0 0 0-.677-.71 2.167 2.167 0 0 0-1-.258c-.153-.003-.567 0-.72 0-.07 0-.068.004-.068-.065V7.76c0-.031-.01-.041-.046-.039H17.93s-.016 0-.023.007c-.006.006-.008.012-.008.023v.546c-.008.036-.057.015-.082.022h-.95c-.022.002-.028.008-.03.032v1.481c0 .09-.004.082.082.082h.913c.082 0 .072.128.072.128V11.19s.003.117-.06.117h-1.482c-.068 0-.06.082-.06.082v1.445s-.01.068.064.068h1.457c.082 0 .076-.006.076.079v3.225c0 .088-.007.081.082.081h1.43c.09 0 .082.007.082-.08v-3.27c0-.029.006-.035.033-.035l2.323-.003c.098 0 .191.02.28.061a.46.46 0 0 1 .274.407c.008.395.003.79.003 1.185 0 .259-.107.367-.33.367h-1.218c-.023.002-.029.008-.028.033.184.437.374.871.57 1.303a.045.045 0 0 0 .04.026c.17.005.34.002.51.003.15-.002.517.004.666-.01a2.03 2.03 0 0 0 .408-.075c.59-.18.975-.698.976-1.313v-1.981c0-.128-.01-.254-.034-.38 0 .078-.029-.641-.724-.998z"], ["抖音", "Tiktok", "国内", "短视频发现", "短视频、直播", "有效观看与评论问题", [2, 3, 4], "#eaf0ec", "M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"], ["哔哩哔哩", "Bilibili", "国内", "深度讲解", "教程、测评、案例", "观看时长与关注", [2, 3, 4], "#00A1D6", "M17.813 4.653h.854c1.51.054 2.769.578 3.773 1.574 1.004.995 1.524 2.249 1.56 3.76v7.36c-.036 1.51-.556 2.769-1.56 3.773s-2.262 1.524-3.773 1.56H5.333c-1.51-.036-2.769-.556-3.773-1.56S.036 18.858 0 17.347v-7.36c.036-1.511.556-2.765 1.56-3.76 1.004-.996 2.262-1.52 3.773-1.574h.774l-1.174-1.12a1.234 1.234 0 0 1-.373-.906c0-.356.124-.658.373-.907l.027-.027c.267-.249.573-.373.92-.373.347 0 .653.124.92.373L9.653 4.44c.071.071.134.142.187.213h4.267a.836.836 0 0 1 .16-.213l2.853-2.747c.267-.249.573-.373.92-.373.347 0 .662.151.929.4.267.249.391.551.391.907 0 .355-.124.657-.373.906zM5.333 7.24c-.746.018-1.373.276-1.88.773-.506.498-.769 1.13-.786 1.894v7.52c.017.764.28 1.395.786 1.893.507.498 1.134.756 1.88.773h13.334c.746-.017 1.373-.275 1.88-.773.506-.498.769-1.129.786-1.893v-7.52c-.017-.765-.28-1.396-.786-1.894-.507-.497-1.134-.755-1.88-.773zM8 11.107c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c0-.373.129-.689.386-.947.258-.257.574-.386.947-.386zm8 0c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c.017-.391.15-.711.4-.96.249-.249.56-.373.933-.373Z"], ["微信", "Wechat", "国内", "沉淀与回访", "公众号、视频号、社群", "订阅、复访与咨询", [3, 4, 5, 6], "#07C160", "M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.582.582 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-6.656-6.088V8.89c-.135-.01-.27-.027-.407-.03zm-2.53 3.274c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982z"], ["知乎", "Zhihu", "国内", "搜索与答疑", "问题回答、长文", "搜索访问与有效互动", [1, 3, 4], "#0084FF", "M5.721 0C2.251 0 0 2.25 0 5.719V18.28C0 21.751 2.252 24 5.721 24h12.56C21.751 24 24 21.75 24 18.281V5.72C24 2.249 21.75 0 18.281 0zm1.964 4.078c-.271.73-.5 1.434-.68 2.11h4.587c.545-.006.445 1.168.445 1.171H9.384a58.104 58.104 0 01-.112 3.797h2.712c.388.023.393 1.251.393 1.266H9.183a9.223 9.223 0 01-.408 2.102l.757-.604c.452.456 1.512 1.712 1.906 2.177.473.681.063 2.081.063 2.081l-2.794-3.382c-.653 2.518-1.845 3.607-1.845 3.607-.523.468-1.58.82-2.64.516 2.218-1.73 3.44-3.917 3.667-6.497H4.491c0-.015.197-1.243.806-1.266h2.71c.024-.32.086-3.254.086-3.797H6.598c-.136.406-.158.447-.268.753-.594 1.095-1.603 1.122-1.907 1.155.906-1.821 1.416-3.6 1.591-4.064.425-1.124 1.671-1.125 1.671-1.125zM13.078 6h6.377v11.33h-2.573l-2.184 1.373-.401-1.373h-1.219zm1.313 1.219v8.86h.623l.263.937 1.455-.938h1.456v-8.86z"], ["飞书", "feishu", "国内", "协作与资料交付", "云文档、知识库、多维表格", "资料访问、表单提交、交付状态", [2, 5, 6], "#80dbc3", "M2 4h20v16H2zm2 2v2l8 6 8-6V6l-8 6z"], ["闲鱼", "xianyu", "国内", "商品发现与交易", "商品详情、搜索、私聊", "有效咨询与成交", [3, 4, 5], "#80dbc3", "M2 4h20v16H2zm2 2v2l8 6 8-6V6l-8 6z"], ["微博", "Sinaweibo", "国内", "热点与讨论", "短帖、话题", "讨论与主页访问", [3, 4], "#E6162D", "M10.098 20.323c-3.977.391-7.414-1.406-7.672-4.02-.259-2.609 2.759-5.047 6.74-5.441 3.979-.394 7.413 1.404 7.671 4.018.259 2.6-2.759 5.049-6.737 5.439l-.002.004zM9.05 17.219c-.384.616-1.208.884-1.829.602-.612-.279-.793-.991-.406-1.593.379-.595 1.176-.861 1.793-.601.622.263.82.972.442 1.592zm1.27-1.627c-.141.237-.449.353-.689.253-.236-.09-.313-.361-.177-.586.138-.227.436-.346.672-.24.239.09.315.36.18.601l.014-.028zm.176-2.719c-1.893-.493-4.033.45-4.857 2.118-.836 1.704-.026 3.591 1.886 4.21 1.983.64 4.318-.341 5.132-2.179.8-1.793-.201-3.642-2.161-4.149zm7.563-1.224c-.346-.105-.57-.18-.405-.615.375-.977.42-1.804 0-2.404-.781-1.112-2.915-1.053-5.364-.03 0 0-.766.331-.571-.271.376-1.217.315-2.224-.27-2.809-1.338-1.337-4.869.045-7.888 3.08C1.309 10.87 0 13.273 0 15.348c0 3.981 5.099 6.395 10.086 6.395 6.536 0 10.888-3.801 10.888-6.82 0-1.822-1.547-2.854-2.915-3.284v.01zm1.908-5.092c-.766-.856-1.908-1.187-2.96-.962-.436.09-.706.511-.616.932.09.42.511.691.932.602.511-.105 1.067.044 1.442.465.376.421.466.977.316 1.473-.136.406.089.856.51.992.405.119.857-.105.992-.512.33-1.021.12-2.178-.646-3.035l.03.045zm2.418-2.195c-1.576-1.757-3.905-2.419-6.054-1.968-.496.104-.812.587-.706 1.081.104.496.586.813 1.082.707 1.532-.331 3.185.15 4.296 1.383 1.112 1.246 1.429 2.943.947 4.416-.165.48.106 1.007.586 1.157.479.165.991-.104 1.157-.586.675-2.088.241-4.478-1.338-6.235l.03.045z"], ["Instagram", "Instagram", "海外", "发现与互动", "Reels、轮播、Stories", "收藏、分享与主页访问", [2, 3, 4], "#FF0069", "M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"], ["YouTube", "Youtube", "海外", "搜索与深度观看", "长视频、Shorts", "观看时长与订阅", [2, 3, 4], "#FF0000", "M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"], ["TikTok", "Tiktok", "海外", "短视频发现", "短视频、系列内容", "有效观看与互动", [2, 3, 4], "#eaf0ec", "M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"], ["Threads", "Threads", "海外", "对话与观点测试", "短帖、串文", "有效回复与观点反馈", [1, 3, 4], "#eaf0ec", "M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 0 1 3.02.142c-.126-.742-.375-1.332-.75-1.757-.513-.586-1.308-.883-2.359-.89h-.029c-.844 0-1.992.232-2.721 1.32L7.734 7.847c.98-1.454 2.568-2.256 4.478-2.256h.044c3.194.02 5.097 1.975 5.287 5.388.108.046.216.094.321.142 1.49.7 2.58 1.761 3.154 3.07.797 1.82.871 4.79-1.548 7.158-1.85 1.81-4.094 2.628-7.277 2.65Zm1.003-11.69c-.242 0-.487.007-.739.021-1.836.103-2.98.946-2.916 2.143.067 1.256 1.452 1.839 2.784 1.767 1.224-.065 2.818-.543 3.086-3.71a10.5 10.5 0 0 0-2.215-.221z"], ["X", "X", "海外", "观点与实时讨论", "短帖、串文", "有效回复与外链点击", [1, 3, 4], "#eaf0ec", "M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"], ["Facebook", "Facebook", "海外", "社群与互动", "Reels、群组讨论", "有效对话与社群参与", [3, 4, 6], "#0866FF", "M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"], ["Pinterest", "Pinterest", "海外", "视觉搜索", "图钉、教程图", "保存与出站点击", [1, 3], "#BD081C", "M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"], ["Reddit", "Reddit", "海外", "需求观察与讨论", "社区问答、经验贴", "有效回复与高频问题", [0, 1, 4], "#FF4500", "M12 0C5.373 0 0 5.373 0 12c0 3.314 1.343 6.314 3.515 8.485l-2.286 2.286C.775 23.225 1.097 24 1.738 24H12c6.627 0 12-5.373 12-12S18.627 0 12 0Zm4.388 3.199c1.104 0 1.999.895 1.999 1.999 0 1.105-.895 2-1.999 2-.946 0-1.739-.657-1.947-1.539v.002c-1.147.162-2.032 1.15-2.032 2.341v.007c1.776.067 3.4.567 4.686 1.363.473-.363 1.064-.58 1.707-.58 1.547 0 2.802 1.254 2.802 2.802 0 1.117-.655 2.081-1.601 2.531-.088 3.256-3.637 5.876-7.997 5.876-4.361 0-7.905-2.617-7.998-5.87-.954-.447-1.614-1.415-1.614-2.538 0-1.548 1.255-2.802 2.803-2.802.645 0 1.239.218 1.712.585 1.275-.79 2.881-1.291 4.64-1.365v-.01c0-1.663 1.263-3.034 2.88-3.207.188-.911.993-1.595 1.959-1.595Zm-8.085 8.376c-.784 0-1.459.78-1.506 1.797-.047 1.016.64 1.429 1.426 1.429.786 0 1.371-.369 1.418-1.385.047-1.017-.553-1.841-1.338-1.841Zm7.406 0c-.786 0-1.385.824-1.338 1.841.047 1.017.634 1.385 1.418 1.385.785 0 1.473-.413 1.426-1.429-.046-1.017-.721-1.797-1.506-1.797Zm-3.703 4.013c-.974 0-1.907.048-2.77.135-.147.015-.241.168-.183.305.483 1.154 1.622 1.964 2.953 1.964 1.33 0 2.47-.81 2.953-1.964.057-.137-.037-.29-.184-.305-.863-.087-1.795-.135-2.769-.135Z"], ["WhatsApp", "Whatsapp", "海外", "主动订阅与跟进", "频道、经同意的消息", "回复与回访", [4, 5, 6], "#25D366", "M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"], ["LINE", "Line", "海外", "订阅与跟进", "官方账号、用户主动添加", "有效回复与复访", [4, 5, 6], "#00C300", "M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"], ["官网 / Newsletter", "generic", "自有", "承接与沉淀", "落地页、邮件、内容库", "订阅或购买转化、复访", [5, 6, 7], "#80dbc3", "M2 4h20v16H2zm2 2v2l8 6 8-6V6l-8 6z"]];
+const byId = id => document.getElementById(id);
+const brandIcons = {
+  '飞书': '<rect x="1" y="1" width="22" height="22" rx="5" fill="#f5faff"/><path fill="#3370ff" d="M3 7.4h6.2c2.3 0 4.3 1.1 5.6 3l2.1 3-3.3 2.5c-1.7 1.3-4.1.9-5.4-.8z"/><path fill="#00bfa5" d="M10 19.3l3-6.5 3.8-5.3c.9-1.2 2.1-1.7 3.6-1.7h1.2l-2.5 6.8c-.4 1.1-1.1 2.1-2.1 2.8z"/>',
+  '闲鱼': '<rect x="1" y="1" width="22" height="22" rx="5" fill="#ffe000"/><text x="12" y="15.4" text-anchor="middle" fill="#151515" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="9.5" font-weight="900" letter-spacing="-.35">闲鱼</text>'
+};
+function icon(p){
+  const mark=brandIcons[p[0]]??'<path fill="'+p[7]+'" d="'+p[8]+'"/>';
+  return '<svg viewBox="0 0 24 24" aria-hidden="true">'+mark+'</svg>';
+}
+const channelEntries={
+  '微信':[['公众号','长文、订阅与内容沉淀'],['视频号','短视频、直播与社交推荐'],['小绿书','微信图文内容，适合清单和经验分享'],['企业微信','客户联系、分组跟进与售后服务']],
+  '小红书':[['图文笔记','搜索、收藏与种草'],['视频笔记','演示、测评与体验'],['评论 / 私信','答疑与意向识别']],
+  '抖音':[['短视频','触达和系列内容'],['直播','演示、答疑和互动'],['评论 / 私信','反馈与咨询']],
+  '哔哩哔哩':[['投稿视频','教程、评测和案例'],['动态','更新预告与讨论'],['直播','实操和答疑']],
+  '知乎':[['回答','承接具体问题与搜索需求'],['文章','系统解释与方法沉淀']],
+  '微博':[['微博帖','短内容与观点'],['话题','参与热点与聚合讨论'],['评论 / 私信','答疑和线索识别']],
+  '飞书':[['云文档 / 知识库','资料协作、发布说明与交付文档'],['多维表格 / 表单','收集需求和跟踪交付'],['群聊','团队协调与答疑']],
+  '闲鱼':[['商品详情','展示商品、状态和交易说明'],['搜索 / 推荐','承接商品发现'],['私聊','答疑、确认需求和跟进交易']],
+  'Instagram':[['Reels','短视频发现'],['轮播','图解和收藏'],['Stories / 私信','互动与回复']],
+  'YouTube':[['长视频','深度讲解与搜索'],['Shorts','短内容触达'],['直播','互动和问答']],
+  'TikTok':[['短视频','触达与测试选题'],['直播','演示和互动'],['评论','收集问题']],
+  'Threads':[['短帖 / 串文','观点与叙事'],['回复','对话与反馈']],
+  'X':[['短帖 / 串文','实时讨论与解释'],['回复','反馈与互动']],
+  'Facebook':[['Reels','短视频触达'],['主页动态','品牌更新'],['群组','讨论与社区运营']],
+  'Pinterest':[['图钉','视觉发现与出站'],['图板','按主题归类内容']],
+  'Reddit':[['社区帖子','经验分享与问答'],['评论','问题观察与对话']],
+  'WhatsApp':[['频道','订阅更新'],['经同意的消息','咨询与回访']],
+  'LINE':[['官方账号','订阅更新与咨询'],['聊天','回复和服务跟进']],
+  '官网 / Newsletter':[['落地页','解释价值与承接转化'],['内容库','沉淀长期可访问的内容'],['Newsletter','定期触达与回访']]
+};
+const communities={
+  '小红书':['评论 / 私信','归档高频问题和咨询；按平台规则跟进。'],
+  '抖音':['评论 / 粉丝群','用评论和群讨论收集问题，沉淀直播答疑。'],
+  '哔哩哔哩':['弹幕 / 评论','从互动里整理教程疑问和后续选题。'],
+  '微信':['微信群 / 企微','按用户意愿加入社群或建立企业微信联系，跟进需求与售后。'],
+  '知乎':['评论 / 问答','追踪追问和反例，补充回答并形成问答库。'],
+  '微博':['评论 / 超话','在评论和主题社区收集反馈，沉淀高频话题。'],
+  '飞书':['群聊 / 知识库','用群聊协作和答疑，把可复用资料整理到知识库。'],
+  '闲鱼':['私聊 / 咨询','在站内沟通商品和交付问题，记录获准保留的常见问答。'],
+  'Instagram':['评论 / 私信','跟进主动发来的问题，沉淀常见疑问。'],
+  'YouTube':['评论 / 社区','用评论和社区帖收集选题、反馈与投票结果。'],
+  'TikTok':['评论 / 直播互动','汇总评论与直播问答，作为下一轮内容输入。'],
+  'Facebook':['群组 / 评论','围绕群组主题持续讨论和答疑。'],
+  'Reddit':['社区 / 评论','在相关社区参与讨论，遵循社区规则。'],
+  'Pinterest':['图板 / 评论','按主题整理图板，记录用户反馈。'],
+  'Threads':['回复 / 讨论串','围绕同一观点延伸讨论，整理反馈。'],
+  'X':['回复 / 社区','追踪回复，在相关社区延续讨论。'],
+  'WhatsApp':['群组 / 频道','经用户同意提供群组讨论或频道更新。'],
+  'LINE':['聊天 / 官方账号','经用户主动添加后进行咨询、更新或售后。'],
+  '官网 / Newsletter':['邮件回复 / 订阅','用自愿订阅与邮件回复沉淀持续联系。']
+};
+function entryDetails(name){
+  return '<ul class="entry-details">'+channelEntries[name].map(([label,role])=>'<li><strong>'+label+'</strong> · '+role+'</li>').join('')+'</ul>';
+}
+const stageButtons = [], platformButtons = [];
+let selectedStage = 0, selectedPlatform = null, filter = '全部';
+function updateStages(){
+  const related = selectedPlatform?.[6] ?? [];
+  stageButtons.forEach((button,i)=>{
+    button.setAttribute('aria-pressed', i===selectedStage);
+    button.classList.toggle('linked',related.includes(i));
+  });
+  const [name,,goal,actions,output,handoff,metric] = stages[selectedStage];
+  byId('stage-detail').innerHTML = '<div><p><b>'+name+' · '+goal+'</b>'+actions+'</p><p><b>交付与交接</b>'+output+' → '+handoff+'</p><p><b>参考指标</b>'+metric+'</p></div>';
+}
+stages.forEach(([name,en,goal],i)=>{
+  const button = document.createElement('button');
+  button.className='stage';
+  button.innerHTML='<span class="index">0'+(i+1)+(i<7?' →':' ↶')+'</span><strong>'+name+'</strong><span class="mono">'+en+'</span><small>'+goal+'</small>';
+  button.onclick=()=>{selectedStage=i;updateStages()};
+  byId('stages').append(button);
+  stageButtons.push(button);
+});
+function updatePlatforms(){
+  platformButtons.forEach(([button,p])=>{
+    button.hidden = filter!=='全部' && p[2]!==filter;
+    button.style.display=button.hidden?'none':'';
+    button.setAttribute('aria-pressed',p===selectedPlatform);
+  });
+  if(!selectedPlatform){
+    byId('platform-detail').textContent='渠道选型：先确定一个负责发现的主渠道，再配一个承接或留存入口。';
+    return;
+  }
+  const [name,,,role,,metric,related]=selectedPlatform;
+  byId('platform-detail').innerHTML='<div><p><b>'+name+' · '+role+'</b>'+communities[name][0]+' · '+communities[name][1]+'</p><p><b>常用环节</b>'+related.map(i=>stages[i][0]).join(' · ')+'</p><p><b>优先观察</b>'+metric+'</p></div>'+entryDetails(name);
+}
+platforms.forEach(p=>{
+  const [name]=p;
+  const button=document.createElement('button');
+  button.className='platform';
+  button.innerHTML=icon(p)+'<span><strong>'+name+'</strong><small>'+channelEntries[name].map(([label])=>label).join(' · ')+'</small></span>';
+  button.onclick=()=>{
+    selectedPlatform=selectedPlatform===p?null:p;
+    if(selectedPlatform&&!p[6].includes(selectedStage))selectedStage=p[6][0];
+    updatePlatforms();
+    updateStages();
+  };
+  byId('platforms').append(button);
+  platformButtons.push([button,p]);
+});
+['全部','国内','海外','自有'].forEach(label=>{
+  const button=document.createElement('button');
+  button.textContent=label;
+  button.setAttribute('aria-pressed',label===filter);
+  button.onclick=()=>{
+    filter=label;
+    if(filter!=='全部'&&selectedPlatform?.[2]!==filter)selectedPlatform=null;
+    Array.from(byId('filters').children).forEach(b=>b.setAttribute('aria-pressed',b===button));
+    updatePlatforms();
+    updateStages();
+  };
+  byId('filters').append(button);
+});
+byId('print').onclick=()=>window.print();
+updateStages();
+updatePlatforms();
+const markets={
+  '中国大陆':{
+    names:['小红书','抖音','哔哩哔哩','微信','知乎','微博','飞书','闲鱼'],
+    handoff:'站内私信 / 微信 / 表单',
+    note:'示例路径：小红书、抖音、微博可做内容触达，微信与企业微信可做订阅和客户跟进，闲鱼承接商品交易，飞书负责资料协作与交付。'
+  },
+  '美国':{
+    names:['Instagram','YouTube','TikTok','Facebook','Reddit','Pinterest','Threads','X','WhatsApp'],
+    handoff:'私信 / 落地页 / 邮件',
+    note:'示例路径：Instagram 或 YouTube 触达 → 私信或落地页捕获自愿提交的线索 → 邮件跟进或预约。'
+  },
+  '日本':{
+    names:['X','Instagram','YouTube','TikTok','LINE'],
+    handoff:'LINE / 表单 / 邮件',
+    note:'示例路径：X 或 Instagram 触达 → 由用户主动添加 LINE 官方账号或填写表单 → 跟进咨询。'
+  }
+};
+const engines=[
+  {key:'content',name:'内容引擎',en:'01 / CONTENT ENGINE',color:'#9bedcb',
+    steps:'需求 → 母内容 → 审核 → 分发',action:'定位受众，收集选题，制作母内容。逐平台改写首屏、标题与 CTA，审核后发布。',
+    handoff:'母内容 ID、品类 × 形式标签、平台版本与 CTA',metric:'有效触达、母内容复用率',stages:[0,1,2,3]},
+  {key:'sales',name:'线索与转化引擎',en:'02 / LEADS & SALES',color:'#91cfff',
+    steps:'线索接收 → 意向判断 → 销售跟进 → 成交',action:'汇总自愿提交的表单与私信，去重并记录来源。识别有效咨询，确认需求和匹配度，再跟进预约、订阅或下单。',
+    handoff:'已确认的订单、预约或订阅，以及交付范围和时间',metric:'有效线索数、首次响应时长、有效线索转化率',stages:[4,5]},
+  {key:'delivery',name:'交付引擎',en:'03 / DELIVERY ENGINE',color:'#d9aefa',
+    steps:'接单 → 履约 → 验收 → 回访',action:'产品按订单发货或开通权限，服务按约定安排人员和里程碑。确认签收或验收，处理售后并收集使用反馈。',
+    handoff:'履约结果、常见问题、经授权的案例和新选题',metric:'按时交付率、一次验收通过率',stages:[6,7]},
+  {key:'station',name:'超级工作站',en:'CONTROL HUB / 共享工作台',color:'#a7b4cf',
+    steps:'人机协作 · 知识检索 · 业务记录',action:'智能电脑承载操作与审核，AI 智能体协助执行，OPC 与其他组件协同，专属知识库沉淀业务资料、规范与案例。',
+    handoff:'可追溯的运营台账与待办队列',metric:'交接完整率、超期任务数',stages:[0,1,2,3,4,5,6,7]}
+];
+const circuit=byId('circuit');
+const marketButtons=byId('markets');
+let currentMarket='中国大陆', focusNode=null, paused=false;
+const colors={publish:'#9bedcb',lead:'#91cfff',convert:'#f2c38c',feedback:'#d9aefa',station:'#a7b4cf'};
+function showCircuitDetail(preset){
+  const engine=engines.find(e=>e.key===focusNode);
+  const communityName=focusNode?.startsWith('community:')?focusNode.slice('community:'.length):null;
+  const platform=platforms.find(p=>p[0]===(communityName??focusNode));
+  const fields=focusNode==='station' ? [
+    ['工作站组成',engine.action],
+    ['内容与市场渠道 ↔','同步选题、稿件和审核状态；下发发布任务，回收链接与互动数据。'],
+    ['线索与转化 ↔','同步来源、意向和分配状态；回收销售进度、订单与未成交原因。']
+  ] : communityName ? [
+    [communityName+' · '+communities[communityName][0],communities[communityName][1]],
+    ['社区沉淀','高频问题、内容反馈、经同意保留的联系信息'],
+    ['交接到线索与转化','有明确意向的咨询进入跟进，常见问题回到内容选题']
+  ] : engine ? [[engine.name,engine.action],['交付给下一环',engine.handoff],['参考指标',engine.metric]] :
+    platform ? [[platform[0]+' · '+platform[3],platform[4]],['市场承接示例',preset.handoff],['优先观察',platform[5]]] :
+    [['点击节点追踪信号','点选左列平台查看内容入口，点选右列查看群、评论或社区如何承接。'],['市场承接示例',preset.handoff],['闭环','订单进入交付，履约反馈返回选题']];
+  byId('circuit-detail').innerHTML='<div>'+fields.map(([label,value])=>'<p><b>'+label+'</b>'+value+'</p>').join('')+'</div>'+(platform?entryDetails(platform[0]):'')+(focusNode==='content'?'<a href="#archive">查看内容档案 ↓</a>':'');
+}
+function renderCircuit(){
+  const preset=markets[currentMarket];
+  byId('market-note').textContent=preset.note;
+  const wires=[];
+  const wire=(d,type,keys)=>wires.push({d,type,keys});
+  const makeNode=(key,x,y,w,h,label,color,engine=false)=>{
+    const button=document.createElement('button');
+    button.className='circuit-node'+(engine?' engine':'');
+    button.dataset.key=key;
+    if(key==='station')button.classList.add('hub');
+    if(key==='微信')button.classList.add('wechat-platform');
+    if(key.startsWith('community:'))button.classList.add('community-node');
+    button.style.cssText='left:'+x/10+'%;top:'+y+'px;width:'+w/10+'%;height:'+h+'px;--signal:'+color;
+    button.innerHTML=label;
+    button.onclick=()=>{
+      focusNode=focusNode===key?null:key;
+      const chosenPlatform=platforms.find(p=>p[0]===focusNode || 'community:'+p[0]===focusNode);
+      const chosenEngine=engines.find(e=>e.key===focusNode);
+      selectedPlatform=chosenPlatform??null;
+      if(chosenPlatform)selectedStage=chosenPlatform[6][0];
+      if(chosenEngine)selectedStage=chosenEngine.stages[0];
+      if(chosenPlatform && filter!=='全部' && filter!==chosenPlatform[2])byId('filters').children[0].onclick();
+      updatePlatforms();
+      updateStages();
+      updateFocus();
+    };
+    circuit.append(button);
+  };
+  function updateFocus(){
+    circuit.querySelectorAll('.circuit-node').forEach(button=>{
+      button.setAttribute('aria-pressed',button.dataset.key===focusNode);
+      button.classList.toggle('muted',Boolean(focusNode)&&button.dataset.key!==focusNode);
+    });
+    circuit.querySelectorAll('.wire-group').forEach((group,i)=>{
+      group.classList.toggle('dim',Boolean(focusNode)&&!wires[i].keys.includes(focusNode));
+    });
+    showCircuitDetail(preset);
+  }
+  circuit.replaceChildren();
+  const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');
+  svg.setAttribute('class','wires');
+  svg.setAttribute('viewBox','0 0 1000 587');
+  svg.setAttribute('preserveAspectRatio','none');
+  svg.setAttribute('aria-hidden','true');
+  circuit.append(svg);
+  const bank=document.createElement('div');
+  bank.className='channel-bank';
+  const extraWechatHeight=preset.names.includes('微信')?28:0;
+  const bankBottom=67+preset.names.length*21+extraWechatHeight;
+  bank.style.cssText='left:36%;width:29%;top:37px;height:'+(bankBottom-37)+'px';
+  circuit.append(bank);
+  [['输入与生产',30,24],['市场渠道 · '+marketLabel(currentMarket),363,18],['01  平台',371,42],['02  私域与社区',520,42],['线索与销售',753,24],['↶ 验收反馈、使用问题与授权案例回流到内容选题',325,556]].forEach(([label,x,y])=>{
+    const node=document.createElement('span');
+    node.className='circuit-label'+(y===42?' channel-head':'');
+    node.style.cssText='left:'+x/10+'%;top:'+y+'px';
+    node.textContent=label;
+    circuit.append(node);
+  });
+  const positions=[[30,84,240,209],[738,84,232,209],[370,454,260,91],[365,273,270,146]];
+  const modules={
+    sales:['线索归集','意向判断','销售跟进','成交移交'],
+    content:['图文','短视频','文字','直播','活动','报告'],
+    station:['智能电脑','AI 智能体','OPC','专属知识库']
+  };
+  engines.forEach((e,i)=>{
+    const subgrid=modules[e.key]?.map(label=>'<span>'+label+'</span>').join('');
+    makeNode(e.key,...positions[i],'<span class="mono">'+e.en+'</span><strong>'+e.name+'</strong><small>'+e.steps+'</small>'+(subgrid?'<span class="subgrid">'+subgrid+'</span>':''),e.color,true);
+  });
+  const channelKeys=preset.names.flatMap(name=>[name,'community:'+name]);
+  let y=63;
+  preset.names.forEach((name,i)=>{
+    const p=platforms.find(item=>item[0]===name);
+    const communityKey='community:'+name;
+    const wechat=name==='微信';
+    const height=wechat?48:20;
+    const mid=y+height/2;
+    const entries=wechat?'<span class="wechat-entries">'+channelEntries[name].map(([label])=>'<span>'+label+'</span>').join('')+'</span>':'';
+    makeNode(name,370,y,135,height,icon(p)+'<span>'+name+entries+'</span>',colors.publish);
+    makeNode(communityKey,519,mid-10,122,20,'<span>'+communities[name][0]+'</span>',colors.lead);
+    wire('M270 110 H'+(282+i*8)+' V'+mid+' H370','publish',['content',name,communityKey]);
+    wire('M505 '+mid+' H519','lead',[name,communityKey]);
+    wire('M641 '+mid+' H'+(654+i*8)+' V110 H738','lead',[name,communityKey,'sales']);
+    y+=height+1;
+  });
+  wire('M854 293 V491 Q854 499 846 499 H630','convert',['sales','delivery',...channelKeys]);
+  wire('M143 293 V491 Q143 499 151 499 H370','feedback',['delivery','content',...channelKeys]);
+  wire('M270 254 H315 V311 H365','station',['station','content']);
+  wire('M500 '+bankBottom+' V273','station',['station',...channelKeys]);
+  wire('M738 249 H691 V311 H635','station',['station','sales']);
+  svg.innerHTML=wires.map(({d,type},i)=>{
+    const delay=(i%7)*.24;
+    const pulse=(reverse,offset)=>'<path class="wire pulse '+(reverse?'reverse':'')+'" style="animation-delay:-'+(delay+offset)+'s" d="'+d+'"/>';
+    return '<g class="wire-group '+type+'" style="--signal:'+colors[type]+'"><path class="wire" d="'+d+'"/>'+pulse(type==='feedback',0)+(type==='station'?pulse(true,1.1):'')+'</g>';
+  }).join('');
+  updateFocus();
+}
+function marketLabel(name){return name==='中国大陆'?'矩阵媒体':name}
+Object.keys(markets).forEach(name=>{
+  const button=document.createElement('button');
+  button.className='control';
+  button.textContent=marketLabel(name);
+  button.setAttribute('aria-pressed',name===currentMarket);
+  button.onclick=()=>{
+    currentMarket=name;
+    focusNode=null;
+    selectedPlatform=null;
+    updateStages();
+    updatePlatforms();
+    Array.from(marketButtons.children).forEach(b=>b.setAttribute('aria-pressed',b===button));
+    renderCircuit();
+  };
+  marketButtons.append(button);
+});
+const motion=byId('motion');
+motion.onclick=()=>{
+  paused=!paused;
+  circuit.classList.toggle('paused',paused);
+  motion.setAttribute('aria-pressed',paused);
+  motion.textContent=paused?'播放流动':'暂停流动';
+};
+renderCircuit();
+const archiveEntries=[
+  ['M001','教程与方法','长视频','从零做一份内容日历','完整录屏，演示从选题到排期'],
+  ['M001','教程与方法','短视频','30 秒演示一个排期技巧','从同一教程拆出一个可立即复用的步骤'],
+  ['M001','教程与方法','图文','内容日历检查清单','把同一教程改成可收藏的清单'],
+  ['M002','案例与复盘','文字','一次跨平台分发复盘','记录假设、结果、改动与下一步'],
+  ['M003','产品与服务','直播','一次服务演示与答疑','演示交付流程，说明适用场景与边界'],
+  ['M004','观点与趋势','短帖 / 串文','哪些选题值得做成系列','用明确观点收集读者反例和反馈'],
+  ['M005','问答与社区','音频 / 播客','回答三个高频运营问题','整理评论与访谈里的实际问题'],
+  ['M006','工具与资源','模板 / 下载','运营周报空白模板','附填写说明和一个完整示例'],
+  ['M007','问答与社区','活动','内容运营主题交流会','设计议程、报名入口和现场互动'],
+  ['M007','案例与复盘','报告','活动回顾与复盘','汇总活动过程、参与反馈、成果和后续行动']
+];
+const category=byId('category'), format=byId('format');
+function renderArchive(){
+  const visible=archiveEntries.filter(row=>(!category.value||row[1]===category.value)&&(!format.value||row[2]===format.value));
+  byId('archive-count').textContent='示例档案 · '+visible.length+' 条版本记录';
+  byId('archive-grid').innerHTML=visible.length?visible.map(([id,topic,type,title,note])=>
+    '<article class="archive-card"><span class="index">'+id+' · '+type+'</span><h3>'+title+'</h3><small>'+topic+'</small><p>'+note+'</p></article>').join(''):'<p>这个品类和形式组合暂无示例。</p>';
+}
+[[category,1,'全部品类'],[format,2,'全部形式']].forEach(([select,index,label])=>{
+  select.innerHTML='<option value="">'+label+'</option>'+Array.from(new Set(archiveEntries.map(row=>row[index]))).map(value=>'<option>'+value+'</option>').join('');
+  select.onchange=renderArchive;
+});
+renderArchive();
+</script>
+</body>
+</html>

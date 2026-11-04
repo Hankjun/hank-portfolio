@@ -11,3 +11,13 @@ html[lang="en"] .product-cover .cover-title{font-size:clamp(21px,2vw,30px)}html[
 .contact-email,.contact-booking{overflow-wrap:anywhere;max-width:100%}.service-slogan{font-family:var(--serif);font-size:clamp(21px,2.4vw,32px)!important;color:var(--accent)!important;line-height:1.55!important}.flagship h3,.case-card h3,.product-card h3,.page-hero h1,.detail-aside h3,.dialog h2{overflow-wrap:anywhere}.detail-layout>*{min-width:0}.channels,.brief-actions,.hero-actions,.footer-links{max-width:100%}.qr-layout img{height:auto;object-fit:contain}.cart-items li>span{min-width:0;overflow-wrap:anywhere}.cart-items button{flex:none}.contact-form input,.contact-form select,.contact-form textarea{min-width:0;max-width:100%}
 @media(max-width:430px){.page-hero h1{font-size:36px}.service-slogan{font-size:23px!important}.contact-copy h2{font-size:39px}.product-actions{gap:6px}.product-actions>button:first-child{min-width:0;overflow-wrap:anywhere}.dialog .brief-actions>.button{flex:1 1 140px;min-width:0}.contact-section .channels>.button{max-width:100%;white-space:normal;text-align:center}.main-nav a{min-width:0;overflow-wrap:anywhere}.footer-links a{overflow-wrap:anywhere;max-width:100%}.flagship>.text-link{max-width:100%}}
 @media(max-width:680px){.flagship{grid-template-columns:42px minmax(0,1fr);column-gap:18px}.flagship .service-number{font-size:35px;line-height:1.15;white-space:nowrap}}
+
+.workstation-frame {
+  display: block;
+  width: 100%;
+  height: 58rem;
+  margin-top: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #121d1b;
+}
