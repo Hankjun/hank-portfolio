@@ -231,5 +231,18 @@
   "hero.capital.problem": "资源有限，几项投入的回报和风险难比较",
   "hero.capital.method": "整理现金流假设，对比不同情景的成本、收益和风险",
   "hero.capital.result": "一张资源配置对比表和待验证假设清单",
-  "hero.capital.feedback": "用实际现金流复核假设，再调整投入"
+  "hero.capital.feedback": "用实际现金流复核假设，再调整投入",
+  "hero.community": "OPC 社区",
+  "hero.network": "无边界的人脉网络",
+  "hero.network.peers": "同行",
+  "hero.network.partners": "伙伴",
+  "hero.network.experts": "专家",
+  "hero.network.projects": "项目",
+  "hero.hardware": "智能硬件生态",
+  "hero.device.input": "采集输入",
+  "hero.device.input.example": "麦克风 · 传感器",
+  "hero.device.edge": "边缘计算",
+  "hero.device.edge.example": "主机 · 开发板",
+  "hero.device.action": "交互反馈",
+  "hero.device.action.example": "屏幕 · 控制设备"
 }

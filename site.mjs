@@ -1,4 +1,4 @@
-import {context,renderPage,productCard,productCover,escapeHTML as esc,categories,emailChannel,mailtoHref} from './site-render.mjs?v=map1';
+import {context,renderPage,productCard,productCover,escapeHTML as esc,categories,emailChannel,mailtoHref} from './site-render.mjs?v=four1';
 const rootURL=new URL('./',import.meta.url),page=JSON.parse(document.body.dataset.page||'{"type":"home"}');
 const files=['services','flagships','products','cases','brands','channels','config'];
 let data,lang='zh',ctx,cart=[],months=1,activeCategory='all',activeTag='all',query='',limit=6,toastTimer;

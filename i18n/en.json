@@ -231,5 +231,18 @@
   "hero.capital.problem": "Limited resources make competing investments hard to compare",
   "hero.capital.method": "Document cash-flow assumptions and compare scenarios, costs, and risks",
   "hero.capital.result": "An allocation comparison and a list of assumptions to test",
-  "hero.capital.feedback": "Revisit the assumptions using actual cash flow"
+  "hero.capital.feedback": "Revisit the assumptions using actual cash flow",
+  "hero.community": "OPC Community",
+  "hero.network": "A network without borders",
+  "hero.network.peers": "Peers",
+  "hero.network.partners": "Partners",
+  "hero.network.experts": "Experts",
+  "hero.network.projects": "Projects",
+  "hero.hardware": "Smart Hardware",
+  "hero.device.input": "Capture",
+  "hero.device.input.example": "Mics · Sensors",
+  "hero.device.edge": "Edge compute",
+  "hero.device.edge.example": "Host · Dev boards",
+  "hero.device.action": "Interaction",
+  "hero.device.action.example": "Displays · Controls"
 }

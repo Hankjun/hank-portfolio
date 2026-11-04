@@ -221,3 +221,19 @@ html[lang="en"] .product-cover .cover-title{font-size:clamp(21px,2vw,30px)}html[
 @media (max-width: 620px) {
   .workbench-switch { grid-template-columns: repeat(2,minmax(0,1fr)); }
 }
+
+/* Four connected workstation screens */
+.desk-screens { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch; gap: 9px 12px; }
+.desk-display { display: flex; }
+.desk-bezel { width: 100%; }
+.desk-network { position: relative; isolation: isolate; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); grid-template-areas: "peers partners" "hub hub" "experts projects"; gap: 4px; text-align: center; }
+.desk-network svg { position: absolute; z-index: -1; inset: 0; width: 100%; height: 100%; }
+.desk-network path { fill: none; stroke: #84c3af; stroke-width: .65; stroke-dasharray: 3 2; }
+.desk-network strong { grid-area: hub; justify-self: center; border: 1px solid #97d4bf; border-radius: 20px; padding: 1px 10px; background: #244b47; font: 11px/1.65 var(--mono); }
+.desk-network span { justify-self: center; border-radius: 4px; padding: 0 4px; background: #1b3c3b; color: #ecf9f0; font-size: clamp(10px, 1.1vw, 12px); }
+.desk-caption { display: block; margin-top: 5px; color: #b6ddcf; text-align: center; font-size: 10px; }
+.desk-hardware-flow { display: grid; gap: 4px; margin: 0; padding: 0; list-style: none; }
+.desk-hardware-flow li { border-left: 2px solid #a4f2cc; background: #254846; padding: 2px 6px; }
+.desk-hardware-flow strong, .desk-hardware-flow small { display: block; line-height: 1.35; overflow-wrap: anywhere; }
+.desk-hardware-flow strong { font-size: 11px; }
+.desk-hardware-flow small { color: #beddd2; font-size: 10px; }

@@ -45,6 +45,19 @@ function heroDesk(c) {
         <span class="desk-screen-label">${t('hero.agents')}</span>
         <ul>${agents.map(agent=>`<li>${agent}</li>`).join('')}</ul>
       </div></div>
+      <div class="desk-display desk-community"><div class="desk-bezel">
+        <span class="desk-screen-label">${t('hero.community')}</span>
+        <div class="desk-network">
+          <svg viewBox="0 0 100 60" preserveAspectRatio="none" aria-hidden="true"><path d="M50 30 14 12M50 30 86 12M50 30 14 48M50 30 86 48"/></svg>
+          <strong>OPC</strong>
+          ${['peers','partners','experts','projects'].map(id=>`<span>${t('hero.network.'+id)}</span>`).join('')}
+        </div>
+        <small class="desk-caption">${t('hero.network')}</small>
+      </div></div>
+      <div class="desk-display desk-ecosystem"><div class="desk-bezel">
+        <span class="desk-screen-label">${t('hero.hardware')}</span>
+        <ol class="desk-hardware-flow">${['input','edge','action'].map(id=>`<li><strong>${t('hero.device.'+id)}</strong><small>${t('hero.device.'+id+'.example')}</small></li>`).join('')}</ol>
+      </div></div>
     </div>
     <div class="desk-hardware">${['compute','audio','board','keyboard'].map(id=>`<div><span class="desk-device desk-device-${id}" aria-hidden="true"></span><small>${t('hero.'+id)}</small></div>`).join('')}</div>
   </figure>`;
