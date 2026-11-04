@@ -1,7 +1,7 @@
 {
   "nav.services": "Services",
   "nav.cases": "Practice",
-  "nav.about": "Reading Notes",
+  "nav.about": "Reading Journal",
   "nav.shop": "Shop",
   "nav.contact": "Contact",
   "nav.research": "WORK 16 research",
@@ -33,7 +33,7 @@
   "cases.deliverables": "Deliverables and practice materials",
   "cases.evidence": "Practice record",
   "cases.next": "Bring your own situation",
-  "about.kicker": "03 / READING & RESEARCH",
+  "about.kicker": "03 / CONTEMPORARY PHILOSOPHY",
   "book.title": "WORK 16: Rethinking Human Work",
   "book.desc": "A research manuscript exploring what people do through tasks, capabilities, workflows and outcomes — and what doing the work well actually means.",
   "book.read": "Read the manuscript",
@@ -153,7 +153,7 @@
   "research.practice": "Get the work diagnosis kit",
   "research.filter": "Fields of work",
   "cart.wechatSend": "Copy brief & open WeChat",
-  "about.intro": "Notes and questions on work, organizations, and AI. Start with the WORK 16 manuscript and research materials.",
+  "about.intro": "Explore contemporary philosophy across six shelves, one book at a time.",
   "nav.workstation": "Workstation",
   "workstation.kicker": "05 / DELIVERY ARCHITECTURE",
   "workstation.title": "Super Workstation Architecture",
@@ -176,5 +176,14 @@
   "hero.office.tab": "Office workflows",
   "hero.office.problem": "The meeting ended without clear owners for the next steps",
   "hero.office.method": "Extract decisions and actions, confirm owners and deadlines, then update the shared tracker.",
-  "hero.office.result": "An action tracker showing who owns each task, when it’s due, and where it stands."
+  "hero.office.result": "An action tracker showing who owns each task, when it’s due, and where it stands.",
+  "journal.intro": "A contemporary philosophy reading list organized by language, with a few optional classics. Open a poster to see the original Chinese reading notes and a prompt.",
+  "journal.browse": "Browse the shelves",
+  "journal.route": "Start with these three",
+  "journal.routine": "Read the second alongside the first, then follow your interests. Set aside 20–30 minutes a day.",
+  "journal.count": "titles",
+  "journal.open": "Open journal entry",
+  "journal.synopsis": "Synopsis",
+  "journal.promptTitle": "Reading prompt",
+  "journal.prompt": "Which line stayed with you today? Write a sentence or two about how it connects to your life."
 }
