@@ -1,7 +1,7 @@
 {
   "nav.services": "Services",
   "nav.cases": "Practice",
-  "nav.about": "About",
+  "nav.about": "Reading Notes",
   "nav.shop": "Shop",
   "nav.contact": "Contact",
   "nav.research": "WORK 16 research",
@@ -33,14 +33,7 @@
   "cases.deliverables": "Deliverables and practice materials",
   "cases.evidence": "Practice record",
   "cases.next": "Bring your own situation",
-  "about.kicker": "03 / ABOUT HANK & HIS WRITING",
-  "about.title": "One point of contact.<br>A network that <em>gets it done.</em>",
-  "about.body": "I’m Hank, an independent solution architect and the principal of Daliyu Super Workstation. My practice spans industrial technology, brand design, exhibition supply chains, innovation services, education partnerships and AI agents.",
-  "about.body2": "I take responsibility for understanding the problem, then organise AI, specialist partners and a practical delivery process around the work.",
-  "about.method1": "Understand the problem",
-  "about.method2": "Design the solution",
-  "about.method3": "Organise delivery",
-  "about.ip": "The Daliyu brand character",
+  "about.kicker": "03 / READING & RESEARCH",
   "book.title": "WORK 16: Rethinking Human Work",
   "book.desc": "A research manuscript exploring what people do through tasks, capabilities, workflows and outcomes — and what doing the work well actually means.",
   "book.read": "Read the manuscript",
@@ -159,5 +152,6 @@
   "research.original": "The full manuscript and practice tools are available in their original Chinese edition.",
   "research.practice": "Get the work diagnosis kit",
   "research.filter": "Fields of work",
-  "cart.wechatSend": "Copy brief & open WeChat"
+  "cart.wechatSend": "Copy brief & open WeChat",
+  "about.intro": "Notes and questions on work, organizations, and AI. Start with the WORK 16 manuscript and research materials."
 }

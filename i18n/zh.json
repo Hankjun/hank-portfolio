@@ -1,7 +1,7 @@
 {
   "nav.services": "服务",
   "nav.cases": "案例",
-  "nav.about": "关于",
+  "nav.about": "读书笔记",
   "nav.shop": "汉克小铺",
   "nav.contact": "联系",
   "nav.research": "WORK 16 研究中心",
@@ -33,14 +33,7 @@
   "cases.deliverables": "交付与实践材料",
   "cases.evidence": "实践记录",
   "cases.next": "把你的场景带来",
-  "about.kicker": "03 / 关于 HANK · 著作",
-  "about.title": "一个人作为入口，<br>一张网络<em>共同完成。</em>",
-  "about.body": "我是汉克，独立方案师、大鲤鱼超级工作站主理人。我的实践涉及产业技术、品牌视觉、会展供应链、科创服务、教育合作与 AI 智能体。",
-  "about.body2": "我把理解问题与承担责任放在前端，再围绕具体任务，组织 AI、专业伙伴与执行流程。",
-  "about.method1": "理解问题",
-  "about.method2": "设计方案",
-  "about.method3": "组织交付",
-  "about.ip": "大鲤鱼品牌 IP",
+  "about.kicker": "03 / 阅读与研究",
   "book.title": "WORK 16：人类工作的重新解构",
   "book.desc": "从任务、能力、工作流与结果出发，研究人究竟在做什么，以及怎样才算做好。",
   "book.read": "在线阅读书稿",
@@ -159,5 +152,6 @@
   "research.original": "完整书稿与练习工具保留中文原稿。",
   "research.practice": "获取工作诊断练习包",
   "research.filter": "工作领域",
-  "cart.wechatSend": "复制简报并打开微信"
+  "cart.wechatSend": "复制简报并打开微信",
+  "about.intro": "围绕工作、组织与 AI，记录阅读中的问题与思考。先从《WORK 16》书稿与研究材料读起。"
 }
