@@ -116,3 +116,12 @@ html[lang="en"] .product-cover .cover-title{font-size:clamp(21px,2vw,30px)}html[
   .journal-page { padding-top: 34px; }
   .journal-intro { grid-template-columns: minmax(0, 1fr); }
 }
+
+.journal-cover {
+  display: block;
+  width: 100%;
+  height: 140px;
+  object-fit: contain;
+  border-radius: 3px;
+  background: #f8dcd9;
+}

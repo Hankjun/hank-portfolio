@@ -112,28 +112,43 @@ const shelves = [
         "《庄子》",
         "",
         "选白话注释版"
+      ],
+      [
+        "《瓦尔登湖》",
+        "亨利·戴维·梭罗",
+        "第 02 章 · 我生活的地方，我为何生活。",
+        {
+          slug: 'walden-02',
+          files: [
+            ['chapter-journal.pdf','章节手账','Chapter journal'],
+            ['poster.pdf','海报','Poster'],
+            ['sketch.pdf','草图','Sketch']
+          ]
+        }
       ]
     ]
   ]
 ];
 
 export function renderJournal(c, escapeHTML) {
-  const {t}=c;
+  const {t,asset,lang}=c;
   let number=0;
   const poster=(book)=>{
-    const [title,author,description]=book.map(escapeHTML);
+    const [title,author,description]=book.slice(0,3).map(escapeHTML);
+    const materials=book[3];
+    const folder=materials ? asset('assets/journal/'+materials.slug+'/') : '';
     const id='journal-book-'+(++number);
     const issue=String(number).padStart(2,'0');
-    return `<li><button type="button" class="journal-poster" popovertarget="${id}" aria-label="${t('journal.open')} ${title}">
+    return `<li${materials?` id="${materials.slug}"`:''}><button type="button" class="journal-poster" popovertarget="${id}" aria-label="${t('journal.open')} ${title}">
       <span class="journal-poster-top"><span>HANK / READING</span><span>${issue}</span></span>
-      <span class="journal-art" aria-hidden="true"></span>
+      ${materials?`<img class="journal-cover" src="${folder}cover.webp" width="509" height="720" loading="lazy" decoding="async" alt=""/>`:'<span class="journal-art" aria-hidden="true"></span>'}
       <strong lang="zh-CN">${title}</strong>${author?`<span class="journal-author" lang="zh-CN">${author}</span>`:''}
       <span class="journal-poster-bottom">${t('journal.open')} ↗</span>
     </button><article class="journal-entry" id="${id}" popover aria-labelledby="${id}-title">
       <div class="journal-entry-top"><span>HANK / READING / ${issue}</span><button type="button" class="button light small" popovertarget="${id}" popovertargetaction="hide">${t('nav.close')}</button></div>
       <h3 id="${id}-title" lang="zh-CN">${title}</h3>${author?`<p lang="zh-CN">${author}</p>`:''}
       <h4>${t('journal.synopsis')}</h4><p lang="zh-CN">${description}</p>
-      <div class="journal-prompt"><h4>${t('journal.promptTitle')}</h4><p>${t('journal.prompt')}</p></div>
+      ${materials?`<div class="inline-links">${materials.files.map(([file,zh,en])=>`<a class="button light small" href="${folder}${file}" target="_blank" rel="noopener">${lang==='zh'?zh:en} · PDF ↗</a>`).join('')}</div>`:`<div class="journal-prompt"><h4>${t('journal.promptTitle')}</h4><p>${t('journal.prompt')}</p></div>`}
     </article></li>`;
   };
   return `<main id="main" class="journal-page"><div class="wrap">

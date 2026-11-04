@@ -1,4 +1,4 @@
-import {renderJournal} from './journal.mjs';
+import {renderJournal} from './journal.mjs?v=journal2';
 export const escapeHTML=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export const categories=['knowledge','training','projects','organization','cocreation'];
 export function context(lang,data,base='./'){
