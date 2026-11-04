@@ -125,3 +125,44 @@ html[lang="en"] .product-cover .cover-title{font-size:clamp(21px,2vw,30px)}html[
   border-radius: 3px;
   background: #f8dcd9;
 }
+
+/* Dual-screen desk illustration anchors the homepage hero. */
+.hero {
+  background: radial-gradient(ellipse at 75% 26%, #e3e9db 0, transparent 56%), var(--paper);
+}
+.hero-layout {
+  grid-template-areas:
+    "intro desk"
+    "workbench workbench";
+  gap: clamp(20px, 3vw, 44px);
+}
+.hero-intro { grid-area: intro; }
+.hero-layout::before {
+  content: "";
+  grid-area: desk;
+  display: block;
+  width: 100%;
+  aspect-ratio: 900 / 793;
+  background: url("./assets/hank-dual-screen-desk.svg") center / contain no-repeat;
+}
+.hero-workbench { grid-area: workbench; }
+@media (min-width: 801px) {
+  .workbench-flow { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .workbench-flow li:not(:last-child)::after {
+    inset: calc(50% - 1px) auto auto 100%;
+    width: 14px;
+    height: 2px;
+  }
+}
+@media (min-width: 801px) and (prefers-reduced-motion: no-preference) {
+  .workbench-flow li:not(:last-child)::after { animation-name: workbench-signal-across; }
+}
+@keyframes workbench-signal-across {
+  0% { background: #688980; transform: scaleX(.1); transform-origin: left; }
+  70% { background: #b6f4d5; transform: scaleX(1); }
+  100% { background: #688980; transform: scaleX(1); }
+}
+@media (max-width: 800px) {
+  .hero-layout { grid-template-areas: "intro" "desk" "workbench"; }
+  .hero-layout::before { max-width: 540px; justify-self: center; }
+}
