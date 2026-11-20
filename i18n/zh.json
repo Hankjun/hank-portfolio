@@ -244,5 +244,18 @@
   "hero.device.edge": "边缘计算",
   "hero.device.edge.example": "主机 · 开发板",
   "hero.device.action": "交互反馈",
-  "hero.device.action.example": "屏幕 · 控制设备"
+  "hero.device.action.example": "屏幕 · 控制设备",
+  "fusion.owner": "汉克主导 · 人与 AI 共同经营",
+  "fusion.title": "超级工作站",
+  "fusion.intro": "从一个人和 AI，到一支能交付的队伍。把品牌、流量、交付和组织放进同一套工作系统。",
+  "fusion.open": "进入超级工作站",
+  "fusion.contact": "带着场景来聊",
+  "fusion.signal": "一套总架构 · 五张场景图 · 一座客户花园",
+  "fusion.chain": "品牌 × 流量 × 交付",
+  "fusion.foundation": "组织底座 · 智能体 · 知识 · 工具 · 硬件",
+  "fusion.brief": "决策简报",
+  "fusion.leader": "1 号位 AI",
+  "fusion.consulting": "咨询陪跑",
+  "fusion.skills": "技能开发",
+  "fusion.note": "主站呈现汉克的服务与研究，超级工作站展开业务架构与实践。"
 }

@@ -244,5 +244,18 @@
   "hero.device.edge": "Edge compute",
   "hero.device.edge.example": "Host · Dev boards",
   "hero.device.action": "Interaction",
-  "hero.device.action.example": "Displays · Controls"
+  "hero.device.action.example": "Displays · Controls",
+  "fusion.owner": "Led by Hank · People and AI working together",
+  "fusion.title": "Super Workstation",
+  "fusion.intro": "From one person with AI to a team that delivers. Connect brand, acquisition, delivery, and organization in one working system.",
+  "fusion.open": "Enter Super Workstation",
+  "fusion.contact": "Discuss your use case",
+  "fusion.signal": "A system map · Five scene maps · A client garden",
+  "fusion.chain": "Brand × Acquisition × Delivery",
+  "fusion.foundation": "Organization · Agents · Knowledge · Tools · Hardware",
+  "fusion.brief": "Decision briefs",
+  "fusion.leader": "AI for leaders",
+  "fusion.consulting": "Consulting partnership",
+  "fusion.skills": "Skill development",
+  "fusion.note": "Explore Hank’s services and research here, and the business architecture and practice inside Super Workstation. The studio experience is in Chinese."
 }
