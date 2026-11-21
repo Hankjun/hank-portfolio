@@ -1,0 +1,81 @@
+/* Shared screen palette taken from the Super Workstation studio. */
+:root {
+  color-scheme: dark;
+  --paper: #08090c;
+  --white: #13161a;
+  --ink: #f1f1e9;
+  --body: #c3cabb;
+  --accent: #c6ff4d;
+  --line: #40453b;
+  --sage: #252a22;
+  --bg: var(--paper);
+  --surface: var(--white);
+  --muted: #adb4a6;
+  --rule: var(--line);
+  --mint: var(--accent);
+  --sand: var(--ink);
+  --sans: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  --serif: var(--sans);
+  --mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
+}
+body { background: var(--paper); color: var(--ink); font-family: var(--sans); }
+::selection { color: var(--paper); background: var(--accent); }
+.site-header, .lab-header { background: rgb(11 13 16 / 96%); border-color: var(--line); }
+.brand, .footer-wordmark, h1, h2, .flagship h3, .case-card h3 { font-weight: 800; }
+.eyebrow, .kicker, .lang-switch strong, .book-cover .book-16 { color: var(--accent); }
+.lang-switch span, .breadcrumb, .footer-brand p, .footer-bottom { color: var(--muted); }
+.button, .button.accent, .badge, .product-actions .add[aria-pressed=true], .chip[aria-pressed=true],
+.hero-console .hero-actions .button { background: var(--accent); color: var(--paper); border-color: var(--accent); }
+.button:hover, .hero-console .hero-actions .button:hover, .fusion-primary:hover { background: #daff89; color: var(--paper); }
+.button.light, .chip, .icon-button { background: transparent; color: var(--ink); border-color: var(--line); }
+.button.light:hover, .category-links a:hover { background: var(--sage); color: var(--accent); }
+.floating-cart .cart-count, .skip { background: var(--paper); color: var(--accent); }
+.site-footer, .video-wrap, .cases-section, .shop-entry { background: #0b0d10; color: var(--ink); }
+.site-footer { border-top: 1px solid var(--line); }
+.footer-wordmark img { width: 44px; }
+.flagship:nth-child(n), .training-note, .detail-aside, .research-note, .cart-pricing,
+.book-panel, .about-image, .journal-note, .journal-entry { background: var(--white); color: var(--ink); border-color: var(--line); }
+.flagship { border-top: 2px solid var(--line); }
+.flagship:hover { border-top-color: var(--accent); }
+.case-art, .case-card:nth-child(2) .case-art, .case-detail-image { background: #212620; color: var(--ink); }
+.book-cover, .product-cover, .product-cover[class*="theme-"] { background: #191d21; color: var(--ink); border: 1px solid var(--line); border-top: 3px solid var(--accent); }
+.product-cover:is(.theme-sage,.theme-blue,.theme-ochre) { background: #23291e; }
+.cover-top, .cover-mark, .cover-bottom { color: var(--accent); }
+.book-cover { box-shadow: 6px 7px #343a2d; }
+.contact-form :is(input,select,textarea), .brief-output textarea, .cart-brief, .cart-pricing select, .search,
+.dialog-close, .reading-page select, .field textarea, .matrix input { background: var(--white); color: var(--ink); border-color: #606758; }
+.dialog, .journal-entry { border: 1px solid var(--line); }
+.hero { background: var(--paper); }
+.hero-console { background: radial-gradient(ellipse at 16% 0%, #252c1d, transparent 60%), #0b0d10; border-color: var(--line); border-radius: 6px 6px 0 0; }
+.hero-console h1 { font-weight: 900; }
+.hero-console h1 em, .hero-console .eyebrow, .desk-screen-label, .workbench-index,
+.desk-network strong, .desk-side li::before, .domain-feedback strong { color: var(--accent); }
+.hero-layout > .hero-workbench { border-radius: 0 0 6px 6px; border-color: var(--line); background: radial-gradient(#42483a 1px, transparent 1px) 0 0 / 22px 22px, #101216; }
+.desk-bezel { background: #101215; border-color: #626958; box-shadow: none; }
+.desk-display::after { background: #707667; }
+.desk-resource-list div, .desk-hardware-flow li, .desk-network strong, .desk-network span { background: #242920; border-color: #869d63; }
+.desk-network path { stroke: var(--accent); }
+.hero-console figcaption, .desk-caption, .desk-hardware small, .desk-hardware-flow small,
+.desk-resource-list span, .workbench-switch legend, .workbench-flow li small, .domain-feedback { color: var(--body); }
+.workbench-switch label > span, .workbench-flow li { background: #181b1f; border-color: var(--line); border-radius: 4px; }
+.workbench-switch input:checked + span { background: var(--accent); color: var(--paper); border-color: var(--accent); }
+.workbench-flow li:last-child { animation-name: none; background: #262d1d; border-color: #859751; }
+.domain-feedback { border-color: var(--line); }
+.journal-page { background: repeating-linear-gradient(0deg,transparent 0 27px,#c6ff4d0b 27px 28px),var(--paper); }
+.journal-note { box-shadow: 4px 4px #353c2b; }
+.journal-shelf-heading, .journal-prompt { border-color: var(--line); }
+.journal-shelf .journal-rail li:nth-child(n) .journal-poster { background: #191c20; color: var(--ink); border-color: var(--line); }
+.journal-shelf .journal-rail li:nth-child(even) .journal-poster { background: #22291e; }
+.journal-poster-top, .journal-poster-bottom { color: var(--accent); }
+.journal-poster:focus-visible { outline-color: var(--accent); }
+.journal-cover { background: var(--white); }
+/* Reading and practice use the same interface, with long-form spacing retained. */
+.reader-banner, .reader-end, .book-reader blockquote, .book-reader th { background: var(--white); color: var(--ink); }
+.reader-banner h1, .reader-banner h1 small, .book-reader :is(.book-chapter,.book-part,blockquote),
+main > header h1, main > section h2 { font-family: var(--sans); color: var(--ink); }
+.reader-banner h1 span, .reader-banner .lab-container > span, .reader-note a, .reader-note button,
+.reader-sidebar a span, .reader-end strong, .reader-end a { color: var(--accent); }
+.reader-progress { background: var(--accent); }
+.book-reader > p, .book-reader ul, .book-reader ol, .reader-sidebar a, .reader-note { color: var(--body); }
+.book-reader strong { color: var(--ink); }
+.book-reader blockquote { border-left-color: var(--accent); }
