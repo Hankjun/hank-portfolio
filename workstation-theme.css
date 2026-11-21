@@ -218,3 +218,23 @@ main > header h1, main > section h2 { font-family: var(--sans); color: var(--ink
 .hero-console .hero-intro .hero-actions{justify-content:center;margin-inline:auto}
 .refined-desk .workspace-head{justify-content:flex-end;margin-bottom:10px}
 @media(max-width:800px){.refined-desk .workspace-head{align-items:flex-end}}
+
+.screen-directory {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25em .4em;
+  margin: .45em 0;
+  padding: 0;
+  list-style: none;
+}
+.screen-directory li {
+  padding: .12em .45em;
+  border: 1px solid currentColor;
+  border-radius: .35em;
+  line-height: 1.4;
+}
+.desk-display .screen-directory { font-size: .72em; }
+.screen-dialog .screen-directory { font-size: 1rem; gap: .5em; margin-block: 1em; }
+.desk-display:focus-within .desk-bezel,
+.desk-display:has(.screen-open:hover) .desk-bezel { outline: 2px solid currentColor; outline-offset: 2px; }
+.screen-dialog { max-height: 85dvh; overflow-y: auto; }

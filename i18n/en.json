@@ -1,7 +1,7 @@
 {
   "nav.services": "Services",
   "nav.cases": "Practice",
-  "nav.about": "Reading Journal",
+  "nav.about": "Personal Column",
   "nav.shop": "Shop",
   "nav.contact": "Contact",
   "nav.research": "WORK 16 research",
@@ -232,7 +232,7 @@
   "hero.capital.method": "Document cash-flow assumptions and compare scenarios, costs, and risks",
   "hero.capital.result": "An allocation comparison and a list of assumptions to test",
   "hero.capital.feedback": "Revisit the assumptions using actual cash flow",
-  "hero.community": "OPC Community",
+  "hero.community": "OPC and FDE",
   "hero.network": "A network without borders",
   "hero.network.peers": "Peers",
   "hero.network.partners": "Partners",

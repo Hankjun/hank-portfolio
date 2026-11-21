@@ -152,7 +152,7 @@ export function renderJournal(c, escapeHTML) {
     </article></li>`;
   };
   return `<main id="main" class="journal-page"><div class="wrap">
-    <section class="journal-intro"><div><p class="eyebrow">HANK / READING JOURNAL</p><h1>${t('nav.about')}</h1><p>${t('journal.intro')}</p><a class="button" href="#journal-shelf-1">${t('journal.browse')} ↓</a></div>
+    <section class="journal-intro" id="philosophy"><div><p class="eyebrow">HANK / PERSONAL COLUMN</p><h1>${lang==='zh'?'汉克读哲学':'Hank Reads Philosophy'}</h1><p>${t('journal.intro')}</p><a class="button" href="#journal-shelf-1">${t('journal.browse')} ↓</a></div>
     <aside class="journal-note"><span class="meta">${t('journal.route')}</span><ol lang="zh-CN"><li>韩炳哲《倦怠社会》</li><li>项飙《把自己作为方法》</li><li>萨瓦特尔《伦理学与生活》</li></ol><p>${t('journal.routine')}</p></aside></section>
     ${shelves.map(([zh,en,books],i)=>`<section class="journal-shelf" id="journal-shelf-${i+1}" aria-labelledby="journal-shelf-title-${i+1}">
       <div class="journal-shelf-heading"><span class="meta">0${i+1} /</span><h2 id="journal-shelf-title-${i+1}">${escapeHTML(c.lang==='zh'?zh:en)}</h2><span class="meta">${books.length} ${t('journal.count')}</span></div>

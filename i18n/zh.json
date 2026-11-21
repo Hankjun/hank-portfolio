@@ -1,7 +1,7 @@
 {
   "nav.services": "服务",
   "nav.cases": "案例",
-  "nav.about": "精读手帐",
+  "nav.about": "个人专栏",
   "nav.shop": "汉克小铺",
   "nav.contact": "联系",
   "nav.research": "WORK 16 研究中心",
@@ -232,7 +232,7 @@
   "hero.capital.method": "整理现金流假设，对比不同情景的成本、收益和风险",
   "hero.capital.result": "一张资源配置对比表和待验证假设清单",
   "hero.capital.feedback": "用实际现金流复核假设，再调整投入",
-  "hero.community": "OPC 社区",
+  "hero.community": "OPC 与 FDE",
   "hero.network": "无边界的人脉网络",
   "hero.network.peers": "同行",
   "hero.network.partners": "伙伴",
