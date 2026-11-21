@@ -210,3 +210,9 @@ main > header h1, main > section h2 { font-family: var(--sans); color: var(--ink
 .footer-top-link{color:var(--body);text-decoration:underline;text-underline-offset:4px}
 @media(max-width:1000px){.footer-directory{grid-template-columns:1fr;gap:36px}.footer-positioning{max-width:52ch}}
 @media(max-width:600px){.footer-invitation{grid-template-columns:1fr;gap:22px}.footer-invitation .button{justify-self:start}.footer-directory-nav{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 20px}.footer-group:last-child{grid-column:1/-1;border-top:1px solid var(--line);padding-top:25px}.footer-group:last-child ul{grid-template-columns:repeat(2,minmax(0,1fr))}.footer-group>p{max-width:none}.footer-bottom{display:grid;gap:12px;padding-bottom:48px}.footer-bottom span{margin:0}.footer-group a,.footer-channel{min-height:40px}}
+/* Align every hero text block to the same centre line. */
+.hero-console .hero-intro{width:100%;text-align:center}
+.hero-console .hero-intro .eyebrow{margin-inline:auto}
+.hero-console .hero-intro h1{max-width:none;width:100%;margin-inline:auto;justify-content:center;text-align:center}
+.hero-console .hero-intro .console-intro{margin-inline:auto;text-align:center}
+.hero-console .hero-intro .hero-actions{justify-content:center;margin-inline:auto}
