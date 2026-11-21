@@ -216,3 +216,5 @@ main > header h1, main > section h2 { font-family: var(--sans); color: var(--ink
 .hero-console .hero-intro h1{max-width:none;width:100%;margin-inline:auto;justify-content:center;text-align:center}
 .hero-console .hero-intro .console-intro{margin-inline:auto;text-align:center}
 .hero-console .hero-intro .hero-actions{justify-content:center;margin-inline:auto}
+.refined-desk .workspace-head{justify-content:flex-end;margin-bottom:10px}
+@media(max-width:800px){.refined-desk .workspace-head{align-items:flex-end}}
