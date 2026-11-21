@@ -38,35 +38,26 @@ function workstationSection(c) {
   </div></section>`;
 }
 function heroDesk(c) {
-  const {t,lang,url}=c;
-  const agents=['Claude','Codex','Gemini','WorkBuddy','Hermes','豆包'];
-  return `<figure class="hero-desk" aria-label="${t('hero.lab')} · ${t('hero.diagram')}">
-    <figcaption><span>HANK / WORKSTATION</span><span>${t('hero.diagram')}</span></figcaption>
-    <div class="console-controls"><p>${lang==='zh'?'四块屏幕，一个协作系统。点击屏幕探索。':'Four screens. One working system. Select a screen to explore.'}</p><button type="button" class="console-play" data-action="console-demo" aria-pressed="false">${lang==='zh'?'播放协作演示':'Play walkthrough'}</button></div><div class="desk-screens">
-      <div class="desk-display desk-main" data-screen="0"><div class="desk-bezel"><button class="screen-open" data-action="screen" data-id="0"><span>${t('hero.resources')}</span><span aria-hidden="true">＋</span></button>
-        <span class="desk-screen-label">${t('hero.resources')}</span>
-        <div class="desk-resource-list">${['knowledge','workflow','deliverables'].map((id,i)=>`<div><span>0${i+1}</span><strong>${t('hero.'+id)}</strong><span aria-hidden="true">↗</span></div>`).join('')}</div>
-      </div></div>
-      <div class="desk-display desk-side" data-screen="1"><div class="desk-bezel"><button class="screen-open" data-action="screen" data-id="1"><span>${t('hero.agents')}</span><span aria-hidden="true">＋</span></button>
-        <span class="desk-screen-label">${t('hero.agents')}</span>
-        <ul>${agents.map(agent=>`<li>${agent}</li>`).join('')}</ul>
-      </div></div>
-      <div class="desk-display desk-community" data-screen="2"><div class="desk-bezel"><button class="screen-open" data-action="screen" data-id="2"><span>${t('hero.community')}</span><span aria-hidden="true">＋</span></button>
-        <span class="desk-screen-label">${t('hero.community')}</span>
-        <div class="desk-network">
-          <svg viewBox="0 0 100 60" preserveAspectRatio="none" aria-hidden="true"><path d="M50 30 14 12M50 30 86 12M50 30 14 48M50 30 86 48"/></svg>
-          <strong>OPC</strong>
-          ${['peers','partners','experts','projects'].map(id=>`<span>${t('hero.network.'+id)}</span>`).join('')}
-        </div>
-        <small class="desk-caption">${t('hero.network')}</small>
-      </div></div>
-      <div class="desk-display desk-ecosystem" data-screen="3"><div class="desk-bezel"><button class="screen-open" data-action="screen" data-id="3"><span>${t('hero.hardware')}</span><span aria-hidden="true">＋</span></button>
-        <span class="desk-screen-label">${t('hero.hardware')}</span>
-        <ol class="desk-hardware-flow">${['input','edge','action'].map(id=>`<li><strong>${t('hero.device.'+id)}</strong><small>${t('hero.device.'+id+'.example')}</small></li>`).join('')}</ol>
-      </div></div>
-    </div>
-    <div class="desk-hardware">${['compute','audio','board','keyboard'].map(id=>`<div><span class="desk-device desk-device-${id}" aria-hidden="true"></span><small>${t('hero.'+id)}</small></div>`).join('')}</div>
-  </figure><dialog class="dialog screen-dialog" id="screenDialog" aria-labelledby="screenTitle"><div class="dialog-inner"><button class="dialog-close" data-action="close" aria-label="${lang==='zh'?'关闭':'Close'}">×</button><span class="eyebrow">HANK / CONNECTED WORKSPACE</span><h2 id="screenTitle"></h2><div id="screenBody"></div><div class="inline-links"><a class="button" href="${url('#workbench')}">${lang==='zh'?'探索业务地图':'Explore business map'}</a><a class="text-link" href="${url('super-workstation/')}">${lang==='zh'?'进入超级工作站':'Enter Super Workstation'}</a></div></div></dialog>`;
+ const {t,lang,url}=c,zh=lang==='zh';
+ const modules=zh?[
+  {title:'资源与流程',role:'让经验成为可调用的资产',items:[['知识库','方法论 · 行业资料 · 项目经验'],['任务流','拆解任务 · 明确输入 · 设置验收'],['交付库','报告 · 原型 · 课程 · 操作手册']],output:'任务清单与交付标准'},
+  {title:'智能体编队',role:'围绕任务组合模型与工具',items:[['Claude / Gemini','研究梳理 · 长文理解'],['Codex / WorkBuddy','开发构建 · 工作流执行'],['Hermes / 豆包','工具协作 · 内容处理']],output:'可检查的方案与工作成果'},
+  {title:'OPC 社区',role:'让合适的人加入真实项目',items:[['同行','方法交流'],['伙伴','共同交付'],['专家','专业校验'],['项目','需求连接']],output:'分工明确的项目协作'},
+  {title:'智能硬件生态',role:'连接数字系统与真实工作现场',items:[['采集输入','麦克风 · 摄像头 · 传感器'],['计算与执行','工作主机 · 开发板 · 自动化'],['交互反馈','屏幕 · 音频 · 控制设备']],output:'现场记录、操作与反馈'}
+ ]:[
+  {title:'Resources & workflows',role:'Turn experience into reusable assets',items:[['Knowledge','Methods · Research · Experience'],['Workflows','Scope · Inputs · Acceptance'],['Deliverables','Reports · Prototypes · Playbooks']],output:'Task brief and acceptance criteria'},
+  {title:'Agent team',role:'Connect models and tools around a task',items:[['Claude / Gemini','Research · Document synthesis'],['Codex / WorkBuddy','Build · Workflow execution'],['Hermes / 豆包','Tool coordination · Content']],output:'Reviewable plans and working outputs'},
+  {title:'OPC community',role:'Bring the right people into the project',items:[['Peers','Exchange'],['Partners','Delivery'],['Experts','Review'],['Projects','Discovery']],output:'A team with clear responsibilities'},
+  {title:'Smart hardware',role:'Connect digital systems to real work',items:[['Capture','Microphone · Camera · Sensors'],['Compute & action','Workstation · Boards · Automation'],['Feedback','Displays · Audio · Controls']],output:'Field capture, actions and feedback'}
+ ];
+ const steps=zh?['整理访谈资料，建立问题清单与验收标准。','智能体辅助研究、整理方案和构建工作流。','邀请业务伙伴与领域专家校验关键判断。','连接会议采集与现场反馈，沉淀复盘记录。']:['Organise interview material into a problem brief and acceptance criteria.','Use agents to research, draft and build the workflow.','Invite partners and domain experts to review key decisions.','Connect meeting capture and field feedback to the review.'];
+ return `<figure class="hero-desk refined-desk" aria-label="${zh?'汉克的四屏协作工作台':'Hank’s connected workspace'}">
+ <div class="workspace-head"><div><span class="eyebrow">HANK / CONNECTED WORKSPACE</span><h2>${zh?'一张工作台，连接完整交付。':'One workspace. Connected delivery.'}</h2><p>${zh?'资源定边界，智能体做协作，社区连接人，硬件接现场。':'Resources frame the task. Agents build. People collaborate. Hardware connects the field.'}</p></div><button type="button" class="console-play" data-action="console-demo" aria-pressed="false">${zh?'播放协作演示':'Play walkthrough'}</button></div>
+ <div class="workspace-demo"><div class="demo-context"><span>${zh?'演示场景':'EXAMPLE WORKFLOW'}</span><strong>${zh?'把一次客户访谈，推进为可执行方案。':'Turn a client interview into an actionable plan.'}</strong></div><p id="consoleNarration" role="status" aria-live="polite" data-idle="${zh?'选择任意屏幕，查看工作内容；播放演示，观察四端如何衔接。':'Select a screen to explore, or play the walkthrough.'}">${zh?'选择任意屏幕，查看工作内容；播放演示，观察四端如何衔接。':'Select a screen to explore, or play the walkthrough.'}</p></div>
+ <div class="desk-screens">${modules.map((m,i)=>`<div class="desk-display" data-screen="${i}" data-narration="${steps[i]}"><div class="desk-bezel"><div class="monitor-chrome" aria-hidden="true"><span></span><small>${['RESOURCE SYSTEM','AGENT TEAM','HUMAN NETWORK','PHYSICAL LAYER'][i]}</small></div><button class="screen-open" data-action="screen" data-id="${i}"><span>${m.title}</span><span aria-hidden="true">＋</span></button><div class="screen-detail-content"><p class="screen-role">${m.role}</p>${i===2?`<div class="community-orbit"><strong>OPC</strong>${m.items.map(([name,role])=>`<span><b>${name}</b><small>${role}</small></span>`).join('')}</div>`:`<div class="screen-modules">${m.items.map(([name,desc])=>`<div><strong>${name}</strong><small>${desc}</small></div>`).join('')}</div>`}<div class="screen-output"><span>${zh?'输出':'OUTPUT'}</span><strong>${m.output}</strong></div>${i===1?`<p class="screen-caveat">${zh?'示例分工，按任务与工具条件调整。':'Example roles, adapted to each task and available tools.'}</p>`:''}</div><div class="monitor-bottom" aria-hidden="true"><i></i><span>HANK WORKBENCH</span></div></div></div>`).join('')}</div>
+ <div class="workspace-bus"><span>${zh?'汉克统筹':'HANK LEADS'}</span><p>${zh?'任务定义 · 人机分工 · 交付验收 · 反馈迭代':'Task definition · Human–AI coordination · Acceptance · Feedback'}</p></div>
+ <div class="desk-hardware">${['compute','audio','board','keyboard'].map(id=>`<div><span class="desk-device desk-device-${id}" aria-hidden="true"></span><small>${t('hero.'+id)}</small></div>`).join('')}</div>
+ </figure><dialog class="dialog screen-dialog" id="screenDialog" aria-labelledby="screenTitle"><div class="dialog-inner"><button class="dialog-close" data-action="close" aria-label="${zh?'关闭':'Close'}">×</button><span class="eyebrow">HANK / CONNECTED WORKSPACE</span><h2 id="screenTitle"></h2><div id="screenBody"></div><div class="inline-links"><a class="button" href="${url('#workbench')}">${zh?'探索业务地图':'Explore business map'}</a><a class="text-link" href="${url('super-workstation/')}">${zh?'进入超级工作站':'Enter Super Workstation'}</a></div></div></dialog>`;
 }
 
 function heroWorkbench(c) {

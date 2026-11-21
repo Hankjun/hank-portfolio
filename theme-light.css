@@ -47,3 +47,10 @@ html[data-theme=light]{background:var(--paper)}
 @media print{.theme-switch{display:none}}
 /* Canvas drawings retain their calibrated rendering surface and original node contrast. */
 [data-theme=light] .neb-preview canvas,[data-theme=light] #nebula canvas{background:#0b1009}
+[data-theme=light] .workspace-demo{background:#f9fbf5;border-color:#bfceaa;border-left-color:var(--accent)}
+[data-theme=light] .refined-desk .desk-bezel{background:linear-gradient(145deg,#fff,#f5f8ef);border-color:#a4b391;box-shadow:0 18px 25px #53683b14,inset 0 0 0 3px #e8eedf}
+[data-theme=light] :is(.screen-modules>div,.community-orbit>span){background:#fff;border-color:#ced8c3}
+[data-theme=light] .community-orbit>strong{background:#e8f0dd}
+[data-theme=light] .workspace-bus{background:#e8f0dd;border-color:#a8bb8f}
+[data-theme=light] .refined-desk .desk-hardware{background:linear-gradient(#dce7cf,#edf3e4);border-color:#b4c39f}
+[data-theme=light] .monitor-chrome,[data-theme=light] .monitor-bottom{color:#667958;border-color:#ced8c3}
