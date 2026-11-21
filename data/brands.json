@@ -23,7 +23,7 @@
       "zh": "瑞士卷",
       "en": "Ruishijuan"
     },
-    "image": "assets/brands/clean/ruishijuan-transparent.webp",
+    "image": "assets/brands/wall/ruishijuan.webp",
     "published": true
   },
   {
@@ -32,7 +32,7 @@
       "zh": "校影",
       "en": "Campus Film"
     },
-    "image": "assets/brands/clean/campus-film-transparent.webp",
+    "image": "assets/brands/wall/campus-film.webp",
     "published": true
   },
   {
@@ -60,6 +60,132 @@
       "en": "Xiyou IP"
     },
     "image": "assets/brands/clean/xiyou-ip-transparent.webp",
+    "published": true
+  },
+  {
+    "id": "hank",
+    "name": {
+      "zh": "汉克",
+      "en": "Hank"
+    },
+    "image": "assets/hank-mark.svg",
+    "published": true
+  },
+  {
+    "id": "gauss",
+    "name": {
+      "zh": "高思控制",
+      "en": "GAUSS Process Control"
+    },
+    "image": "assets/brands/wall/gauss.webp",
+    "published": true
+  },
+  {
+    "id": "daliyu",
+    "name": {
+      "zh": "大鲤鱼基地",
+      "en": "Daliyu"
+    },
+    "image": "assets/brands/wall/daliyu.webp",
+    "published": true
+  },
+  {
+    "id": "jinghui",
+    "name": {
+      "zh": "鲸汇",
+      "en": "Jinghui"
+    },
+    "image": "assets/brands/wall/jinghui.webp",
+    "published": true
+  },
+  {
+    "id": "banzhi",
+    "name": {
+      "zh": "半知",
+      "en": "Banzhi"
+    },
+    "image": "assets/brands/wall/banzhi.webp",
+    "published": true
+  },
+  {
+    "id": "yaning",
+    "name": {
+      "zh": "亚宁服饰",
+      "en": "Yaning Apparel"
+    },
+    "image": "assets/brands/wall/yaning.webp",
+    "published": true
+  },
+  {
+    "id": "xinbao",
+    "name": {
+      "zh": "鑫宝牛杂",
+      "en": "Xinbao"
+    },
+    "image": "assets/brands/wall/xinbao.webp",
+    "published": true
+  },
+  {
+    "id": "fengjie",
+    "name": {
+      "zh": "冯姐的小饭桌",
+      "en": "Fengjie’s Kitchen"
+    },
+    "image": "assets/brands/wall/fengjie.webp",
+    "published": true
+  },
+  {
+    "id": "nanbanyuan-academy",
+    "name": {
+      "zh": "南半园书院",
+      "en": "Nanbanyuan Academy"
+    },
+    "image": "assets/brands/wall/nanbanyuan-academy.webp",
+    "published": true
+  },
+  {
+    "id": "daliyu-opc",
+    "name": {
+      "zh": "大鲤鱼 OPC 社区",
+      "en": "Daliyu OPC Community"
+    },
+    "image": "assets/brands/wall/daliyu-opc.webp",
+    "published": true
+  },
+  {
+    "id": "super-assistant",
+    "name": {
+      "zh": "大鲤鱼超级助理",
+      "en": "Daliyu Super Assistant"
+    },
+    "image": "assets/brands/wall/super-assistant.webp",
+    "published": true
+  },
+  {
+    "id": "hat-beard",
+    "name": {
+      "zh": "帽子与胡须标识",
+      "en": "Hat and Beard Mark"
+    },
+    "image": "assets/brands/wall/hat-beard.webp",
+    "published": true
+  },
+  {
+    "id": "wujun",
+    "name": {
+      "zh": "吴俊小站",
+      "en": "Wujun Station"
+    },
+    "image": "assets/brands/wall/wujun.webp",
+    "published": true
+  },
+  {
+    "id": "curio",
+    "name": {
+      "zh": "Curio",
+      "en": "Curio"
+    },
+    "image": "assets/brands/wall/curio.webp",
     "published": true
   }
 ]
